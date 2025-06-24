@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% if numenclat.id %}Modifier{% else %}Nouvelle{% endif %} Nomenclature{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>{% if numenclat.id %}Modifier la nomenclature{% else %}Créer une nouvelle nomenclature{% endif %}</h1>
+
+    {{ form_start(form) }}
+        {{ form_row(form.produit) }}
+        {{ form_row(form.matiere) }}
+        {{ form_row(form.consommation) }}
+
+        <button class="btn btn-primary">{{ button_label|default('Enregistrer') }}</button>
+        <a href="{{ path('app_nomenclature_index') }}" class="btn btn-secondary">Retour</a>
+    {{ form_end(form) }}
+</div>
+{% endblock %}

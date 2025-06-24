@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nomenclature{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Nomenclature</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Produit fini</th>
+                <th>Matière première</th>
+                <th>Consommation unitaire</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for numenclat in numenclats %}
+            <tr>
+                <td>{{ numenclat.produit.reference }}</td>
+                <td>{{ numenclat.matiere.reference }} ({{ numenclat.matiere.unite }})</td>
+                <td>{{ numenclat.consommation }} {{ numenclat.matiere.unite }}</td>
+                <td>
+                    <a href="{{ path('app_nomenclature_show', {'id': numenclat.id}) }}" class="btn btn-info">Voir</a>
+                    <a href="{{ path('app_nomenclature_edit', {'id': numenclat.id}) }}" class="btn btn-warning">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">Aucune entrée de nomenclature</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_nomenclature_new') }}" class="btn btn-primary">Nouvelle entrée</a>
+</div>
+{% endblock %}

@@ -1,0 +1,143 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des Nomenclatures{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        .nomenclature-list {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid #eaeaea;
+        }
+
+        .nomenclature-list-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .nomenclature-list-header h1 {
+            color: #2c3e50;
+            font-weight: 600;
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .nomenclature-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 0.75rem;
+        }
+
+        .nomenclature-table th {
+            color: #7f8c8d;
+            font-weight: 500;
+            text-align: left;
+            padding: 0.75rem 1rem;
+            font-size: 0.9rem;
+        }
+
+        .nomenclature-table td {
+            background: #f8fafc;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            font-weight: 500;
+            color: #2c3e50;
+            font-size: 0.95rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+        }
+
+        .btn-new {
+            padding: 0.6rem 1.25rem;
+            border-radius: 8px;
+            background-color: #3b82f6;
+            color: white;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .action-icons {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .action-icon {
+            color: #64748b;
+            font-size: 1.1rem;
+            transition: all 0.2s ease;
+            padding: 0.5rem;
+            border-radius: 6px;
+            background: #f1f5f9;
+            cursor: pointer;
+        }
+
+        .action-icon:hover {
+            transform: translateY(-2px);
+        }
+
+        .action-icon.view:hover {
+            color: #10b981;
+            background: #d1fae5;
+        }
+
+        .action-icon.edit:hover {
+            color: #f59e0b;
+            background: #fef3c7;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+<div class="nomenclature-list">
+    <div class="nomenclature-list-header">
+        <h1>Liste des Nomenclatures</h1>
+        <a href="{{ path('app_nomenclature_new') }}" class="btn-new">
+            <i class="uil uil-plus"></i> Nouvelle entrée
+        </a>
+    </div>
+
+    <table class="nomenclature-table">
+        <thead>
+            <tr>
+                <th>Produit fini</th>
+                <th>Matière première</th>
+                <th>Consommation unitaire</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for nomenclature in numenclats %}
+            <tr>
+                <td>{{ nomenclature.produit.reference }}</td>
+                <td>{{ nomenclature.matiere.reference }} ({{ nomenclature.matiere.unite }})</td>
+                <td>{{ nomenclature.consommation }} {{ nomenclature.matiere.unite }}</td>
+                <td>
+                    <div class="action-icons">
+                        <a href="{{ path('app_nomenclature_show', {'id': nomenclature.id}) }}" class="action-icon view" title="Voir">
+                            <i class="uil uil-eye"></i>
+                        </a>
+                        <a href="{{ path('app_nomenclature_edit', {'id': nomenclature.id}) }}" class="action-icon edit" title="Modifier">
+                            <i class="uil uil-edit"></i>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">Aucune entrée de nomenclature</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
