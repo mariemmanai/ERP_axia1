@@ -1,0 +1,218 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% if edit_mode|default(false) %}Modifier{% else %}Ajouter{% endif %} une ligne de document{% endblock %}
+
+{% block body %}
+<div class="container-fluid px-4">
+    <div class="row justify-content-center">
+        <main class="col-md-10 col-lg-8 px-md-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2 mb-0">{% if edit_mode|default(false) %}Modifier la ligne{% else %}Ajouter une ligne{% endif %}</h1>
+                <div class="btn-toolbar mb-2 mb-md-0">
+                    {% if edit_mode|default(false) %}
+                        {% set documentId = form.vars.value.document.id %}
+                    {% endif %}
+                    <a href="{{ path('app_documentslignes_index', {'id': documentId}) }}" class="btn btn-sm btn-outline-secondary">
+                        <i class="bi bi-arrow-left me-1"></i> Retour à la liste
+                    </a>
+                </div>
+            </div>
+
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="card-header bg-primary text-white py-3">
+                    <h5 class="mb-0"><i class="bi bi-list-ul me-2"></i>Détails de la ligne</h5>
+                </div>
+                <div class="card-body p-4">
+                    {{ form_start(form, {'attr': {'class': 'needs-validation', 'novalidate': 'novalidate'}}) }}
+
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                {{ form_widget(form.article, {
+                                    'attr': {
+                                        'class': 'form-select',
+                                        'id': 'floatingArticle'
+                                    }
+                                }) }}
+                                {{ form_label(form.article, null, {
+                                    'label_attr': {'for': 'floatingArticle'}
+                                }) }}
+                                <div class="invalid-feedback">
+                                    {{ form_errors(form.article)|striptags }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                {{ form_widget(form.qte, {
+                                    'attr': {
+                                        'class': 'form-control',
+                                        'id': 'floatingQte',
+                                        'placeholder': '1'
+                                    }
+                                }) }}
+                                {{ form_label(form.qte, null, {
+                                    'label_attr': {'for': 'floatingQte'}
+                                }) }}
+                                <div class="invalid-feedback">
+                                    {{ form_errors(form.qte)|striptags }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-4">
+                            <div class="form-floating">
+                                {{ form_widget(form.prixUnitaireHt, {
+                                    'attr': {
+                                        'class': 'form-control',
+                                        'id': 'floatingPrixUnitaire',
+                                        'placeholder': '0.00'
+                                    }
+                                }) }}
+                                {{ form_label(form.prixUnitaireHt, null, {
+                                    'label_attr': {'for': 'floatingPrixUnitaire'}
+                                }) }}
+                                <div class="invalid-feedback">
+                                    {{ form_errors(form.prixUnitaireHt)|striptags }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-floating">
+                                {{ form_widget(form.remise, {
+                                    'attr': {
+                                        'class': 'form-control',
+                                        'id': 'floatingRemise',
+                                        'placeholder': '0'
+                                    }
+                                }) }}
+                                {{ form_label(form.remise, null, {
+                                    'label_attr': {'for': 'floatingRemise'}
+                                }) }}
+                                <div class="invalid-feedback">
+                                    {{ form_errors(form.remise)|striptags }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="bg-light p-3 rounded">
+                                <h6 class="mb-2">Prix Total HT</h6>
+                                <div class="d-flex align-items-center">
+                                    <span id="prixTotalDisplay" class="fs-4 fw-bold">0.00</span>
+                                    <span class="ms-2">€</span>
+                                </div>
+                                {{ form_widget(form.prixTotalHt, {
+                                    'attr': {
+                                        'class': 'd-none'
+                                    }
+                                }) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-end gap-3 pt-3 border-top">
+                        <a href="{{ path('app_documentslignes_index', {'id': documentId}) }}" class="btn btn-light">
+                            <i class="bi bi-x-circle me-2"></i>Annuler
+                        </a>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-save me-2"></i>{% if edit_mode|default(false) %}Mettre à jour{% else %}Enregistrer{% endif %}
+                        </button>
+                    </div>
+
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+<style>
+    .form-floating > label {
+        color: #6c757d;
+    }
+    .form-select:focus, 
+    .form-select:valid,
+    .form-control:focus,
+    .form-control:valid {
+        border-color: #86b7fe;
+        box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    }
+    .card {
+        border-radius: 0.5rem;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .invalid-feedback {
+        display: block;
+        margin-top: 0.25rem;
+        font-size: 0.875em;
+        color: #dc3545;
+    }
+    .card-body {
+        padding: 2rem;
+    }
+    @media (max-width: 768px) {
+        .card-body {
+            padding: 1.5rem;
+        }
+    }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const forms = document.querySelectorAll('.needs-validation');
+    
+    Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+
+            form.classList.add('was-validated');
+        }, false);
+    });
+    const prixUnitaireInput = document.getElementById('floatingPrixUnitaire');
+    const qteInput = document.getElementById('floatingQte');
+    const remiseInput = document.getElementById('floatingRemise');
+    const prixTotalInput = document.querySelector('input[name*="[prixTotalHt]"]');
+    const prixTotalDisplay = document.getElementById('prixTotalDisplay');
+    
+    function calculateTotal() {
+        const prixUnitaire = parseFloat(prixUnitaireInput.value) || 0;
+        const qte = parseFloat(qteInput.value) || 0;
+        const remise = parseFloat(remiseInput.value) || 0;
+        
+        const total = (prixUnitaire * qte) * (1 - (remise / 100));
+        const formattedTotal = total.toFixed(2);
+                if (prixTotalInput) {
+            prixTotalInput.value = formattedTotal;
+        }
+                if (prixTotalDisplay) {
+            prixTotalDisplay.textContent = formattedTotal;
+        }
+    }
+        if (prixUnitaireInput) prixUnitaireInput.addEventListener('input', calculateTotal);
+    if (qteInput) qteInput.addEventListener('input', calculateTotal);
+    if (remiseInput) remiseInput.addEventListener('input', calculateTotal);
+        calculateTotal();
+
+    // Si vous voulez pré-remplir le prix unitaire lors de la sélection d'un article
+    const articleSelect = document.getElementById('floatingArticle');
+    if (articleSelect) {
+        articleSelect.addEventListener('change', function() {
+            // Ici vous pourriez faire un appel AJAX pour récupérer le prix de l'article
+            // Exemple:
+            // fetch(`/api/articles/${this.value}/price`)
+            //     .then(response => response.json())
+            //     .then(data => {
+            //         prixUnitaireInput.value = data.price;
+            //         calculateTotal();
+            //     });
+        });
+    }
+});
+</script>
+{% endblock %}

@@ -1,39 +1,42 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Nomenclature{% endblock %}
+{% block title %}Liste des Nomenclatures{% endblock %}
 
 {% block body %}
-<div class="container">
-    <h1>Nomenclature</h1>
+<div class="article-list">
+    <div class="article-list-header">
+        <h1>Liste des Nomenclatures</h1>
+        <a href="{{ path('app_nomenclature_new') }}" class="btn-new">
+            <i class="uil uil-plus"></i> Nouvelle Nomenclature
+        </a>
+    </div>
 
-    <table class="table">
+    <table class="article-table">
         <thead>
             <tr>
-                <th>Produit fini</th>
-                <th>Matière première</th>
-                <th>Consommation unitaire</th>
+                <th>Produit Fini</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-        {% for numenclat in numenclats %}
-            <tr>
-                <td>{{ numenclat.produit.reference }}</td>
-                <td>{{ numenclat.matiere.reference }} ({{ numenclat.matiere.unite }})</td>
-                <td>{{ numenclat.consommation }} {{ numenclat.matiere.unite }}</td>
-                <td>
-                    <a href="{{ path('app_nomenclature_show', {'id': numenclat.id}) }}" class="btn btn-info">Voir</a>
-                    <a href="{{ path('app_nomenclature_edit', {'id': numenclat.id}) }}" class="btn btn-warning">Modifier</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="4">Aucune entrée de nomenclature</td>
-            </tr>
-        {% endfor %}
+            {% for produit in produitsFinis %}
+                <tr>
+                    <td>{{ produit.reference }}</td>
+                    <td>
+                        <div class="action-icons">
+                            <a href="{{ path('app_nomenclature_show', {'id': produit.id}) }}" class="action-icon view"><i class="uil uil-eye"></i></a>
+                            <a href="{{ path('app_nomenclature_edit', {'id': produit.id}) }}" class="action-icon edit"><i class="uil uil-edit"></i></a>
+                            <form method="post" action="{{ path('app_nomenclature_delete', {'id': produit.id}) }}" onsubmit="return confirm('Supprimer ?');" style="display:inline">
+                                <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ produit.id) }}">
+                                <button class="action-icon delete"><i class="uil uil-trash-alt"></i></button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            {% else %}
+                <tr><td colspan="2">Aucune nomenclature définie</td></tr>
+            {% endfor %}
         </tbody>
     </table>
-
-    <a href="{{ path('app_nomenclature_new') }}" class="btn btn-primary">Nouvelle entrée</a>
 </div>
 {% endblock %}

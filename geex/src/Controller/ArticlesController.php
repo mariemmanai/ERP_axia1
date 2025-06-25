@@ -104,7 +104,6 @@ public function edit(
     $form->handleRequest($request);
 
     if ($form->isSubmitted() && $form->isValid()) {
-        // Si le type a changé, on génère une nouvelle référence
         if ($article->getType() !== $this->getOriginalTypeFromReference($oldReference)) {
             $type = $form->get('type')->getData();
             $prefix = $this->getTypePrefix($type);

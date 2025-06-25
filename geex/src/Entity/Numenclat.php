@@ -1,9 +1,9 @@
 <?php
-
 namespace App\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
 use App\Repository\NomenclatureRepository;
+use App\Repository\NumenclatRepository;
+use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: NomenclatureRepository::class)]
 #[ORM\Table(name: 'nomenclature')]
@@ -22,49 +22,25 @@ class Numenclat
     #[ORM\JoinColumn(name: 'matiere_id', referencedColumnName: 'id', nullable: false)]
     private ?Articles $matiere = null;
 
-    #[ORM\Column(type: 'float')]
-    private float $consommation;
+    #[ORM\Column(type: 'string', length: 50)]
+    private ?string $consommation = null;
 
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
+    public function getId(): ?int { return $this->id; }
 
-    public function setId(int $id): self
-    {
-        $this->id = $id;
-        return $this;
-    }
-
-    public function getProduit(): ?Articles
-    {
-        return $this->produit;
-    }
-
-    public function setProduit(?Articles $produit): self
-    {
+    public function getProduit(): ?Articles { return $this->produit; }
+    public function setProduit(?Articles $produit): self {
         $this->produit = $produit;
         return $this;
     }
 
-    public function getMatiere(): ?Articles
-    {
-        return $this->matiere;
-    }
-
-    public function setMatiere(?Articles $matiere): self
-    {
+    public function getMatiere(): ?Articles { return $this->matiere; }
+    public function setMatiere(?Articles $matiere): self {
         $this->matiere = $matiere;
         return $this;
     }
 
-    public function getConsommation(): float
-    {
-        return $this->consommation;
-    }
-
-    public function setConsommation(float $consommation): self
-    {
+    public function getConsommation(): ?string { return $this->consommation; }
+    public function setConsommation(string $consommation): self {
         $this->consommation = $consommation;
         return $this;
     }

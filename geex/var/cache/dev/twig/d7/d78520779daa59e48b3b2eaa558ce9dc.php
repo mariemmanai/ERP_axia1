@@ -277,23 +277,17 @@ class __TwigTemplate_b01e1e2d9f9035b6a46ccce12ea81715 extends Template
                         <div class=\"action-icons\">
                             <a href=\"";
             // line 135
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_articles_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 135)]), "html", null, true);
-            yield "\" class=\"action-icon view\" title=\"Voir\">
-                                <i class=\"uil uil-eye\"></i>
-                            </a>
-                            <a href=\"";
-            // line 138
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_articles_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 138)]), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_articles_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 135)]), "html", null, true);
             yield "\" class=\"action-icon edit\" title=\"Modifier\">
                                 <i class=\"uil uil-edit\"></i>
                             </a>
                             <form method=\"post\" action=\"";
-            // line 141
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_articles_delete", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 141)]), "html", null, true);
+            // line 138
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_articles_delete", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 138)]), "html", null, true);
             yield "\" onsubmit=\"return confirmDelete()\" style=\"display: inline;\">
                                 <input type=\"hidden\" name=\"_token\" value=\"";
-            // line 142
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . CoreExtension::getAttribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 142))), "html", null, true);
+            // line 139
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . CoreExtension::getAttribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 139))), "html", null, true);
             yield "\">
                                 <button type=\"submit\" class=\"action-icon delete\" title=\"Supprimer\">
                                     <i class=\"uil uil-trash-alt\"></i>
@@ -305,9 +299,9 @@ class __TwigTemplate_b01e1e2d9f9035b6a46ccce12ea81715 extends Template
                 ";
             $context['_iterated'] = true;
         }
-        // line 150
+        // line 147
         if (!$context['_iterated']) {
-            // line 151
+            // line 148
             yield "                <tr>
                     <td colspan=\"5\">Aucun article trouvé</td>
                 </tr>
@@ -316,7 +310,7 @@ class __TwigTemplate_b01e1e2d9f9035b6a46ccce12ea81715 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['article'], $context['_parent'], $context['_iterated']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 155
+        // line 152
         yield "            </tbody>
         </table>
     </div>
@@ -330,7 +324,7 @@ class __TwigTemplate_b01e1e2d9f9035b6a46ccce12ea81715 extends Template
         yield from [];
     }
 
-    // line 160
+    // line 157
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -343,7 +337,7 @@ class __TwigTemplate_b01e1e2d9f9035b6a46ccce12ea81715 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 161
+        // line 158
         yield "    ";
         yield from $this->yieldParentBlock("javascripts", $context, $blocks);
         yield "
@@ -383,7 +377,7 @@ class __TwigTemplate_b01e1e2d9f9035b6a46ccce12ea81715 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  347 => 161,  334 => 160,  320 => 155,  311 => 151,  309 => 150,  296 => 142,  292 => 141,  286 => 138,  280 => 135,  274 => 132,  270 => 131,  266 => 130,  262 => 129,  258 => 128,  255 => 127,  250 => 126,  230 => 109,  225 => 106,  212 => 105,  102 => 6,  89 => 5,  66 => 3,  43 => 1,);
+        return array (  341 => 158,  328 => 157,  314 => 152,  305 => 148,  303 => 147,  290 => 139,  286 => 138,  280 => 135,  274 => 132,  270 => 131,  266 => 130,  262 => 129,  258 => 128,  255 => 127,  250 => 126,  230 => 109,  225 => 106,  212 => 105,  102 => 6,  89 => 5,  66 => 3,  43 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -522,9 +516,6 @@ class __TwigTemplate_b01e1e2d9f9035b6a46ccce12ea81715 extends Template
                     <td>{{ article.createAt ? article.createAt|date('d/m/Y H:i') : '' }}</td>
                     <td>
                         <div class=\"action-icons\">
-                            <a href=\"{{ path('app_articles_show', {'id': article.id}) }}\" class=\"action-icon view\" title=\"Voir\">
-                                <i class=\"uil uil-eye\"></i>
-                            </a>
                             <a href=\"{{ path('app_articles_edit', {'id': article.id}) }}\" class=\"action-icon edit\" title=\"Modifier\">
                                 <i class=\"uil uil-edit\"></i>
                             </a>

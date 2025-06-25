@@ -1,16 +1,14 @@
 <?php
-
 namespace App\Form;
 
-use App\Entity\Articles;
 use App\Entity\Numenclat;
+use App\Entity\Articles;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
-use Symfony\Component\Form\Extension\Core\Type\NumberType;
-use Symfony\Component\Validator\Constraints\NotBlank;
-use Symfony\Component\Validator\Constraints\Positive;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class NomenclatureType extends AbstractType
 {
@@ -19,36 +17,28 @@ class NomenclatureType extends AbstractType
         $builder
             ->add('produit', EntityType::class, [
                 'class' => Articles::class,
+                'choice_label' => 'reference',
+                'label' => 'Produit Fini',
                 'query_builder' => function ($er) {
                     return $er->createQueryBuilder('a')
                         ->where('a.type = :type')
-                        ->setParameter('type', 'Produit Fini')
-                        ->orderBy('a.reference', 'ASC');
+                        ->setParameter('type', 'Produit Fini');
                 },
-                'choice_label' => function(Articles $article) {
-                    return $article->getReference() . ' - ' . $article->getType();
-                },
-                'label' => 'Produit fini',
-                'constraints' => [new NotBlank()]
             ])
             ->add('matiere', EntityType::class, [
                 'class' => Articles::class,
+                'choice_label' => function (Articles $article) {
+                    return $article->getReference() . ' - ' . $article->getUnite();
+                },
+                'label' => 'Matière Première',
                 'query_builder' => function ($er) {
                     return $er->createQueryBuilder('a')
                         ->where('a.type = :type')
-                        ->setParameter('type', 'Matière Première')
-                        ->orderBy('a.reference', 'ASC');
+                        ->setParameter('type', 'Matière Première');
                 },
-                'choice_label' => function(Articles $article) {
-                    return $article->getReference() . ' - ' . $article->getType() . ' (' . $article->getUnite() . ')';
-                },
-                'label' => 'Matière première',
-                'constraints' => [new NotBlank()]
             ])
-            ->add('consommation', NumberType::class, [
-                'label' => 'Consommation unitaire',
-                'attr' => ['step' => '0.0001'],
-                'constraints' => [new Positive()]
+            ->add('consommation', TextType::class, [
+                'label' => 'Consommation (ex: 2.5 kg)'
             ]);
     }
 

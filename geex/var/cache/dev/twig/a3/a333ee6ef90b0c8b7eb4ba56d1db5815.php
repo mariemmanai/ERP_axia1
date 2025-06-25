@@ -73,7 +73,7 @@ class __TwigTemplate_d06e7da3fbff162442a3cb5a628bc5a6 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        yield "Nomenclature";
+        yield "Liste des Nomenclatures";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -97,76 +97,75 @@ class __TwigTemplate_d06e7da3fbff162442a3cb5a628bc5a6 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        yield "<div class=\"container\">
-    <h1>Nomenclature</h1>
+        yield "<div class=\"article-list\">
+    <div class=\"article-list-header\">
+        <h1>Liste des Nomenclatures</h1>
+        <a href=\"";
+        // line 9
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_nomenclature_new");
+        yield "\" class=\"btn-new\">
+            <i class=\"uil uil-plus\"></i> Nouvelle Nomenclature
+        </a>
+    </div>
 
-    <table class=\"table\">
+    <table class=\"article-table\">
         <thead>
             <tr>
-                <th>Produit fini</th>
-                <th>Matière première</th>
-                <th>Consommation unitaire</th>
+                <th>Produit Fini</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-        ";
-        // line 19
+            ";
+        // line 22
         $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["numenclats"]) || array_key_exists("numenclats", $context) ? $context["numenclats"] : (function () { throw new RuntimeError('Variable "numenclats" does not exist.', 19, $this->source); })()));
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["produitsFinis"]) || array_key_exists("produitsFinis", $context) ? $context["produitsFinis"] : (function () { throw new RuntimeError('Variable "produitsFinis" does not exist.', 22, $this->source); })()));
         $context['_iterated'] = false;
-        foreach ($context['_seq'] as $context["_key"] => $context["numenclat"]) {
-            // line 20
-            yield "            <tr>
-                <td>";
-            // line 21
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["numenclat"], "produit", [], "any", false, false, false, 21), "reference", [], "any", false, false, false, 21), "html", null, true);
-            yield "</td>
-                <td>";
-            // line 22
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["numenclat"], "matiere", [], "any", false, false, false, 22), "reference", [], "any", false, false, false, 22), "html", null, true);
-            yield " (";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["numenclat"], "matiere", [], "any", false, false, false, 22), "unite", [], "any", false, false, false, 22), "html", null, true);
-            yield ")</td>
-                <td>";
+        foreach ($context['_seq'] as $context["_key"] => $context["produit"]) {
             // line 23
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["numenclat"], "consommation", [], "any", false, false, false, 23), "html", null, true);
-            yield " ";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["numenclat"], "matiere", [], "any", false, false, false, 23), "unite", [], "any", false, false, false, 23), "html", null, true);
+            yield "                <tr>
+                    <td>";
+            // line 24
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["produit"], "reference", [], "any", false, false, false, 24), "html", null, true);
             yield "</td>
-                <td>
-                    <a href=\"";
-            // line 25
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_nomenclature_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["numenclat"], "id", [], "any", false, false, false, 25)]), "html", null, true);
-            yield "\" class=\"btn btn-info\">Voir</a>
-                    <a href=\"";
-            // line 26
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_nomenclature_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["numenclat"], "id", [], "any", false, false, false, 26)]), "html", null, true);
-            yield "\" class=\"btn btn-warning\">Modifier</a>
-                </td>
-            </tr>
-        ";
+                    <td>
+                        <div class=\"action-icons\">
+                            <a href=\"";
+            // line 27
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_nomenclature_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 27)]), "html", null, true);
+            yield "\" class=\"action-icon view\"><i class=\"uil uil-eye\"></i></a>
+                            <a href=\"";
+            // line 28
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_nomenclature_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 28)]), "html", null, true);
+            yield "\" class=\"action-icon edit\"><i class=\"uil uil-edit\"></i></a>
+                            <form method=\"post\" action=\"";
+            // line 29
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_nomenclature_delete", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 29)]), "html", null, true);
+            yield "\" onsubmit=\"return confirm('Supprimer ?');\" style=\"display:inline\">
+                                <input type=\"hidden\" name=\"_token\" value=\"";
+            // line 30
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . CoreExtension::getAttribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 30))), "html", null, true);
+            yield "\">
+                                <button class=\"action-icon delete\"><i class=\"uil uil-trash-alt\"></i></button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            ";
             $context['_iterated'] = true;
         }
-        // line 29
+        // line 36
         if (!$context['_iterated']) {
-            // line 30
-            yield "            <tr>
-                <td colspan=\"4\">Aucune entrée de nomenclature</td>
-            </tr>
-        ";
+            // line 37
+            yield "                <tr><td colspan=\"2\">Aucune nomenclature définie</td></tr>
+            ";
         }
         $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_key'], $context['numenclat'], $context['_parent'], $context['_iterated']);
+        unset($context['_seq'], $context['_key'], $context['produit'], $context['_parent'], $context['_iterated']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 34
+        // line 39
         yield "        </tbody>
     </table>
-
-    <a href=\"";
-        // line 37
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_nomenclature_new");
-        yield "\" class=\"btn btn-primary\">Nouvelle entrée</a>
 </div>
 ";
         
@@ -199,48 +198,51 @@ class __TwigTemplate_d06e7da3fbff162442a3cb5a628bc5a6 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  168 => 37,  163 => 34,  154 => 30,  152 => 29,  144 => 26,  140 => 25,  133 => 23,  127 => 22,  123 => 21,  120 => 20,  115 => 19,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
+        return array (  167 => 39,  160 => 37,  158 => 36,  147 => 30,  143 => 29,  139 => 28,  135 => 27,  129 => 24,  126 => 23,  121 => 22,  105 => 9,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
     }
 
     public function getSourceContext(): Source
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Nomenclature{% endblock %}
+{% block title %}Liste des Nomenclatures{% endblock %}
 
 {% block body %}
-<div class=\"container\">
-    <h1>Nomenclature</h1>
+<div class=\"article-list\">
+    <div class=\"article-list-header\">
+        <h1>Liste des Nomenclatures</h1>
+        <a href=\"{{ path('app_nomenclature_new') }}\" class=\"btn-new\">
+            <i class=\"uil uil-plus\"></i> Nouvelle Nomenclature
+        </a>
+    </div>
 
-    <table class=\"table\">
+    <table class=\"article-table\">
         <thead>
             <tr>
-                <th>Produit fini</th>
-                <th>Matière première</th>
-                <th>Consommation unitaire</th>
+                <th>Produit Fini</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-        {% for numenclat in numenclats %}
-            <tr>
-                <td>{{ numenclat.produit.reference }}</td>
-                <td>{{ numenclat.matiere.reference }} ({{ numenclat.matiere.unite }})</td>
-                <td>{{ numenclat.consommation }} {{ numenclat.matiere.unite }}</td>
-                <td>
-                    <a href=\"{{ path('app_nomenclature_show', {'id': numenclat.id}) }}\" class=\"btn btn-info\">Voir</a>
-                    <a href=\"{{ path('app_nomenclature_edit', {'id': numenclat.id}) }}\" class=\"btn btn-warning\">Modifier</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan=\"4\">Aucune entrée de nomenclature</td>
-            </tr>
-        {% endfor %}
+            {% for produit in produitsFinis %}
+                <tr>
+                    <td>{{ produit.reference }}</td>
+                    <td>
+                        <div class=\"action-icons\">
+                            <a href=\"{{ path('app_nomenclature_show', {'id': produit.id}) }}\" class=\"action-icon view\"><i class=\"uil uil-eye\"></i></a>
+                            <a href=\"{{ path('app_nomenclature_edit', {'id': produit.id}) }}\" class=\"action-icon edit\"><i class=\"uil uil-edit\"></i></a>
+                            <form method=\"post\" action=\"{{ path('app_nomenclature_delete', {'id': produit.id}) }}\" onsubmit=\"return confirm('Supprimer ?');\" style=\"display:inline\">
+                                <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ produit.id) }}\">
+                                <button class=\"action-icon delete\"><i class=\"uil uil-trash-alt\"></i></button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            {% else %}
+                <tr><td colspan=\"2\">Aucune nomenclature définie</td></tr>
+            {% endfor %}
         </tbody>
     </table>
-
-    <a href=\"{{ path('app_nomenclature_new') }}\" class=\"btn btn-primary\">Nouvelle entrée</a>
 </div>
 {% endblock %}", "nomenclature/index.html.twig", "C:\\Users\\Lenovo\\Downloads\\ERP_axia\\ProjetWeb - Copie (2)\\geex\\templates\\nomenclature\\index.html.twig");
     }

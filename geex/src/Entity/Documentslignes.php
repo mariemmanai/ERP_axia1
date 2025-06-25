@@ -28,31 +28,24 @@ class Documentslignes
         return $this;
     }
 
-    #[ORM\Column(type: 'integer', nullable: false)]
-    private ?int $id_document = null;
+    #[ORM\ManyToOne(targetEntity: Documents::class, inversedBy: 'lignes')]
+    #[ORM\JoinColumn(name: 'id_document', referencedColumnName: 'id', nullable: false)]
+    private ?Documents $document = null;
 
-    public function getId_document(): ?int
+    public function getDocument(): ?Documents { return $this->document; }
+    public function setDocument(?Documents $document): self
     {
-        return $this->id_document;
-    }
-
-    public function setId_document(int $id_document): self
-    {
-        $this->id_document = $id_document;
+        $this->document = $document;
         return $this;
     }
 
-    #[ORM\Column(type: 'integer', nullable: false)]
-    private ?int $id_article = null;
-
-    public function getId_article(): ?int
+   #[ORM\ManyToOne(targetEntity: Articles::class)]
+    #[ORM\JoinColumn(name: 'id_article', referencedColumnName: 'id', nullable: false)]
+    private ?Articles $article = null;
+    public function getArticle(): ?Articles { return $this->article; }
+    public function setArticle(?Articles $article): self
     {
-        return $this->id_article;
-    }
-
-    public function setId_article(int $id_article): self
-    {
-        $this->id_article = $id_article;
+        $this->article = $article;
         return $this;
     }
 
@@ -71,30 +64,30 @@ class Documentslignes
     }
 
     #[ORM\Column(type: 'decimal', nullable: false)]
-    private ?float $prix_unitaire_ht = null;
+    private ?float $prixUnitaireHt = null;
 
-    public function getPrix_unitaire_ht(): ?float
+    public function getPrixUnitaireHt(): ?float
     {
-        return $this->prix_unitaire_ht;
+        return $this->prixUnitaireHt;
     }
 
-    public function setPrix_unitaire_ht(float $prix_unitaire_ht): self
+    public function setPrixUnitaireHt(float $prixUnitaireHt): self
     {
-        $this->prix_unitaire_ht = $prix_unitaire_ht;
+        $this->prixUnitaireHt = $prixUnitaireHt;
         return $this;
     }
 
     #[ORM\Column(type: 'decimal', nullable: false)]
-    private ?float $prix_total_ht = null;
+    private ?float $prixTotalHt = null;
 
-    public function getPrix_total_ht(): ?float
+    public function getPrixTotalHt(): ?float
     {
-        return $this->prix_total_ht;
+        return $this->prixTotalHt;
     }
 
-    public function setPrix_total_ht(float $prix_total_ht): self
+    public function setPrixTotalHt(float $prixTotalHt): self
     {
-        $this->prix_total_ht = $prix_total_ht;
+        $this->prixTotalHt = $prixTotalHt;
         return $this;
     }
 

@@ -3,11 +3,11 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use App\Repository\DocumentRepository;
+use App\Repository\DocumentsRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 
-#[ORM\Entity(repositoryClass: DocumentRepository::class)]
+#[ORM\Entity(repositoryClass: DocumentsRepository::class)]
 #[ORM\Table(name: 'documents')]
 #[ORM\HasLifecycleCallbacks]
 class Documents
@@ -217,4 +217,40 @@ class Documents
         $this->createAt = $createAt;
         return $this;
     }
+    #[ORM\OneToMany(targetEntity: Documentslignes::class, mappedBy: 'document')]
+private Collection $lignes;
+
+public function __construct()
+{
+    $this->lignes = new ArrayCollection();
+}
+    /**
+ * @return Collection<int, Documentslignes>
+ */
+public function getLignes(): Collection
+{
+    return $this->lignes;
+}
+
+public function addLigne(Documentslignes $ligne): static
+{
+    if (!$this->lignes->contains($ligne)) {
+        $this->lignes->add($ligne);
+        $ligne->setDocument($this);
+    }
+
+    return $this;
+}
+
+public function removeLigne(Documentslignes $ligne): static
+{
+    if ($this->lignes->removeElement($ligne)) {
+        // set the owning side to null (unless already changed)
+        if ($ligne->getDocument() === $this) {
+            $ligne->setDocument(null);
+        }
+    }
+
+    return $this;
+}
 }

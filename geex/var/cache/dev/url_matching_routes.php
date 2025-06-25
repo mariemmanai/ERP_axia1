@@ -20,6 +20,8 @@ return [
         '/articles/new' => [[['_route' => 'app_articles_new', '_controller' => 'App\\Controller\\ArticlesController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/depots' => [[['_route' => 'app_depots_index', '_controller' => 'App\\Controller\\DepotsController::index'], null, ['GET' => 0], null, true, false, null]],
         '/depots/new' => [[['_route' => 'app_depots_new', '_controller' => 'App\\Controller\\DepotsController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/documents' => [[['_route' => 'app_documents_index', '_controller' => 'App\\Controller\\DocumentsController::index'], null, ['GET' => 0], null, true, false, null]],
+        '/documents/new' => [[['_route' => 'app_documents_new', '_controller' => 'App\\Controller\\DocumentsController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/chart' => [[['_route' => 'chart', '_controller' => 'App\\Controller\\FeaturesController::chart'], null, null, null, false, false, null]],
         '/badge' => [[['_route' => 'badge', '_controller' => 'App\\Controller\\FeaturesController::badge'], null, null, null, false, false, null]],
         '/button' => [[['_route' => 'button', '_controller' => 'App\\Controller\\FeaturesController::button'], null, null, null, false, false, null]],
@@ -32,7 +34,7 @@ return [
         '/index2' => [[['_route' => 'index2', '_controller' => 'App\\Controller\\HomeController::index2'], null, null, null, false, false, null]],
         '/index3' => [[['_route' => 'index3', '_controller' => 'App\\Controller\\HomeController::index3'], null, null, null, false, false, null]],
         '/index4' => [[['_route' => 'index4', '_controller' => 'App\\Controller\\HomeController::index4'], null, null, null, false, false, null]],
-        '/nomenclature' => [[['_route' => 'app_nomenclature_index', '_controller' => 'App\\Controller\\NomenclatureController::index'], null, ['GET' => 0], null, true, false, null]],
+        '/nomenclature' => [[['_route' => 'nomenclature_index', '_controller' => 'App\\Controller\\NomenclatureController::index'], null, ['GET' => 0], null, true, false, null]],
         '/nomenclature/new' => [[['_route' => 'app_nomenclature_new', '_controller' => 'App\\Controller\\NomenclatureController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/blog' => [[['_route' => 'blog', '_controller' => 'App\\Controller\\PagesController::blog'], null, null, null, false, false, null]],
         '/blog-details' => [[['_route' => 'blogDetails', '_controller' => 'App\\Controller\\PagesController::blblogDetailsog'], null, null, null, false, false, null]],
@@ -85,25 +87,39 @@ return [
                     .'|/edit(*:203)'
                     .'|(*:211)'
                 .')'
-                .'|/depots/([^/]++)(?'
-                    .'|(*:239)'
-                    .'|/edit(*:252)'
-                    .'|(*:260)'
+                .'|/d(?'
+                    .'|epots/([^/]++)(?'
+                        .'|(*:242)'
+                        .'|/edit(*:255)'
+                        .'|(*:263)'
+                    .')'
+                    .'|ocuments/([^/]++)(?'
+                        .'|(*:292)'
+                        .'|/edit(*:305)'
+                        .'|(*:313)'
+                    .')'
+                    .'|l/(?'
+                        .'|([^/]++)(*:335)'
+                        .'|new/([^/]++)(*:355)'
+                        .'|([^/]++)(?'
+                            .'|/edit(*:379)'
+                            .'|(*:387)'
+                        .')'
+                    .')'
                 .')'
-                .'|/nomenclature/([^/]++)(?'
-                    .'|(*:294)'
-                    .'|/edit(*:307)'
-                    .'|(*:315)'
+                .'|/nomenclature/([^/]++)/(?'
+                    .'|show(*:428)'
+                    .'|delete(*:442)'
                 .')'
                 .'|/stock/([^/]++)(?'
-                    .'|(*:342)'
-                    .'|/edit(*:355)'
-                    .'|(*:363)'
+                    .'|(*:469)'
+                    .'|/edit(*:482)'
+                    .'|(*:490)'
                 .')'
                 .'|/users/([^/]++)(?'
-                    .'|(*:390)'
-                    .'|/edit(*:403)'
-                    .'|(*:411)'
+                    .'|(*:517)'
+                    .'|/edit(*:530)'
+                    .'|(*:538)'
                 .')'
             .')/?$}sDu',
     ],
@@ -118,18 +134,27 @@ return [
         190 => [[['_route' => 'app_articles_show', '_controller' => 'App\\Controller\\ArticlesController::show'], ['id'], ['GET' => 0], null, false, true, null]],
         203 => [[['_route' => 'app_articles_edit', '_controller' => 'App\\Controller\\ArticlesController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
         211 => [[['_route' => 'app_articles_delete', '_controller' => 'App\\Controller\\ArticlesController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        239 => [[['_route' => 'app_depots_show', '_controller' => 'App\\Controller\\DepotsController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        252 => [[['_route' => 'app_depots_edit', '_controller' => 'App\\Controller\\DepotsController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        260 => [[['_route' => 'app_depots_delete', '_controller' => 'App\\Controller\\DepotsController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        294 => [[['_route' => 'app_nomenclature_show', '_controller' => 'App\\Controller\\NomenclatureController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        307 => [[['_route' => 'app_nomenclature_edit', '_controller' => 'App\\Controller\\NomenclatureController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        315 => [[['_route' => 'app_nomenclature_delete', '_controller' => 'App\\Controller\\NomenclatureController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        342 => [[['_route' => 'app_stock_show', '_controller' => 'App\\Controller\\StockController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        355 => [[['_route' => 'app_stock_edit', '_controller' => 'App\\Controller\\StockController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        363 => [[['_route' => 'app_stock_delete', '_controller' => 'App\\Controller\\StockController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        390 => [[['_route' => 'app_users_show', '_controller' => 'App\\Controller\\UsersController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        403 => [[['_route' => 'app_users_edit', '_controller' => 'App\\Controller\\UsersController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        411 => [
+        242 => [[['_route' => 'app_depots_show', '_controller' => 'App\\Controller\\DepotsController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        255 => [[['_route' => 'app_depots_edit', '_controller' => 'App\\Controller\\DepotsController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        263 => [[['_route' => 'app_depots_delete', '_controller' => 'App\\Controller\\DepotsController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        292 => [[['_route' => 'app_documents_show', '_controller' => 'App\\Controller\\DocumentsController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        305 => [[['_route' => 'app_documents_edit', '_controller' => 'App\\Controller\\DocumentsController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        313 => [[['_route' => 'app_documents_delete', '_controller' => 'App\\Controller\\DocumentsController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        335 => [[['_route' => 'app_documentslignes_index', '_controller' => 'App\\Controller\\DocumentslignesController::index'], ['id'], ['GET' => 0], null, false, true, null]],
+        355 => [[['_route' => 'app_documentslignes_new', '_controller' => 'App\\Controller\\DocumentslignesController::new'], ['documentId'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        379 => [[['_route' => 'app_documentslignes_edit', '_controller' => 'App\\Controller\\DocumentslignesController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        387 => [
+            [['_route' => 'app_documentslignes_show', '_controller' => 'App\\Controller\\DocumentslignesController::show'], ['id'], ['GET' => 0], null, false, true, null],
+            [['_route' => 'app_documentslignes_delete', '_controller' => 'App\\Controller\\DocumentslignesController::delete'], ['id'], ['POST' => 0], null, false, true, null],
+        ],
+        428 => [[['_route' => 'nomenclature_show', '_controller' => 'App\\Controller\\NomenclatureController::show'], ['id'], ['GET' => 0], null, false, false, null]],
+        442 => [[['_route' => 'nomenclature_delete', '_controller' => 'App\\Controller\\NomenclatureController::delete'], ['id'], ['POST' => 0], null, false, false, null]],
+        469 => [[['_route' => 'app_stock_show', '_controller' => 'App\\Controller\\StockController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        482 => [[['_route' => 'app_stock_edit', '_controller' => 'App\\Controller\\StockController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        490 => [[['_route' => 'app_stock_delete', '_controller' => 'App\\Controller\\StockController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        517 => [[['_route' => 'app_users_show', '_controller' => 'App\\Controller\\UsersController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        530 => [[['_route' => 'app_users_edit', '_controller' => 'App\\Controller\\UsersController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        538 => [
             [['_route' => 'app_users_delete', '_controller' => 'App\\Controller\\UsersController::delete'], ['id'], ['POST' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

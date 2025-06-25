@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Repository;
 
 use App\Entity\Numenclat;
@@ -15,43 +14,23 @@ class NomenclatureRepository extends ServiceEntityRepository
 
     public function save(Numenclat $entity, bool $flush = false): void
     {
-        $this->getEntityManager()->persist($entity);
-
-        if ($flush) {
-            $this->getEntityManager()->flush();
-        }
+        $this->_em->persist($entity);
+        if ($flush) $this->_em->flush();
     }
 
     public function remove(Numenclat $entity, bool $flush = false): void
     {
-        $this->getEntityManager()->remove($entity);
-
-        if ($flush) {
-            $this->getEntityManager()->flush();
-        }
+        $this->_em->remove($entity);
+        if ($flush) $this->_em->flush();
     }
 
-    public function findAllWithProduitAndMatiere()
+    public function findGroupedByProduit(): array
     {
         return $this->createQueryBuilder('n')
-            ->leftJoin('n.produit', 'p')
             ->addSelect('p')
-            ->leftJoin('n.matiere', 'm')
             ->addSelect('m')
-            ->orderBy('p.reference', 'ASC')
-            ->getQuery()
-            ->getResult();
-    }
-
-    public function findByProduit($produitId)
-    {
-        return $this->createQueryBuilder('n')
-            ->leftJoin('n.produit', 'p')
-            ->addSelect('p')
-            ->leftJoin('n.matiere', 'm')
-            ->addSelect('m')
-            ->where('n.produit = :produitId')
-            ->setParameter('produitId', $produitId)
+            ->join('n.produit', 'p')
+            ->join('n.matiere', 'm')
             ->getQuery()
             ->getResult();
     }

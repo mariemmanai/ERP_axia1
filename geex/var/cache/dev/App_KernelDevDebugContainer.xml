@@ -351,6 +351,21 @@
         <argument type="service" id=".service_locator.jIxfAsi.App\Controller\DepotsController"/>
       </call>
     </service>
+    <service id="App\Controller\DocumentsController" class="App\Controller\DocumentsController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <argument type="service" id="security.helper"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.jIxfAsi.App\Controller\DocumentsController"/>
+      </call>
+    </service>
+    <service id="App\Controller\DocumentslignesController" class="App\Controller\DocumentslignesController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.jIxfAsi.App\Controller\DocumentslignesController"/>
+      </call>
+    </service>
     <service id="App\Controller\FeaturesController" class="App\Controller\FeaturesController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -414,6 +429,12 @@
     <service id="App\Form\DepotsType" class="App\Form\DepotsType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
+    <service id="App\Form\DocumentsType" class="App\Form\DocumentsType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\DocumentslignesType" class="App\Form\DocumentslignesType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Form\NomenclatureType" class="App\Form\NomenclatureType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -434,6 +455,18 @@
       <argument type="service" id="doctrine"/>
     </service>
     <service id="App\Repository\DepotsRepository" class="App\Repository\DepotsRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\DocumentRepository" class="App\Repository\DocumentRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\DocumentsRepository" class="App\Repository\DocumentsRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\DocumentsligneRepository" class="App\Repository\DocumentsligneRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
@@ -1240,6 +1273,8 @@
       <argument type="collection">
         <argument>App\Form\ArticlesType</argument>
         <argument>App\Form\DepotsType</argument>
+        <argument>App\Form\DocumentsType</argument>
+        <argument>App\Form\DocumentslignesType</argument>
         <argument>App\Form\NomenclatureType</argument>
         <argument>App\Form\RegistrationType</argument>
         <argument>App\Form\SignInForm</argument>
@@ -3323,7 +3358,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension">
-      <argument type="service" id=".service_locator.4N6aIYZ"/>
+      <argument type="service" id=".service_locator.gulsDC."/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -4728,7 +4763,7 @@
     <service id="doctrine.orm.configuration" class="Doctrine\ORM\Configuration" abstract="true"/>
     <service id="doctrine.orm.entity_manager.abstract" class="Doctrine\ORM\EntityManager" lazy="true" abstract="true"/>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory">
-      <argument type="service" id=".service_locator.6JLHBCd"/>
+      <argument type="service" id=".service_locator.LMiiz3D"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -6201,6 +6236,12 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\DepotsController" class="App\Controller\DepotsController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\DepotsController" class="App\Controller\DepotsController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\DepotsController" class="App\Controller\DepotsController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\DocumentsController" class="App\Controller\DocumentsController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\DocumentsController" class="App\Controller\DocumentsController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\DocumentsController" class="App\Controller\DocumentsController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\DocumentslignesController" class="App\Controller\DocumentslignesController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\DocumentslignesController" class="App\Controller\DocumentslignesController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\DocumentslignesController" class="App\Controller\DocumentslignesController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\FeaturesController" class="App\Controller\FeaturesController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\FeaturesController" class="App\Controller\FeaturesController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\FeaturesController" class="App\Controller\FeaturesController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -6229,6 +6270,10 @@
     <service id=".abstract.instanceof.App\Form\ArticlesType" class="App\Form\ArticlesType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\DepotsType" class="App\Form\DepotsType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\DepotsType" class="App\Form\DepotsType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\DocumentsType" class="App\Form\DocumentsType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\DocumentsType" class="App\Form\DocumentsType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\DocumentslignesType" class="App\Form\DocumentslignesType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\DocumentslignesType" class="App\Form\DocumentslignesType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\NomenclatureType" class="App\Form\NomenclatureType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\NomenclatureType" class="App\Form\NomenclatureType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RegistrationType" class="App\Form\RegistrationType" autowire="true" abstract="true"/>
@@ -6243,6 +6288,12 @@
     <service id=".abstract.instanceof.App\Repository\ArticlesRepository" class="App\Repository\ArticlesRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\DepotsRepository" class="App\Repository\DepotsRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\DepotsRepository" class="App\Repository\DepotsRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\DocumentRepository" class="App\Repository\DocumentRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\DocumentRepository" class="App\Repository\DocumentRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\DocumentsRepository" class="App\Repository\DocumentsRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\DocumentsRepository" class="App\Repository\DocumentsRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\DocumentsligneRepository" class="App\Repository\DocumentsligneRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\DocumentsligneRepository" class="App\Repository\DocumentsligneRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\FunctionRepository" class="App\Repository\FunctionRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\FunctionRepository" class="App\Repository\FunctionRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\NomenclatureRepository" class="App\Repository\NomenclatureRepository" autowire="true" abstract="true"/>
@@ -6689,23 +6740,81 @@
         <argument key="depotsRepository" type="service_closure" id="App\Repository\DepotsRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.4aR9ZvP" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator..UHQe3l" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="nomenclatureRepository" type="service_closure" id="App\Repository\NomenclatureRepository"/>
+        <argument key="documentsRepository" type="service_closure" id="App\Repository\DocumentsRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.t97CseE" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.kh8CmVl" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="nomenclature" type="service_closure" id=".errored..service_locator.t97CseE.App\Entity\Numenclat"/>
+        <argument key="documentsRepository" type="service_closure" id="App\Repository\DocumentsRepository"/>
+        <argument key="usersRepository" type="service_closure" id="App\Repository\UsersRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.7zr5f2x" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.Kel.nqn" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="nomenclature" type="service_closure" id=".errored..service_locator.7zr5f2x.App\Entity\Numenclat"/>
-        <argument key="nomenclatureRepository" type="service_closure" id="App\Repository\NomenclatureRepository"/>
+        <argument key="document" type="service_closure" id=".errored..service_locator.Kel.nqn.App\Entity\Documents"/>
+      </argument>
+    </service>
+    <service id=".service_locator._dKJEJm" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="document" type="service_closure" id=".errored..service_locator._dKJEJm.App\Entity\Documents"/>
+        <argument key="documentsRepository" type="service_closure" id="App\Repository\DocumentsRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.FdJiUEa" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="document" type="service_closure" id=".errored..service_locator.FdJiUEa.App\Entity\Documents"/>
+        <argument key="documentsligneRepository" type="service_closure" id="App\Repository\DocumentsligneRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.aKM6MDa" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+      </argument>
+    </service>
+    <service id=".service_locator.yH2F3dN" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="documentsligne" type="service_closure" id=".errored..service_locator.yH2F3dN.App\Entity\Documentslignes"/>
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+      </argument>
+    </service>
+    <service id=".service_locator.mlM5kW4" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="documentsligne" type="service_closure" id=".errored..service_locator.mlM5kW4.App\Entity\Documentslignes"/>
+      </argument>
+    </service>
+    <service id=".service_locator.ttVid3I" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="repo" type="service_closure" id="App\Repository\NomenclatureRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.t6i3vFk" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="em" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+      </argument>
+    </service>
+    <service id=".service_locator..Nzt897" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="nomenclat" type="service_closure" id=".errored..service_locator..Nzt897.App\Entity\Numenclat"/>
+      </argument>
+    </service>
+    <service id=".service_locator.5bnQw20" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="em" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+        <argument key="nomenclat" type="service_closure" id=".errored..service_locator.5bnQw20.App\Entity\Numenclat"/>
       </argument>
     </service>
     <service id=".service_locator.zFcJjKU" class="Symfony\Component\DependencyInjection\ServiceLocator">
@@ -6775,7 +6884,7 @@
         <argument key="user" type="service_closure" id=".errored..service_locator.cyg1ViB.App\Entity\Users"/>
       </argument>
     </service>
-    <service id=".service_locator.kXilsoi" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.ImmkkX0" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\ArticlesController::delete" type="service_closure" id=".service_locator.Iiufm0n"/>
@@ -6788,11 +6897,20 @@
         <argument key="App\Controller\DepotsController::index" type="service_closure" id=".service_locator.v9gA5PZ"/>
         <argument key="App\Controller\DepotsController::new" type="service_closure" id=".service_locator.jMPlQJw"/>
         <argument key="App\Controller\DepotsController::show" type="service_closure" id=".service_locator.dxejhxE"/>
-        <argument key="App\Controller\NomenclatureController::delete" type="service_closure" id=".service_locator.7zr5f2x"/>
-        <argument key="App\Controller\NomenclatureController::edit" type="service_closure" id=".service_locator.7zr5f2x"/>
-        <argument key="App\Controller\NomenclatureController::index" type="service_closure" id=".service_locator.4aR9ZvP"/>
-        <argument key="App\Controller\NomenclatureController::new" type="service_closure" id=".service_locator.4aR9ZvP"/>
-        <argument key="App\Controller\NomenclatureController::show" type="service_closure" id=".service_locator.t97CseE"/>
+        <argument key="App\Controller\DocumentsController::delete" type="service_closure" id=".service_locator._dKJEJm"/>
+        <argument key="App\Controller\DocumentsController::edit" type="service_closure" id=".service_locator._dKJEJm"/>
+        <argument key="App\Controller\DocumentsController::index" type="service_closure" id=".service_locator..UHQe3l"/>
+        <argument key="App\Controller\DocumentsController::new" type="service_closure" id=".service_locator.kh8CmVl"/>
+        <argument key="App\Controller\DocumentsController::show" type="service_closure" id=".service_locator.Kel.nqn"/>
+        <argument key="App\Controller\DocumentslignesController::delete" type="service_closure" id=".service_locator.yH2F3dN"/>
+        <argument key="App\Controller\DocumentslignesController::edit" type="service_closure" id=".service_locator.yH2F3dN"/>
+        <argument key="App\Controller\DocumentslignesController::index" type="service_closure" id=".service_locator.FdJiUEa"/>
+        <argument key="App\Controller\DocumentslignesController::new" type="service_closure" id=".service_locator.aKM6MDa"/>
+        <argument key="App\Controller\DocumentslignesController::show" type="service_closure" id=".service_locator.mlM5kW4"/>
+        <argument key="App\Controller\NomenclatureController::delete" type="service_closure" id=".service_locator.5bnQw20"/>
+        <argument key="App\Controller\NomenclatureController::index" type="service_closure" id=".service_locator.ttVid3I"/>
+        <argument key="App\Controller\NomenclatureController::new" type="service_closure" id=".service_locator.t6i3vFk"/>
+        <argument key="App\Controller\NomenclatureController::show" type="service_closure" id=".service_locator..Nzt897"/>
         <argument key="App\Controller\RegistrationController::login" type="service_closure" id=".service_locator.zFcJjKU"/>
         <argument key="App\Controller\RegistrationController::signup" type="service_closure" id=".service_locator.mK6IRPJ"/>
         <argument key="App\Controller\SecurityController::login" type="service_closure" id=".service_locator.zFcJjKU"/>
@@ -6821,11 +6939,20 @@
         <argument key="App\Controller\DepotsController:index" type="service_closure" id=".service_locator.v9gA5PZ"/>
         <argument key="App\Controller\DepotsController:new" type="service_closure" id=".service_locator.jMPlQJw"/>
         <argument key="App\Controller\DepotsController:show" type="service_closure" id=".service_locator.dxejhxE"/>
-        <argument key="App\Controller\NomenclatureController:delete" type="service_closure" id=".service_locator.7zr5f2x"/>
-        <argument key="App\Controller\NomenclatureController:edit" type="service_closure" id=".service_locator.7zr5f2x"/>
-        <argument key="App\Controller\NomenclatureController:index" type="service_closure" id=".service_locator.4aR9ZvP"/>
-        <argument key="App\Controller\NomenclatureController:new" type="service_closure" id=".service_locator.4aR9ZvP"/>
-        <argument key="App\Controller\NomenclatureController:show" type="service_closure" id=".service_locator.t97CseE"/>
+        <argument key="App\Controller\DocumentsController:delete" type="service_closure" id=".service_locator._dKJEJm"/>
+        <argument key="App\Controller\DocumentsController:edit" type="service_closure" id=".service_locator._dKJEJm"/>
+        <argument key="App\Controller\DocumentsController:index" type="service_closure" id=".service_locator..UHQe3l"/>
+        <argument key="App\Controller\DocumentsController:new" type="service_closure" id=".service_locator.kh8CmVl"/>
+        <argument key="App\Controller\DocumentsController:show" type="service_closure" id=".service_locator.Kel.nqn"/>
+        <argument key="App\Controller\DocumentslignesController:delete" type="service_closure" id=".service_locator.yH2F3dN"/>
+        <argument key="App\Controller\DocumentslignesController:edit" type="service_closure" id=".service_locator.yH2F3dN"/>
+        <argument key="App\Controller\DocumentslignesController:index" type="service_closure" id=".service_locator.FdJiUEa"/>
+        <argument key="App\Controller\DocumentslignesController:new" type="service_closure" id=".service_locator.aKM6MDa"/>
+        <argument key="App\Controller\DocumentslignesController:show" type="service_closure" id=".service_locator.mlM5kW4"/>
+        <argument key="App\Controller\NomenclatureController:delete" type="service_closure" id=".service_locator.5bnQw20"/>
+        <argument key="App\Controller\NomenclatureController:index" type="service_closure" id=".service_locator.ttVid3I"/>
+        <argument key="App\Controller\NomenclatureController:new" type="service_closure" id=".service_locator.t6i3vFk"/>
+        <argument key="App\Controller\NomenclatureController:show" type="service_closure" id=".service_locator..Nzt897"/>
         <argument key="App\Controller\RegistrationController:login" type="service_closure" id=".service_locator.zFcJjKU"/>
         <argument key="App\Controller\RegistrationController:signup" type="service_closure" id=".service_locator.mK6IRPJ"/>
         <argument key="App\Controller\SecurityController:login" type="service_closure" id=".service_locator.zFcJjKU"/>
@@ -6903,11 +7030,13 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.4N6aIYZ" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.gulsDC." class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\ArticlesType" type="service_closure" id="App\Form\ArticlesType"/>
         <argument key="App\Form\DepotsType" type="service_closure" id="App\Form\DepotsType"/>
+        <argument key="App\Form\DocumentsType" type="service_closure" id="App\Form\DocumentsType"/>
+        <argument key="App\Form\DocumentslignesType" type="service_closure" id="App\Form\DocumentslignesType"/>
         <argument key="App\Form\NomenclatureType" type="service_closure" id="App\Form\NomenclatureType"/>
         <argument key="App\Form\RegistrationType" type="service_closure" id="App\Form\RegistrationType"/>
         <argument key="App\Form\SignInForm" type="service_closure" id="App\Form\SignInForm"/>
@@ -6997,11 +7126,14 @@
         <argument key="doctrine.orm.messenger.doctrine_schema_subscriber" type="service_closure" id="doctrine.orm.messenger.doctrine_schema_subscriber"/>
       </argument>
     </service>
-    <service id=".service_locator.6JLHBCd" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.LMiiz3D" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Repository\ArticlesRepository" type="service_closure" id="App\Repository\ArticlesRepository"/>
         <argument key="App\Repository\DepotsRepository" type="service_closure" id="App\Repository\DepotsRepository"/>
+        <argument key="App\Repository\DocumentRepository" type="service_closure" id="App\Repository\DocumentRepository"/>
+        <argument key="App\Repository\DocumentsRepository" type="service_closure" id="App\Repository\DocumentsRepository"/>
+        <argument key="App\Repository\DocumentsligneRepository" type="service_closure" id="App\Repository\DocumentsligneRepository"/>
         <argument key="App\Repository\FunctionRepository" type="service_closure" id="App\Repository\FunctionRepository"/>
         <argument key="App\Repository\NomenclatureRepository" type="service_closure" id="App\Repository\NomenclatureRepository"/>
         <argument key="App\Repository\ProfileFunctionsRepository" type="service_closure" id="App\Repository\ProfileFunctionsRepository"/>
@@ -7300,6 +7432,18 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.jIxfAsi" method="withContext"/>
     </service>
+    <service id=".service_locator.jIxfAsi.App\Controller\DocumentsController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\DocumentsController"/>
+      <argument>App\Controller\DocumentsController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.jIxfAsi" method="withContext"/>
+    </service>
+    <service id=".service_locator.jIxfAsi.App\Controller\DocumentslignesController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\DocumentslignesController"/>
+      <argument>App\Controller\DocumentslignesController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.jIxfAsi" method="withContext"/>
+    </service>
     <service id=".service_locator.jIxfAsi.App\Controller\FeaturesController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\FeaturesController"/>
       <argument>App\Controller\FeaturesController</argument>
@@ -7529,12 +7673,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.kXilsoi"/>
+      <argument type="service" id=".service_locator.ImmkkX0"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.kXilsoi"/>
+      <argument type="service" id=".service_locator.ImmkkX0"/>
     </service>
     <service id="debug.traced.messenger.bus.default.inner" class="Symfony\Component\Messenger\MessageBus">
       <argument type="iterator">
@@ -7559,8 +7703,13 @@
     <service id=".errored..service_locator.Iiufm0n.App\Entity\Articles" class="App\Entity\Articles"/>
     <service id=".errored..service_locator.dxejhxE.App\Entity\Depots" class="App\Entity\Depots"/>
     <service id=".errored..service_locator.YJCQvjh.App\Entity\Depots" class="App\Entity\Depots"/>
-    <service id=".errored..service_locator.t97CseE.App\Entity\Numenclat" class="App\Entity\Numenclat"/>
-    <service id=".errored..service_locator.7zr5f2x.App\Entity\Numenclat" class="App\Entity\Numenclat"/>
+    <service id=".errored..service_locator.Kel.nqn.App\Entity\Documents" class="App\Entity\Documents"/>
+    <service id=".errored..service_locator._dKJEJm.App\Entity\Documents" class="App\Entity\Documents"/>
+    <service id=".errored..service_locator.FdJiUEa.App\Entity\Documents" class="App\Entity\Documents"/>
+    <service id=".errored..service_locator.yH2F3dN.App\Entity\Documentslignes" class="App\Entity\Documentslignes"/>
+    <service id=".errored..service_locator.mlM5kW4.App\Entity\Documentslignes" class="App\Entity\Documentslignes"/>
+    <service id=".errored..service_locator..Nzt897.App\Entity\Numenclat" class="App\Entity\Numenclat"/>
+    <service id=".errored..service_locator.5bnQw20.App\Entity\Numenclat" class="App\Entity\Numenclat"/>
     <service id=".errored..service_locator.3B_gMwH.App\Entity\Stock" class="App\Entity\Stock"/>
     <service id=".errored..service_locator.QWF29IA.App\Entity\Stock" class="App\Entity\Stock"/>
     <service id=".errored..service_locator.Sgq.tmb.App\Entity\Users" class="App\Entity\Users"/>
@@ -8566,7 +8715,7 @@
     <service id="sensio_framework_extra.security.expression_language" alias="sensio_framework_extra.security.expression_language.default"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.kXilsoi"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.ImmkkX0"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
@@ -8587,13 +8736,14 @@
     <service id=".service_locator.80edgLI" alias="messenger.receiver_locator"/>
     <service id=".service_locator.h8Jkkd2" alias="messenger.retry_strategy_locator"/>
     <service id=".service_locator.0GV1BZZ" alias=".service_locator.gSv9zYw"/>
+    <service id=".service_locator.3Asj552" alias=".service_locator.5bnQw20"/>
     <service id=".service_locator.YUNSPEp" alias=".service_locator.mK6IRPJ"/>
     <service id=".service_locator.PCvBrAu" alias=".service_locator.gDBsqNt"/>
     <service id=".service_locator.KR8aVf4" alias=".service_locator.C4.1NiB"/>
     <service id=".service_locator.Ar0Pu3O" alias=".service_locator.cyg1ViB"/>
-    <service id=".service_locator.xLcbybn" alias=".service_locator.kXilsoi"/>
+    <service id=".service_locator.nMJ0gpD" alias=".service_locator.ImmkkX0"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.19_mNxd"/>
-    <service id=".service_locator.DGthcKD" alias=".service_locator.4N6aIYZ"/>
+    <service id=".service_locator.SKE3Z4u" alias=".service_locator.gulsDC."/>
     <service id=".service_locator.XW18Svm" alias=".service_locator.TcKhdzh"/>
     <service id=".service_locator.O24_MAy" alias=".service_locator.yY.p4P7"/>
     <service id=".service_locator._eRAkJb" alias=".service_locator.jIxfAsi"/>
@@ -8628,9 +8778,18 @@
     <service id=".service_locator.lsC3dJ5" alias=".service_locator.jMPlQJw"/>
     <service id=".service_locator.77v2xKZ" alias=".service_locator.dxejhxE"/>
     <service id=".service_locator.N9U7O4W" alias=".service_locator.YJCQvjh"/>
-    <service id=".service_locator.CsHkG1H" alias=".service_locator.4aR9ZvP"/>
-    <service id=".service_locator.52vaFtr" alias=".service_locator.t97CseE"/>
-    <service id=".service_locator.mkp4hav" alias=".service_locator.7zr5f2x"/>
+    <service id=".service_locator.wwFWcOk" alias=".service_locator..UHQe3l"/>
+    <service id=".service_locator.lmE4W17" alias=".service_locator.kh8CmVl"/>
+    <service id=".service_locator.qUqbNO_" alias=".service_locator.Kel.nqn"/>
+    <service id=".service_locator.0bF8_Ae" alias=".service_locator._dKJEJm"/>
+    <service id=".service_locator.k516HIu" alias=".service_locator.FdJiUEa"/>
+    <service id=".service_locator.bInR.ll" alias=".service_locator.aKM6MDa"/>
+    <service id=".service_locator.PYapm7O" alias=".service_locator.yH2F3dN"/>
+    <service id=".service_locator.mRNV89t" alias=".service_locator.mlM5kW4"/>
+    <service id=".service_locator.tfUiXmV" alias=".service_locator.ttVid3I"/>
+    <service id=".service_locator.hCumxIO" alias=".service_locator.t6i3vFk"/>
+    <service id=".service_locator.h0VYzIV" alias=".service_locator..Nzt897"/>
+    <service id=".service_locator.za1nwq3" alias=".service_locator.5bnQw20"/>
     <service id=".service_locator.URfgn8g" alias=".service_locator.zFcJjKU"/>
     <service id=".service_locator.TmGMTFD" alias=".service_locator.mK6IRPJ"/>
     <service id=".service_locator.fonEEv2" alias=".service_locator.gDBsqNt"/>
