@@ -103,7 +103,7 @@ class __TwigTemplate_64eb4b2f278e5a99cdbea41eedbbf1ef extends Template
                                                     <th>Type</th>
                                                     <th>Sender</th>
                                                     <th>Recipient</th>
-                                                    <th>Total HT</th>
+                                                    <th>Total TTC</th>
                                                     <th>Status</th>
                                                     <th>Actions</th>
                                                 </tr>
@@ -139,7 +139,7 @@ class __TwigTemplate_64eb4b2f278e5a99cdbea41eedbbf1ef extends Template
             echo "</td>
                                                     <td>";
             // line 52
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["document"], "montantHt", [], "any", false, false, false, 52), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["document"], "montantTva", [], "any", false, false, false, 52), "html", null, true);
             echo "</td>
                                                     <td>
                                                         <span class=\"badge bg-";
@@ -280,7 +280,7 @@ class __TwigTemplate_64eb4b2f278e5a99cdbea41eedbbf1ef extends Template
                                                     <th>Type</th>
                                                     <th>Sender</th>
                                                     <th>Recipient</th>
-                                                    <th>Total HT</th>
+                                                    <th>Total TTC</th>
                                                     <th>Status</th>
                                                     <th>Actions</th>
                                                 </tr>
@@ -293,7 +293,7 @@ class __TwigTemplate_64eb4b2f278e5a99cdbea41eedbbf1ef extends Template
                                                     <td>{{ document.type }}</td>
                                                     <td>{{ document.emetteur.username }}</td>
                                                     <td>{{ document.destinataire.username }}</td>
-                                                    <td>{{ document.montantHt }}</td>
+                                                    <td>{{ document.montantTva}}</td>
                                                     <td>
                                                         <span class=\"badge bg-{{ document.status == 'Paid' ? 'success' : 'warning' }}\">
                                                             {{ document.status }}
@@ -330,6 +330,6 @@ class __TwigTemplate_64eb4b2f278e5a99cdbea41eedbbf1ef extends Template
     <script src=\"{{ asset('assets/libs/sweetalert2/sweetalert2.min.js') }}\"></script>
     <script src=\"../../assets/js/app.js\"></script>
 </body>
-</html>", "documents/index.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\documents\\index.html.twig");
+</html>", "documents/index.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\documents\\index.html.twig");
     }
 }

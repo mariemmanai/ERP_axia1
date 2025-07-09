@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Documents;
 use App\Entity\Documentslignes;
+use Doctrine\Common\Collections\ArrayCollection;
 use App\Form\DocumentsType;
 use App\Repository\DocumentsRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -39,12 +40,8 @@ class DocumentsController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            if (!$document->getDocDate()) {
-                $document->setDocDate(new \DateTime());
-            }
-            $this->calculateDocumentTotals($document);
 
-            $entityManager->persist($document);            
+            $entityManager->persist($document);
             foreach ($document->getLignes() as $ligne) {
                 $ligne->setDocument($document);
                 $entityManager->persist($ligne);
@@ -64,7 +61,7 @@ class DocumentsController extends AbstractController
 
     #[Route('/{id}', name: 'app_documents_show', methods: ['GET'])]
     public function show(
-        Documents $document, 
+        Documents $document,
         DocumentsRepository $documentsRepository
     ): Response {
         $document = $documentsRepository->find($document->getId());
@@ -75,49 +72,122 @@ class DocumentsController extends AbstractController
     #[Route('/{id}/edit', name: 'app_documents_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Documents $document, EntityManagerInterface $entityManager): Response
     {
-        try{
-        $this->logger->info('Editing document', ['request_content' => $request->getContent()]);
-        $form = $this->createForm(DocumentsType::class, $document);
-        $form->handleRequest($request);
+        try {
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $originalLignes = [];
+            $originalLignes = new ArrayCollection();
             foreach ($document->getLignes() as $ligne) {
-                $originalLignes[] = $ligne;
+                $originalLignes->add($ligne);
             }
 
-            foreach ($document->getLignes() as $ligne) {
-                $ligne->setDocument($document);
-                $entityManager->persist($ligne);
+            $form = $this->createForm(DocumentsType::class, $document);
+            $form->handleRequest($request);
+            $this->logger->info('Form submitted successfully');
+
+            if ($form->isSubmitted() && $form->isValid()) {
+                dump($form->getData());
+                dd($document);
+                foreach ($originalLignes as $ligne) {
+                    if (false === $document->getLignes()->contains($ligne)) {
+                        $ligne->setDocument(null);
+                        $entityManager->remove($ligne);
+                    }
+                }
+                foreach ($document->getLignes() as $ligne) {
+                    $ligne->setDocument($document);
+                    if (!$entityManager->contains($ligne)) {
+                        $entityManager->persist($ligne);
+                    }
+                }
+                $document->setMontantHt($form->get('montantHt')->getData());
+                $document->setMontantTva($form->get('montantTva')->getData());
+                $document->setMontantAPayer($form->get('montantAPayer')->getData());
+                $entityManager->flush();
+
+                $this->addFlash('success', 'Document mis à jour avec succès');
+                return $this->redirectToRoute('app_documents_index');
             }
 
-            $entityManager->flush();
-
-            $this->addFlash('success', 'Document mis à jour avec succès');
+            return $this->render('documents/new&edit.html.twig', [
+                'document' => $document,
+                'form' => $form->createView(),
+            ]);
+        } catch (\Exception $e) {
+            $this->addFlash('error', 'Une erreur est survenue lors de la mise à jour du document : ' . $e->getMessage());
             return $this->redirectToRoute('app_documents_index', [], Response::HTTP_SEE_OTHER);
         }
+    }
 
-        return $this->render('documents/new&edit.html.twig', [
-            'document' => $document,
-            'form' => $form->createView(),
-        ]);
-    }catch(\Exception $e){
-        $this->addFlash('error', 'Une erreur est survenue lors de la mise à jour du document : ' . $e->getMessage());
-        return $this->redirectToRoute('app_documents_index', [], Response::HTTP_SEE_OTHER);
+    #[Route('/{id}/editDoc', name: 'app_documents_edit2', methods: ['PUT'])]
+    public function editDoc(Request $request, Documents $document, EntityManagerInterface $entityManager): Response
+    {
+        try {
+            $this->logger->info('Editing document with ID: ' . $document->getId());
+            if ($request->request->all()) {
+                $this->logger->info('Request data: ' . json_encode($request->request->all()));
+                $this->logger->info('Document: ' . json_encode($document));
+                $document = $document->getId();
+                $requestData = $request->request->all();
+                $DocDate = new \DateTime($requestData['docDate']);
+
+                $Doc = $entityManager->getRepository(Documents::class)->findOneBy(['id' => $document]);
+                if (!$Doc) {
+                    throw new \Exception('Document not found');
+                }
+                $this->logger->info('Document data: ' . json_encode($Doc));
+                $Doc->setDocDate($DocDate)
+                    ->setStatus($requestData['status'])
+                    ->setEmetteur($requestData['emetteur'])
+                    ->setDestinataire($requestData['destinataire'])
+                    ->setTauxTva($requestData['tauxTva'])
+                    ->setMontantTva($requestData['montantTva'])
+                    ->setMontantAPayer($requestData['montantAPayer'])
+                    ->setTimbre($requestData['timbre'])
+                    ->setRetenu($requestData['retenu']);
+                $entityManager->persist($Doc);
+
+                $DocLigne = $entityManager->getRepository(Documentslignes::class)->findAllBy(['document' => $document]);
+                if (!$DocLigne) {
+                    throw new \Exception('Document lignes not found');
+                }
+                $this->logger->info('Lignes Document data: ' . json_encode($DocLigne));
+                foreach ($DocLigne as $ligne) {
+                    $entityManager->remove($ligne);
+                }
+
+                $lignes = $requestData['lignes'];
+                foreach ($lignes as $ligne) {
+                    $newLigne = new Documentslignes();
+                    $newLigne->setDocument($Doc)
+                        ->setDocument($document)
+                        ->setArticle($ligne['article'])
+                        ->setQte($ligne['qte'])
+                        ->setPrixUnitaireHt($ligne['prixUnitaireHt'])
+                        ->setRemise($ligne['remise'])
+                        ->setPrixTotalHt($ligne['prixTotalHt']);
+                    $entityManager->persist($newLigne);
+                }
+                $entityManager->flush();
+                return throw new \Exception('Document updated successfully');
+            }
+            return throw new \Exception('Document updated successfully');
+        } catch (\Exception $e) {
+            $this->logger->error('Error updating document: ' . $e->getMessage());
+            $this->addFlash('error', 'Une erreur est survenue lors de la mise à jour du document : ' . $e->getMessage());
+            return $this->redirectToRoute('app_documents_index', [], Response::HTTP_SEE_OTHER);
         }
     }
 
     #[Route('/{id}', name: 'app_documents_delete', methods: ['POST'])]
     public function delete(Request $request, Documents $document, EntityManagerInterface $entityManager): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$document->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $document->getId(), $request->request->get('_token'))) {
             foreach ($document->getLignes() as $ligne) {
                 $entityManager->remove($ligne);
             }
-            
+
             $entityManager->remove($document);
             $entityManager->flush();
-            
+
             $this->addFlash('success', 'Document supprimé avec succès');
         }
 
@@ -125,30 +195,30 @@ class DocumentsController extends AbstractController
     }
 
     private function calculateDocumentTotals(Documents $document): void
-{
-    $montantHt = 0;
-    
-    foreach ($document->getLignes() as $ligne) {
-        if (!$ligne->getPrixTotalHt()) {
-            $prixTotal = $ligne->getPrixUnitaireHt() * $ligne->getQte();
-            if ($ligne->getRemise()) {
-                $prixTotal *= (1 - $ligne->getRemise() / 100);
+    {
+        $montantHt = 0;
+
+        foreach ($document->getLignes() as $ligne) {
+            if (!$ligne->getPrixTotalHt()) {
+                $prixTotal = $ligne->getPrixUnitaireHt() * $ligne->getQte();
+                if ($ligne->getRemise()) {
+                    $prixTotal *= (1 - $ligne->getRemise() / 100);
+                }
+                $ligne->setPrixTotalHt($prixTotal);
             }
-            $ligne->setPrixTotalHt($prixTotal);
+
+            $montantHt += $ligne->getPrixTotalHt();
         }
-        
-        $montantHt += $ligne->getPrixTotalHt();
+
+        $document->setMontantHt($montantHt);
+        $tauxTva = $document->getTauxTva() ?? 0;
+        $montantTva = $montantHt * (1 + ($tauxTva / 100));
+        $document->setMontantTva($montantTva);
+        $montantTtc = $montantHt + $montantTva;
+        $retenue = $document->getRetenu() ?? 0;
+        $montantRetenu = $montantTtc * $retenue / 100;
+        $timbre = $document->getTimbre() ?? 0;
+        $montantAPayer = $montantTtc - $montantRetenu + $timbre;
+        $document->setMontantAPayer($montantAPayer);
     }
-    
-    $document->setMontantHt($montantHt);
-    $tauxTva = $document->getTauxTva() ?? 0;
-    $montantTva = $montantHt * (1 +($tauxTva / 100));
-    $document->setMontantTva($montantTva);
-    $montantTtc = $montantHt + $montantTva;
-    $retenue = $document->getRetenu() ?? 0;
-    $montantRetenu = $montantTtc * $retenue / 100;
-    $timbre = $document->getTimbre() ?? 0;
-    $montantAPayer = $montantTtc - $montantRetenu + $timbre;
-    $document->setMontantAPayer($montantAPayer);
-}
 }

@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Entity;
-
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\DocumentsRepository;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -210,67 +208,68 @@ class Documents
         return $this;
     }
     public function calculateMontantTva(): self
-{
-    if ($this->montantHt !== null && $this->tauxTva !== null) {
-        $this->montantTva = $this->montantHt * (1+ ($this->tauxTva / 100));
-    }
-    return $this;
-}
-public function updateMontantTva(): void
-{
-    $this->calculateMontantTva();
-}
-#[ORM\Column(nullable: true)]
-private ?float $montantAPayer = null;
-
-public function getMontantAPayer(): ?float
-{
-    return $this->montantAPayer;
-}
-
-public function setMontantAPayer(float $montantAPayer): static
-{
-    $this->montantAPayer = $montantAPayer;
-    return $this;
-}
-#[ORM\OneToMany(targetEntity: Documentslignes::class, mappedBy: "document", cascade: ["persist", "remove"], orphanRemoval: true)]
-private Collection $lignes;
-
-public function __construct()
-{
-    $this->lignes = new ArrayCollection();
-}
-
-public function getLignes(): Collection
-{
-    return $this->lignes;
-}
-
-public function addLigne(Documentslignes $ligne): self
-{
-    if (!$this->lignes->contains($ligne)) {
-        $this->lignes[] = $ligne;
-        $ligne->setDocument($this);
-    }
-    return $this;
-}
-
-public function removeLigne(Documentslignes $ligne): self
-{
-    if ($this->lignes->removeElement($ligne)) {
-        if ($ligne->getDocument() === $this) {
-            $ligne->setDocument(null);
+    {
+        if ($this->montantHt !== null && $this->tauxTva !== null) {
+            $this->montantTva = $this->montantHt * (1+ ($this->tauxTva / 100));
         }
+        return $this;
     }
-    return $this;
-}
-#[ORM\PrePersist]
-    public function prePersist(): void
+    public function updateMontantTva(): void
+    {
+        $this->calculateMontantTva();
+    }
+    #[ORM\Column(nullable: true)]
+    private ?float $montantAPayer = null;
+
+    public function getMontantAPayer(): ?float
+    {
+        return $this->montantAPayer;
+    }
+
+    public function setMontantAPayer(float $montantAPayer): static
+    {
+        $this->montantAPayer = $montantAPayer;
+        return $this;
+    }
+    #[ORM\OneToMany(targetEntity: Documentslignes::class, mappedBy: "document", cascade: ["persist", "remove"], orphanRemoval: true)]
+    private Collection $lignes;
+
+    public function __construct()
+    {
+        $this->lignes = new ArrayCollection();
+    }
+
+    public function getLignes(): Collection
+    {
+        return $this->lignes;
+    }
+
+    public function addLigne(Documentslignes $ligne): self
+    {
+        if (!$this->lignes->contains($ligne)) {
+            $this->lignes[] = $ligne;
+            $ligne->setDocument($this);
+        }
+        return $this;
+    }
+
+    public function removeLigne(Documentslignes $ligne): self
+    {
+        if ($this->lignes->removeElement($ligne)) {
+            if ($ligne->getDocument() === $this) {
+                $ligne->setDocument(null);
+            }
+        }
+        return $this;
+    }
+    #[ORM\PrePersist]
+    public function prePersist(): void  
     {
         $this->createAt = new \DateTime();
         if ($this->reference === null) {
             $this->reference = $this->generateReference();
         }
+        $this->updateTotals();
     }
 
     private function generateReference(): string
@@ -297,4 +296,25 @@ public function removeLigne(Documentslignes $ligne): self
         
         return $prefix . $year . '000001'; 
     }
+    public function calculateTotals(): void
+    {
+        $this->montantHt = 0;
+        foreach ($this->lignes as $ligne) {
+            $ligne->calculatePrixTotalHt();
+            $this->montantHt += $ligne->getPrixTotalHt();
+        }
+
+        $this->calculateMontantTva();
+        $ttc = $this->montantTva;
+        $this->montantAPayer = $ttc 
+            + ($this->timbre ?? 0) 
+            - ($this->retenu ?? 0);
+    }
+    #[ORM\PrePersist]
+    #[ORM\PreUpdate]
+    public function updateTotals(): void
+    {
+        $this->calculateTotals(); 
+    }
+    
 }

@@ -35,8 +35,7 @@ class DocumentsligneType extends AbstractType
             ])
             ->add('remise', NumberType::class, [
                 'attr' => ['class' => 'form-control'],
-                'label' => 'Remise ',
-                'required' => false
+                'label' => 'Remise '
             ]);
     }
 

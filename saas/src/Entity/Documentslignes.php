@@ -1,13 +1,8 @@
 <?php
 
 namespace App\Entity;
-
 use Doctrine\ORM\Mapping as ORM;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
-
 use App\Repository\DocumentsligneRepository;
-use PhpParser\Node\Expr\Cast\Double;
 
 #[ORM\Entity(repositoryClass: DocumentsligneRepository::class)]
 #[ORM\Table(name: 'documentslignes')]
@@ -61,6 +56,8 @@ class Documentslignes
     public function setQte(float $qte): self
     {
         $this->qte = $qte;
+        $this->calculatePrixTotalHt();
+        $this->updateDocument();
         return $this;
     }
 
@@ -75,6 +72,8 @@ class Documentslignes
     public function setPrixUnitaireHt(float $prixUnitaireHt): self
     {
         $this->prixUnitaireHt = $prixUnitaireHt;
+        $this->calculatePrixTotalHt();
+        $this->updateDocument();
         return $this;
     }
 
@@ -103,7 +102,19 @@ class Documentslignes
     public function setRemise(float $remise): self
     {
         $this->remise = $remise;
+        $this->calculatePrixTotalHt();
+        $this->updateDocument();
         return $this;
     }
-
+    public function calculatePrixTotalHt(): void
+    {
+        $total = $this->qte * $this->prixUnitaireHt;
+        $this->prixTotalHt = $total - ($total * ($this->remise / 100));
+    }
+    public function updateDocument(): void
+    {
+        if ($this->document) {
+            $this->document->calculateTotals();
+        }
+    }
 }

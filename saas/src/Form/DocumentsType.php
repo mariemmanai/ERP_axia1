@@ -4,7 +4,7 @@ namespace App\Form;
 
 use App\Entity\Documents;
 use App\Entity\Documentslignes;
-use App\Form\DocumentsligneType; 
+use App\Form\DocumentsligneType;
 use App\Entity\Users;
 use App\Entity\Articles;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
@@ -43,46 +43,45 @@ class DocumentsType extends AbstractType
             ])
             ->add('destinataire', EntityType::class, [
                 'class' => Users::class,
-                'choice_label' => 'username', 
+                'choice_label' => 'username',
                 'attr' => ['class' => 'form-control'],
                 'label' => 'Recipient'
             ])
             ->add('type', ChoiceType::class, [
-            'choices' => [
-                'Devis achat' => 'Devis achat',
-                'Commande achat' => 'Commande achat',
-                'Facture achat' => 'Facture achat',
-                'Facture achat avoire' => 'Facture achat avoire',
-                'Bon d\'entrée' => 'Bon d\'entrée',
-                'Bon de transfert' => 'Bon de transfert',
-                'Bon de retour' => 'Bon de retour',
-                'Devis vente' => 'Devis vente',
-                'Commande vente' => 'Commande vente',
-                'Facture vente' => 'Facture vente',
-                'Facture vente avoire' => 'Facture vente avoire',
-                'Bon de sortie' => 'Bon de sortie',
-                'Bon de livraison' => 'Bon de livraison',
-                'Inventaire' => 'Inventaire'
-            ],
-            'attr' => [
-                'class' => 'form-control bg-light border-0',
-                'onchange' => 'updateReference()' 
-            ]
-        ])
+                'choices' => [
+                    'Devis achat' => 'Devis achat',
+                    'Commande achat' => 'Commande achat',
+                    'Facture achat' => 'Facture achat',
+                    'Facture achat avoire' => 'Facture achat avoire',
+                    'Bon d\'entrée' => 'Bon d\'entrée',
+                    'Bon de transfert' => 'Bon de transfert',
+                    'Bon de retour' => 'Bon de retour',
+                    'Devis vente' => 'Devis vente',
+                    'Commande vente' => 'Commande vente',
+                    'Facture vente' => 'Facture vente',
+                    'Facture vente avoire' => 'Facture vente avoire',
+                    'Bon de sortie' => 'Bon de sortie',
+                    'Bon de livraison' => 'Bon de livraison',
+                    'Inventaire' => 'Inventaire'
+                ],
+                'attr' => [
+                    'class' => 'form-control bg-light border-0',
+                    'onchange' => 'updateReference()'
+                ]
+            ])
             ->add('status', ChoiceType::class, [
                 'choices' => [
-                'Sous traitement' => 'Sous traitement',
-                'Ouvert' => 'Ouvert',
-                'Confirmé' => 'Confirmé',
-                'Cloturé' => 'Cloturé',
-            ],
+                    'Sous traitement' => 'Sous traitement',
+                    'Ouvert' => 'Ouvert',
+                    'Confirmé' => 'Confirmé',
+                    'Cloturé' => 'Cloturé',
+                ],
                 'attr' => ['class' => 'form-control'],
                 'label' => 'Status'
             ])
             ->add('montantHt', NumberType::class, [
-                'attr' => ['class' => 'form-control'],
-                'label' => 'HT Amount',
-                'required' => true
+                'mapped' => false,
+                'attr' => ['readonly' => true]
             ])
             ->add('tauxTva', NumberType::class, [
                 'attr' => ['class' => 'form-control'],
@@ -131,11 +130,11 @@ class DocumentsType extends AbstractType
             'data_class' => Documents::class,
         ]);
     }
-public function validateReference($value, ExecutionContextInterface $context)
-{
-    if (!preg_match('/^[A-Z]{2}\d{2}\d{6}$/', $value)) { // Format: XXYYNNNNNN
-        $context->buildViolation('Le format de référence doit être: 2 lettres + 2 chiffres année + 6 chiffres (ex: FV24000001)')
-               ->addViolation();
+    public function validateReference($value, ExecutionContextInterface $context)
+    {
+        if (!preg_match('/^[A-Z]{2}\d{2}\d{6}$/', $value)) { // Format: XXYYNNNNNN
+            $context->buildViolation('Le format de référence doit être: 2 lettres + 2 chiffres année + 6 chiffres (ex: FV24000001)')
+                ->addViolation();
+        }
     }
-}
 }
