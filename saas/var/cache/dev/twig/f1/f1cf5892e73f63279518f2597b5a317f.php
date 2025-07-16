@@ -3733,6 +3733,6 @@ class __TwigTemplate_0795834e0520c466d04c43fa4e0428d5 extends Template
     <script src=\"../../assets/js/app.js\"></script>
 </body>
 
-</html>", "crm/apps-crm-deals.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\crm\\apps-crm-deals.html.twig");
+</html>", "crm/apps-crm-deals.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\crm\\apps-crm-deals.html.twig");
     }
 }

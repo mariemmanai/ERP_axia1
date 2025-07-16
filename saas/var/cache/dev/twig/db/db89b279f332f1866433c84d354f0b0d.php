@@ -973,6 +973,6 @@ class __TwigTemplate_e22232996f98df8ba68247f06ae9d9c9 extends Template
     <script src=\"../../assets/js/app.js\"></script>
 </body>
 
-</html>", "advance/advance-ui-scrollspy.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\advance\\advance-ui-scrollspy.html.twig");
+</html>", "advance/advance-ui-scrollspy.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\advance\\advance-ui-scrollspy.html.twig");
     }
 }

@@ -42,172 +42,168 @@ class __TwigTemplate_64eb4b2f278e5a99cdbea41eedbbf1ef extends Template
         // line 1
         echo twig_include($this->env, $context, "partials/main.html.twig");
         echo "
-
 <head>
-    ";
-        // line 4
+\t";
+        // line 3
         echo twig_include($this->env, $context, "partials/title-meta.html.twig", ["title" => "Documents List"]);
         echo "
-    <link rel=\"stylesheet\" href=\"";
-        // line 5
+\t<link rel=\"stylesheet\" href=\"";
+        // line 4
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/libs/sweetalert2/sweetalert2.min.css"), "html", null, true);
-        echo "\" />
-    <link href=\"";
-        // line 6
+        echo "\"/>
+\t<link href=\"";
+        // line 5
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/css/bootstrap.min.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
-    <link href=\"";
-        // line 7
+\t<link href=\"";
+        // line 6
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/css/icons.min.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
-    <link href=\"";
-        // line 8
+\t<link href=\"";
+        // line 7
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/css/app.min.css"), "html", null, true);
         echo "\" rel=\"stylesheet\"></head>
-
 <body>
-    <div id=\"layout-wrapper\">
-        ";
-        // line 12
+\t<div id=\"layout-wrapper\">
+\t\t";
+        // line 10
         echo twig_include($this->env, $context, "partials/menu.html.twig");
         echo "
-        <div class=\"main-content\">
-            <div class=\"page-content\">
-                <div class=\"container-fluid\">
-                    ";
-        // line 16
+\t\t<div class=\"main-content\">
+\t\t\t<div class=\"page-content\">
+\t\t\t\t<div class=\"container-fluid\">
+\t\t\t\t\t";
+        // line 14
         echo twig_include($this->env, $context, "partials/page-title.html.twig", ["pagetitle" => "Documents", "title" => "List"]);
         echo "
-
-                    <div class=\"row\">
-                        <div class=\"col-12\">
-                            <div class=\"card\">
-                                <div class=\"card-body\">
-                                    <div class=\"row mb-2\">
-                                        <div class=\"col-sm-4\">
-                                            <a href=\"";
-        // line 24
+\t\t\t\t\t<div class=\"row\">
+\t\t\t\t\t\t<div class=\"col-12\">
+\t\t\t\t\t\t\t<div class=\"card\">
+\t\t\t\t\t\t\t\t<div class=\"card-body\">
+\t\t\t\t\t\t\t\t\t<div class=\"row mb-2\">
+\t\t\t\t\t\t\t\t\t\t<div class=\"col-sm-4\">
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
+        // line 21
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_new");
         echo "\" class=\"btn btn-success mb-2\">
-                                                <i class=\"ri-add-line align-bottom me-1\"></i> Create Document
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class=\"table-responsive\">
-                                        <table class=\"table table-centered table-nowrap mb-0\">
-                                            <thead class=\"table-light\">
-                                                <tr>
-                                                    <th>Reference</th>
-                                                    <th>Date</th>
-                                                    <th>Type</th>
-                                                    <th>Sender</th>
-                                                    <th>Recipient</th>
-                                                    <th>Total TTC</th>
-                                                    <th>Status</th>
-                                                    <th>Actions</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                ";
-        // line 45
+\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"ri-add-line align-bottom me-1\"></i>
+\t\t\t\t\t\t\t\t\t\t\t\tCreate Document
+\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t<div class=\"table-responsive\">
+\t\t\t\t\t\t\t\t\t\t<table class=\"table table-centered table-nowrap mb-0\">
+\t\t\t\t\t\t\t\t\t\t\t<thead class=\"table-light\">
+\t\t\t\t\t\t\t\t\t\t\t\t<tr>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<th>Reference</th>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<th>Date</th>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<th>Type</th>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<th>Sender</th>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<th>Recipient</th>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<th>Total TTC</th>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<th>Status</th>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<th>Actions</th>
+\t\t\t\t\t\t\t\t\t\t\t\t</tr>
+\t\t\t\t\t\t\t\t\t\t\t</thead>
+\t\t\t\t\t\t\t\t\t\t\t<tbody>
+\t\t\t\t\t\t\t\t\t\t\t\t";
+        // line 42
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["documents"]) || array_key_exists("documents", $context) ? $context["documents"] : (function () { throw new RuntimeError('Variable "documents" does not exist.', 45, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["documents"]) || array_key_exists("documents", $context) ? $context["documents"] : (function () { throw new RuntimeError('Variable "documents" does not exist.', 42, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["document"]) {
+            // line 43
+            echo "\t\t\t\t\t\t\t\t\t\t\t\t\t<tr>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>";
+            // line 44
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["document"], "reference", [], "any", false, false, false, 44), "html", null, true);
+            echo "</td>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>";
+            // line 45
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["document"], "docDate", [], "any", false, false, false, 45), "d/m/Y"), "html", null, true);
+            echo "</td>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>";
             // line 46
-            echo "                                                <tr>
-                                                    <td>";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["document"], "type", [], "any", false, false, false, 46), "html", null, true);
+            echo "</td>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>";
             // line 47
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["document"], "reference", [], "any", false, false, false, 47), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["document"], "emetteur", [], "any", false, false, false, 47), "username", [], "any", false, false, false, 47), "html", null, true);
             echo "</td>
-                                                    <td>";
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>";
             // line 48
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["document"], "docDate", [], "any", false, false, false, 48), "d/m/Y"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["document"], "destinataire", [], "any", false, false, false, 48), "username", [], "any", false, false, false, 48), "html", null, true);
             echo "</td>
-                                                    <td>";
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>";
             // line 49
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["document"], "type", [], "any", false, false, false, 49), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["document"], "montantTva", [], "any", false, false, false, 49), "html", null, true);
             echo "</td>
-                                                    <td>";
-            // line 50
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["document"], "emetteur", [], "any", false, false, false, 50), "username", [], "any", false, false, false, 50), "html", null, true);
-            echo "</td>
-                                                    <td>";
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge bg-";
             // line 51
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["document"], "destinataire", [], "any", false, false, false, 51), "username", [], "any", false, false, false, 51), "html", null, true);
-            echo "</td>
-                                                    <td>";
-            // line 52
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["document"], "montantTva", [], "any", false, false, false, 52), "html", null, true);
-            echo "</td>
-                                                    <td>
-                                                        <span class=\"badge bg-";
-            // line 54
-            echo (((twig_get_attribute($this->env, $this->source, $context["document"], "status", [], "any", false, false, false, 54) == "Paid")) ? ("success") : ("warning"));
+            echo (((twig_get_attribute($this->env, $this->source, $context["document"], "status", [], "any", false, false, false, 51) == "Paid")) ? ("success") : ("warning"));
             echo "\">
-                                                            ";
-            // line 55
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["document"], "status", [], "any", false, false, false, 55), "html", null, true);
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
+            // line 52
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["document"], "status", [], "any", false, false, false, 52), "html", null, true);
             echo "
-                                                        </span>
-                                                    </td>
-                                                    <td>
-                                                        <a href=\"";
-            // line 59
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_show", ["id" => twig_get_attribute($this->env, $this->source, $context["document"], "id", [], "any", false, false, false, 59)]), "html", null, true);
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
+            // line 56
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_show", ["id" => twig_get_attribute($this->env, $this->source, $context["document"], "id", [], "any", false, false, false, 56)]), "html", null, true);
             echo "\" class=\"btn btn-sm btn-light\">
-                                                            <i class=\"ri-eye-line\"></i>
-                                                        </a>
-                                                        <a href=\"";
-            // line 62
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["document"], "id", [], "any", false, false, false, 62)]), "html", null, true);
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"ri-eye-line\"></i>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
+            // line 59
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["document"], "id", [], "any", false, false, false, 59)]), "html", null, true);
             echo "\" class=\"btn btn-sm btn-primary\">
-                                                            <i class=\"ri-pencil-line\"></i>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                ";
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"ri-pencil-line\"></i>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</tr>
+\t\t\t\t\t\t\t\t\t\t\t\t";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 68
-            echo "                                                <tr>
-                                                    <td colspan=\"8\" class=\"text-center\">No documents found</td>
-                                                </tr>
-                                                ";
+            // line 65
+            echo "\t\t\t\t\t\t\t\t\t\t\t\t\t<tr>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td colspan=\"8\" class=\"text-center\">No documents found</td>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</tr>
+\t\t\t\t\t\t\t\t\t\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['document'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 72
-        echo "                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            ";
-        // line 81
+        // line 69
+        echo "\t\t\t\t\t\t\t\t\t\t\t</tbody>
+\t\t\t\t\t\t\t\t\t\t</table>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t\t";
+        // line 78
         echo twig_include($this->env, $context, "partials/footer.html.twig");
         echo "
-        </div>
-    </div>
-
-    ";
-        // line 85
+\t\t</div>
+\t</div>
+\t";
+        // line 81
         echo twig_include($this->env, $context, "partials/vendor-scripts.html.twig");
         echo "
-    <script src=\"";
-        // line 86
+\t<script src=\"";
+        // line 82
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/libs/sweetalert2/sweetalert2.min.js"), "html", null, true);
         echo "\"></script>
-    <script src=\"../../assets/js/app.js\"></script>
-</body>
-</html>";
+\t<script src=\"../../assets/js/app.js\"></script>
+</body></html>
+";
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
 
@@ -237,99 +233,95 @@ class __TwigTemplate_64eb4b2f278e5a99cdbea41eedbbf1ef extends Template
      */
     public function getDebugInfo()
     {
-        return array (  206 => 86,  202 => 85,  195 => 81,  184 => 72,  175 => 68,  164 => 62,  158 => 59,  151 => 55,  147 => 54,  142 => 52,  138 => 51,  134 => 50,  130 => 49,  126 => 48,  122 => 47,  119 => 46,  114 => 45,  90 => 24,  79 => 16,  72 => 12,  65 => 8,  61 => 7,  57 => 6,  53 => 5,  49 => 4,  43 => 1,);
+        return array (  202 => 82,  198 => 81,  192 => 78,  181 => 69,  172 => 65,  161 => 59,  155 => 56,  148 => 52,  144 => 51,  139 => 49,  135 => 48,  131 => 47,  127 => 46,  123 => 45,  119 => 44,  116 => 43,  111 => 42,  87 => 21,  77 => 14,  70 => 10,  64 => 7,  60 => 6,  56 => 5,  52 => 4,  48 => 3,  43 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{{ include('partials/main.html.twig') }}
-
 <head>
-    {{ include('partials/title-meta.html.twig', {title: 'Documents List'}) }}
-    <link rel=\"stylesheet\" href=\"{{ asset('assets/libs/sweetalert2/sweetalert2.min.css') }}\" />
-    <link href=\"{{ asset('assets/css/bootstrap.min.css') }}\" rel=\"stylesheet\">
-    <link href=\"{{ asset('assets/css/icons.min.css') }}\" rel=\"stylesheet\">
-    <link href=\"{{ asset('assets/css/app.min.css') }}\" rel=\"stylesheet\"></head>
-
+\t{{ include('partials/title-meta.html.twig', {title: 'Documents List'}) }}
+\t<link rel=\"stylesheet\" href=\"{{ asset('assets/libs/sweetalert2/sweetalert2.min.css') }}\"/>
+\t<link href=\"{{ asset('assets/css/bootstrap.min.css') }}\" rel=\"stylesheet\">
+\t<link href=\"{{ asset('assets/css/icons.min.css') }}\" rel=\"stylesheet\">
+\t<link href=\"{{ asset('assets/css/app.min.css') }}\" rel=\"stylesheet\"></head>
 <body>
-    <div id=\"layout-wrapper\">
-        {{ include('partials/menu.html.twig') }}
-        <div class=\"main-content\">
-            <div class=\"page-content\">
-                <div class=\"container-fluid\">
-                    {{ include('partials/page-title.html.twig', {pagetitle: 'Documents', title: 'List'}) }}
-
-                    <div class=\"row\">
-                        <div class=\"col-12\">
-                            <div class=\"card\">
-                                <div class=\"card-body\">
-                                    <div class=\"row mb-2\">
-                                        <div class=\"col-sm-4\">
-                                            <a href=\"{{ path('app_documents_new') }}\" class=\"btn btn-success mb-2\">
-                                                <i class=\"ri-add-line align-bottom me-1\"></i> Create Document
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class=\"table-responsive\">
-                                        <table class=\"table table-centered table-nowrap mb-0\">
-                                            <thead class=\"table-light\">
-                                                <tr>
-                                                    <th>Reference</th>
-                                                    <th>Date</th>
-                                                    <th>Type</th>
-                                                    <th>Sender</th>
-                                                    <th>Recipient</th>
-                                                    <th>Total TTC</th>
-                                                    <th>Status</th>
-                                                    <th>Actions</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                {% for document in documents %}
-                                                <tr>
-                                                    <td>{{ document.reference }}</td>
-                                                    <td>{{ document.docDate|date('d/m/Y') }}</td>
-                                                    <td>{{ document.type }}</td>
-                                                    <td>{{ document.emetteur.username }}</td>
-                                                    <td>{{ document.destinataire.username }}</td>
-                                                    <td>{{ document.montantTva}}</td>
-                                                    <td>
-                                                        <span class=\"badge bg-{{ document.status == 'Paid' ? 'success' : 'warning' }}\">
-                                                            {{ document.status }}
-                                                        </span>
-                                                    </td>
-                                                    <td>
-                                                        <a href=\"{{ path('app_documents_show', {'id': document.id}) }}\" class=\"btn btn-sm btn-light\">
-                                                            <i class=\"ri-eye-line\"></i>
-                                                        </a>
-                                                        <a href=\"{{ path('app_documents_edit', {'id': document.id}) }}\" class=\"btn btn-sm btn-primary\">
-                                                            <i class=\"ri-pencil-line\"></i>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                {% else %}
-                                                <tr>
-                                                    <td colspan=\"8\" class=\"text-center\">No documents found</td>
-                                                </tr>
-                                                {% endfor %}
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {{ include('partials/footer.html.twig') }}
-        </div>
-    </div>
-
-    {{ include('partials/vendor-scripts.html.twig') }}
-    <script src=\"{{ asset('assets/libs/sweetalert2/sweetalert2.min.js') }}\"></script>
-    <script src=\"../../assets/js/app.js\"></script>
-</body>
-</html>", "documents/index.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\documents\\index.html.twig");
+\t<div id=\"layout-wrapper\">
+\t\t{{ include('partials/menu.html.twig') }}
+\t\t<div class=\"main-content\">
+\t\t\t<div class=\"page-content\">
+\t\t\t\t<div class=\"container-fluid\">
+\t\t\t\t\t{{ include('partials/page-title.html.twig', {pagetitle: 'Documents', title: 'List'}) }}
+\t\t\t\t\t<div class=\"row\">
+\t\t\t\t\t\t<div class=\"col-12\">
+\t\t\t\t\t\t\t<div class=\"card\">
+\t\t\t\t\t\t\t\t<div class=\"card-body\">
+\t\t\t\t\t\t\t\t\t<div class=\"row mb-2\">
+\t\t\t\t\t\t\t\t\t\t<div class=\"col-sm-4\">
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ path('app_documents_new') }}\" class=\"btn btn-success mb-2\">
+\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"ri-add-line align-bottom me-1\"></i>
+\t\t\t\t\t\t\t\t\t\t\t\tCreate Document
+\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t<div class=\"table-responsive\">
+\t\t\t\t\t\t\t\t\t\t<table class=\"table table-centered table-nowrap mb-0\">
+\t\t\t\t\t\t\t\t\t\t\t<thead class=\"table-light\">
+\t\t\t\t\t\t\t\t\t\t\t\t<tr>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<th>Reference</th>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<th>Date</th>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<th>Type</th>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<th>Sender</th>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<th>Recipient</th>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<th>Total TTC</th>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<th>Status</th>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<th>Actions</th>
+\t\t\t\t\t\t\t\t\t\t\t\t</tr>
+\t\t\t\t\t\t\t\t\t\t\t</thead>
+\t\t\t\t\t\t\t\t\t\t\t<tbody>
+\t\t\t\t\t\t\t\t\t\t\t\t{% for document in documents %}
+\t\t\t\t\t\t\t\t\t\t\t\t\t<tr>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>{{ document.reference }}</td>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>{{ document.docDate|date('d/m/Y') }}</td>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>{{ document.type }}</td>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>{{ document.emetteur.username }}</td>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>{{ document.destinataire.username }}</td>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>{{ document.montantTva}}</td>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge bg-{{ document.status == 'Paid' ? 'success' : 'warning' }}\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t{{ document.status }}
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ path('app_documents_show', {'id': document.id}) }}\" class=\"btn btn-sm btn-light\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"ri-eye-line\"></i>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ path('app_documents_edit', {'id': document.id}) }}\" class=\"btn btn-sm btn-primary\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"ri-pencil-line\"></i>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</tr>
+\t\t\t\t\t\t\t\t\t\t\t\t{% else %}
+\t\t\t\t\t\t\t\t\t\t\t\t\t<tr>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td colspan=\"8\" class=\"text-center\">No documents found</td>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</tr>
+\t\t\t\t\t\t\t\t\t\t\t\t{% endfor %}
+\t\t\t\t\t\t\t\t\t\t\t</tbody>
+\t\t\t\t\t\t\t\t\t\t</table>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t\t{{ include('partials/footer.html.twig') }}
+\t\t</div>
+\t</div>
+\t{{ include('partials/vendor-scripts.html.twig') }}
+\t<script src=\"{{ asset('assets/libs/sweetalert2/sweetalert2.min.js') }}\"></script>
+\t<script src=\"../../assets/js/app.js\"></script>
+</body></html>
+", "documents/index.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\documents\\index.html.twig");
     }
 }

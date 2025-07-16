@@ -1429,6 +1429,6 @@ class __TwigTemplate_51f67d9b8b0a1c9218b0bf7650fbd015 extends Template
     <script src=\"../../assets/js/app.js\"></script>
 </body>
 
-</html>", "crypto/apps-crypto-buy-sell.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\crypto\\apps-crypto-buy-sell.html.twig");
+</html>", "crypto/apps-crypto-buy-sell.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\crypto\\apps-crypto-buy-sell.html.twig");
     }
 }

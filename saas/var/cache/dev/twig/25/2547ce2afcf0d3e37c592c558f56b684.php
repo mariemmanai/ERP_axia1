@@ -1316,6 +1316,6 @@ class __TwigTemplate_1535aef0ff88ea589c3cb09393db260f extends Template
     <script src=\"../../assets/js/app.js\"></script>
 </body>
 
-</html>", "layouts/layouts-horizontal.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\layouts\\layouts-horizontal.html.twig");
+</html>", "layouts/layouts-horizontal.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\layouts\\layouts-horizontal.html.twig");
     }
 }

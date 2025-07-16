@@ -473,6 +473,6 @@ class __TwigTemplate_6a626769b2fbb3f2d4d89ed29ecc5a9c extends Template
     <script src=\"../../assets/js/app.js\"></script>
 </body>
 
-</html>", "tables/tables-gridjs.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\tables\\tables-gridjs.html.twig");
+</html>", "tables/tables-gridjs.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\tables\\tables-gridjs.html.twig");
     }
 }

@@ -1959,6 +1959,6 @@ class __TwigTemplate_de906ceeb29c79d2ea52a101ea0b1439 extends Template
     <script src=\"../../assets/js/pages/nft-landing.init.js\"></script>
 </body>
 
-</html>", "nft/nft-landing.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\nft\\nft-landing.html.twig");
+</html>", "nft/nft-landing.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\nft\\nft-landing.html.twig");
     }
 }

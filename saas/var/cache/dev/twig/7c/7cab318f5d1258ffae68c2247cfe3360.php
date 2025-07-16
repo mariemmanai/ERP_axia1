@@ -3493,6 +3493,6 @@ class __TwigTemplate_dd5c3a416f5ebc32682107bedbe710c8 extends Template
     <script src=\"../../assets/js/pages/landing.init.js\"></script>
 </body>
 
-</html>", "pages/landing.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\pages\\landing.html.twig");
+</html>", "pages/landing.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\pages\\landing.html.twig");
     }
 }

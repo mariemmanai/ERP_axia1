@@ -861,6 +861,6 @@ class __TwigTemplate_c6b0209dfa2ace3bcae22569820cf346 extends Template
     <script src=\"../../assets/js/app.js\"></script>
 </body>
 
-</html>", "crypto/apps-crypto-orders.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\crypto\\apps-crypto-orders.html.twig");
+</html>", "crypto/apps-crypto-orders.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\crypto\\apps-crypto-orders.html.twig");
     }
 }

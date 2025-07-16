@@ -1492,6 +1492,6 @@ class __TwigTemplate_e1aef3bcaddb13efbb5feed36fc74bb7 extends Template
     <script src=\"../../assets/js/app.js\"></script>
 </body>
 
-</html>", "apps/apps-mailbox.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\apps\\apps-mailbox.html.twig");
+</html>", "apps/apps-mailbox.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\apps\\apps-mailbox.html.twig");
     }
 }

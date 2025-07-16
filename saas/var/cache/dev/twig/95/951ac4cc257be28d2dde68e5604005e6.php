@@ -401,6 +401,6 @@ class __TwigTemplate_e63d9e3f1dbac107681eb7bbeea6b983 extends Template
     <script src=\"../../assets/js/app.js\"></script>
 </body>
 
-</html>", "nft/apps-nft-wallet.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\nft\\apps-nft-wallet.html.twig");
+</html>", "nft/apps-nft-wallet.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\nft\\apps-nft-wallet.html.twig");
     }
 }

@@ -343,6 +343,6 @@ class __TwigTemplate_f32a126c4dcf8eb0e68acc111b8a7664 extends Template
     {{ include('partials/vendor-scripts.html.twig') }}
 </body>
 
-</html>", "auth/auth-pass-reset-cover.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\auth\\auth-pass-reset-cover.html.twig");
+</html>", "auth/auth-pass-reset-cover.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\auth\\auth-pass-reset-cover.html.twig");
     }
 }

@@ -961,6 +961,6 @@ class __TwigTemplate_c425277f200871221fa632eb77de81c5 extends Template
     <script src=\"../../assets/js/app.js\"></script>
 </body>
 
-</html>", "nft/apps-nft-auction.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\nft\\apps-nft-auction.html.twig");
+</html>", "nft/apps-nft-auction.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\nft\\apps-nft-auction.html.twig");
     }
 }

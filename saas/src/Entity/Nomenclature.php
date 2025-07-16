@@ -1,9 +1,12 @@
 <?php
+
 namespace App\Entity;
 
 use App\Repository\NomenclatureRepository;
-use App\Repository\NumenclatRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
+
 
 #[ORM\Entity(repositoryClass: NomenclatureRepository::class)]
 #[ORM\Table(name: 'nomenclature')]
@@ -22,26 +25,71 @@ class Nomenclature
     #[ORM\JoinColumn(name: 'matiere_id', referencedColumnName: 'id', nullable: false)]
     private ?Articles $matiere = null;
 
-    #[ORM\Column(type: 'float', length: 50)]
-    private ?float $consommation = null;
+    #[ORM\Column(type: 'integer', nullable: false)]
+    private ?int $consommation = null;
 
-    public function getId(): ?int { return $this->id; }
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
 
-    public function getProduit(): ?Articles { return $this->produit; }
-    public function setProduit(?Articles $produit): self {
+    public function getProduit(): ?Articles
+    {
+        return $this->produit;
+    }
+    public function setProduit(?Articles $produit): self
+    {
         $this->produit = $produit;
         return $this;
     }
-
-    public function getMatiere(): ?Articles { return $this->matiere; }
-    public function setMatiere(?Articles $matiere): self {
+    public function getMatiere(): ?Articles
+    {
+        return $this->matiere;
+    }
+    public function setMatiere(?Articles $matiere): self
+    {
         $this->matiere = $matiere;
         return $this;
     }
-
-    public function getConsommation(): ?string { return $this->consommation; }
-    public function setConsommation(float $consommation): self {
+    public function getConsommation(): ?int
+    {
+        return $this->consommation;
+    }
+    public function setConsommation(?int $consommation): self
+    {
         $this->consommation = $consommation;
+        return $this;
+    }
+
+    #[ORM\OneToMany(targetEntity: Composition::class, mappedBy: 'nomenclature', cascade: ['persist'])]
+    private Collection $compositions;
+
+    public function __construct()
+    {
+        $this->compositions = new ArrayCollection();
+    }
+
+    public function getCompositions(): Collection
+    {
+        return $this->compositions;
+    }
+
+    public function addComposition(Composition $composition): self
+    {
+        if (!$this->compositions->contains($composition)) {
+            $this->compositions[] = $composition;
+            $composition->setNomenclature($this);
+        }
+        return $this;
+    }
+
+    public function removeComposition(Composition $composition): self
+    {
+        if ($this->compositions->removeElement($composition)) {
+            if ($composition->getNomenclature() === $this) {
+                $composition->setNomenclature(null);
+            }
+        }
         return $this;
     }
 }

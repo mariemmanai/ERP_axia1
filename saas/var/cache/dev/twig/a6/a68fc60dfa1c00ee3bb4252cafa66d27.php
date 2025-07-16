@@ -77,6 +77,6 @@ class __TwigTemplate_5e3855034f222aceeaf70a09f396f9ca extends Template
     <circle cx=\"10\" cy=\"10\" r=\"7\"></circle>
     <line x1=\"21\" y1=\"21\" x2=\"15\" y2=\"15\"></line>
 </svg>
-", "@WebProfiler/Icon/search.svg", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Icon\\search.svg");
+", "@WebProfiler/Icon/search.svg", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Icon\\search.svg");
     }
 }

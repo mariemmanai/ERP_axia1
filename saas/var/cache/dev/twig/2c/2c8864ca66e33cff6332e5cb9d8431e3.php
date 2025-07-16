@@ -757,6 +757,6 @@ class __TwigTemplate_c0c79c8ae94a885cb278d1d31e40e7b7 extends Template
     <script src=\"../../assets/js/app.js\"></script>
 </body>
 
-</html>", "ecommerce/apps-ecommerce-cart.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\ecommerce\\apps-ecommerce-cart.html.twig");
+</html>", "ecommerce/apps-ecommerce-cart.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\ecommerce\\apps-ecommerce-cart.html.twig");
     }
 }

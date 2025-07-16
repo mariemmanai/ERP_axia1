@@ -799,6 +799,6 @@ class __TwigTemplate_a09dcc9900a98de90be202d7693d477c extends Template
     <script src=\"../../assets/js/app.js\"></script>
 </body>
 
-</html>", "nft/apps-nft-ranking.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\nft\\apps-nft-ranking.html.twig");
+</html>", "nft/apps-nft-ranking.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\nft\\apps-nft-ranking.html.twig");
     }
 }

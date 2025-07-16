@@ -383,6 +383,6 @@ class __TwigTemplate_ff06d159760eead8a6f1c66038c07359 extends Template
     <script src=\"../../assets/js/pages/passowrd-create.init.js\"></script>
 </body>
 
-</html>", "auth/auth-pass-change-cover.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\auth\\auth-pass-change-cover.html.twig");
+</html>", "auth/auth-pass-change-cover.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\auth\\auth-pass-change-cover.html.twig");
     }
 }

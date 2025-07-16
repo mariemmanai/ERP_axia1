@@ -2276,6 +2276,6 @@ class __TwigTemplate_c304471b818b6b201ef4895e6363b9f3 extends Template
     <script src=\"../../assets/js/app.js\"></script>
 </body>
 
-</html>", "layouts/layouts-two-column.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\layouts\\layouts-two-column.html.twig");
+</html>", "layouts/layouts-two-column.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\layouts\\layouts-two-column.html.twig");
     }
 }

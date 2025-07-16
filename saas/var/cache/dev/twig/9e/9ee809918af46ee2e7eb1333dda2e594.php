@@ -2563,6 +2563,6 @@ class __TwigTemplate_22831a6994707fa9fde5c7feec4ed834 extends Template
     <script src=\"../../assets/js/app.js\"></script>
 </body>
 
-</html>", "tasks/apps-tasks-kanban.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\tasks\\apps-tasks-kanban.html.twig");
+</html>", "tasks/apps-tasks-kanban.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\tasks\\apps-tasks-kanban.html.twig");
     }
 }

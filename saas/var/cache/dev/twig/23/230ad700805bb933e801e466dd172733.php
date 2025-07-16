@@ -79,6 +79,6 @@ class __TwigTemplate_8e3b913da34ef0a340e6d5fa886e4a86 extends Template
 <script src=\"../../assets/libs/node-waves/waves.min.js\"></script>
 <script src=\"../../assets/libs/feather-icons/feather.min.js\"></script>
 <script src=\"../../assets/js/pages/plugins/lord-icon-2.1.0.js\"></script>
-<script src=\"../../assets/js/plugins.js\"></script>", "partials/vendor-scripts.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\partials\\vendor-scripts.html.twig");
+<script src=\"../../assets/js/plugins.js\"></script>", "partials/vendor-scripts.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\partials\\vendor-scripts.html.twig");
     }
 }

@@ -311,6 +311,6 @@ class __TwigTemplate_bf2ba2651392588ccd4aed7aac3b1ed4 extends Template
     {{ include('partials/vendor-scripts.html.twig') }}
 </body>
 
-</html>", "auth/auth-success-msg-cover.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\auth\\auth-success-msg-cover.html.twig");
+</html>", "auth/auth-success-msg-cover.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\auth\\auth-success-msg-cover.html.twig");
     }
 }

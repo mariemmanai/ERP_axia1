@@ -303,6 +303,6 @@ class __TwigTemplate_207dbaf7234f9b013ec58013a3bdddab extends Template
     <script src=\"../../assets/js/pages/particles.app.js\"></script>
 </body>
 
-</html>", "auth/auth-lockscreen-basic.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\auth\\auth-lockscreen-basic.html.twig");
+</html>", "auth/auth-lockscreen-basic.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\auth\\auth-lockscreen-basic.html.twig");
     }
 }

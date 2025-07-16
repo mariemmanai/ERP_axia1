@@ -2015,6 +2015,6 @@ class __TwigTemplate_16afa4f01f4bec30db658b7c5b7a8fe5 extends Template
     <script src=\"../../assets/js/app.js\"></script>
 </body>
 
-</html>", "pages/pages-pricing.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\pages\\pages-pricing.html.twig");
+</html>", "pages/pages-pricing.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\pages\\pages-pricing.html.twig");
     }
 }

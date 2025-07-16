@@ -805,6 +805,6 @@ class __TwigTemplate_ece1924f10f2959e8f6bd751afdf23e6 extends Template
     <script src=\"../../assets/js/app.js\"></script>
 </body>
 
-</html>", "email/apps-email-ecommerce.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\email\\apps-email-ecommerce.html.twig");
+</html>", "email/apps-email-ecommerce.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\email\\apps-email-ecommerce.html.twig");
     }
 }

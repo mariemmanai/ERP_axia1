@@ -2231,6 +2231,6 @@ class __TwigTemplate_e891c57c2f349a1fb848a2b415bd2850 extends Template
     <script src=\"../../assets/js/app.js\"></script>
 </body>
 
-</html>", "features/ui-typography.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\features\\ui-typography.html.twig");
+</html>", "features/ui-typography.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\features\\ui-typography.html.twig");
     }
 }

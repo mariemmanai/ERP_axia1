@@ -347,6 +347,6 @@ class __TwigTemplate_1c16752e591ef860816e6e2fef2b6667 extends Template
         });
     </script>
 </body>
-</html>", "stock/index.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\stock\\index.html.twig");
+</html>", "stock/index.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\stock\\index.html.twig");
     }
 }

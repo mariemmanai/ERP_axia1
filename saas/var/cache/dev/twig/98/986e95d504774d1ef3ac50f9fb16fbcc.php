@@ -1113,6 +1113,6 @@ class __TwigTemplate_45619e5bba47d775586503dc1bcffbb7 extends Template
     <script src=\"../../assets/js/app.js\"></script>
 </body>
 
-</html>", "dashboard/dashboard-blog.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\dashboard\\dashboard-blog.html.twig");
+</html>", "dashboard/dashboard-blog.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\dashboard\\dashboard-blog.html.twig");
     }
 }

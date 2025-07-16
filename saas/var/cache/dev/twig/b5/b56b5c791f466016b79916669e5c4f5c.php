@@ -79,6 +79,6 @@ class __TwigTemplate_78bef8a80b0d09010edfe4c2f18ba5cf extends Template
     <line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"12\"></line>
     <line x1=\"12\" y1=\"16\" x2=\"12.01\" y2=\"16\"></line>
 </svg>
-", "@WebProfiler/Icon/alert-circle.svg", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Icon\\alert-circle.svg");
+", "@WebProfiler/Icon/alert-circle.svg", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Icon\\alert-circle.svg");
     }
 }

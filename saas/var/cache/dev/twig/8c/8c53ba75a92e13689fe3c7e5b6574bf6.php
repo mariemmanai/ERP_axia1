@@ -81,6 +81,6 @@ class __TwigTemplate_9b811ba803a5c871efadcae80e48aaee extends Template
     <line x1=\"7\" y1=\"21\" x2=\"7\" y2=\"3\"></line>
     <path d=\"M20 6l-3 -3l-3 3\"></path>
 </svg>
-", "@WebProfiler/Icon/ajax.svg", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Icon\\ajax.svg");
+", "@WebProfiler/Icon/ajax.svg", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Icon\\ajax.svg");
     }
 }

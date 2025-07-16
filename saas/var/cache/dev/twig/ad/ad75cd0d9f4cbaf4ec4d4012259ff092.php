@@ -287,6 +287,6 @@ class __TwigTemplate_6c903be745167de12d6eaacb6a9a6b3e extends Template
         <script src=\"../../assets/js/app.js\"></script>
     </body>
 
-</html>", "jobs/apps-job-candidate-lists.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\jobs\\apps-job-candidate-lists.html.twig");
+</html>", "jobs/apps-job-candidate-lists.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\jobs\\apps-job-candidate-lists.html.twig");
     }
 }

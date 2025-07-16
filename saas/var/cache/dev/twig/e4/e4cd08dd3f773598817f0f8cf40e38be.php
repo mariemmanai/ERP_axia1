@@ -93,6 +93,6 @@ class __TwigTemplate_37e265e707902dcb68d6fa8df002d947 extends Template
             </div>
         </div>
     </div>
-</footer>", "partials/footer.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\partials\\footer.html.twig");
+</footer>", "partials/footer.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\partials\\footer.html.twig");
     }
 }

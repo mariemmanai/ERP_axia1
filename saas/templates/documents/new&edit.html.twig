@@ -1,6 +1,7 @@
 {{ include('partials/main.html.twig') }}
-
 <head>
+	<br>
+	<br>
 	{{ include('partials/title-meta.html.twig', {title: document.id ? 'Modifier un document' : 'Créer un document'}) }}
 	<link rel="stylesheet" href="{{ asset('assets/libs/dropzone/dropzone.css') }}" type="text/css"/>
 	<link href="{{ asset('assets/libs/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet" type="text/css"/>
@@ -33,7 +34,7 @@
 
 		<div class="main-content">
 			<div class="page-content">
-				<div class="container-fluid mt-3">
+				<div class="container-fluid">
 					{{ include('partials/page-title.html.twig', {
                         pagetitle: 'Documents',
                         title: document.id ? 'Modifier un document' : 'Créer un document'
@@ -154,11 +155,10 @@
 														<td class="text-end">{{ form_widget(ligne.remise, {
                                                                 'attr': {
                                                                     'class': 'form-control' ~ (document.id ? '' : ' bg-light border-0'),
-                                                                    'oninput': 'updateRemise(this)'
+                                                                    'readonly': 'readonly'
                                                                 },
                                                                 'label': false
                                                             }) }}
-
 															<button type="button" class="btn btn-sm btn-danger remove-ligne">
 																<i class="ri-delete-bin-line"></i>
 															</button>
@@ -179,7 +179,6 @@
 										</table>
 									</div>
 								</div>
-
 								<div class="card-body p-4">
 									<div class="row">
 										<div class="col-lg-4">
@@ -237,13 +236,9 @@
 											<i class="ri-save-line align-bottom me-1"></i>
 											{{ document.id ? 'Mettre à jour' : 'Enregistrer' }}
 										</button>
-										<a href="{{ path('app_documents_edit2') }}" class="btn btn-success">
-											Update
-										</a>
 										<a href="{{ path('app_documents_index') }}" class="btn btn-light">
 											Annuler
 										</a>
-
 									</div>
 								</div>
 								{{ form_end(form) }}
@@ -255,7 +250,6 @@
 			{{ include('partials/footer.html.twig') }}
 		</div>
 	</div>
-
 	{{ include('partials/vendor-scripts.html.twig') }}
 	<script src="{{ asset('assets/libs/dropzone/dropzone-min.js') }}"></script>
 	<script src="{{ asset('assets/libs/sweetalert2/sweetalert2.min.js') }}"></script>
@@ -263,21 +257,10 @@
 		document.addEventListener('DOMContentLoaded', function () {
 const ligneCollection = document.getElementById('document-lignes');
 let index = parseInt(ligneCollection.dataset.index);
-function updateHiddenFields() {
-document.querySelectorAll('input[readonly]').forEach(input => {
-if (input.name.includes('montant') || input.name.includes('taux')) {
-const clone = input.cloneNode(true);
-clone.removeAttribute('readonly');
-clone.classList.add('d-none');
-input.parentNode.appendChild(clone);
-}
-});
-}
 function updateReferencePreview() {
-const typeSelect = document.querySelector('#   {{ form.type.vars.id }}');
+const typeSelect = document.querySelector('#      {{ form.type.vars.id }}');
 const type = typeSelect.options[typeSelect.selectedIndex].text;
 const year = new Date().getFullYear().toString().slice(-2);
-
 const prefixMap = {
 'Devis achat': 'DA',
 'Commande achat': 'CA',
@@ -297,15 +280,13 @@ const prefixMap = {
 const prefix = prefixMap[type] || 'DOC';
 const referencePreview = prefix + year + '000001';
 document.querySelector('#reference-preview').textContent = referencePreview;
-document.querySelector('#   {{ form.reference.vars.id }}').value = referencePreview;
+document.querySelector('#      {{ form.reference.vars.id }}').value = referencePreview;
 }
 function addLigneForm() {
 const newForm = ligneCollection.dataset.prototype.replace(/__name__label__/g, index).replace(/__name__/g, index);
-
 const newRow = document.createElement('tr');
 newRow.className = 'ligne-row';
 newRow.innerHTML = newForm;
-
 const removeCell = document.createElement('td');
 removeCell.className = 'text-end';
 removeCell.innerHTML = `
@@ -324,7 +305,6 @@ return newRow;
 function setupLigneEvents(row) {
 const prixUnitaireInput = row.querySelector('[id$="_prixUnitaireHt"]');
 const qteInput = row.querySelector('[id$="_qte"]');
-
 if (prixUnitaireInput && qteInput) {
 prixUnitaireInput.addEventListener('input', function () {
 updateLigneTotal(this);
@@ -333,7 +313,6 @@ qteInput.addEventListener('input', function () {
 updateLigneTotal(this);
 });
 }
-
 row.querySelector('.remove-ligne').addEventListener('click', function () {
 row.remove();
 updateTotals();
@@ -347,18 +326,6 @@ const remise = parseFloat(row.querySelector('[id$="_remise"]').value) || 0;
 const total = (prixUnitaire * qte) * (1 - remise / 100);
 const totalInput = row.querySelector('[id$="_prixTotalHt"]');
 totalInput.value = total.toFixed(2);
-
-updateTotals();
-}
-function updateRemise(input) {
-const row = input.closest('.ligne-row');
-const prixUnitaire = parseFloat(row.querySelector('[id$="_prixUnitaireHt"]').value) || 0;
-const qte = parseFloat(row.querySelector('[id$="_qte"]').value) || 0;
-const remise = parseFloat(input.value) || 0;
-const total = (prixUnitaire * qte) * (1 - remise / 100);
-
-const totalInput = row.querySelector('[id$="_prixTotalHt"]');
-totalInput.value = total.toFixed(2);
 updateTotals();
 }
 function updateTotals() {
@@ -367,20 +334,17 @@ let montantHt = 0;
 document.querySelectorAll('[id$="_prixTotalHt"]').forEach(input => {
 montantHt += parseFloat(input.value) || 0;
 });
-
-const tauxTva = parseFloat(document.querySelector('#   {{ form.tauxTva.vars.id }}').value) || 0;
+const tauxTva = parseFloat(document.querySelector('#      {{ form.tauxTva.vars.id }}').value) || 0;
 const montantTva = montantHt * (1 + (tauxTva / 100));
 const montantTtc = montantHt + montantTva;
-
-const retenu = parseFloat(document.querySelector('#   {{ form.retenu.vars.id }}').value) || 0;
+const retenu = parseFloat(document.querySelector('#      {{ form.retenu.vars.id }}').value) || 0;
 const montantRetenu = montantTtc * retenu / 100;
-
-const timbre = parseFloat(document.querySelector('#   {{ form.timbre.vars.id }}').value) || 0;
+const timbre = parseFloat(document.querySelector('#      {{ form.timbre.vars.id }}').value) || 0;
 const montantAPayer = montantTtc - montantRetenu + timbre;
 
-document.querySelector('#   {{ form.montantHt.vars.id }}').value = montantHt.toFixed(2);
-document.querySelector('#   {{ form.montantTva.vars.id }}').value = montantTva.toFixed(2);
-document.querySelector('#   {{ form.montantAPayer.vars.id }}').value = montantAPayer.toFixed(2);
+document.querySelector('#      {{ form.montantHt.vars.id }}').value = montantHt.toFixed(2);
+document.querySelector('#      {{ form.montantTva.vars.id }}').value = montantTva.toFixed(2);
+document.querySelector('#      {{ form.montantAPayer.vars.id }}').value = montantAPayer.toFixed(2);
 }
 document.getElementById('add-ligne').addEventListener('click', function (e) {
 e.preventDefault();
@@ -397,9 +361,9 @@ updateLigneTotal(this);
 });
 });
 
-document.querySelector('#   {{ form.tauxTva.vars.id }}').addEventListener('input', updateTotals);
-document.querySelector('#   {{ form.timbre.vars.id }}').addEventListener('input', updateTotals);
-document.querySelector('#   {{ form.retenu.vars.id }}').addEventListener('input', updateTotals);{% if not document.id %}const typeSelect = document.querySelector('#   {{ form.type.vars.id }}');
+document.querySelector('#      {{ form.tauxTva.vars.id }}').addEventListener('input', updateTotals);
+document.querySelector('#      {{ form.timbre.vars.id }}').addEventListener('input', updateTotals);
+document.querySelector('#      {{ form.retenu.vars.id }}').addEventListener('input', updateTotals);{% if not document.id %}const typeSelect = document.querySelector('#      {{ form.type.vars.id }}');
 if (typeSelect.value) {
 updateReferencePreview();
 }

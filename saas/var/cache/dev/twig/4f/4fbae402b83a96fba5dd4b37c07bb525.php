@@ -2339,6 +2339,6 @@ class __TwigTemplate_8221328a21193854c3b8dfe32dd55613 extends Template
     <script src=\"../../assets/js/app.js\"></script>
 </body>
 
-</html>", "dashboard/dashboard-nft.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\dashboard\\dashboard-nft.html.twig");
+</html>", "dashboard/dashboard-nft.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\dashboard\\dashboard-nft.html.twig");
     }
 }

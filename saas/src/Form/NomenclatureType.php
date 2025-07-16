@@ -1,14 +1,15 @@
 <?php
+
 namespace App\Form;
 
-use App\Entity\Nomenclature;
-use App\Entity\Articles;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
-use Symfony\Component\Form\Extension\Core\Type\CollectionType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Doctrine\ORM\EntityRepository;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
+use App\Entity\Articles;
+use App\Entity\Nomenclature;
 
 class NomenclatureType extends AbstractType
 {
@@ -18,27 +19,22 @@ class NomenclatureType extends AbstractType
             ->add('produit', EntityType::class, [
                 'class' => Articles::class,
                 'choice_label' => 'reference',
-                'label' => 'Produit Fini',
-                'query_builder' => function ($er) {
+                'label' => 'Produit fini',
+                'query_builder' => function (EntityRepository $er) {
                     return $er->createQueryBuilder('a')
                         ->where('a.type = :type')
                         ->setParameter('type', 'Produit Fini');
                 },
+                'attr' => ['class' => 'form-control']
             ])
-            ->add('matiere', EntityType::class, [
-                'class' => Articles::class,
-                'choice_label' => function (Articles $article) {
-                    return $article->getReference() . ' - ' . $article->getUnite();
-                },
-                'label' => 'Matière Première',
-                'query_builder' => function ($er) {
-                    return $er->createQueryBuilder('a')
-                        ->where('a.type = :type')
-                        ->setParameter('type', 'Matière Première');
-                },
-            ])
-            ->add('consommation', TextType::class, [
-                'label' => 'Consommation (ex: 2.5 kg)'
+            ->add('compositions', CollectionType::class, [
+                'entry_type' => CompositionType::class,
+                'entry_options' => ['label' => false],
+                'allow_add' => true,
+                'allow_delete' => true,
+                'by_reference' => false,
+                'prototype' => true,
+                'label' => false,
             ]);
     }
 

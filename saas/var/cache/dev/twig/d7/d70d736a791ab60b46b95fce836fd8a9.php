@@ -179,6 +179,6 @@ class __TwigTemplate_178a463196d2111072fa35916747f6fa extends Template
 
 </body>
 
-</html>", "auth/auth-offline.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\auth\\auth-offline.html.twig");
+</html>", "auth/auth-offline.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\auth\\auth-offline.html.twig");
     }
 }

@@ -69,6 +69,6 @@ class __TwigTemplate_f6ff3822db5c9b50869f8430410c1732 extends Template
     public function getSourceContext()
     {
         return new Source("<!doctype html>
-<html lang=\"en\" data-layout=\"vertical\" data-topbar=\"dark\" data-sidebar-size=\"lg\" data-sidebar=\"light\" data-sidebar-image=\"none\" data-preloader=\"disable\">", "partials/main.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\partials\\main.html.twig");
+<html lang=\"en\" data-layout=\"vertical\" data-topbar=\"dark\" data-sidebar-size=\"lg\" data-sidebar=\"light\" data-sidebar-image=\"none\" data-preloader=\"disable\">", "partials/main.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\partials\\main.html.twig");
     }
 }

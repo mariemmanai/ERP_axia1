@@ -1342,6 +1342,6 @@ class __TwigTemplate_442712ed3d925abf492fc1cfd219f2bd extends Template
     <script src=\"../../assets/js/app.js\"></script>
 </body>
 
-</html>", "apps/apps-file-manager.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\apps\\apps-file-manager.html.twig");
+</html>", "apps/apps-file-manager.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\apps\\apps-file-manager.html.twig");
     }
 }

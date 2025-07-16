@@ -473,6 +473,6 @@ class __TwigTemplate_6a1a37ca11cf8266845f44c29da419e2 extends Template
 </div>
 <!-- Left Sidebar End -->
 <!-- Vertical Overlay-->
-<div class=\"vertical-overlay\"></div>", "partials/sidebar.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\partials\\sidebar.html.twig");
+<div class=\"vertical-overlay\"></div>", "partials/sidebar.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\partials\\sidebar.html.twig");
     }
 }

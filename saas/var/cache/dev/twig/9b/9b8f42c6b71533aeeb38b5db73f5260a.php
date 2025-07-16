@@ -85,6 +85,6 @@ class __TwigTemplate_4278daeb56aab50ce74f35f0a4cb8f75 extends Template
 <!-- App Css-->
 <link href=\"../../assets/css/app.min.css\" rel=\"stylesheet\" type=\"text/css\" />
 <!-- custom Css-->
-<link href=\"../../assets/css/custom.min.css\" rel=\"stylesheet\" type=\"text/css\" />", "partials/head-css.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\partials\\head-css.html.twig");
+<link href=\"../../assets/css/custom.min.css\" rel=\"stylesheet\" type=\"text/css\" />", "partials/head-css.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\partials\\head-css.html.twig");
     }
 }

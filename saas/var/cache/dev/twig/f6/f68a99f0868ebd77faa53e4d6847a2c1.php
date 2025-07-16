@@ -77,6 +77,6 @@ class __TwigTemplate_22e4e126d0d0b0d75d20d135eb7b3447 extends Template
     <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>
     <path d=\"M6 6v6a3 3 0 0 0 3 3h10l-4 -4m0 8l4 -4\"></path>
 </svg>
-", "@WebProfiler/Icon/redirect.svg", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Icon\\redirect.svg");
+", "@WebProfiler/Icon/redirect.svg", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Icon\\redirect.svg");
     }
 }

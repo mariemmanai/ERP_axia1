@@ -1,0 +1,88 @@
+{{ include('partials/main.html.twig') }}
+
+<head>
+	{{ include('partials/title-meta.html.twig', {title: 'Détails nomenclature'}) }}
+	<link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+	<link href="{{ asset('assets/css/icons.min.css') }}" rel="stylesheet">
+	<link href="{{ asset('assets/css/app.min.css') }}" rel="stylesheet">
+</head>
+
+<body>
+	<div id="layout-wrapper">
+		{{ include('partials/menu.html.twig') }}
+
+		<div class="main-content">
+			<div class="page-content">
+				<div class="container-fluid">
+					{{ include('partials/page-title.html.twig', {
+                        pagetitle: 'Nomenclatures',
+                        title: 'Détails de la composition'
+                    }) }}
+
+					<div class="row justify-content-center">
+						<div class="col-xxl-8">
+							<div class="card">
+								<div class="card-body p-4">
+									<div class="row">
+										<div class="col-lg-6">
+											<div class="mb-3">
+												<label class="form-label fw-semibold">Produit fini</label>
+												<div class="form-control bg-light border-0">
+													{{ nomenclature.produit.reference }}
+												</div>
+											</div>
+										</div>
+
+									</div>
+
+									<div class="border-top border-top-dashed my-4"></div>
+
+									<h5 class="mb-3">Composition du produit</h5>
+
+									<div class="table-responsive">
+										<table class="table table-striped">
+											<thead>
+												<tr>
+													<th>Matière première</th>
+													<th>Référence</th>
+													<th>Consommation</th>
+													<th>Unité</th>
+												</tr>
+											</thead>
+											<tbody>
+												{% for compo in compositions %}
+													<tr>
+														<td>{{ compo.matiere.reference }}</td>
+														<td>{{ compo.matiere.reference }}</td>
+														<td>{{ compo.consommation }}</td>
+														<td>{{ compo.matiere.unite }}</td>
+													</tr>
+												{% endfor %}
+											</tbody>
+										</table>
+									</div>
+								</div>
+
+								<div class="card-body p-4 border-top">
+									<div class="hstack gap-2 justify-content-end">
+										<a href="{{ path('nomenclature_index') }}" class="btn btn-light">
+											<i class="ri-arrow-left-line align-bottom me-1"></i>
+											Retour
+										</a>
+										<a href="{{ path('nomenclature_edit', {'id': nomenclature.id}) }}" class="btn btn-primary">
+											<i class="ri-edit-line align-bottom me-1"></i>
+											Modifier
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{{ include('partials/footer.html.twig') }}
+		</div>
+	</div>
+
+	{{ include('partials/vendor-scripts.html.twig') }}
+</body></html>

@@ -83,6 +83,6 @@ class __TwigTemplate_fd6694366cf5273b5de073bf201f418d extends Template
     {
         return new Source("{{ include('partials/topbar.html.twig') }}
 {{ include('partials/sidebar.html.twig') }}
-", "partials/menu.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\partials\\menu.html.twig");
+", "partials/menu.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\partials\\menu.html.twig");
     }
 }

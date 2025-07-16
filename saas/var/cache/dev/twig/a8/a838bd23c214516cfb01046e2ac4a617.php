@@ -491,6 +491,6 @@ class __TwigTemplate_7f4d168ced293ff5f63e94295599e76a extends Template
     <script src=\"../../assets/js/app.js\"></script>
 </body>
 
-</html>", "charts/charts-apex-bar.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\charts\\charts-apex-bar.html.twig");
+</html>", "charts/charts-apex-bar.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\charts\\charts-apex-bar.html.twig");
     }
 }

@@ -2703,6 +2703,6 @@ class __TwigTemplate_b0b3c166607f1f8e8d4aa7f4617552f4 extends Template
         <script src=\"../../assets/js/pages/job-lading.init.js\"></script>
     </body>
 
-</html>", "jobs/job-landing.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\jobs\\job-landing.html.twig");
+</html>", "jobs/job-landing.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\jobs\\job-landing.html.twig");
     }
 }

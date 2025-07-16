@@ -1111,6 +1111,6 @@ class __TwigTemplate_5f026454416b073c5fbce2ad0c5ee63b extends Template
     <script src=\"../../assets/js/app.js\"></script>
 </body>
 
-</html>", "nft/apps-nft-creators.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\nft\\apps-nft-creators.html.twig");
+</html>", "nft/apps-nft-creators.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\nft\\apps-nft-creators.html.twig");
     }
 }

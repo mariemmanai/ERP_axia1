@@ -77,6 +77,6 @@ class __TwigTemplate_ba2b8242f5fd095d895875999ba3a9b8 extends Template
     <line x1=\"3\" y1=\"19\" x2=\"21\" y2=\"19\" />
     <rect x=\"5\" y=\"6\" width=\"14\" height=\"10\" rx=\"1\" />
 </svg>
-", "@WebProfiler/Icon/settings-theme-system.svg", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Icon\\settings-theme-system.svg");
+", "@WebProfiler/Icon/settings-theme-system.svg", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Icon\\settings-theme-system.svg");
     }
 }

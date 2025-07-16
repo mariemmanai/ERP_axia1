@@ -4945,6 +4945,6 @@ class __TwigTemplate_2f9d06d8316eec9726c23c4c9ff21144 extends Template
     <script src=\"../../assets/js/app.js\"></script>
 </body>
 
-</html>", "icons/icons-crypto.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\icons\\icons-crypto.html.twig");
+</html>", "icons/icons-crypto.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\icons\\icons-crypto.html.twig");
     }
 }

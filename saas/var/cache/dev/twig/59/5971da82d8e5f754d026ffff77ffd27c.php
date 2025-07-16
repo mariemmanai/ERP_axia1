@@ -1580,6 +1580,6 @@ class __TwigTemplate_a68fca80698cbfb3ae233f3a78b17a23 extends Template
     <script src=\"../../assets/js/app.js\"></script>
 </body>
 
-</html>", "layouts/layouts-detached.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\layouts\\layouts-detached.html.twig");
+</html>", "layouts/layouts-detached.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\layouts\\layouts-detached.html.twig");
     }
 }

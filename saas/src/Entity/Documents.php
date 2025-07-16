@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Entity;
+
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\DocumentsRepository;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -31,7 +33,8 @@ class Documents
 
     #[ORM\Column(
         type: 'string',
-        length: 50)]
+        length: 50
+    )]
     private ?string $type = null;
 
     #[ORM\Column(
@@ -210,7 +213,7 @@ class Documents
     public function calculateMontantTva(): self
     {
         if ($this->montantHt !== null && $this->tauxTva !== null) {
-            $this->montantTva = $this->montantHt * (1+ ($this->tauxTva / 100));
+            $this->montantTva = $this->montantHt * (1 + ($this->tauxTva / 100));
         }
         return $this;
     }
@@ -263,7 +266,7 @@ class Documents
         return $this;
     }
     #[ORM\PrePersist]
-    public function prePersist(): void  
+    public function prePersist(): void
     {
         $this->createAt = new \DateTime();
         if ($this->reference === null) {
@@ -272,7 +275,7 @@ class Documents
         $this->updateTotals();
     }
 
-    private function generateReference(): string
+    public function generateReference(): string
     {
         $prefixMap = [
             'Devis achat' => 'DA',
@@ -292,9 +295,9 @@ class Documents
         ];
 
         $prefix = $prefixMap[$this->type] ?? 'DOC';
-        $year = date('y'); 
-        
-        return $prefix . $year . '000001'; 
+        $year = date('y');
+
+        return $prefix . $year . '000001';
     }
     public function calculateTotals(): void
     {
@@ -306,15 +309,14 @@ class Documents
 
         $this->calculateMontantTva();
         $ttc = $this->montantTva;
-        $this->montantAPayer = $ttc 
-            + ($this->timbre ?? 0) 
+        $this->montantAPayer = $ttc
+            + ($this->timbre ?? 0)
             - ($this->retenu ?? 0);
     }
     #[ORM\PrePersist]
     #[ORM\PreUpdate]
     public function updateTotals(): void
     {
-        $this->calculateTotals(); 
+        $this->calculateTotals();
     }
-    
 }

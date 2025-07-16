@@ -520,6 +520,6 @@ class __TwigTemplate_417b06402a7c0e39af779128e309ed10 extends Template
     <!-- password create init -->
     <script src=\"{{ asset('assets/js/pages/passowrd-create.init.js') }}\"></script>
 </body>
-</html>", "auth/auth-signup-basic.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\auth\\auth-signup-basic.html.twig");
+</html>", "auth/auth-signup-basic.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\auth\\auth-signup-basic.html.twig");
     }
 }

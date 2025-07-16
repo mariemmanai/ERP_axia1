@@ -9731,6 +9731,6 @@ class __TwigTemplate_aff8d9d139f6e8cada95d0611ffae319 extends Template
     <script src=\"../../assets/js/app.js\"></script>
 </body>
 
-</html>", "icons/icons-boxicons.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\icons\\icons-boxicons.html.twig");
+</html>", "icons/icons-boxicons.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\icons\\icons-boxicons.html.twig");
     }
 }

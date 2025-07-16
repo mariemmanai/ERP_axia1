@@ -837,6 +837,6 @@ class __TwigTemplate_7d05c74b232fe19cc4e1013b722442e4 extends Template
     <script src=\"../../assets/js/app.js\"></script>
 </body>
 
-</html>", "advance/advance-ui-sweetalerts.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\advance\\advance-ui-sweetalerts.html.twig");
+</html>", "advance/advance-ui-sweetalerts.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\advance\\advance-ui-sweetalerts.html.twig");
     }
 }

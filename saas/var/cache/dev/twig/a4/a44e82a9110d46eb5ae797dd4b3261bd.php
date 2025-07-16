@@ -217,6 +217,6 @@ class __TwigTemplate_ee992f18f3491e017ee39781e4129d78 extends Template
     <script src=\"../../assets/js/app.js\"></script>
 </body>
 
-</html>", "icons/icons-remix.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\icons\\icons-remix.html.twig");
+</html>", "icons/icons-remix.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\icons\\icons-remix.html.twig");
     }
 }

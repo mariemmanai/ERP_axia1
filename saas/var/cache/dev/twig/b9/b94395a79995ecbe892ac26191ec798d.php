@@ -81,6 +81,6 @@ class __TwigTemplate_580c2e051a13bdb14ad149c44badb1b6 extends Template
     <path d=\"M21 6.727a11.05 11.05 0 0 0 -2.794 -3.727\"></path>
     <path d=\"M3 6.727a11.05 11.05 0 0 1 2.792 -3.727\"></path>
 </svg>
-", "@WebProfiler/Icon/notifier.svg", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Icon\\notifier.svg");
+", "@WebProfiler/Icon/notifier.svg", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Icon\\notifier.svg");
     }
 }

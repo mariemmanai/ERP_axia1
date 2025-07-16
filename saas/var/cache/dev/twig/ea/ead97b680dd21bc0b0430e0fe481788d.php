@@ -95,6 +95,6 @@ class __TwigTemplate_881070416dd43352394743679bf1b006 extends Template
     <path d=\"M14 21v-2\"></path>
     <path d=\"M10 21v-2\"></path>
 </svg>
-", "@WebProfiler/Icon/memory.svg", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Icon\\memory.svg");
+", "@WebProfiler/Icon/memory.svg", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Icon\\memory.svg");
     }
 }

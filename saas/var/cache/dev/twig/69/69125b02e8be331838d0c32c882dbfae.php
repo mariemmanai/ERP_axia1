@@ -2497,6 +2497,6 @@ class __TwigTemplate_4a1c31f15952cb5f038c287fb6f2b60b extends Template
     <script src=\"../../assets/js/app.js\"></script>
 </body>
 
-</html>", "dashboard/dashboard-crypto.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\dashboard\\dashboard-crypto.html.twig");
+</html>", "dashboard/dashboard-crypto.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\dashboard\\dashboard-crypto.html.twig");
     }
 }

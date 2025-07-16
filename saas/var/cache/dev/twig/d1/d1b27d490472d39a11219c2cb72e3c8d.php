@@ -333,6 +333,6 @@ class __TwigTemplate_12ed761e5c5e7e74a543929b573710c2 extends Template
     <script src=\"../../assets/js/app.js\"></script>
 </body>
 
-</html>", "charts/charts-apex-candlestick.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\charts\\charts-apex-candlestick.html.twig");
+</html>", "charts/charts-apex-candlestick.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\charts\\charts-apex-candlestick.html.twig");
     }
 }

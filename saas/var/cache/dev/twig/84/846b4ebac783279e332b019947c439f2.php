@@ -2578,6 +2578,6 @@ class __TwigTemplate_d1114b8531bbf553f2cac96cb76ff4af extends Template
     <script src=\"../../assets/js/app.js\"></script>
 </body>
 
-</html>", "layouts/layouts-vertical-hovered.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\layouts\\layouts-vertical-hovered.html.twig");
+</html>", "layouts/layouts-vertical-hovered.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\layouts\\layouts-vertical-hovered.html.twig");
     }
 }

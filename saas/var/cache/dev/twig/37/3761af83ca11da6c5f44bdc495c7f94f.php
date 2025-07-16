@@ -597,6 +597,6 @@ class __TwigTemplate_977b5b9ea899d15f492f4a99a0849683 extends Template
         <script src=\"../../assets/js/app.js\"></script>
     </body>
 
-</html>", "jobs/apps-job-statistics.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\jobs\\apps-job-statistics.html.twig");
+</html>", "jobs/apps-job-statistics.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\jobs\\apps-job-statistics.html.twig");
     }
 }

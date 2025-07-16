@@ -90,6 +90,6 @@ class __TwigTemplate_9d61c27da4df026401abf7f4af97f966 extends Template
 <meta content=\"Premium Multipurpose Admin & Dashboard Template\" name=\"description\" />
 <meta content=\"Themesbrand\" name=\"author\" />
 <!-- App favicon -->
-<link rel=\"shortcut icon\" href=\"assets/images/favicon.ico\">", "partials/title-meta.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\partials\\title-meta.html.twig");
+<link rel=\"shortcut icon\" href=\"assets/images/favicon.ico\">", "partials/title-meta.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\partials\\title-meta.html.twig");
     }
 }

@@ -275,6 +275,6 @@ class __TwigTemplate_236a83fe53ab1f8f598a27f9aee298e8 extends Template
     <script src=\"../../assets/js/pages/particles.app.js\"></script>
 </body>
 
-</html>", "auth/auth-logout-basic.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\auth\\auth-logout-basic.html.twig");
+</html>", "auth/auth-logout-basic.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\auth\\auth-logout-basic.html.twig");
     }
 }

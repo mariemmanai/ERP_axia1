@@ -79,6 +79,6 @@ class __TwigTemplate_ccd38c7c5bda8f048adb00a5d9c5760b extends Template
     <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>
     <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>
 </svg>
-", "@Security/Collector/icon.svg", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\vendor\\symfony\\security-bundle\\Resources\\views\\Collector\\icon.svg");
+", "@Security/Collector/icon.svg", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\vendor\\symfony\\security-bundle\\Resources\\views\\Collector\\icon.svg");
     }
 }

@@ -833,6 +833,6 @@ class __TwigTemplate_c70145fb908079e35d8649288d110dce extends Template
     <script src=\"../../assets/js/app.js\"></script>
 </body>
 
-</html>", "charts/charts-echarts.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\charts\\charts-echarts.html.twig");
+</html>", "charts/charts-echarts.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\charts\\charts-echarts.html.twig");
     }
 }

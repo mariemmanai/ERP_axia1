@@ -1579,6 +1579,6 @@ class __TwigTemplate_2b02213004abd4f6db0139085172c715 extends Template
             </div>
         </div>
     </div>
-</div>", "partials/customizer.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\partials\\customizer.html.twig");
+</div>", "partials/customizer.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\partials\\customizer.html.twig");
     }
 }

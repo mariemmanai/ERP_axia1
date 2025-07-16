@@ -30,7 +30,7 @@ class DocumentsligneType extends AbstractType
                 'label' => 'Prix unitaire (HT)'
             ])
             ->add('prixTotalHt', NumberType::class, [
-                'attr' => ['class' => 'form-control'],
+                'attr' => ['readonly' => true, 'class' => 'form-control'],
                 'label' => 'Prix total(HT)'
             ])
             ->add('remise', NumberType::class, [

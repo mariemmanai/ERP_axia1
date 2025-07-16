@@ -367,6 +367,6 @@ class __TwigTemplate_9c6fa13c83c47c439736253c4941f9cd extends Template
     <script src=\"../../assets/js/pages/two-step-verification.init.js\"></script>
 </body>
 
-</html>", "auth/auth-twostep-basic.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\auth\\auth-twostep-basic.html.twig");
+</html>", "auth/auth-twostep-basic.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\auth\\auth-twostep-basic.html.twig");
     }
 }

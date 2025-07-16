@@ -195,6 +195,6 @@ class __TwigTemplate_2406770e026412a798d86f1d94ff98dc extends Template
     <script src=\"../../assets/js/app.js\"></script>
 </body>
 
-</html>", "pages/pages-starter.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\pages\\pages-starter.html.twig");
+</html>", "pages/pages-starter.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\pages\\pages-starter.html.twig");
     }
 }

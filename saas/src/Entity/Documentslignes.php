@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Entity;
+
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\DocumentsligneRepository;
 
@@ -27,18 +28,23 @@ class Documentslignes
     #[ORM\ManyToOne(targetEntity: Documents::class, inversedBy: 'lignes')]
     #[ORM\JoinColumn(name: 'id_document', referencedColumnName: 'id', nullable: false)]
     private ?Documents $document = null;
-
-    public function getDocument(): ?Documents { return $this->document; }
+    public function getDocument(): ?Documents
+    {
+        return $this->document;
+    }
     public function setDocument(?Documents $document): self
     {
         $this->document = $document;
         return $this;
     }
 
-   #[ORM\ManyToOne(targetEntity: Articles::class)]
+    #[ORM\ManyToOne(targetEntity: Articles::class)]
     #[ORM\JoinColumn(name: 'id_article', referencedColumnName: 'id', nullable: false)]
     private ?Articles $article = null;
-    public function getArticle(): ?Articles { return $this->article; }
+    public function getArticle(): ?Articles
+    {
+        return $this->article;
+    }
     public function setArticle(?Articles $article): self
     {
         $this->article = $article;

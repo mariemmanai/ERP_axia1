@@ -281,6 +281,6 @@ class __TwigTemplate_a3cf0395f6f640045b3573afdd2231ea extends Template
     <script src=\"../../assets/js/pages/password-addon.init.js\"></script>
 </body>
 
-</html>", "auth/auth-success-msg-basic.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\auth\\auth-success-msg-basic.html.twig");
+</html>", "auth/auth-success-msg-basic.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\auth\\auth-success-msg-basic.html.twig");
     }
 }

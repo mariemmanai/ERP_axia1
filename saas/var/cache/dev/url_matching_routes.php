@@ -22,8 +22,8 @@ return [
         '/documents/new' => [[['_route' => 'app_documents_new', '_controller' => 'App\\Controller\\DocumentsController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/functions' => [[['_route' => 'app_functions_index', '_controller' => 'App\\Controller\\FunctionsController::index'], null, ['GET' => 0], null, true, false, null]],
         '/functions/new' => [[['_route' => 'app_functions_new', '_controller' => 'App\\Controller\\FunctionsController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        '/nomenclature' => [[['_route' => 'app_nomenclature_index', '_controller' => 'App\\Controller\\NomenclatureController::index'], null, ['GET' => 0], null, true, false, null]],
-        '/nomenclature/new' => [[['_route' => 'app_nomenclature_new', '_controller' => 'App\\Controller\\NomenclatureController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/nomenclature' => [[['_route' => 'nomenclature_index', '_controller' => 'App\\Controller\\NomenclatureController::index'], null, ['GET' => 0], null, true, false, null]],
+        '/nomenclature/new' => [[['_route' => 'nomenclature_new', '_controller' => 'App\\Controller\\NomenclatureController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/profiles' => [[['_route' => 'app_profiles_index', '_controller' => 'App\\Controller\\ProfilesController::index'], null, ['GET' => 0], null, true, false, null]],
         '/profiles/new' => [[['_route' => 'app_profiles_new', '_controller' => 'App\\Controller\\ProfilesController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\RegistrationController::login'], null, null, null, false, false, null]],
@@ -64,23 +64,23 @@ return [
                         .'|(*:296)'
                     .')'
                     .'|ocuments/([^/]++)(?'
-                        .'|(*:325)'
-                        .'|/edit(*:338)'
-                        .'|(*:346)'
+                        .'|/edit(*:330)'
+                        .'|(*:338)'
                     .')'
                 .')'
                 .'|/functions/([^/]++)(?'
-                    .'|(*:378)'
-                    .'|/edit(*:391)'
-                    .'|(*:399)'
+                    .'|(*:370)'
+                    .'|/edit(*:383)'
+                    .'|(*:391)'
                 .')'
-                .'|/nomenclature/([^/]++)/(?'
-                    .'|show(*:438)'
-                    .'|delete(*:452)'
+                .'|/nomenclature/([^/]++)(?'
+                    .'|(*:425)'
+                    .'|/edit(*:438)'
+                    .'|(*:446)'
                 .')'
                 .'|/profiles/([^/]++)(?'
-                    .'|/edit(*:487)'
-                    .'|(*:495)'
+                    .'|/edit(*:481)'
+                    .'|(*:489)'
                 .')'
             .')/?$}sDu',
     ],
@@ -99,16 +99,19 @@ return [
         275 => [[['_route' => 'app_depots_show', '_controller' => 'App\\Controller\\DepotsController::show'], ['id'], ['GET' => 0], null, false, true, null]],
         288 => [[['_route' => 'app_depots_edit', '_controller' => 'App\\Controller\\DepotsController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
         296 => [[['_route' => 'app_depots_delete', '_controller' => 'App\\Controller\\DepotsController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        325 => [[['_route' => 'app_documents_show', '_controller' => 'App\\Controller\\DocumentsController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        338 => [[['_route' => 'app_documents_edit', '_controller' => 'App\\Controller\\DocumentsController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        346 => [[['_route' => 'app_documents_delete', '_controller' => 'App\\Controller\\DocumentsController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        378 => [[['_route' => 'app_functions_show', '_controller' => 'App\\Controller\\FunctionsController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        391 => [[['_route' => 'app_functions_edit', '_controller' => 'App\\Controller\\FunctionsController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        399 => [[['_route' => 'app_functions_delete', '_controller' => 'App\\Controller\\FunctionsController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        438 => [[['_route' => 'nomenclature_show', '_controller' => 'App\\Controller\\NomenclatureController::show'], ['id'], ['GET' => 0], null, false, false, null]],
-        452 => [[['_route' => 'nomenclature_delete', '_controller' => 'App\\Controller\\NomenclatureController::delete'], ['id'], ['POST' => 0], null, false, false, null]],
-        487 => [[['_route' => 'app_profiles_edit', '_controller' => 'App\\Controller\\ProfilesController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        495 => [
+        330 => [[['_route' => 'app_documents_edit', '_controller' => 'App\\Controller\\DocumentsController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        338 => [
+            [['_route' => 'app_documents_delete', '_controller' => 'App\\Controller\\DocumentsController::delete'], ['id'], ['POST' => 0], null, false, true, null],
+            [['_route' => 'app_documents_show', '_controller' => 'App\\Controller\\DocumentsController::show'], ['id'], ['GET' => 0], null, false, true, null],
+        ],
+        370 => [[['_route' => 'app_functions_show', '_controller' => 'App\\Controller\\FunctionsController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        383 => [[['_route' => 'app_functions_edit', '_controller' => 'App\\Controller\\FunctionsController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        391 => [[['_route' => 'app_functions_delete', '_controller' => 'App\\Controller\\FunctionsController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        425 => [[['_route' => 'nomenclature_show', '_controller' => 'App\\Controller\\NomenclatureController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        438 => [[['_route' => 'nomenclature_edit', '_controller' => 'App\\Controller\\NomenclatureController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        446 => [[['_route' => 'nomenclature_delete', '_controller' => 'App\\Controller\\NomenclatureController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        481 => [[['_route' => 'app_profiles_edit', '_controller' => 'App\\Controller\\ProfilesController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        489 => [
             [['_route' => 'app_profiles_delete', '_controller' => 'App\\Controller\\ProfilesController::delete'], ['id'], ['POST' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

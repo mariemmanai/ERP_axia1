@@ -583,6 +583,6 @@ class __TwigTemplate_a84578d89f455bafc82dee484d60abae extends Template
 
 </body>
 
-</html>", "invoices/apps-invoices-details.html.twig", "C:\\Users\\Lenovo\\Downloads\\velzon-symfony_v4.3.0\\Symfony\\saas\\templates\\invoices\\apps-invoices-details.html.twig");
+</html>", "invoices/apps-invoices-details.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\invoices\\apps-invoices-details.html.twig");
     }
 }
