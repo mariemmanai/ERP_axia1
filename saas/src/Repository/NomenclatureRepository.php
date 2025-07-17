@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Repository;
 
 use App\Entity\Nomenclature;
@@ -24,14 +25,24 @@ class NomenclatureRepository extends ServiceEntityRepository
         if ($flush) $this->_em->flush();
     }
 
-    public function findGroupedByProduit(): array
+    public function findAllWithProduit()
     {
         return $this->createQueryBuilder('n')
             ->addSelect('p')
-            ->addSelect('m')
             ->join('n.produit', 'p')
-            ->join('n.matiere', 'm')
             ->getQuery()
             ->getResult();
+    }
+    public function findWithCompositions(int $id)
+    {
+        return $this->createQueryBuilder('n')
+            ->leftJoin('n.compositions', 'c')
+            ->addSelect('c')
+            ->leftJoin('c.matiere', 'm')
+            ->addSelect('m')
+            ->where('n.id = :id')
+            ->setParameter('id', $id)
+            ->getQuery()
+            ->getOneOrNullResult();
     }
 }

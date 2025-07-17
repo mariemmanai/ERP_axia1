@@ -6,8 +6,13 @@ use App\Repository\NomenclatureRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
-
+#[UniqueEntity(
+    fields: ['produit'],
+    message: 'Ce produit possède déjà une nomenclature.',
+    errorPath: 'produit'
+)]
 #[ORM\Entity(repositoryClass: NomenclatureRepository::class)]
 #[ORM\Table(name: 'nomenclature')]
 class Nomenclature
@@ -61,7 +66,7 @@ class Nomenclature
         return $this;
     }
 
-    #[ORM\OneToMany(targetEntity: Composition::class, mappedBy: 'nomenclature', cascade: ['persist'])]
+    #[ORM\OneToMany(targetEntity: self::class, mappedBy: 'produit')]
     private Collection $compositions;
 
     public function __construct()

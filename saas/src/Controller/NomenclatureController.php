@@ -10,6 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Entity\Composition;
 
 use Psr\Log\LoggerInterface;
 
@@ -24,20 +25,21 @@ class NomenclatureController extends AbstractController
     #[Route('/', name: 'nomenclature_index', methods: ['GET'])]
     public function index(EntityManagerInterface $entityManager): Response
     {
-        $nomenclatures = $entityManager->getRepository(Nomenclature::class)
-            ->createQueryBuilder('n')
-            ->leftJoin('n.compositions', 'c')
-            ->addSelect('c')
-            ->leftJoin('c.matiere', 'm')
-            ->addSelect('m')
-            ->getQuery()
-            ->getResult();
+        $query = $entityManager->createQuery(
+            'SELECT DISTINCT p 
+         FROM App\Entity\Articles p 
+         WHERE EXISTS (
+             SELECT 1 
+             FROM App\Entity\Nomenclature n 
+             WHERE n.produit = p.id
+         )'
+        );
 
+        $produits = $query->getResult();
         return $this->render('nomenclature/index.html.twig', [
-            'nomenclatures' => $nomenclatures
+            'produits' => $produits
         ]);
     }
-
 
     #[Route('/new', name: 'nomenclature_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
@@ -45,6 +47,7 @@ class NomenclatureController extends AbstractController
         $nomenclature = new Nomenclature();
         $form = $this->createForm(NomenclatureType::class, $nomenclature);
         $form->handleRequest($request);
+
         if ($form->isSubmitted() && $form->isValid()) {
             $data = $request->request->all();
             $this->logger->info('JSON log entry', ['json_data' => json_encode($data)]);
@@ -53,62 +56,91 @@ class NomenclatureController extends AbstractController
             $produit = $entityManager->getRepository(Articles::class)->find($produit);
             $compositions = $data['nomenclature']['compositions'];
 
+            $existingNomenclature = $entityManager->getRepository(Nomenclature::class)
+                ->findOneBy(['produit' => $produit]);
+
+            if ($existingNomenclature) {
+                $this->addFlash('error', 'Ce produit possède déjà une nomenclature.');
+                return $this->redirectToRoute('nomenclature_new');
+            }
+
             foreach ($compositions as $composition) {
                 $matiere = $composition['matiere'];
                 $matiere = $entityManager->getRepository(Articles::class)->find($matiere);
                 $consommation = $composition['consommation'];
 
-                $nomenclature = new Nomenclature();
-                $nomenclature->setProduit($produit);
-                $nomenclature->setMatiere($matiere);
-                $nomenclature->setConsommation($consommation);
+                $nomenclatureItem = new Nomenclature();
+                $nomenclatureItem->setProduit($produit);
+                $nomenclatureItem->setMatiere($matiere);
+                $nomenclatureItem->setConsommation($consommation);
 
-                $entityManager->persist($nomenclature);
+                $entityManager->persist($nomenclatureItem);
             }
 
             $entityManager->flush();
-            // $compositions = $nomenclature->getCompositions();
-            // foreach ($compositions as $key => $composition) {
-            //     if (!$composition->getMatiere() || !$composition->getConsommation()) {
-            //         $nomenclature->removeComposition($composition);
-            //         $entityManager->remove($composition); // Important: supprimer de l'EntityManager
-            //     } else {
-            //         $composition->setNomenclature($nomenclature);
-            //     }
-            // }
-            // $entityManager->persist($nomenclature);
-            // $entityManager->flush();
-            // return $this->redirectToRoute('nomenclature_index', [], Response::HTTP_SEE_OTHER);
+            $this->addFlash('success', 'Nomenclature créée avec succès!');
+            return $this->redirectToRoute('nomenclature_index');
         }
-        return $this->render('nomenclature/new.html.twig', ['form' => $form->createView(),]);
-    }
-    #[Route('/{id}', name: 'nomenclature_show', methods: ['GET'])]
-    public function show(Nomenclature $nomenclature, EntityManagerInterface $em): Response
-    {
-        $compositions = $em->getRepository(Nomenclature::class)
-            ->findBy(['produit' => $nomenclature->getProduit()]);
 
+        return $this->render('nomenclature/new.html.twig', [
+            'form' => $form->createView(),
+        ]);
+    }
+    #[Route('/{produit_id}/show', name: 'nomenclature_show', methods: ['GET'])]
+    public function show(int $produit_id, EntityManagerInterface $entityManager): Response
+    {
+        $produit = $entityManager->getRepository(Articles::class)->find($produit_id);
+
+        if (!$produit) {
+            throw $this->createNotFoundException('Produit non trouvé');
+        }
+        $nomenclatures = $entityManager->getRepository(Nomenclature::class)->findBy(
+            ['produit' => $produit_id],
+            ['id' => 'ASC']
+        );
         return $this->render('nomenclature/show.html.twig', [
-            'nomenclature' => $nomenclature,
-            'compositions' => $compositions
+            'produit' => $produit,
+            'nomenclatures' => $nomenclatures,
         ]);
     }
 
     #[Route('/{id}/edit', name: 'nomenclature_edit', methods: ['GET', 'POST'])]
-    public function edit(Request $request, Nomenclature $nomenclature, EntityManagerInterface $entityManager): Response
+    public function edit(Request $request, EntityManagerInterface $entityManager, Articles $produit): Response
     {
+        $nomenclatureLignes = $entityManager->getRepository(Nomenclature::class)->findBy(['produit' => $produit]);
+        $nomenclature = new Nomenclature();
+        $nomenclature->setProduit($produit);
+        foreach ($nomenclatureLignes as $ligne) {
+            $composition = new Composition();
+            $composition->setMatiere($ligne->getMatiere());
+            $composition->setConsommation($ligne->getConsommation());
+            $nomenclature->addComposition($composition);
+        }
+
         $form = $this->createForm(NomenclatureType::class, $nomenclature);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager->flush();
+            foreach ($nomenclatureLignes as $ligne) {
+                $entityManager->remove($ligne);
+            }
+            $compositions = $nomenclature->getCompositions();
+            foreach ($compositions as $composition) {
+                $newLigne = new Nomenclature();
+                $newLigne->setProduit($produit);
+                $newLigne->setMatiere($composition->getMatiere());
+                $newLigne->setConsommation($composition->getConsommation());
+                $entityManager->persist($newLigne);
+            }
 
-            return $this->redirectToRoute('nomenclature_index', [], Response::HTTP_SEE_OTHER);
+            $entityManager->flush();
+            $this->addFlash('success', 'Nomenclature mise à jour avec succès!');
+            return $this->redirectToRoute('nomenclature_index');
         }
 
         return $this->render('nomenclature/edit.html.twig', [
-            'nomenclature' => $nomenclature,
             'form' => $form->createView(),
+            'produit' => $produit,
         ]);
     }
 

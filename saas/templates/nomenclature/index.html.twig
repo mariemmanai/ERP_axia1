@@ -1,4 +1,5 @@
 {{ include('partials/main.html.twig') }}
+
 <head>
 	{{ include('partials/title-meta.html.twig', {title: 'Liste des nomenclatures'}) }}
 	<link href="{{ asset('assets/libs/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet" type="text/css"/>
@@ -37,39 +38,23 @@
 												<tr>
 													<th>ID</th>
 													<th>Produit Fini</th>
-													<th>Matières Premières</th>
 													<th>Actions</th>
 												</tr>
 											</thead>
 											<tbody>
-												{% for nomenclature in nomenclatures %}
+												{% for produit in produits %}
 													<tr>
-														<td>{{ nomenclature.id }}</td>
-														<td>{{ nomenclature.produit.reference }}</td>
-														<td>
-															{% if nomenclature.compositions|length > 0 %}
-																<ul>
-																	{% for composition in nomenclature.compositions %}
-																		<li>{{ composition.matiere.reference }}</li>
-																	{% endfor %}
-																</ul>
-															{% else %}
-																<span class="text-muted">Aucune matière</span>
-															{% endif %}
-														</td>
+														<td>{{ produit.id }}</td>
+														<td>{{ produit.reference }}</td>
 														<td class="text-center">
-															<a href="{{ path('nomenclature_show', {'id': nomenclature.id}) }}" class="btn btn-sm btn-info" title="Voir">
+															<a href="{{ path('nomenclature_show', {'produit_id': produit.id}) }}" class="btn btn-sm btn-info" title="Voir">
 																<i class="ri-eye-line"></i>
 															</a>
-															<a href="{{ path('nomenclature_edit', {'id': nomenclature.id}) }}" class="btn btn-sm btn-primary" title="Modifier">
-																<i class="ri-edit-line"></i>
-															</a>
-															{{ include('nomenclature/_delete_form.html.twig', {nomenclature: nomenclature}) }}
 														</td>
 													</tr>
 												{% else %}
 													<tr>
-														<td colspan="4" class="text-center">Aucune nomenclature trouvée</td>
+														<td colspan="3" class="text-center">Aucune nomenclature trouvée</td>
 													</tr>
 												{% endfor %}
 											</tbody>
@@ -87,24 +72,4 @@
 
 	{{ include('partials/vendor-scripts.html.twig') }}
 	<script src="{{ asset('assets/libs/sweetalert2/sweetalert2.min.js') }}"></script>
-	<script>
-		document.querySelectorAll('.delete-form').forEach(form => {
-form.addEventListener('submit', function (e) {
-e.preventDefault();
-Swal.fire({
-title: 'Êtes-vous sûr?',
-text: "Vous ne pourrez pas revenir en arrière!",
-icon: 'warning',
-showCancelButton: true,
-confirmButtonColor: '#34c38f',
-cancelButtonColor: '#f46a6a',
-confirmButtonText: 'Oui, supprimer!'
-}).then((result) => {
-if (result.isConfirmed) {
-form.submit();
-}
-});
-});
-});
-	</script>
 </body></html>
