@@ -112,14 +112,38 @@ class __TwigTemplate_6a1a37ca11cf8266845f44c29da419e2 extends Template
             </a>
             <div class=\"collapse menu-dropdown\" id=\"sidebarPurchases\">
                 <ul class=\"nav nav-sm flex-column\">
-                <li class=\"nav-item\"><a href=\"layouts-horizontal\" target=\"_blank\" class=\"nav-link\">Devis Fournisseurs</a></li>
-                <li class=\"nav-item\"><a href=\"layouts-detached\" target=\"_blank\" class=\"nav-link\">Commandes Fournisseurs</a></li>
-                <li class=\"nav-item\"><a href=\"layouts-two-column\" target=\"_blank\" class=\"nav-link\">Factures Fournisseurs</a></li>
-                <li class=\"nav-item\"><a href=\"layouts-two-column\" target=\"_blank\" class=\"nav-link\">Factures Fournisseurs Avoire</a></li>
-                <li class=\"nav-item\"><a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Bon d'entrée</a></li>
-                <li class=\"nav-item\"><a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Bon de transfert</a></li>
-                <li class=\"nav-item\"><a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Bon de retour</a></li>
-                <li class=\"nav-item\"><a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Inventaire</a></li>
+                <li class=\"nav-item\"><a href=\"";
+        // line 73
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "devis_achat"]);
+        echo "\" class=\"nav-link\">Devis achat</a></li>                
+                <li class=\"nav-item\"><a href=\"";
+        // line 74
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "commandes_achat"]);
+        echo "\" class=\"nav-link\">Commandes achat</a></li>                
+                <li class=\"nav-item\"><a href=\"";
+        // line 75
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "factures_achat"]);
+        echo "\" class=\"nav-link\">Factures achat</a></li>
+                <li class=\"nav-item\"><a href=\"";
+        // line 76
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "factures_achat_avoire"]);
+        echo "\" class=\"nav-link\">Factures achat Avoire</a></li>
+                <li class=\"nav-item\"><a href=\"";
+        // line 77
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "bon_entree"]);
+        echo "\" class=\"nav-link\">Bon d'entrée</a></li>
+                <li class=\"nav-item\"><a href=\"";
+        // line 78
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "bon_transfert"]);
+        echo "\" class=\"nav-link\">Bon de transfert</a></li>
+                <li class=\"nav-item\"><a href=\"";
+        // line 79
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "bon_retour"]);
+        echo "\" class=\"nav-link\">Bon de retour</a></li>
+                <li class=\"nav-item\"><a href=\"";
+        // line 80
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "inventaire"]);
+        echo "\" class=\"nav-link\">Inventaire</a></li>
                 </ul>
             </div>
             </li>
@@ -134,11 +158,26 @@ class __TwigTemplate_6a1a37ca11cf8266845f44c29da419e2 extends Template
                     <ul class=\"nav nav-sm flex-column\">
                     <li class=\"nav-item\"><a href=\"layouts-horizontal\" target=\"_blank\" class=\"nav-link\">Création des OF</a></li>
                     <li class=\"nav-item\"><a href=\"layouts-detached\" target=\"_blank\" class=\"nav-link\">Demande de besoins</a></li>
-                    <li class=\"nav-item\"><a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Bon d'entrée</a></li>
-                    <li class=\"nav-item\"><a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Bon de sortie</a></li>
-                    <li class=\"nav-item\"><a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Bon de transfert</a></li>
-                    <li class=\"nav-item\"><a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Bon de retour</a></li>
-                    <li class=\"nav-item\"><a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Inventaire</a></li>
+                    <li class=\"nav-item\"><a href=\"";
+        // line 95
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "bon_entree"]);
+        echo "\" class=\"nav-link\">Bon d'entrée</a></li>
+                    <li class=\"nav-item\"><a href=\"";
+        // line 96
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "bon_sortie"]);
+        echo "\" class=\"nav-link\">Bon de sortie</a></li>
+                    <li class=\"nav-item\"><a href=\"";
+        // line 97
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "bon_transfert"]);
+        echo "\" class=\"nav-link\">Bon de transfert</a></li>
+                    <li class=\"nav-item\"><a href=\"";
+        // line 98
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "bon_retour"]);
+        echo "\" class=\"nav-link\">Bon de retour</a></li>
+                    <li class=\"nav-item\"><a href=\"";
+        // line 99
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "inventaire"]);
+        echo "\" class=\"nav-link\">Inventaire</a></li>
                     </ul>
                 </div>
             </li>
@@ -152,14 +191,34 @@ class __TwigTemplate_6a1a37ca11cf8266845f44c29da419e2 extends Template
             </a>
             <div class=\"collapse menu-dropdown\" id=\"sidebarSales\">
                 <ul class=\"nav nav-sm flex-column\">
-                <li class=\"nav-item\"><a href=\"layouts-horizontal\" target=\"_blank\" class=\"nav-link\">Devis Clients</a></li>
-                <li class=\"nav-item\"><a href=\"layouts-detached\" target=\"_blank\" class=\"nav-link\">Commandes Clients</a></li>
-                <li class=\"nav-item\"><a href=\"layouts-two-column\" target=\"_blank\" class=\"nav-link\">Factures Clients</a></li>
-                <li class=\"nav-item\"><a href=\"layouts-two-column\" target=\"_blank\" class=\"nav-link\">Factures Clients Avoire</a></li>
-                <li class=\"nav-item\"><a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Bon d'entrée</a></li>
-                <li class=\"nav-item\"><a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Bon de sortie</a></li>
-                <li class=\"nav-item\"><a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Bon de livraison</a></li>
-                <li class=\"nav-item\"><a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Inventaire</a></li>
+                <li class=\"nav-item\"><a href=\"";
+        // line 113
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "devis_vente"]);
+        echo "\" class=\"nav-link\">Devis vente</a></li>
+                <li class=\"nav-item\"><a href=\"";
+        // line 114
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "commandes_vente"]);
+        echo "\" class=\"nav-link\">Commandes vente</a></li>
+                <li class=\"nav-item\"><a href=\"";
+        // line 115
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "factures_vente"]);
+        echo "\" class=\"nav-link\">Factures vente</a></li>
+                <li class=\"nav-item\"><a href=\"";
+        // line 116
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "factures_vente_avoire"]);
+        echo "\" class=\"nav-link\">Factures vente avoire</a></li>
+                <li class=\"nav-item\"><a href=\"";
+        // line 117
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "bon_sortie"]);
+        echo "\" class=\"nav-link\">Bon de sortie</a></li>
+                <li class=\"nav-item\"><a href=\"";
+        // line 118
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "bon_livraison"]);
+        echo "\" class=\"nav-link\">Bon de livraison</a></li>
+                <li class=\"nav-item\"><a href=\"";
+        // line 119
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "inventaire"]);
+        echo "\" class=\"nav-link\">Inventaire</a></li>
                 </ul>
             </div>
             </li>
@@ -234,15 +293,10 @@ class __TwigTemplate_6a1a37ca11cf8266845f44c29da419e2 extends Template
             </li>
         </ul>
     </div>
-
-
-        <!-- Sidebar -->
     </div>
 
     <div class=\"sidebar-background\"></div>
 </div>
-<!-- Left Sidebar End -->
-<!-- Vertical Overlay-->
 <div class=\"vertical-overlay\"></div>";
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
@@ -263,9 +317,17 @@ class __TwigTemplate_6a1a37ca11cf8266845f44c29da419e2 extends Template
     /**
      * @codeCoverageIgnore
      */
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
     public function getDebugInfo()
     {
-        return array (  43 => 1,);
+        return array (  220 => 119,  216 => 118,  212 => 117,  208 => 116,  204 => 115,  200 => 114,  196 => 113,  179 => 99,  175 => 98,  171 => 97,  167 => 96,  163 => 95,  145 => 80,  141 => 79,  137 => 78,  133 => 77,  129 => 76,  125 => 75,  121 => 74,  117 => 73,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -342,14 +404,14 @@ class __TwigTemplate_6a1a37ca11cf8266845f44c29da419e2 extends Template
             </a>
             <div class=\"collapse menu-dropdown\" id=\"sidebarPurchases\">
                 <ul class=\"nav nav-sm flex-column\">
-                <li class=\"nav-item\"><a href=\"layouts-horizontal\" target=\"_blank\" class=\"nav-link\">Devis Fournisseurs</a></li>
-                <li class=\"nav-item\"><a href=\"layouts-detached\" target=\"_blank\" class=\"nav-link\">Commandes Fournisseurs</a></li>
-                <li class=\"nav-item\"><a href=\"layouts-two-column\" target=\"_blank\" class=\"nav-link\">Factures Fournisseurs</a></li>
-                <li class=\"nav-item\"><a href=\"layouts-two-column\" target=\"_blank\" class=\"nav-link\">Factures Fournisseurs Avoire</a></li>
-                <li class=\"nav-item\"><a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Bon d'entrée</a></li>
-                <li class=\"nav-item\"><a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Bon de transfert</a></li>
-                <li class=\"nav-item\"><a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Bon de retour</a></li>
-                <li class=\"nav-item\"><a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Inventaire</a></li>
+                <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'devis_achat'}) }}\" class=\"nav-link\">Devis achat</a></li>                
+                <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'commandes_achat'}) }}\" class=\"nav-link\">Commandes achat</a></li>                
+                <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'factures_achat'}) }}\" class=\"nav-link\">Factures achat</a></li>
+                <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'factures_achat_avoire'}) }}\" class=\"nav-link\">Factures achat Avoire</a></li>
+                <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'bon_entree'}) }}\" class=\"nav-link\">Bon d'entrée</a></li>
+                <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'bon_transfert'}) }}\" class=\"nav-link\">Bon de transfert</a></li>
+                <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'bon_retour'}) }}\" class=\"nav-link\">Bon de retour</a></li>
+                <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'inventaire'}) }}\" class=\"nav-link\">Inventaire</a></li>
                 </ul>
             </div>
             </li>
@@ -364,11 +426,11 @@ class __TwigTemplate_6a1a37ca11cf8266845f44c29da419e2 extends Template
                     <ul class=\"nav nav-sm flex-column\">
                     <li class=\"nav-item\"><a href=\"layouts-horizontal\" target=\"_blank\" class=\"nav-link\">Création des OF</a></li>
                     <li class=\"nav-item\"><a href=\"layouts-detached\" target=\"_blank\" class=\"nav-link\">Demande de besoins</a></li>
-                    <li class=\"nav-item\"><a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Bon d'entrée</a></li>
-                    <li class=\"nav-item\"><a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Bon de sortie</a></li>
-                    <li class=\"nav-item\"><a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Bon de transfert</a></li>
-                    <li class=\"nav-item\"><a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Bon de retour</a></li>
-                    <li class=\"nav-item\"><a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Inventaire</a></li>
+                    <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'bon_entree'}) }}\" class=\"nav-link\">Bon d'entrée</a></li>
+                    <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'bon_sortie'}) }}\" class=\"nav-link\">Bon de sortie</a></li>
+                    <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'bon_transfert'}) }}\" class=\"nav-link\">Bon de transfert</a></li>
+                    <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'bon_retour'}) }}\" class=\"nav-link\">Bon de retour</a></li>
+                    <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'inventaire'}) }}\" class=\"nav-link\">Inventaire</a></li>
                     </ul>
                 </div>
             </li>
@@ -382,14 +444,13 @@ class __TwigTemplate_6a1a37ca11cf8266845f44c29da419e2 extends Template
             </a>
             <div class=\"collapse menu-dropdown\" id=\"sidebarSales\">
                 <ul class=\"nav nav-sm flex-column\">
-                <li class=\"nav-item\"><a href=\"layouts-horizontal\" target=\"_blank\" class=\"nav-link\">Devis Clients</a></li>
-                <li class=\"nav-item\"><a href=\"layouts-detached\" target=\"_blank\" class=\"nav-link\">Commandes Clients</a></li>
-                <li class=\"nav-item\"><a href=\"layouts-two-column\" target=\"_blank\" class=\"nav-link\">Factures Clients</a></li>
-                <li class=\"nav-item\"><a href=\"layouts-two-column\" target=\"_blank\" class=\"nav-link\">Factures Clients Avoire</a></li>
-                <li class=\"nav-item\"><a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Bon d'entrée</a></li>
-                <li class=\"nav-item\"><a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Bon de sortie</a></li>
-                <li class=\"nav-item\"><a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Bon de livraison</a></li>
-                <li class=\"nav-item\"><a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Inventaire</a></li>
+                <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'devis_vente'}) }}\" class=\"nav-link\">Devis vente</a></li>
+                <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'commandes_vente'}) }}\" class=\"nav-link\">Commandes vente</a></li>
+                <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'factures_vente'}) }}\" class=\"nav-link\">Factures vente</a></li>
+                <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'factures_vente_avoire'}) }}\" class=\"nav-link\">Factures vente avoire</a></li>
+                <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'bon_sortie'}) }}\" class=\"nav-link\">Bon de sortie</a></li>
+                <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'bon_livraison'}) }}\" class=\"nav-link\">Bon de livraison</a></li>
+                <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'inventaire'}) }}\" class=\"nav-link\">Inventaire</a></li>
                 </ul>
             </div>
             </li>
@@ -464,15 +525,10 @@ class __TwigTemplate_6a1a37ca11cf8266845f44c29da419e2 extends Template
             </li>
         </ul>
     </div>
-
-
-        <!-- Sidebar -->
     </div>
 
     <div class=\"sidebar-background\"></div>
 </div>
-<!-- Left Sidebar End -->
-<!-- Vertical Overlay-->
 <div class=\"vertical-overlay\"></div>", "partials/sidebar.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\partials\\sidebar.html.twig");
     }
 }

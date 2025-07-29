@@ -25,11 +25,10 @@ class DepotsController extends AbstractController
 
     #[Route('/new', name: 'app_depots_new', methods: ['GET', 'POST'])]
     public function new(
-        Request $request, 
+        Request $request,
         DepotsRepository $depotsRepository,
         UsersRepository $usersRepository
-    ): Response
-    {
+    ): Response {
         $depot = new Depots();
         $form = $this->createForm(DepotsType::class, $depot);
         $form->handleRequest($request);
@@ -37,9 +36,9 @@ class DepotsController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $rootUser = $usersRepository->find(49);
             if (!$rootUser) {
-                throw $this->createNotFoundException('Utilisateur root (id=1) non trouvé');
+                throw $this->createNotFoundException('Utilisateur root (id=49) non trouvé');
             }
-            
+
             $depot->setCreateBy($rootUser);
             $depot->setCreateAt(new \DateTime());
 
@@ -65,11 +64,10 @@ class DepotsController extends AbstractController
 
     #[Route('/{id}/edit', name: 'app_depots_edit', methods: ['GET', 'POST'])]
     public function edit(
-        Request $request, 
-        Depots $depot, 
+        Request $request,
+        Depots $depot,
         DepotsRepository $depotsRepository
-    ): Response
-    {
+    ): Response {
         $form = $this->createForm(DepotsType::class, $depot);
         $form->handleRequest($request);
 
@@ -88,12 +86,11 @@ class DepotsController extends AbstractController
 
     #[Route('/{id}', name: 'app_depots_delete', methods: ['POST'])]
     public function delete(
-        Request $request, 
-        Depots $depot, 
+        Request $request,
+        Depots $depot,
         DepotsRepository $depotsRepository
-    ): Response
-    {
-        if ($this->isCsrfTokenValid('delete'.$depot->getId(), $request->request->get('_token'))) {
+    ): Response {
+        if ($this->isCsrfTokenValid('delete' . $depot->getId(), $request->request->get('_token'))) {
             $depotsRepository->remove($depot, true);
             $this->addFlash('success', 'Dépôt supprimé avec succès.');
         }

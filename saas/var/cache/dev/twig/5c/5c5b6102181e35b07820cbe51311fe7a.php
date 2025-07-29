@@ -172,35 +172,60 @@ class __TwigTemplate_e25ce3fff8541edeebe0c48dbb9e092c extends Template
 \t\t\t\t\t\t\t\t\t\t<div class=\"col-lg-3 col-sm-6\">
 \t\t\t\t\t\t\t\t\t\t\t";
         // line 84
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 84, $this->source); })()), "type", [], "any", false, false, false, 84), 'row', ["attr" => ["class" => ("form-control" . ((twig_get_attribute($this->env, $this->source,         // line 86
-(isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 86, $this->source); })()), "id", [], "any", false, false, false, 86)) ? ("") : (" bg-light border-0"))), "onchange" => ((twig_get_attribute($this->env, $this->source,         // line 87
-(isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 87, $this->source); })()), "id", [], "any", false, false, false, 87)) ? ("") : ("updateReferencePreview()")), "disabled" => ((twig_get_attribute($this->env, $this->source,         // line 88
-(isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 88, $this->source); })()), "id", [], "any", false, false, false, 88)) ? ("disabled") : (false))], "label" => "Type"]);
-        // line 91
+        if (twig_get_attribute($this->env, $this->source, (isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 84, $this->source); })()), "id", [], "any", false, false, false, 84)) {
+            // line 85
+            echo "\t\t\t\t\t\t\t\t\t\t\t\t";
+            // line 86
+            echo "\t\t\t\t\t\t\t\t\t\t\t\t";
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 86, $this->source); })()), "type", [], "any", false, false, false, 86), 'widget', ["attr" => ["class" => "d-none"]]);
+            echo "
+
+\t\t\t\t\t\t\t\t\t\t\t\t";
+            // line 89
+            echo "\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"mb-3\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<label class=\"form-label\">Type</label>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-control bg-light border-0\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
+            // line 92
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 92, $this->source); })()), "type", [], "any", false, false, false, 92), "vars", [], "any", false, false, false, 92), "value", [], "any", false, false, false, 92), "html", null, true);
+            echo "
+\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t";
+        } else {
+            // line 96
+            echo "\t\t\t\t\t\t\t\t\t\t\t\t";
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 96, $this->source); })()), "type", [], "any", false, false, false, 96), 'row', ["attr" => ["class" => "form-control bg-light border-0", "onchange" => "updateReferencePreview()", "disabled" => ((twig_get_attribute($this->env, $this->source,             // line 100
+(isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 100, $this->source); })()), "id", [], "any", false, false, false, 100)) ? ("disabled") : (false))], "label" => "Type"]);
+            // line 103
+            echo "
+\t\t\t\t\t\t\t\t\t\t\t";
+        }
+        // line 105
+        echo "\t\t\t\t\t\t\t\t\t\t</div>
+
+\t\t\t\t\t\t\t\t\t\t<div class=\"col-lg-3 col-sm-6\">
+\t\t\t\t\t\t\t\t\t\t\t";
+        // line 108
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 108, $this->source); })()), "status", [], "any", false, false, false, 108), 'row', ["attr" => ["class" => ("form-control" . ((twig_get_attribute($this->env, $this->source,         // line 109
+(isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 109, $this->source); })()), "id", [], "any", false, false, false, 109)) ? ("") : (" bg-light border-0")))], "label" => "Statut"]);
+        // line 111
         echo "
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"col-lg-3 col-sm-6\">
 \t\t\t\t\t\t\t\t\t\t\t";
-        // line 94
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 94, $this->source); })()), "status", [], "any", false, false, false, 94), 'row', ["attr" => ["class" => ("form-control" . ((twig_get_attribute($this->env, $this->source,         // line 95
-(isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 95, $this->source); })()), "id", [], "any", false, false, false, 95)) ? ("") : (" bg-light border-0")))], "label" => "Statut"]);
-        // line 97
+        // line 114
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 114, $this->source); })()), "emetteur", [], "any", false, false, false, 114), 'row', ["attr" => ["class" => ("form-control" . ((twig_get_attribute($this->env, $this->source,         // line 115
+(isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 115, $this->source); })()), "id", [], "any", false, false, false, 115)) ? ("") : (" bg-light border-0")))], "label" => "Émetteur"]);
+        // line 117
         echo "
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"col-lg-3 col-sm-6\">
 \t\t\t\t\t\t\t\t\t\t\t";
-        // line 100
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 100, $this->source); })()), "emetteur", [], "any", false, false, false, 100), 'row', ["attr" => ["class" => ("form-control" . ((twig_get_attribute($this->env, $this->source,         // line 101
-(isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 101, $this->source); })()), "id", [], "any", false, false, false, 101)) ? ("") : (" bg-light border-0")))], "label" => "Émetteur"]);
-        // line 103
-        echo "
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"col-lg-3 col-sm-6\">
-\t\t\t\t\t\t\t\t\t\t\t";
-        // line 106
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 106, $this->source); })()), "destinataire", [], "any", false, false, false, 106), 'row', ["attr" => ["class" => ("form-control" . ((twig_get_attribute($this->env, $this->source,         // line 107
-(isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 107, $this->source); })()), "id", [], "any", false, false, false, 107)) ? ("") : (" bg-light border-0")))], "label" => "Destinataire"]);
-        // line 109
+        // line 120
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 120, $this->source); })()), "destinataire", [], "any", false, false, false, 120), 'row', ["attr" => ["class" => ("form-control" . ((twig_get_attribute($this->env, $this->source,         // line 121
+(isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 121, $this->source); })()), "id", [], "any", false, false, false, 121)) ? ("") : (" bg-light border-0")))], "label" => "Destinataire"]);
+        // line 123
         echo "
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t</div>
@@ -221,15 +246,15 @@ class __TwigTemplate_e25ce3fff8541edeebe0c48dbb9e092c extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t</tr>
 \t\t\t\t\t\t\t\t\t\t\t</thead>
 \t\t\t\t\t\t\t\t\t\t\t<tbody id=\"document-lignes\" data-prototype=\"";
-        // line 128
-        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 128, $this->source); })()), "lignes", [], "any", false, false, false, 128), "vars", [], "any", false, false, false, 128), "prototype", [], "any", false, false, false, 128), 'widget'), "html_attr");
+        // line 142
+        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 142, $this->source); })()), "lignes", [], "any", false, false, false, 142), "vars", [], "any", false, false, false, 142), "prototype", [], "any", false, false, false, 142), 'widget'), "html_attr");
         echo "\" data-index=\"";
-        echo twig_escape_filter($this->env, twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 128, $this->source); })()), "lignes", [], "any", false, false, false, 128)), "html", null, true);
+        echo twig_escape_filter($this->env, twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 142, $this->source); })()), "lignes", [], "any", false, false, false, 142)), "html", null, true);
         echo "\">
 \t\t\t\t\t\t\t\t\t\t\t\t";
-        // line 129
+        // line 143
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 129, $this->source); })()), "lignes", [], "any", false, false, false, 129));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 143, $this->source); })()), "lignes", [], "any", false, false, false, 143));
         $context['loop'] = [
           'parent' => $context['_parent'],
           'index0' => 0,
@@ -244,40 +269,40 @@ class __TwigTemplate_e25ce3fff8541edeebe0c48dbb9e092c extends Template
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["ligne"]) {
-            // line 130
+            // line 144
             echo "\t\t\t\t\t\t\t\t\t\t\t\t\t<tr class=\"ligne-row\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>";
-            // line 131
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 131), "html", null, true);
+            // line 145
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 145), "html", null, true);
             echo "</td>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>";
-            // line 132
-            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, $context["ligne"], "article", [], "any", false, false, false, 132), 'widget', ["attr" => ["class" => "form-control"]]);
-            echo "</td>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>";
-            // line 133
-            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, $context["ligne"], "prixUnitaireHt", [], "any", false, false, false, 133), 'widget', ["attr" => ["class" => ("form-control" . ((twig_get_attribute($this->env, $this->source,             // line 135
-(isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 135, $this->source); })()), "id", [], "any", false, false, false, 135)) ? ("") : (" bg-light border-0"))), "onchange" => "updateLigneTotal(this)"], "label" => false]);
-            // line 139
-            echo "</td>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>";
-            // line 140
-            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, $context["ligne"], "qte", [], "any", false, false, false, 140), 'widget', ["attr" => ["class" => ("form-control" . ((twig_get_attribute($this->env, $this->source,             // line 142
-(isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 142, $this->source); })()), "id", [], "any", false, false, false, 142)) ? ("") : (" bg-light border-0"))), "onchange" => "updateLigneTotal(this)"], "label" => false]);
             // line 146
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, $context["ligne"], "article", [], "any", false, false, false, 146), 'widget', ["attr" => ["class" => "form-control"]]);
             echo "</td>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>";
             // line 147
-            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, $context["ligne"], "prixTotalHt", [], "any", false, false, false, 147), 'widget', ["attr" => ["class" => ("form-control" . ((twig_get_attribute($this->env, $this->source,             // line 149
-(isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 149, $this->source); })()), "id", [], "any", false, false, false, 149)) ? ("") : (" bg-light border-0"))), "readonly" => "readonly"], "label" => false]);
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, $context["ligne"], "prixUnitaireHt", [], "any", false, false, false, 147), 'widget', ["attr" => ["class" => ("form-control" . ((twig_get_attribute($this->env, $this->source,             // line 149
+(isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 149, $this->source); })()), "id", [], "any", false, false, false, 149)) ? ("") : (" bg-light border-0"))), "onchange" => "updateLigneTotal(this)"], "label" => false]);
             // line 153
+            echo "</td>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>";
+            // line 154
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, $context["ligne"], "qte", [], "any", false, false, false, 154), 'widget', ["attr" => ["class" => ("form-control" . ((twig_get_attribute($this->env, $this->source,             // line 156
+(isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 156, $this->source); })()), "id", [], "any", false, false, false, 156)) ? ("") : (" bg-light border-0"))), "onchange" => "updateLigneTotal(this)"], "label" => false]);
+            // line 160
+            echo "</td>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>";
+            // line 161
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, $context["ligne"], "prixTotalHt", [], "any", false, false, false, 161), 'widget', ["attr" => ["class" => ("form-control" . ((twig_get_attribute($this->env, $this->source,             // line 163
+(isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 163, $this->source); })()), "id", [], "any", false, false, false, 163)) ? ("") : (" bg-light border-0"))), "readonly" => "readonly"], "label" => false]);
+            // line 167
             echo "</td>
 
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<td class=\"text-end\">";
-            // line 155
-            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, $context["ligne"], "remise", [], "any", false, false, false, 155), 'widget', ["attr" => ["class" => ("form-control" . ((twig_get_attribute($this->env, $this->source,             // line 157
-(isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 157, $this->source); })()), "id", [], "any", false, false, false, 157)) ? ("") : (" bg-light border-0"))), "readonly" => "readonly"], "label" => false]);
-            // line 161
+            // line 169
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, $context["ligne"], "remise", [], "any", false, false, false, 169), 'widget', ["attr" => ["class" => ("form-control" . ((twig_get_attribute($this->env, $this->source,             // line 171
+(isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 171, $this->source); })()), "id", [], "any", false, false, false, 171)) ? ("") : (" bg-light border-0"))), "readonly" => "readonly"], "label" => false]);
+            // line 175
             echo "
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-sm btn-danger remove-ligne\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"ri-delete-bin-line\"></i>
@@ -297,7 +322,7 @@ class __TwigTemplate_e25ce3fff8541edeebe0c48dbb9e092c extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['ligne'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 168
+        // line 182
         echo "\t\t\t\t\t\t\t\t\t\t\t</tbody>
 \t\t\t\t\t\t\t\t\t\t\t<tfoot>
 \t\t\t\t\t\t\t\t\t\t\t\t<tr>
@@ -316,42 +341,42 @@ class __TwigTemplate_e25ce3fff8541edeebe0c48dbb9e092c extends Template
 \t\t\t\t\t\t\t\t\t<div class=\"row\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"col-lg-4\">
 \t\t\t\t\t\t\t\t\t\t\t";
-        // line 185
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 185, $this->source); })()), "montantHt", [], "any", false, false, false, 185), 'row', ["attr" => ["class" => ("form-control" . ((twig_get_attribute($this->env, $this->source,         // line 187
-(isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 187, $this->source); })()), "id", [], "any", false, false, false, 187)) ? ("") : (" bg-light border-0"))), "readonly" => "readonly"], "label" => "Montant HT"]);
-        // line 191
-        echo "
-\t\t\t\t\t\t\t\t\t\t\t";
-        // line 192
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 192, $this->source); })()), "tauxTva", [], "any", false, false, false, 192), 'row', ["attr" => ["class" => ("form-control" . ((twig_get_attribute($this->env, $this->source,         // line 194
-(isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 194, $this->source); })()), "id", [], "any", false, false, false, 194)) ? ("") : (" bg-light border-0"))), "onchange" => "updateTotals()"], "label" => "Taux TVA"]);
-        // line 198
-        echo "
-\t\t\t\t\t\t\t\t\t\t\t";
         // line 199
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 199, $this->source); })()), "montantTva", [], "any", false, false, false, 199), 'row', ["attr" => ["class" => ("form-control" . ((twig_get_attribute($this->env, $this->source,         // line 201
-(isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 201, $this->source); })()), "id", [], "any", false, false, false, 201)) ? ("") : (" bg-light border-0"))), "readonly" => "readonly"], "label" => "Montant TVA"]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 199, $this->source); })()), "montantHt", [], "any", false, false, false, 199), 'row', ["attr" => ["class" => ("form-control" . ((twig_get_attribute($this->env, $this->source,         // line 201
+(isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 201, $this->source); })()), "id", [], "any", false, false, false, 201)) ? ("") : (" bg-light border-0"))), "readonly" => "readonly"], "label" => "Montant HT"]);
         // line 205
         echo "
 \t\t\t\t\t\t\t\t\t\t\t";
         // line 206
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 206, $this->source); })()), "montantAPayer", [], "any", false, false, false, 206), 'row', ["attr" => ["class" => ("form-control" . ((twig_get_attribute($this->env, $this->source,         // line 208
-(isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 208, $this->source); })()), "id", [], "any", false, false, false, 208)) ? ("") : (" bg-light border-0"))), "readonly" => "readonly"], "label" => "Montant à payer"]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 206, $this->source); })()), "tauxTva", [], "any", false, false, false, 206), 'row', ["attr" => ["class" => ("form-control" . ((twig_get_attribute($this->env, $this->source,         // line 208
+(isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 208, $this->source); })()), "id", [], "any", false, false, false, 208)) ? ("") : (" bg-light border-0"))), "onchange" => "updateTotals()"], "label" => "Taux TVA"]);
         // line 212
+        echo "
+\t\t\t\t\t\t\t\t\t\t\t";
+        // line 213
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 213, $this->source); })()), "montantTva", [], "any", false, false, false, 213), 'row', ["attr" => ["class" => ("form-control" . ((twig_get_attribute($this->env, $this->source,         // line 215
+(isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 215, $this->source); })()), "id", [], "any", false, false, false, 215)) ? ("") : (" bg-light border-0"))), "readonly" => "readonly"], "label" => "Montant TVA"]);
+        // line 219
+        echo "
+\t\t\t\t\t\t\t\t\t\t\t";
+        // line 220
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 220, $this->source); })()), "montantAPayer", [], "any", false, false, false, 220), 'row', ["attr" => ["class" => ("form-control" . ((twig_get_attribute($this->env, $this->source,         // line 222
+(isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 222, $this->source); })()), "id", [], "any", false, false, false, 222)) ? ("") : (" bg-light border-0"))), "readonly" => "readonly"], "label" => "Montant à payer"]);
+        // line 226
         echo "
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"col-lg-4\">
 \t\t\t\t\t\t\t\t\t\t\t";
-        // line 215
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 215, $this->source); })()), "timbre", [], "any", false, false, false, 215), 'row', ["attr" => ["class" => ("form-control" . ((twig_get_attribute($this->env, $this->source,         // line 217
-(isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 217, $this->source); })()), "id", [], "any", false, false, false, 217)) ? ("") : (" bg-light border-0"))), "onchange" => "updateTotals()"], "label" => "Timbre"]);
-        // line 221
+        // line 229
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 229, $this->source); })()), "timbre", [], "any", false, false, false, 229), 'row', ["attr" => ["class" => ("form-control" . ((twig_get_attribute($this->env, $this->source,         // line 231
+(isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 231, $this->source); })()), "id", [], "any", false, false, false, 231)) ? ("") : (" bg-light border-0"))), "onchange" => "updateTotals()"], "label" => "Timbre"]);
+        // line 235
         echo "
 \t\t\t\t\t\t\t\t\t\t\t";
-        // line 222
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 222, $this->source); })()), "retenu", [], "any", false, false, false, 222), 'row', ["attr" => ["class" => ("form-control" . ((twig_get_attribute($this->env, $this->source,         // line 224
-(isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 224, $this->source); })()), "id", [], "any", false, false, false, 224)) ? ("") : (" bg-light border-0"))), "onchange" => "updateTotals()"], "label" => "Retenue"]);
-        // line 228
+        // line 236
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 236, $this->source); })()), "retenu", [], "any", false, false, false, 236), 'row', ["attr" => ["class" => ("form-control" . ((twig_get_attribute($this->env, $this->source,         // line 238
+(isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 238, $this->source); })()), "id", [], "any", false, false, false, 238)) ? ("") : (" bg-light border-0"))), "onchange" => "updateTotals()"], "label" => "Retenue"]);
+        // line 242
         echo "
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t</div>
@@ -362,12 +387,12 @@ class __TwigTemplate_e25ce3fff8541edeebe0c48dbb9e092c extends Template
 \t\t\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-success\">
 \t\t\t\t\t\t\t\t\t\t\t<i class=\"ri-save-line align-bottom me-1\"></i>
 \t\t\t\t\t\t\t\t\t\t\t";
-        // line 237
-        echo ((twig_get_attribute($this->env, $this->source, (isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 237, $this->source); })()), "id", [], "any", false, false, false, 237)) ? ("Mettre à jour") : ("Enregistrer"));
+        // line 251
+        echo ((twig_get_attribute($this->env, $this->source, (isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 251, $this->source); })()), "id", [], "any", false, false, false, 251)) ? ("Mettre à jour") : ("Enregistrer"));
         echo "
 \t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 239
+        // line 253
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index");
         echo "\" class=\"btn btn-light\">
 \t\t\t\t\t\t\t\t\t\t\tAnnuler
@@ -375,8 +400,8 @@ class __TwigTemplate_e25ce3fff8541edeebe0c48dbb9e092c extends Template
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t";
-        // line 244
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 244, $this->source); })()), 'form_end');
+        // line 258
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 258, $this->source); })()), 'form_end');
         echo "
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
@@ -384,34 +409,36 @@ class __TwigTemplate_e25ce3fff8541edeebe0c48dbb9e092c extends Template
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t\t";
-        // line 250
+        // line 264
         echo twig_include($this->env, $context, "partials/footer.html.twig");
         echo "
 \t\t</div>
 \t</div>
 \t";
-        // line 253
+        // line 267
         echo twig_include($this->env, $context, "partials/vendor-scripts.html.twig");
         echo "
 \t<script src=\"";
-        // line 254
+        // line 268
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/libs/dropzone/dropzone-min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 255
+        // line 269
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/libs/sweetalert2/sweetalert2.min.js"), "html", null, true);
         echo "\"></script>
 \t<script>
 \t\tdocument.addEventListener('DOMContentLoaded', function () {
 const ligneCollection = document.getElementById('document-lignes');
 let index = parseInt(ligneCollection.dataset.index);
+const form = document.querySelector('form');
 function updateReferencePreview() {
-const typeSelect = document.querySelector('#      ";
-        // line 261
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 261, $this->source); })()), "type", [], "any", false, false, false, 261), "vars", [], "any", false, false, false, 261), "id", [], "any", false, false, false, 261), "html", null, true);
+const typeSelect = document.querySelector('#";
+        // line 276
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 276, $this->source); })()), "type", [], "any", false, false, false, 276), "vars", [], "any", false, false, false, 276), "id", [], "any", false, false, false, 276), "html", null, true);
         echo "');
-const type = typeSelect.options[typeSelect.selectedIndex].text;
+const type = typeSelect.value;
 const year = new Date().getFullYear().toString().slice(-2);
+
 const prefixMap = {
 'Devis achat': 'DA',
 'Commande achat': 'CA',
@@ -428,139 +455,154 @@ const prefixMap = {
 'Bon de livraison': 'BL',
 'Inventaire': 'INV'
 };
+
 const prefix = prefixMap[type] || 'DOC';
 const referencePreview = prefix + year + '000001';
+
 document.querySelector('#reference-preview').textContent = referencePreview;
-document.querySelector('#      ";
-        // line 283
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 283, $this->source); })()), "reference", [], "any", false, false, false, 283), "vars", [], "any", false, false, false, 283), "id", [], "any", false, false, false, 283), "html", null, true);
+document.querySelector('#";
+        // line 301
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 301, $this->source); })()), "reference", [], "any", false, false, false, 301), "vars", [], "any", false, false, false, 301), "id", [], "any", false, false, false, 301), "html", null, true);
         echo "').value = referencePreview;
 }
 function addLigneForm() {
-const newForm = ligneCollection.dataset.prototype.replace(/__name__label__/g, index).replace(/__name__/g, index);
+const prototype = ligneCollection.dataset.prototype;
+const newForm = prototype.replace(/__name__/g, index);
 const newRow = document.createElement('tr');
 newRow.className = 'ligne-row';
 newRow.innerHTML = newForm;
-const removeCell = document.createElement('td');
-removeCell.className = 'text-end';
-removeCell.innerHTML = `
+
+const actionCell = document.createElement('td');
+actionCell.className = 'text-end';
+actionCell.innerHTML = `
             <button type=\"button\" class=\"btn btn-sm btn-danger remove-ligne\">
                 <i class=\"ri-delete-bin-line\"></i>
             </button>
         `;
-newRow.appendChild(removeCell);
+newRow.appendChild(actionCell);
+
 setupLigneEvents(newRow);
 ligneCollection.appendChild(newRow);
 index++;
 ligneCollection.dataset.index = index;
 updateTotals();
-return newRow;
 }
+
 function setupLigneEvents(row) {
-const prixUnitaireInput = row.querySelector('[id\$=\"_prixUnitaireHt\"]');
+const prixInput = row.querySelector('[id\$=\"_prixUnitaireHt\"]');
 const qteInput = row.querySelector('[id\$=\"_qte\"]');
-if (prixUnitaireInput && qteInput) {
-prixUnitaireInput.addEventListener('input', function () {
+const remiseInput = row.querySelector('[id\$=\"_remise\"]');
+
+if (prixInput && qteInput) {
+prixInput.addEventListener('input', function () {
 updateLigneTotal(this);
 });
 qteInput.addEventListener('input', function () {
 updateLigneTotal(this);
 });
 }
+
+if (remiseInput) {
+remiseInput.addEventListener('input', function () {
+updateLigneTotal(this);
+});
+}
+
 row.querySelector('.remove-ligne').addEventListener('click', function () {
 row.remove();
 updateTotals();
 });
 }
+
 function updateLigneTotal(input) {
 const row = input.closest('.ligne-row');
 const prixUnitaire = parseFloat(row.querySelector('[id\$=\"_prixUnitaireHt\"]').value) || 0;
 const qte = parseFloat(row.querySelector('[id\$=\"_qte\"]').value) || 0;
 const remise = parseFloat(row.querySelector('[id\$=\"_remise\"]').value) || 0;
-const total = (prixUnitaire * qte) * (1 - remise / 100);
-const totalInput = row.querySelector('[id\$=\"_prixTotalHt\"]');
-totalInput.value = total.toFixed(2);
+
+const totalHT = (prixUnitaire * qte) * (1 - remise / 100);
+row.querySelector('[id\$=\"_prixTotalHt\"]').value = totalHT.toFixed(2);
+
 updateTotals();
 }
+
 function updateTotals() {
 let montantHt = 0;
 
 document.querySelectorAll('[id\$=\"_prixTotalHt\"]').forEach(input => {
 montantHt += parseFloat(input.value) || 0;
 });
-const tauxTva = parseFloat(document.querySelector('#      ";
-        // line 337
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 337, $this->source); })()), "tauxTva", [], "any", false, false, false, 337), "vars", [], "any", false, false, false, 337), "id", [], "any", false, false, false, 337), "html", null, true);
-        echo "').value) || 0;
-const montantTva = montantHt * (1 + (tauxTva / 100));
-const montantTtc = montantHt + montantTva;
-const retenu = parseFloat(document.querySelector('#      ";
-        // line 340
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 340, $this->source); })()), "retenu", [], "any", false, false, false, 340), "vars", [], "any", false, false, false, 340), "id", [], "any", false, false, false, 340), "html", null, true);
-        echo "').value) || 0;
-const montantRetenu = montantTtc * retenu / 100;
-const timbre = parseFloat(document.querySelector('#      ";
-        // line 342
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 342, $this->source); })()), "timbre", [], "any", false, false, false, 342), "vars", [], "any", false, false, false, 342), "id", [], "any", false, false, false, 342), "html", null, true);
-        echo "').value) || 0;
-const montantAPayer = montantTtc - montantRetenu + timbre;
 
-document.querySelector('#      ";
-        // line 345
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 345, $this->source); })()), "montantHt", [], "any", false, false, false, 345), "vars", [], "any", false, false, false, 345), "id", [], "any", false, false, false, 345), "html", null, true);
+const tauxTva = parseFloat(document.querySelector('#";
+        // line 371
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 371, $this->source); })()), "tauxTva", [], "any", false, false, false, 371), "vars", [], "any", false, false, false, 371), "id", [], "any", false, false, false, 371), "html", null, true);
+        echo "').value) || 0;
+const montantTva = montantHt * (tauxTva / 100);
+const montantTtc = montantHt + montantTva;
+
+const timbre = parseFloat(document.querySelector('#";
+        // line 375
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 375, $this->source); })()), "timbre", [], "any", false, false, false, 375), "vars", [], "any", false, false, false, 375), "id", [], "any", false, false, false, 375), "html", null, true);
+        echo "').value) || 0;
+const retenu = parseFloat(document.querySelector('#";
+        // line 376
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 376, $this->source); })()), "retenu", [], "any", false, false, false, 376), "vars", [], "any", false, false, false, 376), "id", [], "any", false, false, false, 376), "html", null, true);
+        echo "').value) || 0;
+const montantAPayer = montantTtc + timbre - retenu;
+
+document.querySelector('#";
+        // line 379
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 379, $this->source); })()), "montantHt", [], "any", false, false, false, 379), "vars", [], "any", false, false, false, 379), "id", [], "any", false, false, false, 379), "html", null, true);
         echo "').value = montantHt.toFixed(2);
-document.querySelector('#      ";
-        // line 346
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 346, $this->source); })()), "montantTva", [], "any", false, false, false, 346), "vars", [], "any", false, false, false, 346), "id", [], "any", false, false, false, 346), "html", null, true);
-        echo "').value = montantTva.toFixed(2);
-document.querySelector('#      ";
-        // line 347
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 347, $this->source); })()), "montantAPayer", [], "any", false, false, false, 347), "vars", [], "any", false, false, false, 347), "id", [], "any", false, false, false, 347), "html", null, true);
+document.querySelector('#";
+        // line 380
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 380, $this->source); })()), "montantTva", [], "any", false, false, false, 380), "vars", [], "any", false, false, false, 380), "id", [], "any", false, false, false, 380), "html", null, true);
+        echo "').value = montantTtc.toFixed(2);
+document.querySelector('#";
+        // line 381
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 381, $this->source); })()), "montantAPayer", [], "any", false, false, false, 381), "vars", [], "any", false, false, false, 381), "id", [], "any", false, false, false, 381), "html", null, true);
         echo "').value = montantAPayer.toFixed(2);
 }
-document.getElementById('add-ligne').addEventListener('click', function (e) {
-e.preventDefault();
-addLigneForm();
-});
+document.getElementById('add-ligne').addEventListener('click', addLigneForm);
 
 document.querySelectorAll('.ligne-row').forEach(row => {
 setupLigneEvents(row);
 });
 
-document.querySelectorAll('[id\$=\"_prixUnitaireHt\"], [id\$=\"_qte\"], [id\$=\"_remise\"]').forEach(input => {
-input.addEventListener('input', function () {
-updateLigneTotal(this);
-});
-});
+document.querySelector('#";
+        // line 389
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 389, $this->source); })()), "tauxTva", [], "any", false, false, false, 389), "vars", [], "any", false, false, false, 389), "id", [], "any", false, false, false, 389), "html", null, true);
+        echo "').addEventListener('input', updateTotals);
+document.querySelector('#";
+        // line 390
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 390, $this->source); })()), "timbre", [], "any", false, false, false, 390), "vars", [], "any", false, false, false, 390), "id", [], "any", false, false, false, 390), "html", null, true);
+        echo "').addEventListener('input', updateTotals);
+document.querySelector('#";
+        // line 391
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 391, $this->source); })()), "retenu", [], "any", false, false, false, 391), "vars", [], "any", false, false, false, 391), "id", [], "any", false, false, false, 391), "html", null, true);
+        echo "').addEventListener('input', updateTotals);
 
-document.querySelector('#      ";
-        // line 364
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 364, $this->source); })()), "tauxTva", [], "any", false, false, false, 364), "vars", [], "any", false, false, false, 364), "id", [], "any", false, false, false, 364), "html", null, true);
-        echo "').addEventListener('input', updateTotals);
-document.querySelector('#      ";
-        // line 365
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 365, $this->source); })()), "timbre", [], "any", false, false, false, 365), "vars", [], "any", false, false, false, 365), "id", [], "any", false, false, false, 365), "html", null, true);
-        echo "').addEventListener('input', updateTotals);
-document.querySelector('#      ";
-        // line 366
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 366, $this->source); })()), "retenu", [], "any", false, false, false, 366), "vars", [], "any", false, false, false, 366), "id", [], "any", false, false, false, 366), "html", null, true);
-        echo "').addEventListener('input', updateTotals);";
-        if ( !twig_get_attribute($this->env, $this->source, (isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 366, $this->source); })()), "id", [], "any", false, false, false, 366)) {
-            echo "const typeSelect = document.querySelector('#      ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 366, $this->source); })()), "type", [], "any", false, false, false, 366), "vars", [], "any", false, false, false, 366), "id", [], "any", false, false, false, 366), "html", null, true);
-            echo "');
+if (!";
+        // line 393
+        echo ((twig_get_attribute($this->env, $this->source, (isset($context["document"]) || array_key_exists("document", $context) ? $context["document"] : (function () { throw new RuntimeError('Variable "document" does not exist.', 393, $this->source); })()), "id", [], "any", false, false, false, 393)) ? ("true") : ("false"));
+        echo ") {
+const typeSelect = document.querySelector('#";
+        // line 394
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 394, $this->source); })()), "type", [], "any", false, false, false, 394), "vars", [], "any", false, false, false, 394), "id", [], "any", false, false, false, 394), "html", null, true);
+        echo "');
+typeSelect.addEventListener('change', updateReferencePreview);
 if (typeSelect.value) {
 updateReferencePreview();
 }
-typeSelect.addEventListener('change', updateReferencePreview);";
-        }
-        // line 370
-        echo "document.querySelector('form').addEventListener('submit', function (e) {
+}
+updateTotals();
+form.addEventListener('submit', function (e) {
 if (document.querySelectorAll('.ligne-row').length === 0) {
 e.preventDefault();
 alert('Veuillez ajouter au moins une ligne au document');
 return;
 }
+
 let isValid = true;
 document.querySelectorAll('.ligne-row').forEach(row => {
 const qte = parseFloat(row.querySelector('[id\$=\"_qte\"]').value) || 0;
@@ -581,6 +623,7 @@ alert('Veuillez corriger les lignes en rouge (quantité et prix doivent être > 
 });
 });
 \t</script>
+
 </body></html>
 ";
         
@@ -612,7 +655,7 @@ alert('Veuillez corriger les lignes en rouge (quantité et prix doivent être > 
      */
     public function getDebugInfo()
     {
-        return array (  558 => 370,  546 => 366,  542 => 365,  538 => 364,  518 => 347,  514 => 346,  510 => 345,  504 => 342,  499 => 340,  493 => 337,  436 => 283,  411 => 261,  402 => 255,  398 => 254,  394 => 253,  388 => 250,  379 => 244,  371 => 239,  366 => 237,  355 => 228,  353 => 224,  352 => 222,  349 => 221,  347 => 217,  346 => 215,  341 => 212,  339 => 208,  338 => 206,  335 => 205,  333 => 201,  332 => 199,  329 => 198,  327 => 194,  326 => 192,  323 => 191,  321 => 187,  320 => 185,  301 => 168,  281 => 161,  279 => 157,  278 => 155,  274 => 153,  272 => 149,  271 => 147,  268 => 146,  266 => 142,  265 => 140,  262 => 139,  260 => 135,  259 => 133,  255 => 132,  251 => 131,  248 => 130,  231 => 129,  225 => 128,  204 => 109,  202 => 107,  201 => 106,  196 => 103,  194 => 101,  193 => 100,  188 => 97,  186 => 95,  185 => 94,  180 => 91,  178 => 88,  177 => 87,  176 => 86,  175 => 84,  165 => 76,  163 => 73,  162 => 71,  157 => 69,  154 => 68,  148 => 66,  142 => 64,  140 => 63,  129 => 55,  125 => 54,  114 => 46,  107 => 41,  105 => 40,  104 => 38,  96 => 33,  70 => 10,  66 => 9,  62 => 8,  58 => 7,  54 => 6,  50 => 5,  43 => 1,);
+        return array (  591 => 394,  587 => 393,  582 => 391,  578 => 390,  574 => 389,  563 => 381,  559 => 380,  555 => 379,  549 => 376,  545 => 375,  538 => 371,  465 => 301,  437 => 276,  427 => 269,  423 => 268,  419 => 267,  413 => 264,  404 => 258,  396 => 253,  391 => 251,  380 => 242,  378 => 238,  377 => 236,  374 => 235,  372 => 231,  371 => 229,  366 => 226,  364 => 222,  363 => 220,  360 => 219,  358 => 215,  357 => 213,  354 => 212,  352 => 208,  351 => 206,  348 => 205,  346 => 201,  345 => 199,  326 => 182,  306 => 175,  304 => 171,  303 => 169,  299 => 167,  297 => 163,  296 => 161,  293 => 160,  291 => 156,  290 => 154,  287 => 153,  285 => 149,  284 => 147,  280 => 146,  276 => 145,  273 => 144,  256 => 143,  250 => 142,  229 => 123,  227 => 121,  226 => 120,  221 => 117,  219 => 115,  218 => 114,  213 => 111,  211 => 109,  210 => 108,  205 => 105,  201 => 103,  199 => 100,  197 => 96,  190 => 92,  185 => 89,  179 => 86,  177 => 85,  175 => 84,  165 => 76,  163 => 73,  162 => 71,  157 => 69,  154 => 68,  148 => 66,  142 => 64,  140 => 63,  129 => 55,  125 => 54,  114 => 46,  107 => 41,  105 => 40,  104 => 38,  96 => 33,  70 => 10,  66 => 9,  62 => 8,  58 => 7,  54 => 6,  50 => 5,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -700,15 +743,29 @@ alert('Veuillez corriger les lignes en rouge (quantité et prix doivent être > 
 \t\t\t\t\t\t\t\t<div class=\"card-body p-4\">
 \t\t\t\t\t\t\t\t\t<div class=\"row g-3\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"col-lg-3 col-sm-6\">
-\t\t\t\t\t\t\t\t\t\t\t{{ form_row(form.type, {
-                                                    'attr': {
-                                                        'class': 'form-control' ~ (document.id ? '' : ' bg-light border-0'),
-                                                        'onchange': document.id ? '' : 'updateReferencePreview()',
-                                                        'disabled': document.id ? 'disabled' : false
-                                                    },
-                                                    'label': 'Type'
-                                                }) }}
+\t\t\t\t\t\t\t\t\t\t\t{% if document.id %}
+\t\t\t\t\t\t\t\t\t\t\t\t{#Champ caché pour soumettre la valeur #}
+\t\t\t\t\t\t\t\t\t\t\t\t{{ form_widget(form.type, {'attr': {'class': 'd-none'}}) }}
+
+\t\t\t\t\t\t\t\t\t\t\t\t{#Affichage en lecture seule #}
+\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"mb-3\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<label class=\"form-label\">Type</label>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-control bg-light border-0\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t{{ form.type.vars.value }}
+\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t{% else %}
+\t\t\t\t\t\t\t\t\t\t\t\t{{ form_row(form.type, {
+\t\t\t\t\t\t\t\t\t\t\t\t\t'attr': {
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t'class': 'form-control bg-light border-0',
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t'onchange': 'updateReferencePreview()',
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t'disabled': document.id ? 'disabled' : false
+\t\t\t\t\t\t\t\t\t\t\t\t\t},
+\t\t\t\t\t\t\t\t\t\t\t\t\t'label': 'Type'
+\t\t\t\t\t\t\t\t\t\t\t\t}) }}
+\t\t\t\t\t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t\t\t\t\t</div>
+
 \t\t\t\t\t\t\t\t\t\t<div class=\"col-lg-3 col-sm-6\">
 \t\t\t\t\t\t\t\t\t\t\t{{ form_row(form.status, {
                                                     'attr': {'class': 'form-control' ~ (document.id ? '' : ' bg-light border-0')},
@@ -876,10 +933,12 @@ alert('Veuillez corriger les lignes en rouge (quantité et prix doivent être > 
 \t\tdocument.addEventListener('DOMContentLoaded', function () {
 const ligneCollection = document.getElementById('document-lignes');
 let index = parseInt(ligneCollection.dataset.index);
+const form = document.querySelector('form');
 function updateReferencePreview() {
-const typeSelect = document.querySelector('#      {{ form.type.vars.id }}');
-const type = typeSelect.options[typeSelect.selectedIndex].text;
+const typeSelect = document.querySelector('#{{ form.type.vars.id }}');
+const type = typeSelect.value;
 const year = new Date().getFullYear().toString().slice(-2);
+
 const prefixMap = {
 'Devis achat': 'DA',
 'Commande achat': 'CA',
@@ -896,102 +955,118 @@ const prefixMap = {
 'Bon de livraison': 'BL',
 'Inventaire': 'INV'
 };
+
 const prefix = prefixMap[type] || 'DOC';
 const referencePreview = prefix + year + '000001';
+
 document.querySelector('#reference-preview').textContent = referencePreview;
-document.querySelector('#      {{ form.reference.vars.id }}').value = referencePreview;
+document.querySelector('#{{ form.reference.vars.id }}').value = referencePreview;
 }
 function addLigneForm() {
-const newForm = ligneCollection.dataset.prototype.replace(/__name__label__/g, index).replace(/__name__/g, index);
+const prototype = ligneCollection.dataset.prototype;
+const newForm = prototype.replace(/__name__/g, index);
 const newRow = document.createElement('tr');
 newRow.className = 'ligne-row';
 newRow.innerHTML = newForm;
-const removeCell = document.createElement('td');
-removeCell.className = 'text-end';
-removeCell.innerHTML = `
+
+const actionCell = document.createElement('td');
+actionCell.className = 'text-end';
+actionCell.innerHTML = `
             <button type=\"button\" class=\"btn btn-sm btn-danger remove-ligne\">
                 <i class=\"ri-delete-bin-line\"></i>
             </button>
         `;
-newRow.appendChild(removeCell);
+newRow.appendChild(actionCell);
+
 setupLigneEvents(newRow);
 ligneCollection.appendChild(newRow);
 index++;
 ligneCollection.dataset.index = index;
 updateTotals();
-return newRow;
 }
+
 function setupLigneEvents(row) {
-const prixUnitaireInput = row.querySelector('[id\$=\"_prixUnitaireHt\"]');
+const prixInput = row.querySelector('[id\$=\"_prixUnitaireHt\"]');
 const qteInput = row.querySelector('[id\$=\"_qte\"]');
-if (prixUnitaireInput && qteInput) {
-prixUnitaireInput.addEventListener('input', function () {
+const remiseInput = row.querySelector('[id\$=\"_remise\"]');
+
+if (prixInput && qteInput) {
+prixInput.addEventListener('input', function () {
 updateLigneTotal(this);
 });
 qteInput.addEventListener('input', function () {
 updateLigneTotal(this);
 });
 }
+
+if (remiseInput) {
+remiseInput.addEventListener('input', function () {
+updateLigneTotal(this);
+});
+}
+
 row.querySelector('.remove-ligne').addEventListener('click', function () {
 row.remove();
 updateTotals();
 });
 }
+
 function updateLigneTotal(input) {
 const row = input.closest('.ligne-row');
 const prixUnitaire = parseFloat(row.querySelector('[id\$=\"_prixUnitaireHt\"]').value) || 0;
 const qte = parseFloat(row.querySelector('[id\$=\"_qte\"]').value) || 0;
 const remise = parseFloat(row.querySelector('[id\$=\"_remise\"]').value) || 0;
-const total = (prixUnitaire * qte) * (1 - remise / 100);
-const totalInput = row.querySelector('[id\$=\"_prixTotalHt\"]');
-totalInput.value = total.toFixed(2);
+
+const totalHT = (prixUnitaire * qte) * (1 - remise / 100);
+row.querySelector('[id\$=\"_prixTotalHt\"]').value = totalHT.toFixed(2);
+
 updateTotals();
 }
+
 function updateTotals() {
 let montantHt = 0;
 
 document.querySelectorAll('[id\$=\"_prixTotalHt\"]').forEach(input => {
 montantHt += parseFloat(input.value) || 0;
 });
-const tauxTva = parseFloat(document.querySelector('#      {{ form.tauxTva.vars.id }}').value) || 0;
-const montantTva = montantHt * (1 + (tauxTva / 100));
-const montantTtc = montantHt + montantTva;
-const retenu = parseFloat(document.querySelector('#      {{ form.retenu.vars.id }}').value) || 0;
-const montantRetenu = montantTtc * retenu / 100;
-const timbre = parseFloat(document.querySelector('#      {{ form.timbre.vars.id }}').value) || 0;
-const montantAPayer = montantTtc - montantRetenu + timbre;
 
-document.querySelector('#      {{ form.montantHt.vars.id }}').value = montantHt.toFixed(2);
-document.querySelector('#      {{ form.montantTva.vars.id }}').value = montantTva.toFixed(2);
-document.querySelector('#      {{ form.montantAPayer.vars.id }}').value = montantAPayer.toFixed(2);
+const tauxTva = parseFloat(document.querySelector('#{{ form.tauxTva.vars.id }}').value) || 0;
+const montantTva = montantHt * (tauxTva / 100);
+const montantTtc = montantHt + montantTva;
+
+const timbre = parseFloat(document.querySelector('#{{ form.timbre.vars.id }}').value) || 0;
+const retenu = parseFloat(document.querySelector('#{{ form.retenu.vars.id }}').value) || 0;
+const montantAPayer = montantTtc + timbre - retenu;
+
+document.querySelector('#{{ form.montantHt.vars.id }}').value = montantHt.toFixed(2);
+document.querySelector('#{{ form.montantTva.vars.id }}').value = montantTtc.toFixed(2);
+document.querySelector('#{{ form.montantAPayer.vars.id }}').value = montantAPayer.toFixed(2);
 }
-document.getElementById('add-ligne').addEventListener('click', function (e) {
-e.preventDefault();
-addLigneForm();
-});
+document.getElementById('add-ligne').addEventListener('click', addLigneForm);
 
 document.querySelectorAll('.ligne-row').forEach(row => {
 setupLigneEvents(row);
 });
 
-document.querySelectorAll('[id\$=\"_prixUnitaireHt\"], [id\$=\"_qte\"], [id\$=\"_remise\"]').forEach(input => {
-input.addEventListener('input', function () {
-updateLigneTotal(this);
-});
-});
+document.querySelector('#{{ form.tauxTva.vars.id }}').addEventListener('input', updateTotals);
+document.querySelector('#{{ form.timbre.vars.id }}').addEventListener('input', updateTotals);
+document.querySelector('#{{ form.retenu.vars.id }}').addEventListener('input', updateTotals);
 
-document.querySelector('#      {{ form.tauxTva.vars.id }}').addEventListener('input', updateTotals);
-document.querySelector('#      {{ form.timbre.vars.id }}').addEventListener('input', updateTotals);
-document.querySelector('#      {{ form.retenu.vars.id }}').addEventListener('input', updateTotals);{% if not document.id %}const typeSelect = document.querySelector('#      {{ form.type.vars.id }}');
+if (!{{ document.id ? 'true' : 'false' }}) {
+const typeSelect = document.querySelector('#{{ form.type.vars.id }}');
+typeSelect.addEventListener('change', updateReferencePreview);
 if (typeSelect.value) {
 updateReferencePreview();
 }
-typeSelect.addEventListener('change', updateReferencePreview);{% endif %}document.querySelector('form').addEventListener('submit', function (e) {
+}
+updateTotals();
+form.addEventListener('submit', function (e) {
 if (document.querySelectorAll('.ligne-row').length === 0) {
 e.preventDefault();
 alert('Veuillez ajouter au moins une ligne au document');
 return;
 }
+
 let isValid = true;
 document.querySelectorAll('.ligne-row').forEach(row => {
 const qte = parseFloat(row.querySelector('[id\$=\"_qte\"]').value) || 0;
@@ -1012,6 +1087,7 @@ alert('Veuillez corriger les lignes en rouge (quantité et prix doivent être > 
 });
 });
 \t</script>
+
 </body></html>
 ", "documents/new&edit.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\documents\\new&edit.html.twig");
     }

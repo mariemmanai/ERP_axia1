@@ -210,13 +210,13 @@ class Documents
         $this->createAt = $createAt;
         return $this;
     }
-    public function calculateMontantTva(): self
-    {
-        if ($this->montantHt !== null && $this->tauxTva !== null) {
-            $this->montantTva = $this->montantHt * (1 + ($this->tauxTva / 100));
-        }
-        return $this;
-    }
+    // public function calculateMontantTva(): self
+    // {
+    //     if ($this->montantHt !== null && $this->tauxTva !== null) {
+    //         $this->montantTva = $this->montantHt * (1 + ($this->tauxTva / 100));
+    //     }
+    //     return $this;
+    // }
     public function updateMontantTva(): void
     {
         $this->calculateMontantTva();
@@ -302,16 +302,24 @@ class Documents
     public function calculateTotals(): void
     {
         $this->montantHt = 0;
+
         foreach ($this->lignes as $ligne) {
             $ligne->calculatePrixTotalHt();
             $this->montantHt += $ligne->getPrixTotalHt();
         }
 
         $this->calculateMontantTva();
-        $ttc = $this->montantTva;
-        $this->montantAPayer = $ttc
-            + ($this->timbre ?? 0)
-            - ($this->retenu ?? 0);
+
+        $ttc = $this->montantTva ?? $this->montantHt;
+        $this->montantAPayer = $ttc + ($this->timbre ?? 0) - ($this->retenu ?? 0);
+    }
+
+    public function calculateMontantTva(): self
+    {
+        if ($this->montantHt !== null && $this->tauxTva !== null) {
+            $this->montantTva = $this->montantHt * (1 + ($this->tauxTva / 100));
+        }
+        return $this;
     }
     #[ORM\PrePersist]
     #[ORM\PreUpdate]

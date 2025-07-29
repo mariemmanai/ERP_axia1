@@ -70,14 +70,14 @@
             </a>
             <div class="collapse menu-dropdown" id="sidebarPurchases">
                 <ul class="nav nav-sm flex-column">
-                <li class="nav-item"><a href="layouts-horizontal" target="_blank" class="nav-link">Devis Fournisseurs</a></li>
-                <li class="nav-item"><a href="layouts-detached" target="_blank" class="nav-link">Commandes Fournisseurs</a></li>
-                <li class="nav-item"><a href="layouts-two-column" target="_blank" class="nav-link">Factures Fournisseurs</a></li>
-                <li class="nav-item"><a href="layouts-two-column" target="_blank" class="nav-link">Factures Fournisseurs Avoire</a></li>
-                <li class="nav-item"><a href="layouts-vertical-hovered" target="_blank" class="nav-link">Bon d'entrée</a></li>
-                <li class="nav-item"><a href="layouts-vertical-hovered" target="_blank" class="nav-link">Bon de transfert</a></li>
-                <li class="nav-item"><a href="layouts-vertical-hovered" target="_blank" class="nav-link">Bon de retour</a></li>
-                <li class="nav-item"><a href="layouts-vertical-hovered" target="_blank" class="nav-link">Inventaire</a></li>
+                <li class="nav-item"><a href="{{ path('app_documents_index', {'filter': 'devis_achat'}) }}" class="nav-link">Devis achat</a></li>                
+                <li class="nav-item"><a href="{{ path('app_documents_index', {'filter': 'commandes_achat'}) }}" class="nav-link">Commandes achat</a></li>                
+                <li class="nav-item"><a href="{{ path('app_documents_index', {'filter': 'factures_achat'}) }}" class="nav-link">Factures achat</a></li>
+                <li class="nav-item"><a href="{{ path('app_documents_index', {'filter': 'factures_achat_avoire'}) }}" class="nav-link">Factures achat Avoire</a></li>
+                <li class="nav-item"><a href="{{ path('app_documents_index', {'filter': 'bon_entree'}) }}" class="nav-link">Bon d'entrée</a></li>
+                <li class="nav-item"><a href="{{ path('app_documents_index', {'filter': 'bon_transfert'}) }}" class="nav-link">Bon de transfert</a></li>
+                <li class="nav-item"><a href="{{ path('app_documents_index', {'filter': 'bon_retour'}) }}" class="nav-link">Bon de retour</a></li>
+                <li class="nav-item"><a href="{{ path('app_documents_index', {'filter': 'inventaire'}) }}" class="nav-link">Inventaire</a></li>
                 </ul>
             </div>
             </li>
@@ -92,11 +92,11 @@
                     <ul class="nav nav-sm flex-column">
                     <li class="nav-item"><a href="layouts-horizontal" target="_blank" class="nav-link">Création des OF</a></li>
                     <li class="nav-item"><a href="layouts-detached" target="_blank" class="nav-link">Demande de besoins</a></li>
-                    <li class="nav-item"><a href="layouts-vertical-hovered" target="_blank" class="nav-link">Bon d'entrée</a></li>
-                    <li class="nav-item"><a href="layouts-vertical-hovered" target="_blank" class="nav-link">Bon de sortie</a></li>
-                    <li class="nav-item"><a href="layouts-vertical-hovered" target="_blank" class="nav-link">Bon de transfert</a></li>
-                    <li class="nav-item"><a href="layouts-vertical-hovered" target="_blank" class="nav-link">Bon de retour</a></li>
-                    <li class="nav-item"><a href="layouts-vertical-hovered" target="_blank" class="nav-link">Inventaire</a></li>
+                    <li class="nav-item"><a href="{{ path('app_documents_index', {'filter': 'bon_entree'}) }}" class="nav-link">Bon d'entrée</a></li>
+                    <li class="nav-item"><a href="{{ path('app_documents_index', {'filter': 'bon_sortie'}) }}" class="nav-link">Bon de sortie</a></li>
+                    <li class="nav-item"><a href="{{ path('app_documents_index', {'filter': 'bon_transfert'}) }}" class="nav-link">Bon de transfert</a></li>
+                    <li class="nav-item"><a href="{{ path('app_documents_index', {'filter': 'bon_retour'}) }}" class="nav-link">Bon de retour</a></li>
+                    <li class="nav-item"><a href="{{ path('app_documents_index', {'filter': 'inventaire'}) }}" class="nav-link">Inventaire</a></li>
                     </ul>
                 </div>
             </li>
@@ -110,14 +110,13 @@
             </a>
             <div class="collapse menu-dropdown" id="sidebarSales">
                 <ul class="nav nav-sm flex-column">
-                <li class="nav-item"><a href="layouts-horizontal" target="_blank" class="nav-link">Devis Clients</a></li>
-                <li class="nav-item"><a href="layouts-detached" target="_blank" class="nav-link">Commandes Clients</a></li>
-                <li class="nav-item"><a href="layouts-two-column" target="_blank" class="nav-link">Factures Clients</a></li>
-                <li class="nav-item"><a href="layouts-two-column" target="_blank" class="nav-link">Factures Clients Avoire</a></li>
-                <li class="nav-item"><a href="layouts-vertical-hovered" target="_blank" class="nav-link">Bon d'entrée</a></li>
-                <li class="nav-item"><a href="layouts-vertical-hovered" target="_blank" class="nav-link">Bon de sortie</a></li>
-                <li class="nav-item"><a href="layouts-vertical-hovered" target="_blank" class="nav-link">Bon de livraison</a></li>
-                <li class="nav-item"><a href="layouts-vertical-hovered" target="_blank" class="nav-link">Inventaire</a></li>
+                <li class="nav-item"><a href="{{ path('app_documents_index', {'filter': 'devis_vente'}) }}" class="nav-link">Devis vente</a></li>
+                <li class="nav-item"><a href="{{ path('app_documents_index', {'filter': 'commandes_vente'}) }}" class="nav-link">Commandes vente</a></li>
+                <li class="nav-item"><a href="{{ path('app_documents_index', {'filter': 'factures_vente'}) }}" class="nav-link">Factures vente</a></li>
+                <li class="nav-item"><a href="{{ path('app_documents_index', {'filter': 'factures_vente_avoire'}) }}" class="nav-link">Factures vente avoire</a></li>
+                <li class="nav-item"><a href="{{ path('app_documents_index', {'filter': 'bon_sortie'}) }}" class="nav-link">Bon de sortie</a></li>
+                <li class="nav-item"><a href="{{ path('app_documents_index', {'filter': 'bon_livraison'}) }}" class="nav-link">Bon de livraison</a></li>
+                <li class="nav-item"><a href="{{ path('app_documents_index', {'filter': 'inventaire'}) }}" class="nav-link">Inventaire</a></li>
                 </ul>
             </div>
             </li>
@@ -192,13 +191,8 @@
             </li>
         </ul>
     </div>
-
-
-        <!-- Sidebar -->
     </div>
 
     <div class="sidebar-background"></div>
 </div>
-<!-- Left Sidebar End -->
-<!-- Vertical Overlay-->
 <div class="vertical-overlay"></div>

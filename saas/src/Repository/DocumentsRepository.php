@@ -41,7 +41,7 @@ class DocumentsRepository extends ServiceEntityRepository
 
     public function getNextReference(string $type): string
     {
-        $prefixes = [
+        $prefixMap = [
             'Devis achat' => 'DA',
             'Commande achat' => 'CA',
             'Facture achat' => 'FA',
@@ -59,15 +59,23 @@ class DocumentsRepository extends ServiceEntityRepository
         ];
 
         $prefix = $prefixMap[$type] ?? 'DOC';
-        $year = date('y'); 
-        $lastNum = $this->getLastReferenceNumber($type);
-        
-        return sprintf('%s%s%06d', $prefix, $year, $lastNum + 1);
+        $year = date('y');
+        $lastNum = $this->getLastReferenceNumber($prefix . $year);
+
+        return sprintf('%s%06d', $prefix . $year, $lastNum + 1);
     }
-    private function getLastReferenceNumber(string $type): int
+
+    private function getLastReferenceNumber(string $prefix): int
     {
-        $lastDoc = $this->findOneBy(['type' => $type], ['id' => 'DESC']);
-        return $lastDoc ? (int) substr($lastDoc->getReference(), -6) : 0;
+        $qb = $this->createQueryBuilder('d')
+            ->select('MAX(SUBSTRING(d.reference, 5)) as max_num')
+            ->where('d.reference LIKE :prefix')
+            ->setParameter('prefix', $prefix . '%')
+            ->getQuery();
+
+        $result = $qb->getSingleScalarResult();
+
+        return $result ? (int)$result : 0;
     }
     public function findWithLignes(int $id): ?Documents
     {
@@ -79,5 +87,12 @@ class DocumentsRepository extends ServiceEntityRepository
             ->getQuery()
             ->getOneOrNullResult();
     }
-
+    public function findByType(string $type): array
+    {
+        return $this->createQueryBuilder('d')
+            ->where('d.type = :type')
+            ->setParameter('type', $type)
+            ->getQuery()
+            ->getResult();
+    }
 }

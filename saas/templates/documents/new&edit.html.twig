@@ -81,15 +81,29 @@
 								<div class="card-body p-4">
 									<div class="row g-3">
 										<div class="col-lg-3 col-sm-6">
-											{{ form_row(form.type, {
-                                                    'attr': {
-                                                        'class': 'form-control' ~ (document.id ? '' : ' bg-light border-0'),
-                                                        'onchange': document.id ? '' : 'updateReferencePreview()',
-                                                        'disabled': document.id ? 'disabled' : false
-                                                    },
-                                                    'label': 'Type'
-                                                }) }}
+											{% if document.id %}
+												{#Champ caché pour soumettre la valeur #}
+												{{ form_widget(form.type, {'attr': {'class': 'd-none'}}) }}
+
+												{#Affichage en lecture seule #}
+												<div class="mb-3">
+													<label class="form-label">Type</label>
+													<div class="form-control bg-light border-0">
+														{{ form.type.vars.value }}
+													</div>
+												</div>
+											{% else %}
+												{{ form_row(form.type, {
+													'attr': {
+														'class': 'form-control bg-light border-0',
+														'onchange': 'updateReferencePreview()',
+														'disabled': document.id ? 'disabled' : false
+													},
+													'label': 'Type'
+												}) }}
+											{% endif %}
 										</div>
+
 										<div class="col-lg-3 col-sm-6">
 											{{ form_row(form.status, {
                                                     'attr': {'class': 'form-control' ~ (document.id ? '' : ' bg-light border-0')},
@@ -257,10 +271,12 @@
 		document.addEventListener('DOMContentLoaded', function () {
 const ligneCollection = document.getElementById('document-lignes');
 let index = parseInt(ligneCollection.dataset.index);
+const form = document.querySelector('form');
 function updateReferencePreview() {
-const typeSelect = document.querySelector('#      {{ form.type.vars.id }}');
-const type = typeSelect.options[typeSelect.selectedIndex].text;
+const typeSelect = document.querySelector('#{{ form.type.vars.id }}');
+const type = typeSelect.value;
 const year = new Date().getFullYear().toString().slice(-2);
+
 const prefixMap = {
 'Devis achat': 'DA',
 'Commande achat': 'CA',
@@ -277,102 +293,118 @@ const prefixMap = {
 'Bon de livraison': 'BL',
 'Inventaire': 'INV'
 };
+
 const prefix = prefixMap[type] || 'DOC';
 const referencePreview = prefix + year + '000001';
+
 document.querySelector('#reference-preview').textContent = referencePreview;
-document.querySelector('#      {{ form.reference.vars.id }}').value = referencePreview;
+document.querySelector('#{{ form.reference.vars.id }}').value = referencePreview;
 }
 function addLigneForm() {
-const newForm = ligneCollection.dataset.prototype.replace(/__name__label__/g, index).replace(/__name__/g, index);
+const prototype = ligneCollection.dataset.prototype;
+const newForm = prototype.replace(/__name__/g, index);
 const newRow = document.createElement('tr');
 newRow.className = 'ligne-row';
 newRow.innerHTML = newForm;
-const removeCell = document.createElement('td');
-removeCell.className = 'text-end';
-removeCell.innerHTML = `
+
+const actionCell = document.createElement('td');
+actionCell.className = 'text-end';
+actionCell.innerHTML = `
             <button type="button" class="btn btn-sm btn-danger remove-ligne">
                 <i class="ri-delete-bin-line"></i>
             </button>
         `;
-newRow.appendChild(removeCell);
+newRow.appendChild(actionCell);
+
 setupLigneEvents(newRow);
 ligneCollection.appendChild(newRow);
 index++;
 ligneCollection.dataset.index = index;
 updateTotals();
-return newRow;
 }
+
 function setupLigneEvents(row) {
-const prixUnitaireInput = row.querySelector('[id$="_prixUnitaireHt"]');
+const prixInput = row.querySelector('[id$="_prixUnitaireHt"]');
 const qteInput = row.querySelector('[id$="_qte"]');
-if (prixUnitaireInput && qteInput) {
-prixUnitaireInput.addEventListener('input', function () {
+const remiseInput = row.querySelector('[id$="_remise"]');
+
+if (prixInput && qteInput) {
+prixInput.addEventListener('input', function () {
 updateLigneTotal(this);
 });
 qteInput.addEventListener('input', function () {
 updateLigneTotal(this);
 });
 }
+
+if (remiseInput) {
+remiseInput.addEventListener('input', function () {
+updateLigneTotal(this);
+});
+}
+
 row.querySelector('.remove-ligne').addEventListener('click', function () {
 row.remove();
 updateTotals();
 });
 }
+
 function updateLigneTotal(input) {
 const row = input.closest('.ligne-row');
 const prixUnitaire = parseFloat(row.querySelector('[id$="_prixUnitaireHt"]').value) || 0;
 const qte = parseFloat(row.querySelector('[id$="_qte"]').value) || 0;
 const remise = parseFloat(row.querySelector('[id$="_remise"]').value) || 0;
-const total = (prixUnitaire * qte) * (1 - remise / 100);
-const totalInput = row.querySelector('[id$="_prixTotalHt"]');
-totalInput.value = total.toFixed(2);
+
+const totalHT = (prixUnitaire * qte) * (1 - remise / 100);
+row.querySelector('[id$="_prixTotalHt"]').value = totalHT.toFixed(2);
+
 updateTotals();
 }
+
 function updateTotals() {
 let montantHt = 0;
 
 document.querySelectorAll('[id$="_prixTotalHt"]').forEach(input => {
 montantHt += parseFloat(input.value) || 0;
 });
-const tauxTva = parseFloat(document.querySelector('#      {{ form.tauxTva.vars.id }}').value) || 0;
-const montantTva = montantHt * (1 + (tauxTva / 100));
-const montantTtc = montantHt + montantTva;
-const retenu = parseFloat(document.querySelector('#      {{ form.retenu.vars.id }}').value) || 0;
-const montantRetenu = montantTtc * retenu / 100;
-const timbre = parseFloat(document.querySelector('#      {{ form.timbre.vars.id }}').value) || 0;
-const montantAPayer = montantTtc - montantRetenu + timbre;
 
-document.querySelector('#      {{ form.montantHt.vars.id }}').value = montantHt.toFixed(2);
-document.querySelector('#      {{ form.montantTva.vars.id }}').value = montantTva.toFixed(2);
-document.querySelector('#      {{ form.montantAPayer.vars.id }}').value = montantAPayer.toFixed(2);
+const tauxTva = parseFloat(document.querySelector('#{{ form.tauxTva.vars.id }}').value) || 0;
+const montantTva = montantHt * (tauxTva / 100);
+const montantTtc = montantHt + montantTva;
+
+const timbre = parseFloat(document.querySelector('#{{ form.timbre.vars.id }}').value) || 0;
+const retenu = parseFloat(document.querySelector('#{{ form.retenu.vars.id }}').value) || 0;
+const montantAPayer = montantTtc + timbre - retenu;
+
+document.querySelector('#{{ form.montantHt.vars.id }}').value = montantHt.toFixed(2);
+document.querySelector('#{{ form.montantTva.vars.id }}').value = montantTtc.toFixed(2);
+document.querySelector('#{{ form.montantAPayer.vars.id }}').value = montantAPayer.toFixed(2);
 }
-document.getElementById('add-ligne').addEventListener('click', function (e) {
-e.preventDefault();
-addLigneForm();
-});
+document.getElementById('add-ligne').addEventListener('click', addLigneForm);
 
 document.querySelectorAll('.ligne-row').forEach(row => {
 setupLigneEvents(row);
 });
 
-document.querySelectorAll('[id$="_prixUnitaireHt"], [id$="_qte"], [id$="_remise"]').forEach(input => {
-input.addEventListener('input', function () {
-updateLigneTotal(this);
-});
-});
+document.querySelector('#{{ form.tauxTva.vars.id }}').addEventListener('input', updateTotals);
+document.querySelector('#{{ form.timbre.vars.id }}').addEventListener('input', updateTotals);
+document.querySelector('#{{ form.retenu.vars.id }}').addEventListener('input', updateTotals);
 
-document.querySelector('#      {{ form.tauxTva.vars.id }}').addEventListener('input', updateTotals);
-document.querySelector('#      {{ form.timbre.vars.id }}').addEventListener('input', updateTotals);
-document.querySelector('#      {{ form.retenu.vars.id }}').addEventListener('input', updateTotals);{% if not document.id %}const typeSelect = document.querySelector('#      {{ form.type.vars.id }}');
+if (!{{ document.id ? 'true' : 'false' }}) {
+const typeSelect = document.querySelector('#{{ form.type.vars.id }}');
+typeSelect.addEventListener('change', updateReferencePreview);
 if (typeSelect.value) {
 updateReferencePreview();
 }
-typeSelect.addEventListener('change', updateReferencePreview);{% endif %}document.querySelector('form').addEventListener('submit', function (e) {
+}
+updateTotals();
+form.addEventListener('submit', function (e) {
 if (document.querySelectorAll('.ligne-row').length === 0) {
 e.preventDefault();
 alert('Veuillez ajouter au moins une ligne au document');
 return;
 }
+
 let isValid = true;
 document.querySelectorAll('.ligne-row').forEach(row => {
 const qte = parseFloat(row.querySelector('[id$="_qte"]').value) || 0;
@@ -393,4 +425,5 @@ alert('Veuillez corriger les lignes en rouge (quantité et prix doivent être > 
 });
 });
 	</script>
+
 </body></html>

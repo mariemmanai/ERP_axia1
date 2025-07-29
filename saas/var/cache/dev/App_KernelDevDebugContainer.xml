@@ -487,7 +487,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
       <tag priority="-50" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">controller.argument_value_resolver</tag>
-      <argument type="service" id=".service_locator.Ra8D4w8"/>
+      <argument type="service" id=".service_locator.lNC2sYX"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">
       <tag priority="-100" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">controller.argument_value_resolver</tag>
@@ -2101,7 +2101,7 @@
     </service>
     <service id="argument_resolver.not_tagged_controller" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
       <tag name="controller.argument_value_resolver" priority="-200"/>
-      <argument type="service" id=".service_locator.Ra8D4w8"/>
+      <argument type="service" id=".service_locator.lNC2sYX"/>
     </service>
     <service id="debug.log_processor" class="Symfony\Bridge\Monolog\Processor\DebugProcessor">
       <tag name="kernel.reset" method="reset"/>
@@ -5885,17 +5885,11 @@
         <argument key="documentsRepository" type="service_closure" id="App\Repository\DocumentsRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.9kKwU2t" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.3PT.5bi" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="em" type="service_closure" id="doctrine.orm.default_entity_manager"/>
-      </argument>
-    </service>
-    <service id=".service_locator.dS6S7Rl" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="document" type="service_closure" id=".errored..service_locator.dS6S7Rl.App\Entity\Documents"/>
-        <argument key="em" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+        <argument key="usersRepository" type="service_closure" id="App\Repository\UsersRepository"/>
       </argument>
     </service>
     <service id=".service_locator.M6HiOAx" class="Symfony\Component\DependencyInjection\ServiceLocator">
@@ -5983,7 +5977,7 @@
         <argument key="stockRepository" type="service_closure" id="App\Repository\StockRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.Ra8D4w8" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.lNC2sYX" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.y4_Zrx."/>
@@ -6001,8 +5995,8 @@
         <argument key="App\Controller\DepotsController::edit" type="service_closure" id=".service_locator.bYcHeuA"/>
         <argument key="App\Controller\DepotsController::delete" type="service_closure" id=".service_locator.bYcHeuA"/>
         <argument key="App\Controller\DocumentsController::index" type="service_closure" id=".service_locator.kmEPCuR"/>
-        <argument key="App\Controller\DocumentsController::new" type="service_closure" id=".service_locator.9kKwU2t"/>
-        <argument key="App\Controller\DocumentsController::edit" type="service_closure" id=".service_locator.dS6S7Rl"/>
+        <argument key="App\Controller\DocumentsController::new" type="service_closure" id=".service_locator.3PT.5bi"/>
+        <argument key="App\Controller\DocumentsController::edit" type="service_closure" id=".service_locator.M6HiOAx"/>
         <argument key="App\Controller\DocumentsController::delete" type="service_closure" id=".service_locator.M6HiOAx"/>
         <argument key="App\Controller\DocumentsController::show" type="service_closure" id=".service_locator.b8Xc1kV"/>
         <argument key="App\Controller\FunctionsController::index" type="service_closure" id=".service_locator.UXXErZW"/>
@@ -6035,8 +6029,8 @@
         <argument key="App\Controller\DepotsController:edit" type="service_closure" id=".service_locator.bYcHeuA"/>
         <argument key="App\Controller\DepotsController:delete" type="service_closure" id=".service_locator.bYcHeuA"/>
         <argument key="App\Controller\DocumentsController:index" type="service_closure" id=".service_locator.kmEPCuR"/>
-        <argument key="App\Controller\DocumentsController:new" type="service_closure" id=".service_locator.9kKwU2t"/>
-        <argument key="App\Controller\DocumentsController:edit" type="service_closure" id=".service_locator.dS6S7Rl"/>
+        <argument key="App\Controller\DocumentsController:new" type="service_closure" id=".service_locator.3PT.5bi"/>
+        <argument key="App\Controller\DocumentsController:edit" type="service_closure" id=".service_locator.M6HiOAx"/>
         <argument key="App\Controller\DocumentsController:delete" type="service_closure" id=".service_locator.M6HiOAx"/>
         <argument key="App\Controller\DocumentsController:show" type="service_closure" id=".service_locator.b8Xc1kV"/>
         <argument key="App\Controller\FunctionsController:index" type="service_closure" id=".service_locator.UXXErZW"/>
@@ -6787,9 +6781,6 @@
     </service>
     <service id=".errored..service_locator.bYcHeuA.App\Entity\Depots" class="App\Entity\Depots">
       <tag name="container.error" message="Cannot autowire service &quot;.service_locator.bYcHeuA&quot;: it needs an instance of &quot;App\Entity\Depots&quot; but this type has been excluded in &quot;config/services.yaml&quot;."/>
-    </service>
-    <service id=".errored..service_locator.dS6S7Rl.App\Entity\Documents" class="App\Entity\Documents">
-      <tag name="container.error" message="Cannot autowire service &quot;.service_locator.dS6S7Rl&quot;: it needs an instance of &quot;App\Entity\Documents&quot; but this type has been excluded in &quot;config/services.yaml&quot;."/>
     </service>
     <service id=".errored..service_locator.M6HiOAx.App\Entity\Documents" class="App\Entity\Documents">
       <tag name="container.error" message="Cannot autowire service &quot;.service_locator.M6HiOAx&quot;: it needs an instance of &quot;App\Entity\Documents&quot; but this type has been excluded in &quot;config/services.yaml&quot;."/>
@@ -7757,7 +7748,7 @@
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.w7.f4fT" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.Ra8D4w8"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.lNC2sYX"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
@@ -7797,8 +7788,7 @@
     <service id=".service_locator.Ta7q9Zg" alias=".service_locator.vvmCTmQ"/>
     <service id=".service_locator.jMw6zu4" alias=".service_locator.bYcHeuA"/>
     <service id=".service_locator.WnzJUZZ" alias=".service_locator.kmEPCuR"/>
-    <service id=".service_locator.gaTSUXr" alias=".service_locator.9kKwU2t"/>
-    <service id=".service_locator.rIZLOTb" alias=".service_locator.dS6S7Rl"/>
+    <service id=".service_locator.azuzgT4" alias=".service_locator.3PT.5bi"/>
     <service id=".service_locator.vdntKi9" alias=".service_locator.M6HiOAx"/>
     <service id=".service_locator.PIIxu21" alias=".service_locator.b8Xc1kV"/>
     <service id=".service_locator.8lDdanb" alias=".service_locator.UXXErZW"/>

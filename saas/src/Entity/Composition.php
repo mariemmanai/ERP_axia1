@@ -42,13 +42,11 @@ class Composition
     {
         return $this->matiere;
     }
-
     public function setMatiere(?Articles $matiere): static
     {
         $this->matiere = $matiere;
         return $this;
     }
-
     public function getConsommation(): ?float
     {
         return $this->consommation;

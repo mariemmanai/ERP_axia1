@@ -3,22 +3,14 @@
 namespace App\Form;
 
 use App\Entity\Documents;
-use App\Entity\Documentslignes;
-use App\Form\DocumentsligneType;
-use App\Entity\Users;
-use App\Entity\Articles;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Form\Extension\Core\Type\DateType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-use Symfony\Component\Validator\Constraints\Callback;
-use Symfony\Component\Validator\Context\ExecutionContextInterface;
+use App\Entity\Users;
 
 class DocumentsType extends AbstractType
 {
@@ -26,26 +18,26 @@ class DocumentsType extends AbstractType
     {
         $builder
             ->add('reference', null, [
-                'constraints' => [
-                    new Callback([$this, 'validateReference']),
-                ],
+                'attr' => ['class' => 'd-none'],
+                'label' => false,
+                'disabled' => true,
             ])
-            ->add('docDate', DateType::class, [
+            ->add('docDate', null, [
                 'widget' => 'single_text',
                 'attr' => ['class' => 'form-control'],
-                'label' => 'Document Date'
+                'label' => 'Date du document'
             ])
             ->add('emetteur', EntityType::class, [
                 'class' => Users::class,
                 'choice_label' => 'username',
                 'attr' => ['class' => 'form-control'],
-                'label' => 'Sender'
+                'label' => 'Émetteur'
             ])
             ->add('destinataire', EntityType::class, [
                 'class' => Users::class,
                 'choice_label' => 'username',
                 'attr' => ['class' => 'form-control'],
-                'label' => 'Recipient'
+                'label' => 'Destinataire'
             ])
             ->add('type', ChoiceType::class, [
                 'choices' => [
@@ -65,9 +57,10 @@ class DocumentsType extends AbstractType
                     'Inventaire' => 'Inventaire'
                 ],
                 'attr' => [
-                    'class' => 'form-control bg-light border-0',
-                    'onchange' => 'updateReference()'
-                ]
+                    'class' => 'form-control',
+                    'onchange' => 'updateReferencePreview()'
+                ],
+                'label' => 'Type'
             ])
             ->add('status', ChoiceType::class, [
                 'choices' => [
@@ -77,30 +70,54 @@ class DocumentsType extends AbstractType
                     'Cloturé' => 'Cloturé',
                 ],
                 'attr' => ['class' => 'form-control'],
-                'label' => 'Status'
-            ])
-            ->add('montantHt', NumberType::class, [
-                'mapped' => false,
-                'attr' => ['readonly' => true]
+                'label' => 'Statut'
             ])
             ->add('tauxTva', NumberType::class, [
-                'attr' => ['class' => 'form-control'],
-                'label' => 'VAT Rate (%)',
+                'attr' => [
+                    'class' => 'form-control',
+                    'onchange' => 'updateTotals()'
+                ],
+                'label' => 'Taux TVA (%)',
                 'required' => false
             ])
-            ->add('montantTva', NumberType::class, [
-                'attr' => ['class' => 'form-control'],
-                'label' => 'VAT Amount',
+            ->add('montantHt', NumberType::class, [
+                'attr' => [
+                    'class' => 'form-control bg-light border-0',
+                    'readonly' => 'readonly'
+                ],
+                'label' => 'Montant HT',
+                'required' => false
+            ])
+            ->add('montantTva', NumberType::class, [ // Renommé en TTC
+                'attr' => [
+                    'class' => 'form-control bg-light border-0',
+                    'readonly' => 'readonly'
+                ],
+                'label' => 'Montant TTC',
                 'required' => false
             ])
             ->add('timbre', NumberType::class, [
-                'attr' => ['class' => 'form-control'],
-                'label' => 'Stamp',
+                'attr' => [
+                    'class' => 'form-control',
+                    'onchange' => 'updateTotals()'
+                ],
+                'label' => 'Timbre',
                 'required' => false
             ])
             ->add('retenu', NumberType::class, [
-                'attr' => ['class' => 'form-control'],
-                'label' => 'Withholding',
+                'attr' => [
+                    'class' => 'form-control',
+                    'onchange' => 'updateTotals()'
+                ],
+                'label' => 'Retenue',
+                'required' => false
+            ])
+            ->add('montantAPayer', NumberType::class, [
+                'attr' => [
+                    'class' => 'form-control bg-light border-0',
+                    'readonly' => 'readonly'
+                ],
+                'label' => 'Montant à payer',
                 'required' => false
             ])
             ->add('lignes', CollectionType::class, [
@@ -110,17 +127,7 @@ class DocumentsType extends AbstractType
                 'allow_delete' => true,
                 'by_reference' => false,
                 'label' => false,
-                'attr' => [
-                    'class' => 'lignes-collection',
-                ],
-            ])
-            ->add('montantAPayer', NumberType::class, [
-                'attr' => [
-                    'class' => 'form-control',
-                    'readonly' => 'readonly'
-                ],
-                'label' => 'Montant à payer',
-                'required' => false
+                'attr' => ['class' => 'lignes-collection'],
             ]);
     }
 
@@ -129,12 +136,5 @@ class DocumentsType extends AbstractType
         $resolver->setDefaults([
             'data_class' => Documents::class,
         ]);
-    }
-    public function validateReference($value, ExecutionContextInterface $context)
-    {
-        if (!preg_match('/^[A-Z]{2}\d{2}\d{6}$/', $value)) { // Format: XXYYNNNNNN
-            $context->buildViolation('Le format de référence doit être: 2 lettres + 2 chiffres année + 6 chiffres (ex: FV24000001)')
-                ->addViolation();
-        }
     }
 }
