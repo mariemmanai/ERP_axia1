@@ -6,7 +6,6 @@ use App\Entity\Depots;
 use App\Form\DepotsType;
 use App\Repository\DepotsRepository;
 use App\Repository\UsersRepository;
-use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;

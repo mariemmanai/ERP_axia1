@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* documents/show.html.twig */
+/* documents/show.html.Twig */
 class __TwigTemplate_ee25fe6ddfc73fb72a2b4fdebdb43651 extends Template
 {
     private $source;
@@ -34,10 +34,10 @@ class __TwigTemplate_ee25fe6ddfc73fb72a2b4fdebdb43651 extends Template
     {
         $macros = $this->macros;
         $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "documents/show.html.twig"));
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "documents/show.html.Twig"));
 
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "documents/show.html.twig"));
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "documents/show.html.Twig"));
 
         // line 1
         echo twig_include($this->env, $context, "partials/main.html.twig");
@@ -327,7 +327,7 @@ class __TwigTemplate_ee25fe6ddfc73fb72a2b4fdebdb43651 extends Template
      */
     public function getTemplateName()
     {
-        return "documents/show.html.twig";
+        return "documents/show.html.Twig";
     }
 
     /**
@@ -504,6 +504,6 @@ class __TwigTemplate_ee25fe6ddfc73fb72a2b4fdebdb43651 extends Template
 \t{{ include('partials/vendor-scripts.html.twig') }}
 \t<script src=\"../../assets/js/app.js\"></script>
 </body></body></html>
-", "documents/show.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\documents\\show.html.Twig");
+", "documents/show.html.Twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\documents\\show.html.Twig");
     }
 }

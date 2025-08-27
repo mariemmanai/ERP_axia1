@@ -20,7 +20,7 @@ class CompositionType extends AbstractType
                 'class' => Articles::class,
                 'choice_label' => 'reference',
                 'label' => 'Matière première',
-                'placeholder' => 'Sélectionnez une matière', // AJOUT ICI
+                'placeholder' => 'Sélectionnez une matière',
                 'query_builder' => function (EntityRepository $er) {
                     return $er->createQueryBuilder('a')
                         ->where('a.type = :type')

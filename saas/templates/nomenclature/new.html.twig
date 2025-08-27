@@ -133,12 +133,10 @@ const newRow = document.createElement('tr');
 newRow.classList.add('composition-row');
 newRow.innerHTML = newForm;
 
-// Ajouter la cellule d'unité
 const uniteCell = document.createElement('td');
 uniteCell.innerHTML = '<span class="unite-display"></span>';
 newRow.appendChild(uniteCell);
 
-// Ajouter le bouton de suppression
 const deleteCell = document.createElement('td');
 deleteCell.className = 'text-end';
 deleteCell.innerHTML = `<button type="button" class="btn btn-sm btn-danger remove-ligne">
@@ -152,17 +150,15 @@ container.dataset.index = index;
 initRowEvents(newRow);
 });
 
-function initRowEvents(row) { // Suppression de ligne
+function initRowEvents(row) {
 row.querySelector('.remove-ligne').addEventListener('click', function () {
 row.remove();
 });
 
-// Mise à jour de l'unité
 const matiereSelect = row.querySelector('.matiere-select');
-if (matiereSelect) { // Initialiser l'unité
+if (matiereSelect) {
 updateUniteDisplay(matiereSelect);
 
-// Écouter les changements
 matiereSelect.addEventListener('change', function () {
 updateUniteDisplay(this);
 });
@@ -184,7 +180,7 @@ const unite = selectedOption ? selectedOption.getAttribute('data-unite') : '';
 uniteDisplay.textContent = unite || '';
 }
 
-document.querySelectorAll('.composition-row').forEach(row => { // Mettre à jour l'unité pour les lignes existantes
+document.querySelectorAll('.composition-row').forEach(row => {
 const matiereSelect = row.querySelector('.matiere-select');
 if (matiereSelect && matiereSelect.selectedIndex > 0) {
 updateUniteDisplay(matiereSelect);

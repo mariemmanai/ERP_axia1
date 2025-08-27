@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -12,18 +13,15 @@ use Symfony\Component\Security\Core\User\UserInterface;
 #[ORM\Table(name: 'users')]
 class Users implements PasswordAuthenticatedUserInterface, UserInterface
 {
-    public function eraseCredentials(): void
-    {
-        // Clear sensitive data if needed
-    }
+    public function eraseCredentials(): void {}
 
     public function getRoles(): array
     {
         $roles = ['ROLE_USER'];
         if ($this->profile) {
-            $roles[] = 'ROLE_'.strtoupper($this->profile->getIntitule());
+            $roles[] = 'ROLE_' . strtoupper($this->profile->getIntitule());
         }
-        return array_unique($roles);   
+        return array_unique($roles);
     }
     #[ORM\Column(type: 'string', length: 255)]
 
@@ -139,10 +137,8 @@ class Users implements PasswordAuthenticatedUserInterface, UserInterface
         $this->profile = $profile;
         return $this;
     }
-public function getUserIdentifier(): string
+    public function getUserIdentifier(): string
     {
         return $this->mail;
     }
-
-    
 }

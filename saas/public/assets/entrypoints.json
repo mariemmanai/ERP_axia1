@@ -6,8 +6,8 @@
         "/assets/app.js"
       ],
       "css": [
-        "/assets/css/app.min.css",
-        "/assets/css/app-rtl.min.css"
+        "/assets/css/app-rtl.min.css",
+        "/assets/css/app.min.css"
       ]
     },
     "bootstrap": {
@@ -16,8 +16,8 @@
         "/assets/bootstrap.js"
       ],
       "css": [
-        "/assets/css/bootstrap.min.css",
-        "/assets/css/bootstrap-rtl.min.css"
+        "/assets/css/bootstrap-rtl.min.css",
+        "/assets/css/bootstrap.min.css"
       ]
     },
     "icons": {
@@ -26,8 +26,8 @@
         "/assets/icons.js"
       ],
       "css": [
-        "/assets/css/icons.min.css",
-        "/assets/css/icons-rtl.min.css"
+        "/assets/css/icons-rtl.min.css",
+        "/assets/css/icons.min.css"
       ]
     },
     "custom": {
@@ -36,8 +36,8 @@
         "/assets/custom.js"
       ],
       "css": [
-        "/assets/css/custom.min.css",
-        "/assets/css/custom-rtl.min.css"
+        "/assets/css/custom-rtl.min.css",
+        "/assets/css/custom.min.css"
       ]
     }
   }

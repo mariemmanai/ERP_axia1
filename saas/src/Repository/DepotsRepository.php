@@ -38,20 +38,4 @@ class DepotsRepository extends ServiceEntityRepository
             $this->getEntityManager()->flush();
         }
     }
-
-    // Vous pouvez ajouter ici vos méthodes personnalisées de requête
-    // Par exemple:
-    /*
-    public function findByExampleField($value): array
-    {
-        return $this->createQueryBuilder('d')
-            ->andWhere('d.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('d.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
 }

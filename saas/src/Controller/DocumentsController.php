@@ -25,43 +25,50 @@ class DocumentsController extends AbstractController
     #[Route('/', name: 'app_documents_index', methods: ['GET'])]
     public function index(Request $request, DocumentsRepository $documentsRepository): Response
     {
-        $filter = $request->query->get('filter');
-
+        $filter = $request->query->get('Doc');
         $documents = match ($filter) {
-            'devis_achat' => $documentsRepository->findByType('Devis achat'),
-            'commandes_achat' => $documentsRepository->findByType('Commande achat'),
-            'factures_achat' => $documentsRepository->findByType('Facture achat'),
-            'factures_achat_avoire' => $documentsRepository->findByType('Facture achat avoire'),
-            'bon_entree' => $documentsRepository->findByType('Bon d\'entrée'),
-            'bon_transfert' => $documentsRepository->findByType('Bon de transfert'),
-            'bon_retour' => $documentsRepository->findByType('Bon de retour'),
-
+            'DA' => $documentsRepository->findByType('Devis achat'),
+            'CA' => $documentsRepository->findByType('Commande achat'),
+            'FA' => $documentsRepository->findByType('Facture achat'),
+            'FAA' => $documentsRepository->findByType('Facture achat avoire'),
+            'BE' => $documentsRepository->findByType('Bon d\'entrée'),
+            'BT' => $documentsRepository->findByType('Bon de transfert'),
+            'BR' => $documentsRepository->findByType('Bon de retour'),
             // Ventes
-            'devis_vente' => $documentsRepository->findByType('Devis vente'),
-            'commandes_vente' => $documentsRepository->findByType('Commande vente'),
-            'factures_vente' => $documentsRepository->findByType('Facture vente'),
-            'factures_vente_avoire' => $documentsRepository->findByType('Facture vente avoire'),
-            'bon_sortie' => $documentsRepository->findByType('Bon de sortie'),
-            'bon_livraison' => $documentsRepository->findByType('Bon de livraison'),
-
+            'DV' => $documentsRepository->findByType('Devis vente'),
+            'CV' => $documentsRepository->findByType('Commande vente'),
+            'FV' => $documentsRepository->findByType('Facture vente'),
+            'FVA' => $documentsRepository->findByType('Facture vente avoire'),
+            'BS' => $documentsRepository->findByType('Bon de sortie'),
+            'BL' => $documentsRepository->findByType('Bon de livraison'),
             // Commun
-            'inventaire' => $documentsRepository->findByType('Inventaire'),
-            // Production (ajouter si nécessaire)
+            'Inv' => $documentsRepository->findByType('Inventaire'),
+            // Production 
             'creation_of' => $documentsRepository->findByType('Création OF'),
             'demande_besoins' => $documentsRepository->findByType('Demande besoins'),
             default => $documentsRepository->findAll()
         };
         return $this->render('documents/index.html.twig', [
-            'documents' => $documents
+            'documents' => $documents,
+            'current_type' => $filter
         ]);
     }
     #[Route('/new', name: 'app_documents_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager, UsersRepository $usersRepository): Response
     {
         $document = new Documents();
-        $form = $this->createForm(DocumentsType::class, $document);
-        $form->handleRequest($request);
+        $typeFromRoute = $request->query->get('Doc');
+        $this->logger->info('Type from route: ' . $typeFromRoute);
 
+        if ($typeFromRoute) {
+            $document->setType($typeFromRoute);
+        }
+
+        $form = $this->createForm(DocumentsType::class, $document, [
+            'hide_type' => (bool) $typeFromRoute
+        ]);
+
+        $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $rootUser = $usersRepository->find(49);
             if (!$rootUser) {
@@ -87,6 +94,7 @@ class DocumentsController extends AbstractController
         return $this->render('documents/new&edit.html.twig', [
             'form' => $form->createView(),
             'document' => $document,
+            'current_type' => $typeFromRoute
         ]);
     }
 
@@ -107,6 +115,7 @@ class DocumentsController extends AbstractController
         return $this->render('documents/new&edit.html.twig', [
             'form' => $form->createView(),
             'document' => $document,
+            'current_type' => $document->getType()
         ]);
     }
     #[Route('/{id}', name: 'app_documents_delete', methods: ['POST'])]

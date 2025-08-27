@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Repository;
 
 use App\Entity\Profiles;
@@ -37,13 +38,11 @@ class ProfileRepository extends ServiceEntityRepository
             $this->getEntityManager()->flush();
         }
     }
-
-    // Exemple de méthode personnalisée
     public function findByIntitule(string $intitule): array
     {
         return $this->createQueryBuilder('p')
             ->andWhere('p.intitule LIKE :intitule')
-            ->setParameter('intitule', '%'.$intitule.'%')
+            ->setParameter('intitule', '%' . $intitule . '%')
             ->orderBy('p.id', 'ASC')
             ->getQuery()
             ->getResult();

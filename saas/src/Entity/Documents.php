@@ -210,13 +210,6 @@ class Documents
         $this->createAt = $createAt;
         return $this;
     }
-    // public function calculateMontantTva(): self
-    // {
-    //     if ($this->montantHt !== null && $this->tauxTva !== null) {
-    //         $this->montantTva = $this->montantHt * (1 + ($this->tauxTva / 100));
-    //     }
-    //     return $this;
-    // }
     public function updateMontantTva(): void
     {
         $this->calculateMontantTva();

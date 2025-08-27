@@ -55,7 +55,7 @@ class DocumentsRepository extends ServiceEntityRepository
             'Facture vente avoire' => 'FVA',
             'Bon de sortie' => 'BS',
             'Bon de livraison' => 'BL',
-            'Inventaire' => 'INV'
+            'Inventaire' => 'Inv'
         ];
 
         $prefix = $prefixMap[$type] ?? 'DOC';

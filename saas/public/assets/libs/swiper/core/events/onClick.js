@@ -1,1 +1,11 @@
-export default function onClick(a){const t=this;t.enabled&&(t.allowClick||(t.params.preventClicks&&a.preventDefault(),t.params.preventClicksPropagation&&t.animating&&(a.stopPropagation(),a.stopImmediatePropagation())))}
+export default function onClick(e) {
+  const swiper = this;
+  if (!swiper.enabled) return;
+  if (!swiper.allowClick) {
+    if (swiper.params.preventClicks) e.preventDefault();
+    if (swiper.params.preventClicksPropagation && swiper.animating) {
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+    }
+  }
+}

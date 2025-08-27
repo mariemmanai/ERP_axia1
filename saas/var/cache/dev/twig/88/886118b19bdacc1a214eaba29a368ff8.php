@@ -84,10 +84,10 @@ class __TwigTemplate_64eb4b2f278e5a99cdbea41eedbbf1ef extends Template
 \t\t\t\t\t\t\t\t\t\t<div class=\"col-sm-4\">
 \t\t\t\t\t\t\t\t\t\t\t<a href=\"";
         // line 21
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_new");
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_new", ["Doc" => (isset($context["current_type"]) || array_key_exists("current_type", $context) ? $context["current_type"] : (function () { throw new RuntimeError('Variable "current_type" does not exist.', 21, $this->source); })())]), "html", null, true);
         echo "\" class=\"btn btn-success mb-2\">
 \t\t\t\t\t\t\t\t\t\t\t\t<i class=\"ri-add-line align-bottom me-1\"></i>
-\t\t\t\t\t\t\t\t\t\t\t\tCreate Document
+\t\t\t\t\t\t\t\t\t\t\t\tCréer un document
 \t\t\t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t</div>
@@ -156,19 +156,24 @@ class __TwigTemplate_64eb4b2f278e5a99cdbea41eedbbf1ef extends Template
             echo "\" class=\"btn btn-sm btn-light\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"ri-eye-line\"></i>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
             // line 59
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["document"], "id", [], "any", false, false, false, 59)]), "html", null, true);
-            echo "\" class=\"btn btn-sm btn-primary\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"ri-pencil-line\"></i>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<form method=\"post\" action=\"";
-            // line 62
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["document"], "id", [], "any", false, false, false, 62)]), "html", null, true);
+            if ((twig_get_attribute($this->env, $this->source, $context["document"], "status", [], "any", false, false, false, 59) != "Confirmé")) {
+                // line 60
+                echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["document"], "id", [], "any", false, false, false, 60)]), "html", null, true);
+                echo "\" class=\"btn btn-sm btn-primary\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"ri-pencil-line\"></i>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
+            }
+            // line 64
+            echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<form method=\"post\" action=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["document"], "id", [], "any", false, false, false, 64)]), "html", null, true);
             echo "\" style=\"display: inline-block;\" onsubmit=\"return confirm('Are you sure you want to delete this document?');\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"hidden\" name=\"_token\" value=\"";
-            // line 63
-            echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, $context["document"], "id", [], "any", false, false, false, 63))), "html", null, true);
+            // line 65
+            echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, $context["document"], "id", [], "any", false, false, false, 65))), "html", null, true);
             echo "\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-sm btn-danger\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"ri-delete-bin-line\"></i>
@@ -181,7 +186,7 @@ class __TwigTemplate_64eb4b2f278e5a99cdbea41eedbbf1ef extends Template
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 72
+            // line 74
             echo "\t\t\t\t\t\t\t\t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<td colspan=\"8\" class=\"text-center\">No documents found</td>
 \t\t\t\t\t\t\t\t\t\t\t\t\t</tr>
@@ -190,7 +195,7 @@ class __TwigTemplate_64eb4b2f278e5a99cdbea41eedbbf1ef extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['document'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 76
+        // line 78
         echo "\t\t\t\t\t\t\t\t\t\t\t</tbody>
 \t\t\t\t\t\t\t\t\t\t</table>
 \t\t\t\t\t\t\t\t\t</div>
@@ -201,17 +206,17 @@ class __TwigTemplate_64eb4b2f278e5a99cdbea41eedbbf1ef extends Template
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t\t";
-        // line 85
+        // line 87
         echo twig_include($this->env, $context, "partials/footer.html.twig");
         echo "
 \t\t</div>
 \t</div>
 \t";
-        // line 88
+        // line 90
         echo twig_include($this->env, $context, "partials/vendor-scripts.html.twig");
         echo "
 \t<script src=\"";
-        // line 89
+        // line 91
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/libs/sweetalert2/sweetalert2.min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"../../assets/js/app.js\"></script>
@@ -246,7 +251,7 @@ class __TwigTemplate_64eb4b2f278e5a99cdbea41eedbbf1ef extends Template
      */
     public function getDebugInfo()
     {
-        return array (  215 => 89,  211 => 88,  205 => 85,  194 => 76,  185 => 72,  171 => 63,  167 => 62,  161 => 59,  155 => 56,  148 => 52,  144 => 51,  139 => 49,  135 => 48,  131 => 47,  127 => 46,  123 => 45,  119 => 44,  116 => 43,  111 => 42,  87 => 21,  77 => 14,  70 => 10,  64 => 7,  60 => 6,  56 => 5,  52 => 4,  48 => 3,  43 => 1,);
+        return array (  220 => 91,  216 => 90,  210 => 87,  199 => 78,  190 => 74,  176 => 65,  171 => 64,  163 => 60,  161 => 59,  155 => 56,  148 => 52,  144 => 51,  139 => 49,  135 => 48,  131 => 47,  127 => 46,  123 => 45,  119 => 44,  116 => 43,  111 => 42,  87 => 21,  77 => 14,  70 => 10,  64 => 7,  60 => 6,  56 => 5,  52 => 4,  48 => 3,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -271,9 +276,9 @@ class __TwigTemplate_64eb4b2f278e5a99cdbea41eedbbf1ef extends Template
 \t\t\t\t\t\t\t\t<div class=\"card-body\">
 \t\t\t\t\t\t\t\t\t<div class=\"row mb-2\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"col-sm-4\">
-\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ path('app_documents_new') }}\" class=\"btn btn-success mb-2\">
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ path('app_documents_new', {'Doc': current_type}) }}\" class=\"btn btn-success mb-2\">
 \t\t\t\t\t\t\t\t\t\t\t\t<i class=\"ri-add-line align-bottom me-1\"></i>
-\t\t\t\t\t\t\t\t\t\t\t\tCreate Document
+\t\t\t\t\t\t\t\t\t\t\t\tCréer un document
 \t\t\t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t</div>
@@ -309,9 +314,11 @@ class __TwigTemplate_64eb4b2f278e5a99cdbea41eedbbf1ef extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ path('app_documents_show', {'id': document.id}) }}\" class=\"btn btn-sm btn-light\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"ri-eye-line\"></i>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ path('app_documents_edit', {'id': document.id}) }}\" class=\"btn btn-sm btn-primary\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"ri-pencil-line\"></i>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t{% if document.status != \"Confirmé\" %}
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ path('app_documents_edit', {'id': document.id}) }}\" class=\"btn btn-sm btn-primary\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"ri-pencil-line\"></i>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<form method=\"post\" action=\"{{ path('app_documents_delete', {'id': document.id}) }}\" style=\"display: inline-block;\" onsubmit=\"return confirm('Are you sure you want to delete this document?');\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ document.id) }}\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-sm btn-danger\">

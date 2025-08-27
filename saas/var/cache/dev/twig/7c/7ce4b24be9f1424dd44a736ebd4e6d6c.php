@@ -41,263 +41,354 @@ class __TwigTemplate_6a1a37ca11cf8266845f44c29da419e2 extends Template
 
         // line 1
         echo "<!-- ========== App Menu ========== -->
-<div class=\"app-menu navbar-menu\">
-    <!-- LOGO -->
-    <div class=\"navbar-brand-box\">
-        <!-- Dark Logo-->
-        <a href=\"/\" class=\"logo logo-dark\">
-            <span class=\"logo-sm\">
-                <img src=\"../../assets/images/logo-sm.png\" alt=\"\" height=\"22\">
-            </span>
-            <span class=\"logo-lg\">
-                <img src=\"../../assets/images/logo-dark.png\" alt=\"\" height=\"17\">
-            </span>
-        </a>
-        <!-- Light Logo-->
-        <a href=\"/\" class=\"logo logo-light\">
-            <span class=\"logo-sm\">
-                <img src=\"../../assets/images/logo-sm.png\" alt=\"\" height=\"22\">
-            </span>
-            <span class=\"logo-lg\">
-                <img src=\"../../assets/images/logo-light.png\" alt=\"\" height=\"17\">
-            </span>
-        </a>
-        <button type=\"button\" class=\"btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover\" id=\"vertical-hover\">
-            <i class=\"ri-record-circle-line\"></i>
-        </button>
-    </div>
+<div
+\tclass=\"app-menu navbar-menu\">
+\t<!-- LOGO -->
+\t<div
+\t\tclass=\"navbar-brand-box\">
+\t\t<!-- Dark Logo-->
+\t\t<a href=\"/\" class=\"logo logo-dark\">
+\t\t\t<span class=\"logo-sm\">
+\t\t\t\t<img src=\"../../assets/images/logo-sm.png\" alt=\"\" height=\"22\">
+\t\t\t</span>
+\t\t\t<span class=\"logo-lg\">
+\t\t\t\t<img src=\"../../assets/images/logo-dark.png\" alt=\"\" height=\"17\">
+\t\t\t</span>
+\t\t</a>
+\t\t<!-- Light Logo-->
+\t\t<a href=\"/\" class=\"logo logo-light\">
+\t\t\t<span class=\"logo-sm\">
+\t\t\t\t<img src=\"../../assets/images/logo-sm.png\" alt=\"\" height=\"22\">
+\t\t\t</span>
+\t\t\t<span class=\"logo-lg\">
+\t\t\t\t<img src=\"../../assets/images/logo-light.png\" alt=\"\" height=\"17\">
+\t\t\t</span>
+\t\t</a>
+\t\t<button type=\"button\" class=\"btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover\" id=\"vertical-hover\">
+\t\t\t<i class=\"ri-record-circle-line\"></i>
+\t\t</button>
+\t</div>
 
-    <div id=\"scrollbar\">
-        <div class=\"container-fluid\">
-        <div id=\"two-column-menu\"></div>
-        <ul class=\"navbar-nav\" id=\"navbar-nav\">
-            <li class=\"menu-title\"><span data-key=\"t-menu\">Menu</span></li>
+\t<div id=\"scrollbar\">
+\t\t<div class=\"container-fluid\">
+\t\t\t<div id=\"two-column-menu\"></div>
+\t\t\t<ul class=\"navbar-nav\" id=\"navbar-nav\">
+\t\t\t\t<li class=\"menu-title\">
+\t\t\t\t\t<span data-key=\"t-menu\">Menu</span>
+\t\t\t\t</li>
 
-            <!-- Dashboards -->
-            <li class=\"nav-item\">
-            <a class=\"nav-link menu-link\" href=\"#sidebarDashboards\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarDashboards\">
-                <i class=\"ri-dashboard-2-line\"></i>
-                <span data-key=\"t-dashboards\">Dashboards</span>
-            </a>
-            <div class=\"collapse menu-dropdown\" id=\"sidebarDashboards\">
-                <ul class=\"nav nav-sm flex-column\">
-                <li class=\"nav-item\">
-                    <a href=\"#\" class=\"nav-link\">Dashboard Principal</a>
-                </li>
-                </ul>
-            </div>
-            </li>
+\t\t\t\t<!-- Dashboards -->
+\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t<a class=\"nav-link menu-link\" href=\"#sidebarDashboards\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarDashboards\">
+\t\t\t\t\t\t<i class=\"ri-dashboard-2-line\"></i>
+\t\t\t\t\t\t<span data-key=\"t-dashboards\">Dashboards</span>
+\t\t\t\t\t</a>
+\t\t\t\t\t<div class=\"collapse menu-dropdown\" id=\"sidebarDashboards\">
+\t\t\t\t\t\t<ul class=\"nav nav-sm flex-column\">
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"#\" class=\"nav-link\">Tableau de Bord Principal</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t\t</div>
 
-            <!-- Messages -->
-            <li class=\"nav-item\">
-            <a class=\"nav-link menu-link\" href=\"#sidebarMessages\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarMessages\">
-                <i class=\"ri-mail-line\"></i>
-                <span data-key=\"t-messages\">Messages</span>
-            </a>
-            <div class=\"collapse menu-dropdown\" id=\"sidebarMessages\">
-                <ul class=\"nav nav-sm flex-column\">
-                <li class=\"nav-item\"><a href=\"apps-chat\" class=\"nav-link\">Boite Réception</a></li>
-                <li class=\"nav-item\"><a href=\"apps-chat\" class=\"nav-link\">Nouveaux Messages</a></li>
-                <li class=\"nav-item\"><a href=\"apps-chat\" class=\"nav-link\">Messages Envoyés</a></li>
-                <li class=\"nav-item\"><a href=\"apps-chat\" class=\"nav-link\">Corbeilles</a></li>
-                </ul>
-            </div>
-            </li>
 
-            <!-- Gestion Des Achats -->
-            <li class=\"nav-item\">
-            <a class=\"nav-link menu-link\" href=\"#sidebarPurchases\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarPurchases\">
-                <i class=\"ri-shopping-cart-line\"></i>
-                <span>Gestion Des Achats</span>
-            </a>
-            <div class=\"collapse menu-dropdown\" id=\"sidebarPurchases\">
-                <ul class=\"nav nav-sm flex-column\">
-                <li class=\"nav-item\"><a href=\"";
-        // line 73
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "devis_achat"]);
-        echo "\" class=\"nav-link\">Devis achat</a></li>                
-                <li class=\"nav-item\"><a href=\"";
-        // line 74
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "commandes_achat"]);
-        echo "\" class=\"nav-link\">Commandes achat</a></li>                
-                <li class=\"nav-item\"><a href=\"";
-        // line 75
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "factures_achat"]);
-        echo "\" class=\"nav-link\">Factures achat</a></li>
-                <li class=\"nav-item\"><a href=\"";
-        // line 76
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "factures_achat_avoire"]);
-        echo "\" class=\"nav-link\">Factures achat Avoire</a></li>
-                <li class=\"nav-item\"><a href=\"";
-        // line 77
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "bon_entree"]);
-        echo "\" class=\"nav-link\">Bon d'entrée</a></li>
-                <li class=\"nav-item\"><a href=\"";
-        // line 78
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "bon_transfert"]);
-        echo "\" class=\"nav-link\">Bon de transfert</a></li>
-                <li class=\"nav-item\"><a href=\"";
-        // line 79
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "bon_retour"]);
-        echo "\" class=\"nav-link\">Bon de retour</a></li>
-                <li class=\"nav-item\"><a href=\"";
-        // line 80
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "inventaire"]);
-        echo "\" class=\"nav-link\">Inventaire</a></li>
-                </ul>
-            </div>
-            </li>
+\t\t\t\t</li>
 
-            <!-- Gestion Des Productions -->
-           <li class=\"nav-item\">
-                <a class=\"nav-link menu-link\" href=\"#sidebarProduction\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarProduction\">
-                    <i class=\"ri-building-2-line\"></i>
-                    <span>Gestion Des Productions</span>
-                </a>
-                <div class=\"collapse menu-dropdown\" id=\"sidebarProduction\">
-                    <ul class=\"nav nav-sm flex-column\">
-                    <li class=\"nav-item\"><a href=\"layouts-horizontal\" target=\"_blank\" class=\"nav-link\">Création des OF</a></li>
-                    <li class=\"nav-item\"><a href=\"layouts-detached\" target=\"_blank\" class=\"nav-link\">Demande de besoins</a></li>
-                    <li class=\"nav-item\"><a href=\"";
-        // line 95
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "bon_entree"]);
-        echo "\" class=\"nav-link\">Bon d'entrée</a></li>
-                    <li class=\"nav-item\"><a href=\"";
-        // line 96
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "bon_sortie"]);
-        echo "\" class=\"nav-link\">Bon de sortie</a></li>
-                    <li class=\"nav-item\"><a href=\"";
+\t\t\t\t<!-- Messages -->
+\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t<a class=\"nav-link menu-link\" href=\"#sidebarMessages\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarMessages\">
+\t\t\t\t\t\t<i class=\"ri-mail-line\"></i>
+\t\t\t\t\t\t<span data-key=\"t-messages\">Messages</span>
+\t\t\t\t\t</a>
+\t\t\t\t\t<div class=\"collapse menu-dropdown\" id=\"sidebarMessages\">
+\t\t\t\t\t\t<ul class=\"nav nav-sm flex-column\">
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Boite Réception</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Nouveaux Messages</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Messages Envoyés</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Corbeilles</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t\t</div>
+\t\t\t\t</li>
+
+\t\t\t\t<!-- Gestion Des Achats -->
+\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t<a class=\"nav-link menu-link\" href=\"#sidebarPurchases\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarPurchases\">
+\t\t\t\t\t\t<i class=\"ri-shopping-cart-line\"></i>
+\t\t\t\t\t\t<span>Gestion Des Achats</span>
+\t\t\t\t\t</a>
+\t\t\t\t\t<div class=\"collapse menu-dropdown\" id=\"sidebarPurchases\">
+\t\t\t\t\t\t<ul class=\"nav nav-sm flex-column\">
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"";
+        // line 88
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "DA"]);
+        echo "\" class=\"nav-link\">Devis achat</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"";
+        // line 91
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "CA"]);
+        echo "\" class=\"nav-link\">Commandes achat</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"";
+        // line 94
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "FA"]);
+        echo "\" class=\"nav-link\">Factures achat</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"";
         // line 97
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "bon_transfert"]);
-        echo "\" class=\"nav-link\">Bon de transfert</a></li>
-                    <li class=\"nav-item\"><a href=\"";
-        // line 98
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "bon_retour"]);
-        echo "\" class=\"nav-link\">Bon de retour</a></li>
-                    <li class=\"nav-item\"><a href=\"";
-        // line 99
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "inventaire"]);
-        echo "\" class=\"nav-link\">Inventaire</a></li>
-                    </ul>
-                </div>
-            </li>
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "FAA"]);
+        echo "\" class=\"nav-link\">Factures achat Avoire</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"";
+        // line 100
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "BE"]);
+        echo "\" class=\"nav-link\">Bon d'entrée</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"";
+        // line 103
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "BT"]);
+        echo "\" class=\"nav-link\">Bon de transfert</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"";
+        // line 106
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "BR"]);
+        echo "\" class=\"nav-link\">Bon de retour</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"";
+        // line 109
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "Inv"]);
+        echo "\" class=\"nav-link\">Inventaire</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t\t</div>
+\t\t\t\t</li>
+
+\t\t\t\t<!-- Gestion Des Productions -->
+\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t<a class=\"nav-link menu-link\" href=\"#sidebarProduction\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarProduction\">
+\t\t\t\t\t\t<i class=\"ri-building-2-line\"></i>
+\t\t\t\t\t\t<span>Gestion Des Productions</span>
+\t\t\t\t\t</a>
+\t\t\t\t\t<div class=\"collapse menu-dropdown\" id=\"sidebarProduction\">
+\t\t\t\t\t\t<ul class=\"nav nav-sm flex-column\">
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"layouts-horizontal\" target=\"_blank\" class=\"nav-link\">Création des OF</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"layouts-detached\" target=\"_blank\" class=\"nav-link\">Demande de besoins</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"";
+        // line 130
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "BE"]);
+        echo "\" class=\"nav-link\">Bon d'entrée</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"";
+        // line 133
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "BS"]);
+        echo "\" class=\"nav-link\">Bon de sortie</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"";
+        // line 136
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "BT"]);
+        echo "\" class=\"nav-link\">Bon de transfert</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"";
+        // line 139
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "BR"]);
+        echo "\" class=\"nav-link\">Bon de retour</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"";
+        // line 142
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "Inv"]);
+        echo "\" class=\"nav-link\">Inventaire</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t\t</div>
+\t\t\t\t</li>
 
 
-            <!-- Gestion Des Ventes -->
-            <li class=\"nav-item\">
-            <a class=\"nav-link menu-link\" href=\"#sidebarSales\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarSales\">
-                <i class=\"ri-handbag-line\"></i>
-                <span>Gestion Des Ventes</span>
-            </a>
-            <div class=\"collapse menu-dropdown\" id=\"sidebarSales\">
-                <ul class=\"nav nav-sm flex-column\">
-                <li class=\"nav-item\"><a href=\"";
-        // line 113
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "devis_vente"]);
-        echo "\" class=\"nav-link\">Devis vente</a></li>
-                <li class=\"nav-item\"><a href=\"";
-        // line 114
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "commandes_vente"]);
-        echo "\" class=\"nav-link\">Commandes vente</a></li>
-                <li class=\"nav-item\"><a href=\"";
-        // line 115
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "factures_vente"]);
-        echo "\" class=\"nav-link\">Factures vente</a></li>
-                <li class=\"nav-item\"><a href=\"";
-        // line 116
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "factures_vente_avoire"]);
-        echo "\" class=\"nav-link\">Factures vente avoire</a></li>
-                <li class=\"nav-item\"><a href=\"";
-        // line 117
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "bon_sortie"]);
-        echo "\" class=\"nav-link\">Bon de sortie</a></li>
-                <li class=\"nav-item\"><a href=\"";
-        // line 118
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "bon_livraison"]);
-        echo "\" class=\"nav-link\">Bon de livraison</a></li>
-                <li class=\"nav-item\"><a href=\"";
-        // line 119
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["filter" => "inventaire"]);
-        echo "\" class=\"nav-link\">Inventaire</a></li>
-                </ul>
-            </div>
-            </li>
+\t\t\t\t<!-- Gestion Des Ventes -->
+\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t<a class=\"nav-link menu-link\" href=\"#sidebarSales\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarSales\">
+\t\t\t\t\t\t<i class=\"ri-handbag-line\"></i>
+\t\t\t\t\t\t<span>Gestion Des Ventes</span>
+\t\t\t\t\t</a>
+\t\t\t\t\t<div class=\"collapse menu-dropdown\" id=\"sidebarSales\">
+\t\t\t\t\t\t<ul class=\"nav nav-sm flex-column\">
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"";
+        // line 158
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "DV"]);
+        echo "\" class=\"nav-link\">Devis vente</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"";
+        // line 161
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "CV"]);
+        echo "\" class=\"nav-link\">Commandes vente</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"";
+        // line 164
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "FV"]);
+        echo "\" class=\"nav-link\">Factures vente</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"";
+        // line 167
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "FVA"]);
+        echo "\" class=\"nav-link\">Factures vente avoire</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"";
+        // line 170
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "BS"]);
+        echo "\" class=\"nav-link\">Bon de sortie</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"";
+        // line 173
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "BL"]);
+        echo "\" class=\"nav-link\">Bon de livraison</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"";
+        // line 176
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "Inv"]);
+        echo "\" class=\"nav-link\">Inventaire</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t\t</div>
+\t\t\t\t</li>
 
-            <!-- Administration -->
-            <li class=\"nav-item\">
-            <a class=\"nav-link menu-link\" href=\"#sidebarAdmin\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarAdmin\">
-                <i class=\"ri-settings-3-line\"></i>
-                <span>Administration</span>
-            </a>
-            <div class=\"collapse menu-dropdown\" id=\"sidebarAdmin\">
-                <ul class=\"nav nav-sm flex-column\">
-                <li class=\"nav-item\"><a href=\"layouts-horizontal\" target=\"_blank\" class=\"nav-link\">Droits d'accès</a></li>
-                <li class=\"nav-item\"><a href=\"layouts-detached\" target=\"_blank\" class=\"nav-link\">Profiles</a></li>
-                <li class=\"nav-item\"><a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Utilisateurs Internes</a></li>
-                <li class=\"nav-item\">
-                    <a href=\"#sidebarTiers\" class=\"nav-link\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarTiers\">
-                    <i class=\"ri-group-line\"></i> Tiers
-                    </a>
-                    <div class=\"collapse menu-dropdown\" id=\"sidebarTiers\">
-                    <ul class=\"nav nav-sm flex-column\">
-                        <li class=\"nav-item\"><a href=\"apps-ecommerce-products\" class=\"nav-link\">Clients</a></li>
-                        <li class=\"nav-item\"><a href=\"apps-ecommerce-products\" class=\"nav-link\">Fournisseurs</a></li>
-                    </ul>
-                    </div>
-                </li>
-                <li class=\"nav-item\"><a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Magasins</a></li>
-                <li class=\"nav-item\">
-                    <a href=\"#sidebarArticles\" class=\"nav-link\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarArticles\">
-                    <i class=\"ri-archive-line\"></i> Articles
-                    </a>
-                    <div class=\"collapse menu-dropdown\" id=\"sidebarArticles\">
-                    <ul class=\"nav nav-sm flex-column\">
-                        <li class=\"nav-item\"><a href=\"apps-ecommerce-products\" class=\"nav-link\">Matières Premières</a></li>
-                        <li class=\"nav-item\"><a href=\"apps-ecommerce-products\" class=\"nav-link\">Produits Finis</a></li>
-                        <li class=\"nav-item\"><a href=\"apps-ecommerce-products\" class=\"nav-link\">Nomenclature</a></li>
-                    </ul>
-                    </div>
-                </li>
-                </ul>
-            </div>
-            </li>
+\t\t\t\t<!-- Administration -->
+\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t<a class=\"nav-link menu-link\" href=\"#sidebarAdmin\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarAdmin\">
+\t\t\t\t\t\t<i class=\"ri-settings-3-line\"></i>
+\t\t\t\t\t\t<span>Administration</span>
+\t\t\t\t\t</a>
+\t\t\t\t\t<div class=\"collapse menu-dropdown\" id=\"sidebarAdmin\">
+\t\t\t\t\t\t<ul class=\"nav nav-sm flex-column\">
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"layouts-horizontal\" target=\"_blank\" class=\"nav-link\">Droits d'accès</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"layouts-detached\" target=\"_blank\" class=\"nav-link\">Profiles</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Utilisateurs Internes</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"#sidebarTiers\" class=\"nav-link\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarTiers\">
+\t\t\t\t\t\t\t\t\t<i class=\"ri-group-line\"></i>
+\t\t\t\t\t\t\t\t\tTiers
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t<div class=\"collapse menu-dropdown\" id=\"sidebarTiers\">
+\t\t\t\t\t\t\t\t\t<ul class=\"nav nav-sm flex-column\">
+\t\t\t\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"apps-ecommerce-products\" class=\"nav-link\">Clients</a>
+\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"apps-ecommerce-products\" class=\"nav-link\">Fournisseurs</a>
+\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Magasins</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"#sidebarArticles\" class=\"nav-link\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarArticles\">
+\t\t\t\t\t\t\t\t\t<i class=\"ri-archive-line\"></i>
+\t\t\t\t\t\t\t\t\tArticles
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t<div class=\"collapse menu-dropdown\" id=\"sidebarArticles\">
+\t\t\t\t\t\t\t\t\t<ul class=\"nav nav-sm flex-column\">
+\t\t\t\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"apps-ecommerce-products\" class=\"nav-link\">Matières Premières</a>
+\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"apps-ecommerce-products\" class=\"nav-link\">Produits Finis</a>
+\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"apps-ecommerce-products\" class=\"nav-link\">Nomenclature</a>
+\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t\t</div>
+\t\t\t\t</li>
 
-            <!-- Statistiques -->
-            <li class=\"nav-item\">
-            <a class=\"nav-link menu-link\" href=\"#sidebarStats\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarStats\">
-                <i class=\"ri-bar-chart-line\"></i>
-                <span data-key=\"t-statistics\">Statistiques</span>
-            </a>
-            <div class=\"collapse menu-dropdown\" id=\"sidebarStats\">
-                <ul class=\"nav nav-sm flex-column\">
-                <li class=\"nav-item\"><a href=\"apps-chat\" class=\"nav-link\">Générale</a></li>
-                <li class=\"nav-item\"><a href=\"apps-chat\" class=\"nav-link\">Achats</a></li>
-                <li class=\"nav-item\"><a href=\"apps-chat\" class=\"nav-link\">Productions</a></li>
-                <li class=\"nav-item\"><a href=\"apps-chat\" class=\"nav-link\">Ventes</a></li>
-                </ul>
-            </div>
-            </li>
+\t\t\t\t<!-- Statistiques -->
+\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t<a class=\"nav-link menu-link\" href=\"#sidebarStats\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarStats\">
+\t\t\t\t\t\t<i class=\"ri-bar-chart-line\"></i>
+\t\t\t\t\t\t<span data-key=\"t-statistics\">Statistiques</span>
+\t\t\t\t\t</a>
+\t\t\t\t\t<div class=\"collapse menu-dropdown\" id=\"sidebarStats\">
+\t\t\t\t\t\t<ul class=\"nav nav-sm flex-column\">
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Générale</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Achats</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Productions</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Ventes</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t\t</div>
+\t\t\t\t</li>
 
-            <!-- Logs -->
-            <li class=\"nav-item\">
-            <a class=\"nav-link menu-link\" href=\"#sidebarLogs\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarLogs\">
-                <i class=\"ri-file-list-2-line\"></i>
-                <span data-key=\"t-logs\">Logs</span>
-            </a>
-            <div class=\"collapse menu-dropdown\" id=\"sidebarLogs\">
-                <ul class=\"nav nav-sm flex-column\">
-                <li class=\"nav-item\"><a href=\"apps-chat\" class=\"nav-link\">Administration</a></li>
-                <li class=\"nav-item\"><a href=\"apps-chat\" class=\"nav-link\">Système</a></li>
-                </ul>
-            </div>
-            </li>
-        </ul>
-    </div>
-    </div>
+\t\t\t\t<!-- Logs -->
+\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t<a class=\"nav-link menu-link\" href=\"#sidebarLogs\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarLogs\">
+\t\t\t\t\t\t<i class=\"ri-file-list-2-line\"></i>
+\t\t\t\t\t\t<span data-key=\"t-logs\">Logs</span>
+\t\t\t\t\t</a>
+\t\t\t\t\t<div class=\"collapse menu-dropdown\" id=\"sidebarLogs\">
+\t\t\t\t\t\t<ul class=\"nav nav-sm flex-column\">
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Administration</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Système</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t\t</div>
+\t\t\t\t</li>
+\t\t\t</ul>
+\t\t</div>
+\t</div>
 
-    <div class=\"sidebar-background\"></div>
+\t<div class=\"sidebar-background\"></div>
 </div>
-<div class=\"vertical-overlay\"></div>";
+<div class=\"vertical-overlay\"></div>
+";
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
 
@@ -327,208 +418,299 @@ class __TwigTemplate_6a1a37ca11cf8266845f44c29da419e2 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  220 => 119,  216 => 118,  212 => 117,  208 => 116,  204 => 115,  200 => 114,  196 => 113,  179 => 99,  175 => 98,  171 => 97,  167 => 96,  163 => 95,  145 => 80,  141 => 79,  137 => 78,  133 => 77,  129 => 76,  125 => 75,  121 => 74,  117 => 73,  43 => 1,);
+        return array (  277 => 176,  271 => 173,  265 => 170,  259 => 167,  253 => 164,  247 => 161,  241 => 158,  222 => 142,  216 => 139,  210 => 136,  204 => 133,  198 => 130,  174 => 109,  168 => 106,  162 => 103,  156 => 100,  150 => 97,  144 => 94,  138 => 91,  132 => 88,  43 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<!-- ========== App Menu ========== -->
-<div class=\"app-menu navbar-menu\">
-    <!-- LOGO -->
-    <div class=\"navbar-brand-box\">
-        <!-- Dark Logo-->
-        <a href=\"/\" class=\"logo logo-dark\">
-            <span class=\"logo-sm\">
-                <img src=\"../../assets/images/logo-sm.png\" alt=\"\" height=\"22\">
-            </span>
-            <span class=\"logo-lg\">
-                <img src=\"../../assets/images/logo-dark.png\" alt=\"\" height=\"17\">
-            </span>
-        </a>
-        <!-- Light Logo-->
-        <a href=\"/\" class=\"logo logo-light\">
-            <span class=\"logo-sm\">
-                <img src=\"../../assets/images/logo-sm.png\" alt=\"\" height=\"22\">
-            </span>
-            <span class=\"logo-lg\">
-                <img src=\"../../assets/images/logo-light.png\" alt=\"\" height=\"17\">
-            </span>
-        </a>
-        <button type=\"button\" class=\"btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover\" id=\"vertical-hover\">
-            <i class=\"ri-record-circle-line\"></i>
-        </button>
-    </div>
+<div
+\tclass=\"app-menu navbar-menu\">
+\t<!-- LOGO -->
+\t<div
+\t\tclass=\"navbar-brand-box\">
+\t\t<!-- Dark Logo-->
+\t\t<a href=\"/\" class=\"logo logo-dark\">
+\t\t\t<span class=\"logo-sm\">
+\t\t\t\t<img src=\"../../assets/images/logo-sm.png\" alt=\"\" height=\"22\">
+\t\t\t</span>
+\t\t\t<span class=\"logo-lg\">
+\t\t\t\t<img src=\"../../assets/images/logo-dark.png\" alt=\"\" height=\"17\">
+\t\t\t</span>
+\t\t</a>
+\t\t<!-- Light Logo-->
+\t\t<a href=\"/\" class=\"logo logo-light\">
+\t\t\t<span class=\"logo-sm\">
+\t\t\t\t<img src=\"../../assets/images/logo-sm.png\" alt=\"\" height=\"22\">
+\t\t\t</span>
+\t\t\t<span class=\"logo-lg\">
+\t\t\t\t<img src=\"../../assets/images/logo-light.png\" alt=\"\" height=\"17\">
+\t\t\t</span>
+\t\t</a>
+\t\t<button type=\"button\" class=\"btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover\" id=\"vertical-hover\">
+\t\t\t<i class=\"ri-record-circle-line\"></i>
+\t\t</button>
+\t</div>
 
-    <div id=\"scrollbar\">
-        <div class=\"container-fluid\">
-        <div id=\"two-column-menu\"></div>
-        <ul class=\"navbar-nav\" id=\"navbar-nav\">
-            <li class=\"menu-title\"><span data-key=\"t-menu\">Menu</span></li>
+\t<div id=\"scrollbar\">
+\t\t<div class=\"container-fluid\">
+\t\t\t<div id=\"two-column-menu\"></div>
+\t\t\t<ul class=\"navbar-nav\" id=\"navbar-nav\">
+\t\t\t\t<li class=\"menu-title\">
+\t\t\t\t\t<span data-key=\"t-menu\">Menu</span>
+\t\t\t\t</li>
 
-            <!-- Dashboards -->
-            <li class=\"nav-item\">
-            <a class=\"nav-link menu-link\" href=\"#sidebarDashboards\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarDashboards\">
-                <i class=\"ri-dashboard-2-line\"></i>
-                <span data-key=\"t-dashboards\">Dashboards</span>
-            </a>
-            <div class=\"collapse menu-dropdown\" id=\"sidebarDashboards\">
-                <ul class=\"nav nav-sm flex-column\">
-                <li class=\"nav-item\">
-                    <a href=\"#\" class=\"nav-link\">Dashboard Principal</a>
-                </li>
-                </ul>
-            </div>
-            </li>
-
-            <!-- Messages -->
-            <li class=\"nav-item\">
-            <a class=\"nav-link menu-link\" href=\"#sidebarMessages\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarMessages\">
-                <i class=\"ri-mail-line\"></i>
-                <span data-key=\"t-messages\">Messages</span>
-            </a>
-            <div class=\"collapse menu-dropdown\" id=\"sidebarMessages\">
-                <ul class=\"nav nav-sm flex-column\">
-                <li class=\"nav-item\"><a href=\"apps-chat\" class=\"nav-link\">Boite Réception</a></li>
-                <li class=\"nav-item\"><a href=\"apps-chat\" class=\"nav-link\">Nouveaux Messages</a></li>
-                <li class=\"nav-item\"><a href=\"apps-chat\" class=\"nav-link\">Messages Envoyés</a></li>
-                <li class=\"nav-item\"><a href=\"apps-chat\" class=\"nav-link\">Corbeilles</a></li>
-                </ul>
-            </div>
-            </li>
-
-            <!-- Gestion Des Achats -->
-            <li class=\"nav-item\">
-            <a class=\"nav-link menu-link\" href=\"#sidebarPurchases\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarPurchases\">
-                <i class=\"ri-shopping-cart-line\"></i>
-                <span>Gestion Des Achats</span>
-            </a>
-            <div class=\"collapse menu-dropdown\" id=\"sidebarPurchases\">
-                <ul class=\"nav nav-sm flex-column\">
-                <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'devis_achat'}) }}\" class=\"nav-link\">Devis achat</a></li>                
-                <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'commandes_achat'}) }}\" class=\"nav-link\">Commandes achat</a></li>                
-                <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'factures_achat'}) }}\" class=\"nav-link\">Factures achat</a></li>
-                <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'factures_achat_avoire'}) }}\" class=\"nav-link\">Factures achat Avoire</a></li>
-                <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'bon_entree'}) }}\" class=\"nav-link\">Bon d'entrée</a></li>
-                <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'bon_transfert'}) }}\" class=\"nav-link\">Bon de transfert</a></li>
-                <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'bon_retour'}) }}\" class=\"nav-link\">Bon de retour</a></li>
-                <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'inventaire'}) }}\" class=\"nav-link\">Inventaire</a></li>
-                </ul>
-            </div>
-            </li>
-
-            <!-- Gestion Des Productions -->
-           <li class=\"nav-item\">
-                <a class=\"nav-link menu-link\" href=\"#sidebarProduction\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarProduction\">
-                    <i class=\"ri-building-2-line\"></i>
-                    <span>Gestion Des Productions</span>
-                </a>
-                <div class=\"collapse menu-dropdown\" id=\"sidebarProduction\">
-                    <ul class=\"nav nav-sm flex-column\">
-                    <li class=\"nav-item\"><a href=\"layouts-horizontal\" target=\"_blank\" class=\"nav-link\">Création des OF</a></li>
-                    <li class=\"nav-item\"><a href=\"layouts-detached\" target=\"_blank\" class=\"nav-link\">Demande de besoins</a></li>
-                    <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'bon_entree'}) }}\" class=\"nav-link\">Bon d'entrée</a></li>
-                    <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'bon_sortie'}) }}\" class=\"nav-link\">Bon de sortie</a></li>
-                    <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'bon_transfert'}) }}\" class=\"nav-link\">Bon de transfert</a></li>
-                    <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'bon_retour'}) }}\" class=\"nav-link\">Bon de retour</a></li>
-                    <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'inventaire'}) }}\" class=\"nav-link\">Inventaire</a></li>
-                    </ul>
-                </div>
-            </li>
+\t\t\t\t<!-- Dashboards -->
+\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t<a class=\"nav-link menu-link\" href=\"#sidebarDashboards\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarDashboards\">
+\t\t\t\t\t\t<i class=\"ri-dashboard-2-line\"></i>
+\t\t\t\t\t\t<span data-key=\"t-dashboards\">Dashboards</span>
+\t\t\t\t\t</a>
+\t\t\t\t\t<div class=\"collapse menu-dropdown\" id=\"sidebarDashboards\">
+\t\t\t\t\t\t<ul class=\"nav nav-sm flex-column\">
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"#\" class=\"nav-link\">Tableau de Bord Principal</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t\t</div>
 
 
-            <!-- Gestion Des Ventes -->
-            <li class=\"nav-item\">
-            <a class=\"nav-link menu-link\" href=\"#sidebarSales\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarSales\">
-                <i class=\"ri-handbag-line\"></i>
-                <span>Gestion Des Ventes</span>
-            </a>
-            <div class=\"collapse menu-dropdown\" id=\"sidebarSales\">
-                <ul class=\"nav nav-sm flex-column\">
-                <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'devis_vente'}) }}\" class=\"nav-link\">Devis vente</a></li>
-                <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'commandes_vente'}) }}\" class=\"nav-link\">Commandes vente</a></li>
-                <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'factures_vente'}) }}\" class=\"nav-link\">Factures vente</a></li>
-                <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'factures_vente_avoire'}) }}\" class=\"nav-link\">Factures vente avoire</a></li>
-                <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'bon_sortie'}) }}\" class=\"nav-link\">Bon de sortie</a></li>
-                <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'bon_livraison'}) }}\" class=\"nav-link\">Bon de livraison</a></li>
-                <li class=\"nav-item\"><a href=\"{{ path('app_documents_index', {'filter': 'inventaire'}) }}\" class=\"nav-link\">Inventaire</a></li>
-                </ul>
-            </div>
-            </li>
+\t\t\t\t</li>
 
-            <!-- Administration -->
-            <li class=\"nav-item\">
-            <a class=\"nav-link menu-link\" href=\"#sidebarAdmin\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarAdmin\">
-                <i class=\"ri-settings-3-line\"></i>
-                <span>Administration</span>
-            </a>
-            <div class=\"collapse menu-dropdown\" id=\"sidebarAdmin\">
-                <ul class=\"nav nav-sm flex-column\">
-                <li class=\"nav-item\"><a href=\"layouts-horizontal\" target=\"_blank\" class=\"nav-link\">Droits d'accès</a></li>
-                <li class=\"nav-item\"><a href=\"layouts-detached\" target=\"_blank\" class=\"nav-link\">Profiles</a></li>
-                <li class=\"nav-item\"><a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Utilisateurs Internes</a></li>
-                <li class=\"nav-item\">
-                    <a href=\"#sidebarTiers\" class=\"nav-link\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarTiers\">
-                    <i class=\"ri-group-line\"></i> Tiers
-                    </a>
-                    <div class=\"collapse menu-dropdown\" id=\"sidebarTiers\">
-                    <ul class=\"nav nav-sm flex-column\">
-                        <li class=\"nav-item\"><a href=\"apps-ecommerce-products\" class=\"nav-link\">Clients</a></li>
-                        <li class=\"nav-item\"><a href=\"apps-ecommerce-products\" class=\"nav-link\">Fournisseurs</a></li>
-                    </ul>
-                    </div>
-                </li>
-                <li class=\"nav-item\"><a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Magasins</a></li>
-                <li class=\"nav-item\">
-                    <a href=\"#sidebarArticles\" class=\"nav-link\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarArticles\">
-                    <i class=\"ri-archive-line\"></i> Articles
-                    </a>
-                    <div class=\"collapse menu-dropdown\" id=\"sidebarArticles\">
-                    <ul class=\"nav nav-sm flex-column\">
-                        <li class=\"nav-item\"><a href=\"apps-ecommerce-products\" class=\"nav-link\">Matières Premières</a></li>
-                        <li class=\"nav-item\"><a href=\"apps-ecommerce-products\" class=\"nav-link\">Produits Finis</a></li>
-                        <li class=\"nav-item\"><a href=\"apps-ecommerce-products\" class=\"nav-link\">Nomenclature</a></li>
-                    </ul>
-                    </div>
-                </li>
-                </ul>
-            </div>
-            </li>
+\t\t\t\t<!-- Messages -->
+\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t<a class=\"nav-link menu-link\" href=\"#sidebarMessages\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarMessages\">
+\t\t\t\t\t\t<i class=\"ri-mail-line\"></i>
+\t\t\t\t\t\t<span data-key=\"t-messages\">Messages</span>
+\t\t\t\t\t</a>
+\t\t\t\t\t<div class=\"collapse menu-dropdown\" id=\"sidebarMessages\">
+\t\t\t\t\t\t<ul class=\"nav nav-sm flex-column\">
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Boite Réception</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Nouveaux Messages</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Messages Envoyés</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Corbeilles</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t\t</div>
+\t\t\t\t</li>
 
-            <!-- Statistiques -->
-            <li class=\"nav-item\">
-            <a class=\"nav-link menu-link\" href=\"#sidebarStats\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarStats\">
-                <i class=\"ri-bar-chart-line\"></i>
-                <span data-key=\"t-statistics\">Statistiques</span>
-            </a>
-            <div class=\"collapse menu-dropdown\" id=\"sidebarStats\">
-                <ul class=\"nav nav-sm flex-column\">
-                <li class=\"nav-item\"><a href=\"apps-chat\" class=\"nav-link\">Générale</a></li>
-                <li class=\"nav-item\"><a href=\"apps-chat\" class=\"nav-link\">Achats</a></li>
-                <li class=\"nav-item\"><a href=\"apps-chat\" class=\"nav-link\">Productions</a></li>
-                <li class=\"nav-item\"><a href=\"apps-chat\" class=\"nav-link\">Ventes</a></li>
-                </ul>
-            </div>
-            </li>
+\t\t\t\t<!-- Gestion Des Achats -->
+\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t<a class=\"nav-link menu-link\" href=\"#sidebarPurchases\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarPurchases\">
+\t\t\t\t\t\t<i class=\"ri-shopping-cart-line\"></i>
+\t\t\t\t\t\t<span>Gestion Des Achats</span>
+\t\t\t\t\t</a>
+\t\t\t\t\t<div class=\"collapse menu-dropdown\" id=\"sidebarPurchases\">
+\t\t\t\t\t\t<ul class=\"nav nav-sm flex-column\">
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"{{ path('app_documents_index', {'Doc': 'DA'}) }}\" class=\"nav-link\">Devis achat</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"{{ path('app_documents_index', {'Doc': 'CA'}) }}\" class=\"nav-link\">Commandes achat</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"{{ path('app_documents_index', {'Doc': 'FA'}) }}\" class=\"nav-link\">Factures achat</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"{{ path('app_documents_index', {'Doc': 'FAA'}) }}\" class=\"nav-link\">Factures achat Avoire</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"{{ path('app_documents_index', {'Doc': 'BE'}) }}\" class=\"nav-link\">Bon d'entrée</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"{{ path('app_documents_index', {'Doc': 'BT'}) }}\" class=\"nav-link\">Bon de transfert</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"{{ path('app_documents_index', {'Doc': 'BR'}) }}\" class=\"nav-link\">Bon de retour</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"{{ path('app_documents_index', {'Doc': 'Inv'}) }}\" class=\"nav-link\">Inventaire</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t\t</div>
+\t\t\t\t</li>
 
-            <!-- Logs -->
-            <li class=\"nav-item\">
-            <a class=\"nav-link menu-link\" href=\"#sidebarLogs\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarLogs\">
-                <i class=\"ri-file-list-2-line\"></i>
-                <span data-key=\"t-logs\">Logs</span>
-            </a>
-            <div class=\"collapse menu-dropdown\" id=\"sidebarLogs\">
-                <ul class=\"nav nav-sm flex-column\">
-                <li class=\"nav-item\"><a href=\"apps-chat\" class=\"nav-link\">Administration</a></li>
-                <li class=\"nav-item\"><a href=\"apps-chat\" class=\"nav-link\">Système</a></li>
-                </ul>
-            </div>
-            </li>
-        </ul>
-    </div>
-    </div>
+\t\t\t\t<!-- Gestion Des Productions -->
+\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t<a class=\"nav-link menu-link\" href=\"#sidebarProduction\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarProduction\">
+\t\t\t\t\t\t<i class=\"ri-building-2-line\"></i>
+\t\t\t\t\t\t<span>Gestion Des Productions</span>
+\t\t\t\t\t</a>
+\t\t\t\t\t<div class=\"collapse menu-dropdown\" id=\"sidebarProduction\">
+\t\t\t\t\t\t<ul class=\"nav nav-sm flex-column\">
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"layouts-horizontal\" target=\"_blank\" class=\"nav-link\">Création des OF</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"layouts-detached\" target=\"_blank\" class=\"nav-link\">Demande de besoins</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"{{ path('app_documents_index', {'Doc': 'BE'}) }}\" class=\"nav-link\">Bon d'entrée</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"{{ path('app_documents_index', {'Doc': 'BS'}) }}\" class=\"nav-link\">Bon de sortie</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"{{ path('app_documents_index', {'Doc': 'BT'}) }}\" class=\"nav-link\">Bon de transfert</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"{{ path('app_documents_index', {'Doc': 'BR'}) }}\" class=\"nav-link\">Bon de retour</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"{{ path('app_documents_index', {'Doc': 'Inv'}) }}\" class=\"nav-link\">Inventaire</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t\t</div>
+\t\t\t\t</li>
 
-    <div class=\"sidebar-background\"></div>
+
+\t\t\t\t<!-- Gestion Des Ventes -->
+\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t<a class=\"nav-link menu-link\" href=\"#sidebarSales\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarSales\">
+\t\t\t\t\t\t<i class=\"ri-handbag-line\"></i>
+\t\t\t\t\t\t<span>Gestion Des Ventes</span>
+\t\t\t\t\t</a>
+\t\t\t\t\t<div class=\"collapse menu-dropdown\" id=\"sidebarSales\">
+\t\t\t\t\t\t<ul class=\"nav nav-sm flex-column\">
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"{{ path('app_documents_index', {'Doc': 'DV'}) }}\" class=\"nav-link\">Devis vente</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"{{ path('app_documents_index', {'Doc': 'CV'}) }}\" class=\"nav-link\">Commandes vente</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"{{ path('app_documents_index', {'Doc': 'FV'}) }}\" class=\"nav-link\">Factures vente</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"{{ path('app_documents_index', {'Doc': 'FVA'}) }}\" class=\"nav-link\">Factures vente avoire</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"{{ path('app_documents_index', {'Doc': 'BS'}) }}\" class=\"nav-link\">Bon de sortie</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"{{ path('app_documents_index', {'Doc': 'BL'}) }}\" class=\"nav-link\">Bon de livraison</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"{{ path('app_documents_index', {'Doc': 'Inv'}) }}\" class=\"nav-link\">Inventaire</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t\t</div>
+\t\t\t\t</li>
+
+\t\t\t\t<!-- Administration -->
+\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t<a class=\"nav-link menu-link\" href=\"#sidebarAdmin\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarAdmin\">
+\t\t\t\t\t\t<i class=\"ri-settings-3-line\"></i>
+\t\t\t\t\t\t<span>Administration</span>
+\t\t\t\t\t</a>
+\t\t\t\t\t<div class=\"collapse menu-dropdown\" id=\"sidebarAdmin\">
+\t\t\t\t\t\t<ul class=\"nav nav-sm flex-column\">
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"layouts-horizontal\" target=\"_blank\" class=\"nav-link\">Droits d'accès</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"layouts-detached\" target=\"_blank\" class=\"nav-link\">Profiles</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Utilisateurs Internes</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"#sidebarTiers\" class=\"nav-link\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarTiers\">
+\t\t\t\t\t\t\t\t\t<i class=\"ri-group-line\"></i>
+\t\t\t\t\t\t\t\t\tTiers
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t<div class=\"collapse menu-dropdown\" id=\"sidebarTiers\">
+\t\t\t\t\t\t\t\t\t<ul class=\"nav nav-sm flex-column\">
+\t\t\t\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"apps-ecommerce-products\" class=\"nav-link\">Clients</a>
+\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"apps-ecommerce-products\" class=\"nav-link\">Fournisseurs</a>
+\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"layouts-vertical-hovered\" target=\"_blank\" class=\"nav-link\">Magasins</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"#sidebarArticles\" class=\"nav-link\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarArticles\">
+\t\t\t\t\t\t\t\t\t<i class=\"ri-archive-line\"></i>
+\t\t\t\t\t\t\t\t\tArticles
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t<div class=\"collapse menu-dropdown\" id=\"sidebarArticles\">
+\t\t\t\t\t\t\t\t\t<ul class=\"nav nav-sm flex-column\">
+\t\t\t\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"apps-ecommerce-products\" class=\"nav-link\">Matières Premières</a>
+\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"apps-ecommerce-products\" class=\"nav-link\">Produits Finis</a>
+\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"apps-ecommerce-products\" class=\"nav-link\">Nomenclature</a>
+\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t\t</div>
+\t\t\t\t</li>
+
+\t\t\t\t<!-- Statistiques -->
+\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t<a class=\"nav-link menu-link\" href=\"#sidebarStats\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarStats\">
+\t\t\t\t\t\t<i class=\"ri-bar-chart-line\"></i>
+\t\t\t\t\t\t<span data-key=\"t-statistics\">Statistiques</span>
+\t\t\t\t\t</a>
+\t\t\t\t\t<div class=\"collapse menu-dropdown\" id=\"sidebarStats\">
+\t\t\t\t\t\t<ul class=\"nav nav-sm flex-column\">
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Générale</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Achats</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Productions</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Ventes</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t\t</div>
+\t\t\t\t</li>
+
+\t\t\t\t<!-- Logs -->
+\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t<a class=\"nav-link menu-link\" href=\"#sidebarLogs\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarLogs\">
+\t\t\t\t\t\t<i class=\"ri-file-list-2-line\"></i>
+\t\t\t\t\t\t<span data-key=\"t-logs\">Logs</span>
+\t\t\t\t\t</a>
+\t\t\t\t\t<div class=\"collapse menu-dropdown\" id=\"sidebarLogs\">
+\t\t\t\t\t\t<ul class=\"nav nav-sm flex-column\">
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Administration</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Système</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t\t</div>
+\t\t\t\t</li>
+\t\t\t</ul>
+\t\t</div>
+\t</div>
+
+\t<div class=\"sidebar-background\"></div>
 </div>
-<div class=\"vertical-overlay\"></div>", "partials/sidebar.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\partials\\sidebar.html.twig");
+<div class=\"vertical-overlay\"></div>
+", "partials/sidebar.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\partials\\sidebar.html.twig");
     }
 }

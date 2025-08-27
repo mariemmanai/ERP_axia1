@@ -41,26 +41,28 @@ class DocumentsType extends AbstractType
             ])
             ->add('type', ChoiceType::class, [
                 'choices' => [
-                    'Devis achat' => 'Devis achat',
-                    'Commande achat' => 'Commande achat',
-                    'Facture achat' => 'Facture achat',
-                    'Facture achat avoire' => 'Facture achat avoire',
-                    'Bon d\'entrée' => 'Bon d\'entrée',
-                    'Bon de transfert' => 'Bon de transfert',
-                    'Bon de retour' => 'Bon de retour',
-                    'Devis vente' => 'Devis vente',
-                    'Commande vente' => 'Commande vente',
-                    'Facture vente' => 'Facture vente',
-                    'Facture vente avoire' => 'Facture vente avoire',
-                    'Bon de sortie' => 'Bon de sortie',
-                    'Bon de livraison' => 'Bon de livraison',
-                    'Inventaire' => 'Inventaire'
+                    'Devis achat' => 'DA',
+                    'Commande achat' => 'CA',
+                    'Facture achat' => 'FA',
+                    'Facture achat avoire' => 'FAA',
+                    'Bon d\'entrée' => 'BE',
+                    'Bon de transfert' => 'BT',
+                    'Bon de retour' => 'BR',
+                    'Devis vente' => 'DV',
+                    'Commande vente' => 'CV',
+                    'Facture vente' => 'FV',
+                    'Facture vente avoire' => 'FVA',
+                    'Bon de sortie' => 'BS',
+                    'Bon de livraison' => 'BL',
+                    'Inventaire' => 'Inv'
                 ],
                 'attr' => [
                     'class' => 'form-control',
-                    'onchange' => 'updateReferencePreview()'
+                    'onchange' => 'updateReferencePreview()',
+                    'style' => $options['hide_type'] ? 'display:none;' : ''
                 ],
-                'label' => 'Type'
+                'label' => $options['hide_type'] ? false : 'Type',
+                'disabled' => $options['hide_type']
             ])
             ->add('status', ChoiceType::class, [
                 'choices' => [
@@ -135,6 +137,7 @@ class DocumentsType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => Documents::class,
+            'hide_type' => false
         ]);
     }
 }

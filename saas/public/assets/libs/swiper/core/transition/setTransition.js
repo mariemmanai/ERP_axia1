@@ -1,1 +1,7 @@
-export default function setTransition(t,s){const i=this;i.params.cssMode||(i.wrapperEl.style.transitionDuration=`${t}ms`),i.emit("setTransition",t,s)}
+export default function setTransition(duration, byController) {
+  const swiper = this;
+  if (!swiper.params.cssMode) {
+    swiper.wrapperEl.style.transitionDuration = `${duration}ms`;
+  }
+  swiper.emit('setTransition', duration, byController);
+}

@@ -356,6 +356,22 @@
         <argument type="service" id=".service_locator.O2p6Lk7.App\Controller\ArticlesController"/>
       </call>
     </service>
+    <service id="App\Controller\DashboardController" class="App\Controller\DashboardController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.O2p6Lk7.App\Controller\DashboardController"/>
+      </call>
+    </service>
+    <service id="App\Controller\DebugController" class="App\Controller\DebugController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <argument type="service" id="App\Service\StatsKpiService"/>
+      <argument type="service" id="doctrine.dbal.default_connection"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.O2p6Lk7.App\Controller\DebugController"/>
+      </call>
+    </service>
     <service id="App\Controller\DepotsController" class="App\Controller\DepotsController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -405,8 +421,17 @@
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <argument type="service" id="monolog.logger"/>
+      <argument type="service" id="App\Service\StatsKpiService"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.O2p6Lk7.App\Controller\RegistrationController"/>
+      </call>
+    </service>
+    <service id="App\Controller\StatisticsController" class="App\Controller\StatisticsController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <argument type="service" id="App\Service\StatsKpiService"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.O2p6Lk7.App\Controller\StatisticsController"/>
       </call>
     </service>
     <service id="App\Controller\StockController" class="App\Controller\StockController" public="true" autowire="true" autoconfigure="true">
@@ -464,6 +489,10 @@
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
+    <service id="App\Service\StatsKpiService" class="App\Service\StatsKpiService" autowire="true" autoconfigure="true">
+      <argument type="service" id="doctrine.dbal.default_connection"/>
+      <argument type="service" id="request_stack"/>
+    </service>
     <service id="argument_metadata_factory" class="Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadataFactory"/>
     <service id="argument_resolver.backed_enum_resolver" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\BackedEnumValueResolver">
       <tag priority="100" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\BackedEnumValueResolver">controller.argument_value_resolver</tag>
@@ -487,7 +516,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
       <tag priority="-50" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">controller.argument_value_resolver</tag>
-      <argument type="service" id=".service_locator.lNC2sYX"/>
+      <argument type="service" id=".service_locator.IaS4.sL"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">
       <tag priority="-100" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">controller.argument_value_resolver</tag>
@@ -2101,7 +2130,7 @@
     </service>
     <service id="argument_resolver.not_tagged_controller" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
       <tag name="controller.argument_value_resolver" priority="-200"/>
-      <argument type="service" id=".service_locator.lNC2sYX"/>
+      <argument type="service" id=".service_locator.IaS4.sL"/>
     </service>
     <service id="debug.log_processor" class="Symfony\Bridge\Monolog\Processor\DebugProcessor">
       <tag name="kernel.reset" method="reset"/>
@@ -5390,6 +5419,12 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ArticlesController" class="App\Controller\ArticlesController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ArticlesController" class="App\Controller\ArticlesController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\ArticlesController" class="App\Controller\ArticlesController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\DashboardController" class="App\Controller\DashboardController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\DashboardController" class="App\Controller\DashboardController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\DashboardController" class="App\Controller\DashboardController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\DebugController" class="App\Controller\DebugController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\DebugController" class="App\Controller\DebugController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\DebugController" class="App\Controller\DebugController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\DepotsController" class="App\Controller\DepotsController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\DepotsController" class="App\Controller\DepotsController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\DepotsController" class="App\Controller\DepotsController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -5411,6 +5446,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\StatisticsController" class="App\Controller\StatisticsController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\StatisticsController" class="App\Controller\StatisticsController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\StatisticsController" class="App\Controller\StatisticsController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\StockController" class="App\Controller\StockController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\StockController" class="App\Controller\StockController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\StockController" class="App\Controller\StockController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -5853,6 +5891,15 @@
         <argument key="articleRepository" type="service_closure" id="App\Repository\ArticlesRepository"/>
       </argument>
     </service>
+    <service id=".service_locator.XIXbMBf" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="documentsRepository" type="service_closure" id="App\Repository\DocumentsRepository"/>
+        <argument key="articlesRepository" type="service_closure" id="App\Repository\ArticlesRepository"/>
+        <argument key="stockRepository" type="service_closure" id="App\Repository\StockRepository"/>
+        <argument key="documentsLignesRepository" type="service_closure" id=".errored..service_locator.XIXbMBf.App\Repository\DocumentsLigneRepository"/>
+      </argument>
+    </service>
     <service id=".service_locator.onxW7Ic" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5977,7 +6024,7 @@
         <argument key="stockRepository" type="service_closure" id="App\Repository\StockRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.lNC2sYX" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.IaS4.sL" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.y4_Zrx."/>
@@ -5989,6 +6036,7 @@
         <argument key="App\Controller\ArticlesController::show" type="service_closure" id=".service_locator.dLwEijJ"/>
         <argument key="App\Controller\ArticlesController::edit" type="service_closure" id=".service_locator.vAz6QVh"/>
         <argument key="App\Controller\ArticlesController::delete" type="service_closure" id=".service_locator.9VSm2G1"/>
+        <argument key="App\Controller\DashboardController::index" type="service_closure" id=".service_locator.XIXbMBf"/>
         <argument key="App\Controller\DepotsController::index" type="service_closure" id=".service_locator.onxW7Ic"/>
         <argument key="App\Controller\DepotsController::new" type="service_closure" id=".service_locator.J5rp158"/>
         <argument key="App\Controller\DepotsController::show" type="service_closure" id=".service_locator.vvmCTmQ"/>
@@ -6023,6 +6071,7 @@
         <argument key="App\Controller\ArticlesController:show" type="service_closure" id=".service_locator.dLwEijJ"/>
         <argument key="App\Controller\ArticlesController:edit" type="service_closure" id=".service_locator.vAz6QVh"/>
         <argument key="App\Controller\ArticlesController:delete" type="service_closure" id=".service_locator.9VSm2G1"/>
+        <argument key="App\Controller\DashboardController:index" type="service_closure" id=".service_locator.XIXbMBf"/>
         <argument key="App\Controller\DepotsController:index" type="service_closure" id=".service_locator.onxW7Ic"/>
         <argument key="App\Controller\DepotsController:new" type="service_closure" id=".service_locator.J5rp158"/>
         <argument key="App\Controller\DepotsController:show" type="service_closure" id=".service_locator.vvmCTmQ"/>
@@ -6515,6 +6564,18 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.O2p6Lk7" method="withContext"/>
     </service>
+    <service id=".service_locator.O2p6Lk7.App\Controller\DashboardController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\DashboardController"/>
+      <argument>App\Controller\DashboardController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.O2p6Lk7" method="withContext"/>
+    </service>
+    <service id=".service_locator.O2p6Lk7.App\Controller\DebugController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\DebugController"/>
+      <argument>App\Controller\DebugController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.O2p6Lk7" method="withContext"/>
+    </service>
     <service id=".service_locator.O2p6Lk7.App\Controller\DepotsController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\DepotsController"/>
       <argument>App\Controller\DepotsController</argument>
@@ -6554,6 +6615,12 @@
     <service id=".service_locator.O2p6Lk7.App\Controller\RegistrationController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\RegistrationController"/>
       <argument>App\Controller\RegistrationController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.O2p6Lk7" method="withContext"/>
+    </service>
+    <service id=".service_locator.O2p6Lk7.App\Controller\StatisticsController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\StatisticsController"/>
+      <argument>App\Controller\StatisticsController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.O2p6Lk7" method="withContext"/>
     </service>
@@ -6692,6 +6759,8 @@
         <argument type="collection">
           <argument>App\Kernel</argument>
           <argument>App\Controller\ArticlesController</argument>
+          <argument>App\Controller\DashboardController</argument>
+          <argument>App\Controller\DebugController</argument>
           <argument>App\Controller\DepotsController</argument>
           <argument>App\Controller\DocumentsController</argument>
           <argument>App\Controller\FunctionsController</argument>
@@ -6699,6 +6768,7 @@
           <argument>App\Controller\NomenclatureController</argument>
           <argument>App\Controller\ProfilesController</argument>
           <argument>App\Controller\RegistrationController</argument>
+          <argument>App\Controller\StatisticsController</argument>
           <argument>App\Controller\StockController</argument>
           <argument>Doctrine\Bundle\DoctrineBundle\Controller\ProfilerController</argument>
         </argument>
@@ -6775,6 +6845,9 @@
     </service>
     <service id=".errored..service_locator.9VSm2G1.App\Entity\Articles" class="App\Entity\Articles">
       <tag name="container.error" message="Cannot autowire service &quot;.service_locator.9VSm2G1&quot;: it needs an instance of &quot;App\Entity\Articles&quot; but this type has been excluded in &quot;config/services.yaml&quot;."/>
+    </service>
+    <service id=".errored..service_locator.XIXbMBf.App\Repository\DocumentsLigneRepository" class="App\Repository\DocumentsLigneRepository">
+      <tag name="container.error" message="Cannot autowire service &quot;.service_locator.XIXbMBf&quot;: it references class &quot;App\Repository\DocumentsLigneRepository&quot; but no such service exists. Did you mean &quot;App\Repository\DocumentsligneRepository&quot;?"/>
     </service>
     <service id=".errored..service_locator.vvmCTmQ.App\Entity\Depots" class="App\Entity\Depots">
       <tag name="container.error" message="Cannot autowire service &quot;.service_locator.vvmCTmQ&quot;: it needs an instance of &quot;App\Entity\Depots&quot; but this type has been excluded in &quot;config/services.yaml&quot;."/>
@@ -7748,7 +7821,7 @@
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.w7.f4fT" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.lNC2sYX"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.IaS4.sL"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
@@ -7783,6 +7856,7 @@
     <service id=".service_locator.59D8uju" alias=".service_locator.dLwEijJ"/>
     <service id=".service_locator.UuhWEs8" alias=".service_locator.vAz6QVh"/>
     <service id=".service_locator.SlcUUhd" alias=".service_locator.9VSm2G1"/>
+    <service id=".service_locator.QG1WtgX" alias=".service_locator.XIXbMBf"/>
     <service id=".service_locator.n1zZA2R" alias=".service_locator.onxW7Ic"/>
     <service id=".service_locator.mtenG7C" alias=".service_locator.J5rp158"/>
     <service id=".service_locator.Ta7q9Zg" alias=".service_locator.vvmCTmQ"/>

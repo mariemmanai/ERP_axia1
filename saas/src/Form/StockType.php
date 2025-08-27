@@ -19,13 +19,13 @@ class StockType extends AbstractType
         $builder
             ->add('article', EntityType::class, [
                 'class' => Articles::class,
-                'choice_label' => 'reference', // ou tout autre champ que vous voulez afficher
+                'choice_label' => 'reference',
                 'attr' => ['class' => 'form-control'],
                 'label' => 'Article'
             ])
             ->add('depot', EntityType::class, [
                 'class' => Depots::class,
-                'choice_label' => 'intitule', 
+                'choice_label' => 'intitule',
                 'attr' => ['class' => 'form-control'],
                 'label' => 'Dépôt'
             ])
