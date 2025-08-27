@@ -44,1717 +44,599 @@ class __TwigTemplate_dd5c3a416f5ebc32682107bedbe710c8 extends Template
         echo "
 
 <head>
-
-    ";
-        // line 5
-        echo twig_include($this->env, $context, "partials/title-meta.html.twig", ["title" => "Landing"]);
+\t";
+        // line 4
+        echo twig_include($this->env, $context, "partials/title-meta.html.twig", ["title" => "Tableau de Bord ERP"]);
         echo "
 
-    <!--Swiper slider css-->
-    <link href=\"../../assets/libs/swiper/swiper-bundle.min.css\" rel=\"stylesheet\" type=\"text/css\" />
+\t<!-- plugin css -->
+\t<link href=\"../../assets/libs/jsvectormap/jsvectormap.min.css\" rel=\"stylesheet\" type=\"text/css\"/>
 
-    ";
-        // line 10
+\t";
+        // line 9
         echo twig_include($this->env, $context, "partials/head-css.html.twig");
         echo "
 
+\t<style>
+\t\t.card-stat {
+\t\t\tborder-left: 4px solid #0ab39c;
+\t\t}
+\t\t.card-stat-warning {
+\t\t\tborder-left: 4px solid #f7b84b;
+\t\t}
+\t\t.card-stat-danger {
+\t\t\tborder-left: 4px solid #f06548;
+\t\t}
+\t\t.stat-icon {
+\t\t\tfont-size: 22px;
+\t\t\tbackground-color: rgba(10, 179, 156, 0.1);
+\t\t\theight: 50px;
+\t\t\twidth: 50px;
+\t\t\tline-height: 50px;
+\t\t\ttext-align: center;
+\t\t\tborder-radius: 50%;
+\t\t\tcolor: #0ab39c;
+\t\t}
+\t\t.stat-icon-warning {
+\t\t\tbackground-color: rgba(247, 184, 75, 0.1);
+\t\t\tcolor: #f7b84b;
+\t\t}
+\t\t.stat-icon-danger {
+\t\t\tbackground-color: rgba(240, 101, 72, 0.1);
+\t\t\tcolor: #f06548;
+\t\t}
+\t</style>
 </head>
 
-<body data-bs-spy=\"scroll\" data-bs-target=\"#navbar-example\">
-
-    <!-- Begin page -->
-    <div class=\"layout-wrapper landing\">
-        <nav class=\"navbar navbar-expand-lg navbar-landing fixed-top\" id=\"navbar\">
-            <div class=\"container\">
-                <a class=\"navbar-brand\" href=\"/\">
-                    <img src=\"../../assets/images/logo-dark.png\" class=\"card-logo card-logo-dark\" alt=\"logo dark\" height=\"17\">
-                    <img src=\"../../assets/images/logo-light.png\" class=\"card-logo card-logo-light\" alt=\"logo light\" height=\"17\">
-                </a>
-                <button class=\"navbar-toggler py-0 fs-20 text-body\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-                    <i class=\"mdi mdi-menu\"></i>
-                </button>
-
-                <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
-                    <ul class=\"navbar-nav mx-auto mt-2 mt-lg-0\" id=\"navbar-example\">
-                        <li class=\"nav-item\">
-                            <a class=\"nav-link active\" href=\"#hero\">Home</a>
-                        </li>
-                        <li class=\"nav-item\">
-                            <a class=\"nav-link\" href=\"#services\">Services</a>
-                        </li>
-                        <li class=\"nav-item\">
-                            <a class=\"nav-link\" href=\"#features\">Features</a>
-                        </li>
-                        <li class=\"nav-item\">
-                            <a class=\"nav-link\" href=\"#plans\">Plans</a>
-                        </li>
-                        <li class=\"nav-item\">
-                            <a class=\"nav-link\" href=\"#reviews\">Reviews</a>
-                        </li>
-                        <li class=\"nav-item\">
-                            <a class=\"nav-link\" href=\"#team\">Team</a>
-                        </li>
-                        <li class=\"nav-item\">
-                            <a class=\"nav-link\" href=\"#contact\">Contact</a>
-                        </li>
-                    </ul>
-
-                    <div class=\"\">
-                        <a href=\"auth-signin-basic\" class=\"btn btn-link fw-medium text-decoration-none text-dark\">Sign in</a>
-                        <a href=\"auth-signup-basic\" class=\"btn btn-primary\">Sign Up</a>
-                    </div>
-                </div>
-
-            </div>
-        </nav>
-        <!-- end navbar -->
-        <div class=\"vertical-overlay\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent.show\"></div>
-
-        <!-- start hero section -->
-        <section class=\"section pb-0 hero-section\" id=\"hero\">
-            <div class=\"bg-overlay bg-overlay-pattern\"></div>
-            <div class=\"container\">
-                <div class=\"row justify-content-center\">
-                    <div class=\"col-lg-8 col-sm-10\">
-                        <div class=\"text-center mt-lg-5 pt-5\">
-                            <h1 class=\"display-6 fw-semibold mb-3 lh-base\">The better way to manage your website with <span class=\"text-success\">Velzon </span></h1>
-                            <p class=\"lead text-muted lh-base\">Velzon is a fully responsive, multipurpose and premium Bootstrap 5 Admin & Dashboard Template built in multiple frameworks.</p>
-
-                            <div class=\"d-flex gap-2 justify-content-center mt-4\">
-                                <a href=\"auth-signup-basic\" class=\"btn btn-primary\">Get Started <i class=\"ri-arrow-right-line align-middle ms-1\"></i></a>
-                                <a href=\"pages-pricing\" class=\"btn btn-danger\">View Plans <i class=\"ri-eye-line align-middle ms-1\"></i></a>
-                            </div>
-                        </div>
-
-                        <div class=\"mt-4 mt-sm-5 pt-sm-5 mb-sm-n5 demo-carousel\">
-                            <div class=\"demo-img-patten-top d-none d-sm-block\">
-                                <img src=\"../../assets/images/landing/img-pattern.png\" class=\"d-block img-fluid\" alt=\"...\">
-                            </div>
-                            <div class=\"demo-img-patten-bottom d-none d-sm-block\">
-                                <img src=\"../../assets/images/landing/img-pattern.png\" class=\"d-block img-fluid\" alt=\"...\">
-                            </div>
-                            <div class=\"carousel slide carousel-fade\" data-bs-ride=\"carousel\">
-                                <div class=\"carousel-inner shadow-lg p-2 bg-white rounded\">
-                                    <div class=\"carousel-item active\" data-bs-interval=\"2000\">
-                                        <img src=\"../../assets/images/demos/default.png\" class=\"d-block w-100\" alt=\"...\">
-                                    </div>
-                                    <div class=\"carousel-item\" data-bs-interval=\"2000\">
-                                        <img src=\"../../assets/images/demos/saas.png\" class=\"d-block w-100\" alt=\"...\">
-                                    </div>
-                                    <div class=\"carousel-item\" data-bs-interval=\"2000\">
-                                        <img src=\"../../assets/images/demos/material.png\" class=\"d-block w-100\" alt=\"...\">
-                                    </div>
-                                    <div class=\"carousel-item\" data-bs-interval=\"2000\">
-                                        <img src=\"../../assets/images/demos/minimal.png\" class=\"d-block w-100\" alt=\"...\">
-                                    </div>
-                                    <div class=\"carousel-item\" data-bs-interval=\"2000\">
-                                        <img src=\"../../assets/images/demos/creative.png\" class=\"d-block w-100\" alt=\"...\">
-                                    </div>
-                                    <div class=\"carousel-item\" data-bs-interval=\"2000\">
-                                        <img src=\"../../assets/images/demos/modern.png\" class=\"d-block w-100\" alt=\"...\">
-                                    </div>
-                                    <div class=\"carousel-item\" data-bs-interval=\"2000\">
-                                        <img src=\"../../assets/images/demos/interactive.png\" class=\"d-block w-100\" alt=\"...\">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-            <div class=\"position-absolute start-0 end-0 bottom-0 hero-shape-svg\">
-                <svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 1440 120\">
-                    <g mask=\"url(&quot;#SvgjsMask1003&quot;)\" fill=\"none\">
-                        <path d=\"M 0,118 C 288,98.6 1152,40.4 1440,21L1440 140L0 140z\">
-                        </path>
-                    </g>
-                </svg>
-            </div>
-            <!-- end shape -->
-        </section>
-        <!-- end hero section -->
-
-        <!-- start client section -->
-        <div class=\"pt-5 mt-5\">
-            <div class=\"container\">
-                <div class=\"row\">
-                    <div class=\"col-lg-12\">
-
-                        <div class=\"text-center mt-5\">
-                            <h5 class=\"fs-20\">Trusted <span class=\"text-primary text-decoration-underline\">by</span> the world's best</h5>
-
-                            <!-- Swiper -->
-                            <div class=\"swiper trusted-client-slider mt-sm-5 mt-4 mb-sm-5 mb-4\" dir=\"ltr\">
-                                <div class=\"swiper-wrapper\">
-                                    <div class=\"swiper-slide\">
-                                        <div class=\"client-images\">
-                                            <img src=\"../../assets/images/clients/amazon.svg\" alt=\"client-img\" class=\"mx-auto img-fluid d-block\">
-                                        </div>
-                                    </div>
-                                    <div class=\"swiper-slide\">
-                                        <div class=\"client-images\">
-                                            <img src=\"../../assets/images/clients/walmart.svg\" alt=\"client-img\" class=\"mx-auto img-fluid d-block\">
-                                        </div>
-                                    </div>
-                                    <div class=\"swiper-slide\">
-                                        <div class=\"client-images\">
-                                            <img src=\"../../assets/images/clients/lenovo.svg\" alt=\"client-img\" class=\"mx-auto img-fluid d-block\">
-                                        </div>
-                                    </div>
-                                    <div class=\"swiper-slide\">
-                                        <div class=\"client-images\">
-                                            <img src=\"../../assets/images/clients/paypal.svg\" alt=\"client-img\" class=\"mx-auto img-fluid d-block\">
-                                        </div>
-                                    </div>
-                                    <div class=\"swiper-slide\">
-                                        <div class=\"client-images\">
-                                            <img src=\"../../assets/images/clients/shopify.svg\" alt=\"client-img\" class=\"mx-auto img-fluid d-block\">
-                                        </div>
-                                    </div>
-                                    <div class=\"swiper-slide\">
-                                        <div class=\"client-images\">
-                                            <img src=\"../../assets/images/clients/verizon.svg\" alt=\"client-img\" class=\"mx-auto img-fluid d-block\">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-        </div>
-        <!-- end client section -->
-
-        <!-- start services -->
-        <section class=\"section\" id=\"services\">
-            <div class=\"container\">
-                <div class=\"row justify-content-center\">
-                    <div class=\"col-lg-8\">
-                        <div class=\"text-center mb-5\">
-                            <h1 class=\"mb-3 ff-secondary fw-semibold lh-base\">A Digital web design studio creating modern & engaging online</h1>
-                            <p class=\"text-muted\">To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce the grammar</p>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
-
-                <div class=\"row g-3\">
-                    <div class=\"col-lg-4\">
-                        <div class=\"d-flex p-3\">
-                            <div class=\"flex-shrink-0 me-3\">
-                                <div class=\"avatar-sm icon-effect\">
-                                    <div class=\"avatar-title bg-transparent text-success rounded-circle\">
-                                        <i class=\"ri-pencil-ruler-2-line fs-36\"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"flex-grow-1\">
-                                <h5 class=\"fs-18\">Creative Design</h5>
-                                <p class=\"text-muted my-3 ff-secondary\">The creative design includes designs that are unique, effective and memorable.</p>
-                                <div>
-                                    <a href=\"#\" class=\"fs-13 fw-medium\">Learn More <i class=\"ri-arrow-right-s-line align-bottom\"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-4\">
-                        <div class=\"d-flex p-3\">
-                            <div class=\"flex-shrink-0 me-3\">
-                                <div class=\"avatar-sm icon-effect\">
-                                    <div class=\"avatar-title bg-transparent text-success rounded-circle\">
-                                        <i class=\"ri-palette-line fs-36\"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"flex-grow-1\">
-                                <h5 class=\"fs-18\">Unlimited Colors</h5>
-                                <p class=\"text-muted my-3 ff-secondary\">The collection of rules and guidelines which designers use to communicate with users through appealing.</p>
-                                <div>
-                                    <a href=\"#\" class=\"fs-13 fw-medium\">Learn More <i class=\"ri-arrow-right-s-line align-bottom\"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-4\">
-                        <div class=\"d-flex p-3\">
-                            <div class=\"flex-shrink-0 me-3\">
-                                <div class=\"avatar-sm icon-effect\">
-                                    <div class=\"avatar-title bg-transparent text-success rounded-circle\">
-                                        <i class=\"ri-lightbulb-flash-line fs-36\"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"flex-grow-1\">
-                                <h5 class=\"fs-18\">Strategy Solutions</h5>
-                                <p class=\"text-muted my-3 ff-secondary\">Business development firm that provides strategic planning, market research services and project.</p>
-                                <div>
-                                    <a href=\"#\" class=\"fs-13 fw-medium\">Learn More <i class=\"ri-arrow-right-s-line align-bottom\"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-4\">
-                        <div class=\"d-flex p-3\">
-                            <div class=\"flex-shrink-0 me-3\">
-                                <div class=\"avatar-sm icon-effect\">
-                                    <div class=\"avatar-title bg-transparent text-success rounded-circle\">
-                                        <i class=\"ri-customer-service-line fs-36\"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"flex-grow-1\">
-                                <h5 class=\"fs-18\">Awesome Support</h5>
-                                <p class=\"text-muted my-3 ff-secondary\">Awesome Support is the most versatile and feature-rich support plugin for all version.</p>
-                                <div>
-                                    <a href=\"#\" class=\"fs-13 fw-medium\">Learn More <i class=\"ri-arrow-right-s-line align-bottom\"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-4\">
-                        <div class=\"d-flex p-3\">
-                            <div class=\"flex-shrink-0 me-3\">
-                                <div class=\"avatar-sm icon-effect\">
-                                    <div class=\"avatar-title bg-transparent text-success rounded-circle\">
-                                        <i class=\"ri-stack-line fs-36\"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"flex-grow-1\">
-                                <h5 class=\"fs-18\">Truly Multipurpose</h5>
-                                <p class=\"text-muted my-3 ff-secondary\">You usually get a broad range of options to play with. This enables you to use a single theme across multiple.</p>
-                                <div>
-                                    <a href=\"#\" class=\"fs-13 fw-medium\">Learn More <i class=\"ri-arrow-right-s-line align-bottom\"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-4\">
-                        <div class=\"d-flex p-3\">
-                            <div class=\"flex-shrink-0 me-3\">
-                                <div class=\"avatar-sm icon-effect\">
-                                    <div class=\"avatar-title bg-transparent text-success rounded-circle\">
-                                        <i class=\"ri-settings-2-line fs-36\"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"flex-grow-1\">
-                                <h5 class=\"fs-18\">Easy to customize</h5>
-                                <p class=\"text-muted my-3 ff-secondary\">Personalise your own website, no matter what theme and what customization options.</p>
-                                <div>
-                                    <a href=\"#\" class=\"fs-13 fw-medium\">Learn More <i class=\"ri-arrow-right-s-line align-bottom\"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-
-                    <div class=\"col-lg-4\">
-                        <div class=\"d-flex p-3\">
-                            <div class=\"flex-shrink-0 me-3\">
-                                <div class=\"avatar-sm icon-effect\">
-                                    <div class=\"avatar-title bg-transparent text-success rounded-circle\">
-                                        <i class=\"ri-slideshow-line fs-36\"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"flex-grow-1\">
-                                <h5 class=\"fs-18\">Responsive & Clean Design</h5>
-                                <p class=\"text-muted my-3 ff-secondary\">Responsive design is a graphic user interface (GUI) design approach used to create content.</p>
-                                <div>
-                                    <a href=\"#\" class=\"fs-13 fw-medium\">Learn More <i class=\"ri-arrow-right-s-line align-bottom\"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-4\">
-                        <div class=\"d-flex p-3\">
-                            <div class=\"flex-shrink-0 me-3\">
-                                <div class=\"avatar-sm icon-effect\">
-                                    <div class=\"avatar-title bg-transparent text-success rounded-circle\">
-                                        <i class=\"ri-google-fill fs-36\"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"flex-grow-1\">
-                                <h5 class=\"fs-18\">Google Font Collection</h5>
-                                <p class=\"text-muted my-3 ff-secondary\">Google Fonts is a collection of 915 fonts, all available to use for free on your website.</p>
-                                <div>
-                                    <a href=\"#\" class=\"fs-13 fw-medium\">Learn More <i class=\"ri-arrow-right-s-line align-bottom\"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-4\">
-                        <div class=\"d-flex p-3\">
-                            <div class=\"flex-shrink-0 me-3\">
-                                <div class=\"avatar-sm icon-effect\">
-                                    <div class=\"avatar-title bg-transparent text-success rounded-circle\">
-                                        <i class=\"ri-briefcase-5-line fs-36\"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"flex-grow-1\">
-                                <h5 class=\"fs-18\">Top Industry Specialists</h5>
-                                <p class=\"text-muted my-3 ff-secondary\">An industrial specialist works with industrial operations to ensure that manufacturing facilities work.</p>
-                                <div>
-                                    <a href=\"#\" class=\"fs-13 fw-medium\">Learn More <i class=\"ri-arrow-right-s-line align-bottom\"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-        </section>
-        <!-- end services -->
-
-        <!-- start features -->
-        <section class=\"section bg-light py-5\" id=\"features\">
-            <div class=\"container\">
-                <div class=\"row align-items-center gy-4\">
-                    <div class=\"col-lg-6 col-sm-7 mx-auto\">
-                        <div>
-                            <img src=\"../../assets/images/landing/features/img-1.png\" alt=\"\" class=\"img-fluid mx-auto\">
-                        </div>
-                    </div>
-                    <div class=\"col-lg-6\">
-                        <div class=\"text-muted\">
-                            <div class=\"avatar-sm icon-effect mb-4\">
-                                <div class=\"avatar-title bg-transparent rounded-circle text-success h1\">
-                                    <i class=\"ri-collage-line fs-36\"></i>
-                                </div>
-                            </div>
-                            <h3 class=\"mb-3 fs-20\">Huge collection of widgets</h3>
-                            <p class=\"mb-4 ff-secondary fs-16\">Collection widgets specialize in displaying many elements of the same type, such as a collection of pictures from a collection of articles from a news app or a collection of messages from a communication app.</p>
-
-                            <div class=\"row pt-3\">
-                                <div class=\"col-3\">
-                                    <div class=\"text-center\">
-                                        <h4>5</h4>
-                                        <p>Dashboards</p>
-                                    </div>
-                                </div>
-                                <div class=\"col-3\">
-                                    <div class=\"text-center\">
-                                        <h4>150+</h4>
-                                        <p>Pages</p>
-                                    </div>
-                                </div>
-                                <div class=\"col-4\">
-                                    <div class=\"text-center\">
-                                        <h4>7+</h4>
-                                        <p>Functional Apps</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-        </section>
-        <!-- end features -->
-
-        <!-- start cta -->
-        <section class=\"py-5 bg-primary position-relative\">
-            <div class=\"bg-overlay bg-overlay-pattern opacity-50\"></div>
-            <div class=\"container\">
-                <div class=\"row align-items-center gy-4\">
-                    <div class=\"col-sm\">
-                        <div>
-                            <h4 class=\"text-white mb-0 fw-semibold\">Build your web App/SaaS with Velzon dashboard</h4>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-sm-auto\">
-                        <div>
-                            <a href=\"https://1.envato.market/velzon-admin\" target=\"_blank\" class=\"btn bg-gradient btn-danger\"><i class=\"ri-shopping-cart-2-line align-middle me-1\"></i> Buy Now</a>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-        </section>
-        <!-- end cta -->
-
-        <!-- start features -->
-        <section class=\"section\">
-            <div class=\"container\">
-                <div class=\"row align-items-center gy-4\">
-                    <div class=\"col-lg-6 order-2 order-lg-1\">
-                        <div class=\"text-muted\">
-                            <h5 class=\"fs-12 text-uppercase text-success\">Design</h5>
-                            <h4 class=\"mb-3\">Well Designed Dashboards</h4>
-                            <p class=\"mb-4 ff-secondary\">Quality Dashboards (QD) is a condition-specific, actionable web-based application for quality reporting and population management that is integrated into the Electronic Health Record (EHR).</p>
-
-                            <div class=\"row\">
-                                <div class=\"col-sm-5\">
-                                    <div class=\"vstack gap-2\">
-                                        <div class=\"d-flex align-items-center\">
-                                            <div class=\"flex-shrink-0 me-2\">
-                                                <div class=\"avatar-xs icon-effect\">
-                                                    <div class=\"avatar-title bg-transparent text-success rounded-circle h2\">
-                                                        <i class=\"ri-check-fill\"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class=\"flex-grow-1\">
-                                                <h5 class=\"fs-14 mb-0\">Ecommerce</h5>
-                                            </div>
-                                        </div>
-                                        <div class=\"d-flex align-items-center\">
-                                            <div class=\"flex-shrink-0 me-2\">
-                                                <div class=\"avatar-xs icon-effect\">
-                                                    <div class=\"avatar-title bg-transparent text-success rounded-circle h2\">
-                                                        <i class=\"ri-check-fill\"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class=\"flex-grow-1\">
-                                                <h5 class=\"fs-14 mb-0\">Analytics</h5>
-                                            </div>
-                                        </div>
-                                        <div class=\"d-flex align-items-center\">
-                                            <div class=\"flex-shrink-0 me-2\">
-                                                <div class=\"avatar-xs icon-effect\">
-                                                    <div class=\"avatar-title bg-transparent text-success rounded-circle h2\">
-                                                        <i class=\"ri-check-fill\"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class=\"flex-grow-1\">
-                                                <h5 class=\"fs-14 mb-0\">CRM</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class=\"col-sm-5\">
-                                    <div class=\"vstack gap-2\">
-                                        <div class=\"d-flex align-items-center\">
-                                            <div class=\"flex-shrink-0 me-2\">
-                                                <div class=\"avatar-xs icon-effect\">
-                                                    <div class=\"avatar-title bg-transparent text-success rounded-circle h2\">
-                                                        <i class=\"ri-check-fill\"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class=\"flex-grow-1\">
-                                                <h5 class=\"fs-14 mb-0\">Crypto</h5>
-                                            </div>
-                                        </div>
-                                        <div class=\"d-flex align-items-center\">
-                                            <div class=\"flex-shrink-0 me-2\">
-                                                <div class=\"avatar-xs icon-effect\">
-                                                    <div class=\"avatar-title bg-transparent text-success rounded-circle h2\">
-                                                        <i class=\"ri-check-fill\"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class=\"flex-grow-1\">
-                                                <h5 class=\"fs-14 mb-0\">Projects</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class=\"mt-4\">
-                                <a href=\"/\" class=\"btn btn-primary\">Learn More <i class=\"ri-arrow-right-line align-middle ms-1\"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-6 col-sm-7 col-10 ms-auto order-1 order-lg-2\">
-                        <div>
-                            <img src=\"../../assets/images/landing/features/img-2.png\" alt=\"\" class=\"img-fluid\">
-                        </div>
-                    </div>
-                </div>
-                <!-- end row -->
-
-                <div class=\"row align-items-center mt-5 pt-lg-5 gy-4\">
-                    <div class=\"col-lg-6 col-sm-7 col-10 mx-auto\">
-                        <div>
-                            <img src=\"../../assets/images/landing/features/img-3.png\" alt=\"\" class=\"img-fluid\">
-                        </div>
-                    </div>
-                    <div class=\"col-lg-6\">
-                        <div class=\"text-muted ps-lg-5\">
-                            <h5 class=\"fs-12 text-uppercase text-success\">structure</h5>
-                            <h4 class=\"mb-3\">Well Documented</h4>
-                            <p class=\"mb-4\">used to describe something that is known about or known to be true because there are many documents that describe it, prove it, etc.</p>
-
-                            <div class=\"vstack gap-2\">
-                                <div class=\"d-flex align-items-center\">
-                                    <div class=\"flex-shrink-0 me-2\">
-                                        <div class=\"avatar-xs icon-effect\">
-                                            <div class=\"avatar-title bg-transparent text-success rounded-circle h2\">
-                                                <i class=\"ri-check-fill\"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class=\"flex-grow-1\">
-                                        <p class=\"mb-0\">Dynamic Conetnt</p>
-                                    </div>
-                                </div>
-                                <div class=\"d-flex align-items-center\">
-                                    <div class=\"flex-shrink-0 me-2\">
-                                        <div class=\"avatar-xs icon-effect\">
-                                            <div class=\"avatar-title bg-transparent text-success rounded-circle h2\">
-                                                <i class=\"ri-check-fill\"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class=\"flex-grow-1\">
-                                        <p class=\"mb-0\">Setup plugin's information.</p>
-                                    </div>
-                                </div>
-                                <div class=\"d-flex align-items-center\">
-                                    <div class=\"flex-shrink-0 me-2\">
-                                        <div class=\"avatar-xs icon-effect\">
-                                            <div class=\"avatar-title bg-transparent text-success rounded-circle h2\">
-                                                <i class=\"ri-check-fill\"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class=\"flex-grow-1\">
-                                        <p class=\"mb-0\">Themes customization information</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-        </section>
-        <!-- end features -->
-
-        <!-- start plan -->
-        <section class=\"section bg-light\" id=\"plans\">
-            <div class=\"bg-overlay bg-overlay-pattern\"></div>
-            <div class=\"container\">
-                <div class=\"row justify-content-center\">
-                    <div class=\"col-lg-8\">
-                        <div class=\"text-center mb-5\">
-                            <h3 class=\"mb-3 fw-semibold\">Choose the plan that's right for you</h3>
-                            <p class=\"text-muted mb-4\">Simple pricing. No hidden fees. Advanced features for you business.</p>
-
-                            <div class=\"d-flex justify-content-center align-items-center\">
-                                <div>
-                                    <h5 class=\"fs-14 mb-0\">Month</h5>
-                                </div>
-                                <div class=\"form-check form-switch fs-20 ms-3 \" onclick=\"check()\">
-                                    <input class=\"form-check-input\" type=\"checkbox\" id=\"plan-switch\">
-                                    <label class=\"form-check-label\" for=\"plan-switch\"></label>
-                                </div>
-                                <div>
-                                    <h5 class=\"fs-14 mb-0\">Annual <span class=\"badge bg-success-subtle text-success\">Save 20%</span></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
-
-                <div class=\"row gy-4\">
-                    <div class=\"col-lg-4\">
-                        <div class=\"card plan-box mb-0\">
-                            <div class=\"card-body p-4 m-2\">
-                                <div class=\"d-flex align-items-center\">
-                                    <div class=\"flex-grow-1\">
-                                        <h5 class=\"mb-1 fw-semibold\">Basic Plan</h5>
-                                        <p class=\"text-muted mb-0\">For Startup</p>
-                                    </div>
-                                    <div class=\"avatar-sm\">
-                                        <div class=\"avatar-title bg-light rounded-circle text-primary\">
-                                            <i class=\"ri-book-mark-line fs-20\"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class=\"py-4 text-center\">
-                                    <h1 class=\"month\"><sup><small>\$</small></sup><span class=\"ff-secondary fw-bold\">19</span> <span class=\"fs-13 text-muted\">/Month</span></h1>
-                                    <h1 class=\"annual\"><sup><small>\$</small></sup><span class=\"ff-secondary fw-bold\">171</span> <span class=\"fs-13 text-muted\">/Year</span></h1>
-                                </div>
-
-                                <div>
-                                    <ul class=\"list-unstyled text-muted vstack gap-3 ff-secondary\">
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-success me-1\">
-                                                    <i class=\"ri-checkbox-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    Upto <b>3</b> Projects
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-success me-1\">
-                                                    <i class=\"ri-checkbox-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    Upto <b>299</b> Customers
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-success me-1\">
-                                                    <i class=\"ri-checkbox-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    Scalable Bandwidth
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-success me-1\">
-                                                    <i class=\"ri-checkbox-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    <b>5</b> FTP Login
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-danger me-1\">
-                                                    <i class=\"ri-close-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    <b>24/7</b> Support
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-danger me-1\">
-                                                    <i class=\"ri-close-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    <b>Unlimited</b> Storage
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-danger me-1\">
-                                                    <i class=\"ri-close-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    Domain
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class=\"mt-4\">
-                                        <a href=\"javascript:void(0);\" class=\"btn btn-soft-success w-100\">Get Started</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end col-->
-                    <div class=\"col-lg-4\">
-                        <div class=\"card plan-box mb-0 ribbon-box right\">
-                            <div class=\"card-body p-4 m-2\">
-                                <div class=\"ribbon-two ribbon-two-danger\"><span>Popular</span></div>
-                                <div class=\"d-flex align-items-center\">
-                                    <div class=\"flex-grow-1\">
-                                        <h5 class=\"mb-1 fw-semibold\">Pro Business</h5>
-                                        <p class=\"text-muted mb-0\">Professional plans</p>
-                                    </div>
-                                    <div class=\"avatar-sm\">
-                                        <div class=\"avatar-title bg-light rounded-circle text-primary\">
-                                            <i class=\"ri-medal-fill fs-20\"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class=\"py-4 text-center\">
-                                    <h1 class=\"month\"><sup><small>\$</small></sup><span class=\"ff-secondary fw-bold\">29</span> <span class=\"fs-13 text-muted\">/Month</span></h1>
-                                    <h1 class=\"annual\"><sup><small>\$</small></sup><span class=\"ff-secondary fw-bold\">261</span> <span class=\"fs-13 text-muted\">/Year</span></h1>
-                                </div>
-
-                                <div>
-                                    <ul class=\"list-unstyled text-muted vstack gap-3 ff-secondary\">
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-success me-1\">
-                                                    <i class=\"ri-checkbox-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    Upto <b>15</b> Projects
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-success me-1\">
-                                                    <i class=\"ri-checkbox-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    <b>Unlimited</b> Customers
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-success me-1\">
-                                                    <i class=\"ri-checkbox-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    Scalable Bandwidth
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-success me-1\">
-                                                    <i class=\"ri-checkbox-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    <b>12</b> FTP Login
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-success me-1\">
-                                                    <i class=\"ri-checkbox-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    <b>24/7</b> Support
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-danger me-1\">
-                                                    <i class=\"ri-close-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    <b>Unlimited</b> Storage
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-danger me-1\">
-                                                    <i class=\"ri-close-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    Domain
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class=\"mt-4\">
-                                        <a href=\"javascript:void(0);\" class=\"btn btn-soft-success w-100\">Get Started</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end col-->
-                    <div class=\"col-lg-4\">
-                        <div class=\"card plan-box mb-0\">
-                            <div class=\"card-body p-4 m-2\">
-                                <div class=\"d-flex align-items-center\">
-                                    <div class=\"flex-grow-1\">
-                                        <h5 class=\"mb-1 fw-semibold\">Platinum Plan</h5>
-                                        <p class=\"text-muted mb-0\">Enterprise Businesses</p>
-                                    </div>
-                                    <div class=\"avatar-sm\">
-                                        <div class=\"avatar-title bg-light rounded-circle text-primary\">
-                                            <i class=\"ri-stack-fill fs-20\"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class=\"py-4 text-center\">
-                                    <h1 class=\"month\"><sup><small>\$</small></sup><span class=\"ff-secondary fw-bold\">39</span> <span class=\"fs-13 text-muted\">/Month</span></h1>
-                                    <h1 class=\"annual\"><sup><small>\$</small></sup><span class=\"ff-secondary fw-bold\">351</span> <span class=\"fs-13 text-muted\">/Year</span></h1>
-                                </div>
-
-                                <div>
-                                    <ul class=\"list-unstyled text-muted vstack gap-3 ff-secondary\">
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-success me-1\">
-                                                    <i class=\"ri-checkbox-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    <b>Unlimited</b> Projects
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-success me-1\">
-                                                    <i class=\"ri-checkbox-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    <b>Unlimited</b> Customers
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-success me-1\">
-                                                    <i class=\"ri-checkbox-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    Scalable Bandwidth
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-success me-1\">
-                                                    <i class=\"ri-checkbox-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    <b>Unlimited</b> FTP Login
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-success me-1\">
-                                                    <i class=\"ri-checkbox-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    <b>24/7</b> Support
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-success me-1\">
-                                                    <i class=\"ri-checkbox-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    <b>Unlimited</b> Storage
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-success me-1\">
-                                                    <i class=\"ri-checkbox-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    Domain
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class=\"mt-4\">
-                                        <a href=\"javascript:void(0);\" class=\"btn btn-soft-success w-100\">Get Started</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end col-->
-                </div>
-                <!--end row-->
-            </div>
-            <!-- end container -->
-        </section>
-        <!-- end plan -->
-
-        <!-- start faqs -->
-        <section class=\"section\">
-            <div class=\"container\">
-                <div class=\"row justify-content-center\">
-                    <div class=\"col-lg-8\">
-                        <div class=\"text-center mb-5\">
-                            <h3 class=\"mb-3 fw-semibold\">Frequently Asked Questions</h3>
-                            <p class=\"text-muted mb-4 ff-secondary\">If you can not find answer to your question in our FAQ, you can always contact us or email us. We will answer you shortly!</p>
-
-                            <div class=\"hstack gap-2 justify-content-center\">
-                                <button type=\"button\" class=\"btn btn-primary btn-label rounded-pill\"><i class=\"ri-mail-line label-icon align-middle rounded-pill fs-16 me-2\"></i> Email Us</button>
-                                <button type=\"button\" class=\"btn btn-info btn-label rounded-pill\"><i class=\"ri-twitter-line label-icon align-middle rounded-pill fs-16 me-2\"></i> Send Us Tweet</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end row -->
-
-                <div class=\"row g-lg-5 g-4\">
-                    <div class=\"col-lg-6\">
-                        <div class=\"d-flex align-items-center mb-2\">
-                            <div class=\"flex-shrink-0 me-1\">
-                                <i class=\"ri-question-line fs-24 align-middle text-success me-1\"></i>
-                            </div>
-                            <div class=\"flex-grow-1\">
-                                <h5 class=\"mb-0 fw-semibold\">General Questions</h5>
-                            </div>
-                        </div>
-                        <div class=\"accordion custom-accordionwithicon custom-accordion-border accordion-border-box\" id=\"genques-accordion\">
-                            <div class=\"accordion-item\">
-                                <h2 class=\"accordion-header\" id=\"genques-headingOne\">
-                                    <button class=\"accordion-button\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#genques-collapseOne\" aria-expanded=\"true\" aria-controls=\"genques-collapseOne\">
-                                        What is the purpose of using themes ?
-                                    </button>
-                                </h2>
-                                <div id=\"genques-collapseOne\" class=\"accordion-collapse collapse show\" aria-labelledby=\"genques-headingOne\" data-bs-parent=\"#genques-accordion\">
-                                    <div class=\"accordion-body ff-secondary\">
-                                        A theme is a set of colors, fonts, effects, and more that can be applied to your entire presentation to give it a
-                                        consistent, professional look. You've already been using a theme, even if you didn't know it: the default Office theme, which consists.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"accordion-item\">
-                                <h2 class=\"accordion-header\" id=\"genques-headingTwo\">
-                                    <button class=\"accordion-button collapsed\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#genques-collapseTwo\" aria-expanded=\"false\" aria-controls=\"genques-collapseTwo\">
-                                        Can a theme have more than one theme?
-                                    </button>
-                                </h2>
-                                <div id=\"genques-collapseTwo\" class=\"accordion-collapse collapse\" aria-labelledby=\"genques-headingTwo\" data-bs-parent=\"#genques-accordion\">
-                                    <div class=\"accordion-body ff-secondary\">
-                                        A story can have as many themes as the reader can identify based on recurring patterns and parallels within the story
-                                        itself. In looking at ways to separate themes into a hierarchy, we might find it useful to follow the example of a single book.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"accordion-item\">
-                                <h2 class=\"accordion-header\" id=\"genques-headingThree\">
-                                    <button class=\"accordion-button collapsed\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#genques-collapseThree\" aria-expanded=\"false\" aria-controls=\"genques-collapseThree\">
-                                        What are theme features?
-                                    </button>
-                                </h2>
-                                <div id=\"genques-collapseThree\" class=\"accordion-collapse collapse\" aria-labelledby=\"genques-headingThree\" data-bs-parent=\"#genques-accordion\">
-                                    <div class=\"accordion-body ff-secondary\">
-                                        Theme features is a set of specific functionality that may be enabled by theme authors. Themes must register each
-                                        individual Theme Feature that the author wishes to support. Theme support functions should be called in the theme's functions.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"accordion-item\">
-                                <h2 class=\"accordion-header\" id=\"genques-headingFour\">
-                                    <button class=\"accordion-button collapsed\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#genques-collapseFour\" aria-expanded=\"false\" aria-controls=\"genques-collapseFour\">
-                                        What is simple theme?
-                                    </button>
-                                </h2>
-                                <div id=\"genques-collapseFour\" class=\"accordion-collapse collapse\" aria-labelledby=\"genques-headingFour\" data-bs-parent=\"#genques-accordion\">
-                                    <div class=\"accordion-body ff-secondary\">
-                                        Simple is a free WordPress theme, by Themify, built exactly what it is named for: simplicity. Immediately upgrade the
-                                        quality of your WordPress site with the simple theme To use the built-in Chrome theme editor.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--end accordion-->
-
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-6\">
-                        <div class=\"d-flex align-items-center mb-2\">
-                            <div class=\"flex-shrink-0 me-1\">
-                                <i class=\"ri-shield-keyhole-line fs-24 align-middle text-success me-1\"></i>
-                            </div>
-                            <div class=\"flex-grow-1\">
-                                <h5 class=\"mb-0 fw-semibold\">Privacy &amp; Security</h5>
-                            </div>
-                        </div>
-
-                        <div class=\"accordion custom-accordionwithicon custom-accordion-border accordion-border-box\" id=\"privacy-accordion\">
-                            <div class=\"accordion-item\">
-                                <h2 class=\"accordion-header\" id=\"privacy-headingOne\">
-                                    <button class=\"accordion-button collapsed\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#privacy-collapseOne\" aria-expanded=\"false\" aria-controls=\"privacy-collapseOne\">
-                                        Does Word have night mode?
-                                    </button>
-                                </h2>
-                                <div id=\"privacy-collapseOne\" class=\"accordion-collapse collapse\" aria-labelledby=\"privacy-headingOne\" data-bs-parent=\"#privacy-accordion\">
-                                    <div class=\"accordion-body ff-secondary\">
-                                        You can run Microsoft Word in dark mode, which uses a dark color palette to help reduce eye strain in low light
-                                        settings. You can choose to make the document white or black using the Switch Modes button in the ribbon's View tab.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"accordion-item\">
-                                <h2 class=\"accordion-header\" id=\"privacy-headingTwo\">
-                                    <button class=\"accordion-button\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#privacy-collapseTwo\" aria-expanded=\"true\" aria-controls=\"privacy-collapseTwo\">
-                                        Is theme an opinion?
-                                    </button>
-                                </h2>
-                                <div id=\"privacy-collapseTwo\" class=\"accordion-collapse collapse show\" aria-labelledby=\"privacy-headingTwo\" data-bs-parent=\"#privacy-accordion\">
-                                    <div class=\"accordion-body ff-secondary\">
-                                        A theme is an opinion the author expresses on the subject, for instance, the author's dissatisfaction with the narrow
-                                        confines of French bourgeois marriage during that period theme is an idea that a writer repeats.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"accordion-item\">
-                                <h2 class=\"accordion-header\" id=\"privacy-headingThree\">
-                                    <button class=\"accordion-button collapsed\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#privacy-collapseThree\" aria-expanded=\"false\" aria-controls=\"privacy-collapseThree\">
-                                        How do you develop a theme?
-                                    </button>
-                                </h2>
-                                <div id=\"privacy-collapseThree\" class=\"accordion-collapse collapse\" aria-labelledby=\"privacy-headingThree\" data-bs-parent=\"#privacy-accordion\">
-                                    <div class=\"accordion-body ff-secondary\">
-                                        A short story, novella, or novel presents a narrative to its reader. Perhaps that narrative involves mystery, terror,
-                                        romance, comedy, or all of the above. These works of fiction may also contain memorable characters, vivid
-                                        world-building, literary devices.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"accordion-item\">
-                                <h2 class=\"accordion-header\" id=\"privacy-headingFour\">
-                                    <button class=\"accordion-button collapsed\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#privacy-collapseFour\" aria-expanded=\"false\" aria-controls=\"privacy-collapseFour\">
-                                        Do stories need themes?
-                                    </button>
-                                </h2>
-                                <div id=\"privacy-collapseFour\" class=\"accordion-collapse collapse\" aria-labelledby=\"privacy-headingFour\" data-bs-parent=\"#privacy-accordion\">
-                                    <div class=\"accordion-body ff-secondary\">
-                                        A story can have as many themes as the reader can identify based on recurring patterns and parallels within the story
-                                        itself. In looking at ways to separate themes into a hierarchy, we might find it useful to follow the example of a
-                                        single book.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--end accordion-->
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-        </section>
-        <!-- end faqs -->
-
-        <!-- start review -->
-        <section class=\"section bg-primary\" id=\"reviews\">
-            <div class=\"bg-overlay bg-overlay-pattern\"></div>
-            <div class=\"container\">
-                <div class=\"row justify-content-center\">
-                    <div class=\"col-lg-10\">
-                        <div class=\"text-center\">
-                            <div>
-                                <i class=\"ri-double-quotes-l text-success display-3\"></i>
-                            </div>
-                            <h4 class=\"text-white mb-5\"><span class=\"text-success\">19k</span>+ Satisfied clients</h4>
-
-                            <!-- Swiper -->
-                            <div class=\"swiper client-review-swiper rounded\" dir=\"ltr\">
-                                <div class=\"swiper-wrapper\">
-                                    <div class=\"swiper-slide\">
-                                        <div class=\"row justify-content-center\">
-                                            <div class=\"col-10\">
-                                                <div class=\"text-white-50\">
-                                                    <p class=\"fs-20 ff-secondary mb-4\">\" I am givng 5 stars. Theme is great and everyone one stuff everything in theme. Future request should not affect current state of theme. \"</p>
-
-                                                    <div>
-                                                        <h5 class=\"text-white\">gregoriusus</h5>
-                                                        <p>- Skote User</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end slide -->
-                                    <div class=\"swiper-slide\">
-                                        <div class=\"row justify-content-center\">
-                                            <div class=\"col-10\">
-                                                <div class=\"text-white-50\">
-                                                    <p class=\"fs-20 ff-secondary mb-4\">\" Awesome support. Had few issues while setting up because of my device, the support team helped me fix them up in a day. Everything looks clean and good. Highly recommended! \"</p>
-
-                                                    <div>
-                                                        <h5 class=\"text-white\">GeekyGreenOwl</h5>
-                                                        <p>- Skote User</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end slide -->
-                                    <div class=\"swiper-slide\">
-                                        <div class=\"row justify-content-center\">
-                                            <div class=\"col-10\">
-                                                <div class=\"text-white-50\">
-                                                    <p class=\"fs-20 ff-secondary mb-4\">\" Amazing template, Redux store and components is nicely designed. It's a great start point for an admin based project. Clean Code and good documentation. Template is completely in React and absolutely no usage of jQuery \"</p>
-
-                                                    <div>
-                                                        <h5 class=\"text-white\">sreeks456</h5>
-                                                        <p>- Veltrix User</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end slide -->
-                                </div>
-                                <div class=\"swiper-button-next bg-white rounded-circle\"></div>
-                                <div class=\"swiper-button-prev bg-white rounded-circle\"></div>
-                                <div class=\"swiper-pagination position-relative mt-2\"></div>
-                            </div>
-                            <!-- end slider -->
-                        </div>
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-        </section>
-        <!-- end review -->
-
-        <!-- start counter -->
-        <section class=\"py-5 position-relative bg-light\">
-            <div class=\"container\">
-                <div class=\"row text-center gy-4\">
-                    <div class=\"col-lg-3 col-6\">
-                        <div>
-                            <h2 class=\"mb-2\"><span class=\"counter-value\" data-target=\"100\">0</span>+</h2>
-                            <div class=\"text-muted\">Projects Completed</div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-
-                    <div class=\"col-lg-3 col-6\">
-                        <div>
-                            <h2 class=\"mb-2\"><span class=\"counter-value\" data-target=\"24\">0</span></h2>
-                            <div class=\"text-muted\">Win Awards</div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-
-                    <div class=\"col-lg-3 col-6\">
-                        <div>
-                            <h2 class=\"mb-2\"><span class=\"counter-value\" data-target=\"20.3\">0</span>k</h2>
-                            <div class=\"text-muted\">Satisfied Clients</div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-3 col-6\">
-                        <div>
-                            <h2 class=\"mb-2\"><span class=\"counter-value\" data-target=\"50\">0</span></h2>
-                            <div class=\"text-muted\">Employees</div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-        </section>
-        <!-- end counter -->
-
-        <!-- start Work Process -->
-        <section class=\"section\">
-            <div class=\"container\">
-                <div class=\"row justify-content-center\">
-                    <div class=\"col-lg-8\">
-                        <div class=\"text-center mb-5\">
-                            <h3 class=\"mb-3 fw-semibold\">Our Work Process</h3>
-                            <p class=\"text-muted mb-4 ff-secondary\">In an ideal world this website wouldn’t exist, a client would acknowledge the importance of having web copy before the Proin vitae ipsum vel ex finibus semper design starts.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- end row -->
-
-                <div class=\"row text-center\">
-                    <div class=\"col-lg-4\">
-                        <div class=\"process-card mt-4\">
-                            <div class=\"process-arrow-img d-none d-lg-block\">
-                                <img src=\"../../assets/images/landing/process-arrow-img.png\" alt=\"\" class=\"img-fluid\">
-                            </div>
-                            <div class=\"avatar-sm icon-effect mx-auto mb-4\">
-                                <div class=\"avatar-title bg-transparent text-success rounded-circle h1\">
-                                    <i class=\"ri-quill-pen-line\"></i>
-                                </div>
-                            </div>
-
-                            <h5>Tell us what you need</h5>
-                            <p class=\"text-muted ff-secondary\">The profession and the employer and your desire to make your mark.</p>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-4\">
-                        <div class=\"process-card mt-4\">
-                            <div class=\"process-arrow-img d-none d-lg-block\">
-                                <img src=\"../../assets/images/landing/process-arrow-img.png\" alt=\"\" class=\"img-fluid\">
-                            </div>
-                            <div class=\"avatar-sm icon-effect mx-auto mb-4\">
-                                <div class=\"avatar-title bg-transparent text-success rounded-circle h1\">
-                                    <i class=\"ri-user-follow-line\"></i>
-                                </div>
-                            </div>
-
-                            <h5>Get free quotes</h5>
-                            <p class=\"text-muted ff-secondary\">The most important aspect of beauty was, therefore, an inherent part.</p>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-4\">
-                        <div class=\"process-card mt-4\">
-                            <div class=\"avatar-sm icon-effect mx-auto mb-4\">
-                                <div class=\"avatar-title bg-transparent text-success rounded-circle h1\">
-                                    <i class=\"ri-book-mark-line\"></i>
-                                </div>
-                            </div>
-
-                            <h5>Deliver high quality product</h5>
-                            <p class=\"text-muted ff-secondary\">We quickly learn to fear and thus automatically avoid potentially.</p>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-        </section>
-        <!-- end Work Process -->
-
-        <!-- start team -->
-        <section class=\"section bg-light\" id=\"team\">
-            <div class=\"container\">
-                <div class=\"row justify-content-center\">
-                    <div class=\"col-lg-8\">
-                        <div class=\"text-center mb-5\">
-                            <h3 class=\"mb-3 fw-semibold\">Our <span class=\"text-danger\">Team</span></h3>
-                            <p class=\"text-muted mb-4 ff-secondary\">To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce the grammar.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- end row -->
-                <div class=\"row\">
-                    <div class=\"col-lg-3 col-sm-6\">
-                        <div class=\"card\">
-                            <div class=\"card-body text-center p-4\">
-                                <div class=\"avatar-xl mx-auto mb-4 position-relative\">
-                                    <img src=\"../../assets/images/users/avatar-2.jpg\" alt=\"\" class=\"img-fluid rounded-circle\">
-                                    <a href=\"apps-mailbox\" class=\"btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs\">
-                                        <div class=\"avatar-title bg-transparent\">
-                                            <i class=\"ri-mail-fill align-bottom\"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- end card body -->
-                                <h5 class=\"mb-1\"><a href=\"pages-profile\" class=\"text-body\">Nancy Martino</a></h5>
-                                <p class=\"text-muted mb-0 ff-secondary\">Team Leader</p>
-                            </div>
-                        </div>
-                        <!-- end card -->
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-3 col-sm-6\">
-                        <div class=\"card\">
-                            <div class=\"card-body text-center p-4\">
-                                <div class=\"avatar-xl mx-auto mb-4 position-relative\">
-                                    <img src=\"../../assets/images/users/avatar-10.jpg\" alt=\"\" class=\"img-fluid rounded-circle\">
-                                    <a href=\"apps-mailbox\" class=\"btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs\">
-                                        <div class=\"avatar-title bg-transparent\">
-                                            <i class=\"ri-mail-fill align-bottom\"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- end card body -->
-                                <h5 class=\"mb-1\"><a href=\"pages-profile\" class=\"text-body\">Henry Baird</a></h5>
-                                <p class=\"text-muted mb-0 ff-secondary\">Full Stack Developer</p>
-                            </div>
-                        </div>
-                        <!-- end card -->
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-3 col-sm-6\">
-                        <div class=\"card\">
-                            <div class=\"card-body text-center p-4\">
-                                <div class=\"avatar-xl mx-auto mb-4 position-relative\">
-                                    <img src=\"../../assets/images/users/avatar-3.jpg\" alt=\"\" class=\"img-fluid rounded-circle\">
-                                    <a href=\"apps-mailbox\" class=\"btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs\">
-                                        <div class=\"avatar-title bg-transparent\">
-                                            <i class=\"ri-mail-fill align-bottom\"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- end card body -->
-                                <h5 class=\"mb-1\"><a href=\"pages-profile\" class=\"text-body\">Frank Hook</a></h5>
-                                <p class=\"text-muted mb-0 ff-secondary\">Project Manager</p>
-                            </div>
-                        </div>
-                        <!-- end card -->
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-3 col-sm-6\">
-                        <div class=\"card\">
-                            <div class=\"card-body text-center p-4\">
-                                <div class=\"avatar-xl mx-auto mb-4 position-relative\">
-                                    <img src=\"../../assets/images/users/avatar-8.jpg\" alt=\"\" class=\"img-fluid rounded-circle\">
-                                    <a href=\"apps-mailbox\" class=\"btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs\">
-                                        <div class=\"avatar-title bg-transparent\">
-                                            <i class=\"ri-mail-fill align-bottom\"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- end card body -->
-                                <h5 class=\"mb-1\"><a href=\"pages-profile\" class=\"text-body\">Donald Palmer</a></h5>
-                                <p class=\"text-muted mb-0 ff-secondary\">UI/UX Designer</p>
-                            </div>
-                        </div>
-                        <!-- end card -->
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
-                <div class=\"row\">
-                    <div class=\"col-lg-3 col-sm-6\">
-                        <div class=\"card\">
-                            <div class=\"card-body text-center p-4\">
-                                <div class=\"avatar-xl mx-auto mb-4 position-relative\">
-                                    <img src=\"../../assets/images/users/avatar-5.jpg\" alt=\"\" class=\"img-fluid rounded-circle\">
-                                    <a href=\"apps-mailbox\" class=\"btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs\">
-                                        <div class=\"avatar-title bg-transparent\">
-                                            <i class=\"ri-mail-fill align-bottom\"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- end card body -->
-                                <h5 class=\"mb-1\"><a href=\"pages-profile\" class=\"text-body\">Erica Kernan</a></h5>
-                                <p class=\"text-muted mb-0 ff-secondary\">Web Designer</p>
-                            </div>
-                        </div>
-                        <!-- end card -->
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-3 col-sm-6\">
-                        <div class=\"card\">
-                            <div class=\"card-body text-center p-4\">
-                                <div class=\"avatar-xl mx-auto mb-4 position-relative\">
-                                    <img src=\"../../assets/images/users/avatar-4.jpg\" alt=\"\" class=\"img-fluid rounded-circle\">
-                                    <a href=\"apps-mailbox\" class=\"btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs\">
-                                        <div class=\"avatar-title bg-transparent\">
-                                            <i class=\"ri-mail-fill align-bottom\"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- end card body -->
-                                <h5 class=\"mb-1\"><a href=\"pages-profile\" class=\"text-body\">Alexis Clarke</a></h5>
-                                <p class=\"text-muted mb-0 ff-secondary\">Backend Developer</p>
-                            </div>
-                        </div>
-                        <!-- end card -->
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-3 col-sm-6\">
-                        <div class=\"card\">
-                            <div class=\"card-body text-center p-4\">
-                                <div class=\"avatar-xl mx-auto mb-4 position-relative\">
-                                    <img src=\"../../assets/images/users/avatar-6.jpg\" alt=\"\" class=\"img-fluid rounded-circle\">
-                                    <a href=\"apps-mailbox\" class=\"btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs\">
-                                        <div class=\"avatar-title bg-transparent\">
-                                            <i class=\"ri-mail-fill align-bottom\"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- end card body -->
-                                <h5 class=\"mb-1\"><a href=\"pages-profile\" class=\"text-body\">Marie Ward</a></h5>
-                                <p class=\"text-muted mb-0 ff-secondary\">Full Stack Developer</p>
-                            </div>
-                        </div>
-                        <!-- end card -->
-                    </div>
-                    <!-- end col -->
-
-                    <div class=\"col-lg-3 col-sm-6\">
-                        <div class=\"card\">
-                            <div class=\"card-body text-center p-4\">
-                                <div class=\"avatar-xl mx-auto mb-4 position-relative\">
-                                    <img src=\"../../assets/images/users/avatar-7.jpg\" alt=\"\" class=\"img-fluid rounded-circle\">
-                                    <a href=\"apps-mailbox\" class=\"btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs\">
-                                        <div class=\"avatar-title bg-transparent\">
-                                            <i class=\"ri-mail-fill align-bottom\"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- end card body -->
-                                <h5 class=\"mb-1\"><a href=\"pages-profile\" class=\"text-body\">Jack Gough</a></h5>
-                                <p class=\"text-muted mb-0 ff-secondary\">React Js Developer</p>
-                            </div>
-                        </div>
-                        <!-- end card -->
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
-                <div class=\"row\">
-                    <div class=\"col-lg-12\">
-                        <div class=\"text-center mt-2\">
-                            <a href=\"pages-team\" class=\"btn btn-primary\">View All Members <i class=\"ri-arrow-right-line ms-1 align-bottom\"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-        </section>
-        <!-- end team -->
-
-        <!-- start contact -->
-        <section class=\"section\" id=\"contact\">
-            <div class=\"container\">
-                <div class=\"row justify-content-center\">
-                    <div class=\"col-lg-8\">
-                        <div class=\"text-center mb-5\">
-                            <h3 class=\"mb-3 fw-semibold\">Get In Touch</h3>
-                            <p class=\"text-muted mb-4 ff-secondary\">We thrive when coming up with innovative ideas but also understand that a smart concept should be supported with faucibus sapien odio measurable results.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- end row -->
-
-                <div class=\"row gy-4\">
-                    <div class=\"col-lg-4\">
-                        <div>
-                            <div class=\"mt-4\">
-                                <h5 class=\"fs-13 text-muted text-uppercase\">Office Address 1:</h5>
-                                <div class=\"ff-secondary fw-semibold\">4461 Cedar Street Moro, <br />AR 72368</div>
-                            </div>
-                            <div class=\"mt-4\">
-                                <h5 class=\"fs-13 text-muted text-uppercase\">Office Address 2:</h5>
-                                <div class=\"ff-secondary fw-semibold\">2467 Swick Hill Street <br />New Orleans, LA</div>
-                            </div>
-                            <div class=\"mt-4\">
-                                <h5 class=\"fs-13 text-muted text-uppercase\">Working Hours:</h5>
-                                <div class=\"ff-secondary fw-semibold\">9:00am to 6:00pm</div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-8\">
-                        <div>
-                            <form>
-                                <div class=\"row\">
-                                    <div class=\"col-lg-6\">
-                                        <div class=\"mb-4\">
-                                            <label for=\"name\" class=\"form-label fs-13\">Name</label>
-                                            <input name=\"name\" id=\"name\" type=\"text\" class=\"form-control bg-light border-light\" placeholder=\"Your name*\">
-                                        </div>
-                                    </div>
-                                    <div class=\"col-lg-6\">
-                                        <div class=\"mb-4\">
-                                            <label for=\"email\" class=\"form-label fs-13\">Email</label>
-                                            <input name=\"email\" id=\"email\" type=\"email\" class=\"form-control bg-light border-light\" placeholder=\"Your email*\">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class=\"row\">
-                                    <div class=\"col-lg-12\">
-                                        <div class=\"mb-4\">
-                                            <label for=\"subject\" class=\"form-label fs-13\">Subject</label>
-                                            <input type=\"text\" class=\"form-control bg-light border-light\" id=\"subject\" name=\"subject\" placeholder=\"Your Subject..\" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class=\"row\">
-                                    <div class=\"col-lg-12\">
-                                        <div class=\"mb-3\">
-                                            <label for=\"comments\" class=\"form-label fs-13\">Message</label>
-                                            <textarea name=\"comments\" id=\"comments\" rows=\"3\" class=\"form-control bg-light border-light\" placeholder=\"Your message...\"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class=\"row\">
-                                    <div class=\"col-lg-12 text-end\">
-                                        <input type=\"submit\" id=\"submit\" name=\"send\" class=\"submitBnt btn btn-primary\" value=\"Send Message\">
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-        </section>
-        <!-- end contact -->
-
-        <!-- start cta -->
-        <section class=\"py-5 bg-primary position-relative\">
-            <div class=\"bg-overlay bg-overlay-pattern opacity-50\"></div>
-            <div class=\"container\">
-                <div class=\"row align-items-center gy-4\">
-                    <div class=\"col-sm\">
-                        <div>
-                            <h4 class=\"text-white mb-0 fw-semibold\">Build your web App/SaaS with Velzon dashboard</h4>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-sm-auto\">
-                        <div>
-                            <a href=\"https://1.envato.market/velzon-admin\" target=\"_blank\" class=\"btn bg-gradient btn-danger\"><i class=\"ri-shopping-cart-2-line align-middle me-1\"></i> Buy Now</a>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-        </section>
-        <!-- end cta -->
-
-        <!-- Start footer -->
-        <footer class=\"custom-footer bg-dark py-5 position-relative\">
-            <div class=\"container\">
-                <div class=\"row\">
-                    <div class=\"col-lg-4 mt-4\">
-                        <div>
-                            <div>
-                                <img src=\"../../assets/images/logo-light.png\" alt=\"logo light\" height=\"17\">
-                            </div>
-                            <div class=\"mt-4 fs-13\">
-                                <p>Premium Multipurpose Admin & Dashboard Template</p>
-                                <p class=\"ff-secondary\">You can build any type of web application like eCommerce, CRM, CMS, Project management apps, Admin Panels, etc using Velzon.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class=\"col-lg-7 ms-lg-auto\">
-                        <div class=\"row\">
-                            <div class=\"col-sm-4 mt-4\">
-                                <h5 class=\"text-white mb-0\">Company</h5>
-                                <div class=\"text-muted mt-3\">
-                                    <ul class=\"list-unstyled ff-secondary footer-list\">
-                                        <li><a href=\"pages-profile\">About Us</a></li>
-                                        <li><a href=\"pages-gallery\">Gallery</a></li>
-                                        <li><a href=\"apps-projects-overview\">Projects</a></li>
-                                        <li><a href=\"pages-timeline\">Timeline</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class=\"col-sm-4 mt-4\">
-                                <h5 class=\"text-white mb-0\">Apps Pages</h5>
-                                <div class=\"text-muted mt-3\">
-                                    <ul class=\"list-unstyled ff-secondary footer-list\">
-                                        <li><a href=\"pages-pricing\">Calendar</a></li>
-                                        <li><a href=\"apps-mailbox\">Mailbox</a></li>
-                                        <li><a href=\"apps-chat\">Chat</a></li>
-                                        <li><a href=\"apps-crm-deals\">Deals</a></li>
-                                        <li><a href=\"apps-tasks-kanban\">Kanban Board</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class=\"col-sm-4 mt-4\">
-                                <h5 class=\"text-white mb-0\">Support</h5>
-                                <div class=\"text-muted mt-3\">
-                                    <ul class=\"list-unstyled ff-secondary footer-list\">
-                                        <li><a href=\"pages-faqs\">FAQ</a></li>
-                                        <li><a href=\"pages-faqs\">Contact</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class=\"row text-center text-sm-start align-items-center mt-5\">
-                    <div class=\"col-sm-6\">
-
-                        <div>
-                            <p class=\"copy-rights mb-0\">
-                                <script> document.write(new Date().getFullYear()) </script> © Velzon - Themesbrand
-                            </p>
-                        </div>
-                    </div>
-                    <div class=\"col-sm-6\">
-                        <div class=\"text-sm-end mt-3 mt-sm-0\">
-                            <ul class=\"list-inline mb-0 footer-social-link\">
-                                <li class=\"list-inline-item\">
-                                    <a href=\"javascript: void(0);\" class=\"avatar-xs d-block\">
-                                        <div class=\"avatar-title rounded-circle\">
-                                            <i class=\"ri-facebook-fill\"></i>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class=\"list-inline-item\">
-                                    <a href=\"javascript: void(0);\" class=\"avatar-xs d-block\">
-                                        <div class=\"avatar-title rounded-circle\">
-                                            <i class=\"ri-github-fill\"></i>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class=\"list-inline-item\">
-                                    <a href=\"javascript: void(0);\" class=\"avatar-xs d-block\">
-                                        <div class=\"avatar-title rounded-circle\">
-                                            <i class=\"ri-linkedin-fill\"></i>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class=\"list-inline-item\">
-                                    <a href=\"javascript: void(0);\" class=\"avatar-xs d-block\">
-                                        <div class=\"avatar-title rounded-circle\">
-                                            <i class=\"ri-google-fill\"></i>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class=\"list-inline-item\">
-                                    <a href=\"javascript: void(0);\" class=\"avatar-xs d-block\">
-                                        <div class=\"avatar-title rounded-circle\">
-                                            <i class=\"ri-dribbble-line\"></i>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- end footer -->
-
-
-        <!--start back-to-top-->
-        <button onclick=\"topFunction()\" class=\"btn btn-danger btn-icon landing-back-top\" id=\"back-to-top\">
-            <i class=\"ri-arrow-up-line\"></i>
-        </button>
-        <!--end back-to-top-->
-
-    </div>
-    <!-- end layout wrapper -->
-
-
-    ";
-        // line 1696
-        echo twig_include($this->env, $context, "partials/vendor-scripts.html.twig");
+<body>
+\t<!-- Begin page -->
+\t<div id=\"layout-wrapper\">
+\t\t";
+        // line 45
+        echo twig_include($this->env, $context, "partials/menu.html.twig");
         echo "
 
-    <!--Swiper slider js-->
-    <script src=\"../../assets/libs/swiper/swiper-bundle.min.js\"></script>
+\t\t<!-- ============================================================== -->
+\t\t<!-- Start right Content here -->
+\t\t<!-- ============================================================== -->
+\t\t\t<div class=\"main-content\"> <div class=\"page-content\">
+\t\t\t\t<div class=\"container-fluid\">
+\t\t\t\t\t";
+        // line 52
+        echo twig_include($this->env, $context, "partials/page-title.html.twig", ["pagetitle" => "Tableau de Bord", "title" => "Vue d'ensemble"]);
+        echo "
 
-    <!-- landing init -->
-    <script src=\"../../assets/js/pages/landing.init.js\"></script>
-</body>
+                    <div class=\"row\">
+                        <!-- Statistiques principales -->
+                        <div class=\"col-xl-3 col-md-6\">
+                            <div class=\"card card-animate card-stat\">
+                                <div class=\"card-body\">
+                                    <div class=\"d-flex justify-content-between\">
+                                        <div>
+                                            <p class=\"fw-medium text-muted mb-0\">Chiffre d'Affaires</p>
+                                            <h2 class=\"mt-4 ff-secondary fw-semibold\">
+                                                <span class=\"counter-value\" data-target=\"";
+        // line 63
+        echo twig_escape_filter($this->env, twig_number_format_filter($this->env, (isset($context["ca_mois"]) || array_key_exists("ca_mois", $context) ? $context["ca_mois"] : (function () { throw new RuntimeError('Variable "ca_mois" does not exist.', 63, $this->source); })()), 2, ",", " "), "html", null, true);
+        echo "\">0</span> €
+                                            </h2>
+                                            <p class=\"mb-0 text-muted\">
+                                                <span class=\"badge bg-light text-success mb-0\">
+                                                    <i class=\"ri-arrow-up-line align-middle\"></i> ";
+        // line 67
+        echo twig_escape_filter($this->env, (isset($context["evolution_ca"]) || array_key_exists("evolution_ca", $context) ? $context["evolution_ca"] : (function () { throw new RuntimeError('Variable "evolution_ca" does not exist.', 67, $this->source); })()), "html", null, true);
+        echo "
+\t\t\t\t\t%
+\t\t\t\t</span>
+\t\t\t\tvs. mois dernier
+\t\t\t</p>
+\t\t</div>
+\t\t<div>
+\t\t\t<div class=\"avatar-sm flex-shrink-0\">
+\t\t\t\t<span class=\"avatar-title bg-info-subtle rounded-circle fs-2\">
+\t\t\t\t\t<i data-feather=\"dollar-sign\" class=\"text-info\"></i>
+\t\t\t\t</span>
+\t\t\t</div>
+\t\t</div>
+\t</div>
+</body></div></div></div><div class=\"col-xl-3 col-md-6\"><div class=\"card card-animate card-stat\"><div class=\"card-body\">
+<div class=\"d-flex justify-content-between\">
+\t<div>
+\t\t<p class=\"fw-medium text-muted mb-0\">Commandes en cours</p>
+\t\t<h2 class=\"mt-4 ff-secondary fw-semibold\">
+\t\t\t<span class=\"counter-value\" data-target=\"";
+        // line 86
+        echo twig_escape_filter($this->env, (isset($context["commandes_encours"]) || array_key_exists("commandes_encours", $context) ? $context["commandes_encours"] : (function () { throw new RuntimeError('Variable "commandes_encours" does not exist.', 86, $this->source); })()), "html", null, true);
+        echo "\">0</span>
+\t\t</h2>
+\t\t<p class=\"mb-0 text-muted\">
+\t\t\t<span class=\"badge bg-light text-success mb-0\">
+\t\t\t\t<i class=\"ri-arrow-up-line align-middle\"></i>
+\t\t\t\t";
+        // line 91
+        echo twig_escape_filter($this->env, (isset($context["evolution_commandes"]) || array_key_exists("evolution_commandes", $context) ? $context["evolution_commandes"] : (function () { throw new RuntimeError('Variable "evolution_commandes" does not exist.', 91, $this->source); })()), "html", null, true);
+        echo "
+\t\t\t\t%
+\t\t\t</span>
+\t\t\tvs. mois dernier
+\t\t</p>
+\t</div>
+\t<div>
+\t\t<div class=\"avatar-sm flex-shrink-0\">
+\t\t\t<span class=\"avatar-title bg-info-subtle rounded-circle fs-2\">
+\t\t\t\t<i data-feather=\"shopping-cart\" class=\"text-info\"></i>
+\t\t\t</span>
+\t\t</div>
+\t</div>
+</div></div></div></div><div class=\"col-xl-3 col-md-6\"><div class=\"card card-animate card-stat-warning\"><div class=\"card-body\">
+<div class=\"d-flex justify-content-between\">
+\t<div>
+\t\t<p class=\"fw-medium text-muted mb-0\">Stocks Faibles</p>
+\t\t<h2 class=\"mt-4 ff-secondary fw-semibold\">
+\t\t\t<span class=\"counter-value\" data-target=\"";
+        // line 109
+        echo twig_escape_filter($this->env, (isset($context["stocks_faibles"]) || array_key_exists("stocks_faibles", $context) ? $context["stocks_faibles"] : (function () { throw new RuntimeError('Variable "stocks_faibles" does not exist.', 109, $this->source); })()), "html", null, true);
+        echo "\">0</span>
+\t\t</h2>
+\t\t<p class=\"mb-0 text-muted\">Articles à réapprovisionner</p>
+\t</div>
+\t<div>
+\t\t<div class=\"avatar-sm flex-shrink-0\">
+\t\t\t<span class=\"avatar-title bg-warning-subtle rounded-circle fs-2\">
+\t\t\t\t<i data-feather=\"alert-triangle\" class=\"text-warning\"></i>
+\t\t\t</span>
+\t\t</div>
+\t</div>
+</div></div></div></div><div class=\"col-xl-3 col-md-6\"><div class=\"card card-animate card-stat-danger\"><div class=\"card-body\">
+<div class=\"d-flex justify-content-between\">
+\t<div>
+\t\t<p class=\"fw-medium text-muted mb-0\">Documents en attente</p>
+\t\t<h2 class=\"mt-4 ff-secondary fw-semibold\">
+\t\t\t<span class=\"counter-value\" data-target=\"";
+        // line 125
+        echo twig_escape_filter($this->env, (isset($context["documents_attente"]) || array_key_exists("documents_attente", $context) ? $context["documents_attente"] : (function () { throw new RuntimeError('Variable "documents_attente" does not exist.', 125, $this->source); })()), "html", null, true);
+        echo "\">0</span>
+\t\t</h2>
+\t\t<p class=\"mb-0 text-muted\">En attente de validation</p>
+\t</div>
+\t<div>
+\t\t<div class=\"avatar-sm flex-shrink-0\">
+\t\t\t<span class=\"avatar-title bg-danger-subtle rounded-circle fs-2\">
+\t\t\t\t<i data-feather=\"clock\" class=\"text-danger\"></i>
+\t\t\t</span>
+\t\t</div>
+\t</div>
+</div></div></div></div></div><divclass=\"row\"><!-- Graphique CA vs Dépenses --><div class=\"col-xl-8\"><div class=\"card\"><div class=\"card-header align-items-center d-flex\">
+<h4 class=\"card-title mb-0 flex-grow-1\">Évolution du Chiffre d'Affaires</h4>
+<div class=\"flex-shrink-0\">
+\t<div class=\"dropdown\">
+\t\t<a class=\"text-reset dropdown-btn\" href=\"#\" data-bs-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+\t\t\t<span class=\"fw-semibold text-uppercase fs-12\">Mensuel</span>
+\t\t</a>
+\t</div>
+</div></div><div class=\"card-body\">
+<div id=\"ca-chart\" data-colors='[\"--vz-success\", \"--vz-primary\"]' class=\"apex-charts\" dir=\"ltr\"></div></div></div></div><!-- Statistiques documents --><div class=\"col-xl-4\"><div class=\"card\"><div class=\"card-header align-items-center d-flex\">
+<h4 class=\"card-title mb-0 flex-grow-1\">Répartition des Documents</h4></div><div class=\"card-body\">
+<div id=\"documents-chart\" data-colors='[\"--vz-primary\", \"--vz-success\", \"--vz-warning\", \"--vz-danger\", \"--vz-info\"]' class=\"apex-charts\" dir=\"ltr\"></div>
 
-</html>";
+<div class=\"mt-3\">
+\t<div class=\"d-flex align-items-center mb-2\">
+\t\t<div class=\"flex-grow-1\">
+\t\t\t<p class=\"text-truncate text-muted fs-14 mb-0\">
+\t\t\t\t<i class=\"mdi mdi-circle align-middle text-primary me-2\"></i>
+\t\t\t\tFactures Vente
+\t\t\t</p>
+\t\t</div>
+\t\t<div class=\"flex-shrink-0\">
+\t\t\t<p class=\"mb-0\">";
+        // line 158
+        (((twig_get_attribute($this->env, $this->source, ($context["stats_documents"] ?? null), "Facture vente", [], "array", true, true, false, 158) &&  !(null === twig_get_attribute($this->env, $this->source, ($context["stats_documents"] ?? null), "Facture vente", [], "array", false, false, false, 158)))) ? (print (twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["stats_documents"] ?? null), "Facture vente", [], "array", false, false, false, 158), "html", null, true))) : (print (0)));
+        echo "</p>
+\t\t</div>
+\t</div>
+\t<div class=\"d-flex align-items-center mb-2\">
+\t\t<div class=\"flex-grow-1\">
+\t\t\t<p class=\"text-truncate text-muted fs-14 mb-0\">
+\t\t\t\t<i class=\"mdi mdi-circle align-middle text-success me-2\"></i>
+\t\t\t\tCommandes Achat
+\t\t\t</p>
+\t\t</div>
+\t\t<div class=\"flex-shrink-0\">
+\t\t\t<p class=\"mb-0\">";
+        // line 169
+        (((twig_get_attribute($this->env, $this->source, ($context["stats_documents"] ?? null), "Commande achat", [], "array", true, true, false, 169) &&  !(null === twig_get_attribute($this->env, $this->source, ($context["stats_documents"] ?? null), "Commande achat", [], "array", false, false, false, 169)))) ? (print (twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["stats_documents"] ?? null), "Commande achat", [], "array", false, false, false, 169), "html", null, true))) : (print (0)));
+        echo "</p>
+\t\t</div>
+\t</div>
+\t<div class=\"d-flex align-items-center mb-2\">
+\t\t<div class=\"flex-grow-1\">
+\t\t\t<p class=\"text-truncate text-muted fs-14 mb-0\">
+\t\t\t\t<i class=\"mdi mdi-circle align-middle text-warning me-2\"></i>
+\t\t\t\tDevis
+\t\t\t</p>
+\t\t</div>
+\t\t<div class=\"flex-shrink-0\">
+\t\t\t<p class=\"mb-0\">";
+        // line 180
+        echo twig_escape_filter($this->env, ((((twig_get_attribute($this->env, $this->source, ($context["stats_documents"] ?? null), "Devis achat", [], "array", true, true, false, 180) &&  !(null === twig_get_attribute($this->env, $this->source, ($context["stats_documents"] ?? null), "Devis achat", [], "array", false, false, false, 180)))) ? (twig_get_attribute($this->env, $this->source, ($context["stats_documents"] ?? null), "Devis achat", [], "array", false, false, false, 180)) : (0)) + (((twig_get_attribute($this->env, $this->source, ($context["stats_documents"] ?? null), "Devis vente", [], "array", true, true, false, 180) &&  !(null === twig_get_attribute($this->env, $this->source, ($context["stats_documents"] ?? null), "Devis vente", [], "array", false, false, false, 180)))) ? (twig_get_attribute($this->env, $this->source, ($context["stats_documents"] ?? null), "Devis vente", [], "array", false, false, false, 180)) : (0))), "html", null, true);
+        echo "</p>
+\t\t</div>
+\t</div>
+\t<div class=\"d-flex align-items-center mb-2\">
+\t\t<div class=\"flex-grow-1\">
+\t\t\t<p class=\"text-truncate text-muted fs-14 mb-0\">
+\t\t\t\t<i class=\"mdi mdi-circle align-middle text-danger me-2\"></i>
+\t\t\t\tBons d'Entrée/Sortie
+\t\t\t</p>
+\t\t</div>
+\t\t<div class=\"flex-shrink-0\">
+\t\t\t<p class=\"mb-0\">";
+        // line 191
+        echo twig_escape_filter($this->env, ((((twig_get_attribute($this->env, $this->source, ($context["stats_documents"] ?? null), "Bon entré", [], "array", true, true, false, 191) &&  !(null === twig_get_attribute($this->env, $this->source, ($context["stats_documents"] ?? null), "Bon entré", [], "array", false, false, false, 191)))) ? (twig_get_attribute($this->env, $this->source, ($context["stats_documents"] ?? null), "Bon entré", [], "array", false, false, false, 191)) : (0)) + (((twig_get_attribute($this->env, $this->source, ($context["stats_documents"] ?? null), "Bon de sortie", [], "array", true, true, false, 191) &&  !(null === twig_get_attribute($this->env, $this->source, ($context["stats_documents"] ?? null), "Bon de sortie", [], "array", false, false, false, 191)))) ? (twig_get_attribute($this->env, $this->source, ($context["stats_documents"] ?? null), "Bon de sortie", [], "array", false, false, false, 191)) : (0))), "html", null, true);
+        echo "</p>
+\t\t</div>
+\t</div>
+</div></div></div></div></div><divclass=\"row\"><!-- Stocks faibles --><div class=\"col-xl-6\"><div class=\"card\"><div class=\"card-header align-items-center d-flex\">
+<h4 class=\"card-title mb-0 flex-grow-1\">Stocks Faibles</h4>
+<div class=\"flex-shrink-0\">
+\t<a href=\"";
+        // line 197
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_stock_index");
+        echo "\" class=\"btn btn-soft-primary btn-sm\">Voir tous les stocks</a>
+</div></div><div class=\"card-body\">
+<div class=\"table-responsive\">
+\t<table class=\"table table-borderless table-centered align-middle table-nowrap mb-0\">
+\t\t<thead class=\"text-muted border-dashed border border-start-0 border-end-0 bg-light-subtle\">
+\t\t\t<tr>
+\t\t\t\t<th>Article</th>
+\t\t\t\t<th>Référence</th>
+\t\t\t\t<th>Dépôt</th>
+\t\t\t\t<th>Stock Actuel</th>
+\t\t\t\t<th>Action</th>
+\t\t\t</tr>
+\t\t</thead>
+\t\t<tbody>
+\t\t\t";
+        // line 211
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["alertes_stocks"]) || array_key_exists("alertes_stocks", $context) ? $context["alertes_stocks"] : (function () { throw new RuntimeError('Variable "alertes_stocks" does not exist.', 211, $this->source); })()));
+        $context['_iterated'] = false;
+        foreach ($context['_seq'] as $context["_key"] => $context["stock"]) {
+            // line 212
+            echo "\t\t\t\t<tr>
+\t\t\t\t\t<td>
+\t\t\t\t\t\t<div class=\"d-flex align-items-center\">
+\t\t\t\t\t\t\t<div class=\"flex-shrink-0 me-2\">
+\t\t\t\t\t\t\t\t<i data-feather=\"package\" class=\"text-warning\"></i>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<div class=\"flex-grow-1\">Article
+\t\t\t\t\t\t\t\t";
+            // line 219
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["stock"], "article_id", [], "any", false, false, false, 219), "html", null, true);
+            echo "</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</td>
+\t\t\t\t\t<td>";
+            // line 222
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["stock"], "reference", [], "any", false, false, false, 222), "html", null, true);
+            echo "</td>
+\t\t\t\t\t<td>Dépôt
+\t\t\t\t\t\t";
+            // line 224
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["stock"], "depot_id", [], "any", false, false, false, 224), "html", null, true);
+            echo "</td>
+\t\t\t\t\t<td>
+\t\t\t\t\t\t<span class=\"text-danger fw-semibold\">";
+            // line 226
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["stock"], "qte_stock_dispo", [], "any", false, false, false, 226), "html", null, true);
+            echo "</span>
+\t\t\t\t\t</td>
+\t\t\t\t\t<td>
+\t\t\t\t\t\t<a href=\"";
+            // line 229
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_commande_achat_new");
+            echo "\" class=\"btn btn-sm btn-soft-warning\">Commander</a>
+\t\t\t\t\t</td>
+\t\t\t\t</tr>
+\t\t\t";
+            $context['_iterated'] = true;
+        }
+        if (!$context['_iterated']) {
+            // line 233
+            echo "\t\t\t\t<tr>
+\t\t\t\t\t<td colspan=\"5\" class=\"text-center\">Aucun stock faible</td>
+\t\t\t\t</tr>
+\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['stock'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 237
+        echo "\t\t</tbody>
+\t</table>
+</div></div></div></div><!-- Documents récents --><div class=\"col-xl-6\"><div class=\"card\"><div class=\"card-header align-items-center d-flex\">
+<h4 class=\"card-title mb-0 flex-grow-1\">Documents Récents</h4>
+<div class=\"flex-shrink-0\">
+\t<a href=\"";
+        // line 242
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index");
+        echo "\" class=\"btn btn-soft-primary btn-sm\">Voir tous</a>
+</div></div><div class=\"card-body\">
+<div class=\"table-responsive\">
+\t<table class=\"table table-borderless table-centered align-middle table-nowrap mb-0\">
+\t\t<thead class=\"text-muted border-dashed border border-start-0 border-end-0 bg-light-subtle\">
+\t\t\t<tr>
+\t\t\t\t<th>Référence</th>
+\t\t\t\t<th>Type</th>
+\t\t\t\t<th>Date</th>
+\t\t\t\t<th>Montant</th>
+\t\t\t\t<th>Statut</th>
+\t\t\t</tr>
+\t\t</thead>
+\t\t<tbody>
+\t\t\t";
+        // line 256
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["documents_recents"]) || array_key_exists("documents_recents", $context) ? $context["documents_recents"] : (function () { throw new RuntimeError('Variable "documents_recents" does not exist.', 256, $this->source); })()));
+        $context['_iterated'] = false;
+        foreach ($context['_seq'] as $context["_key"] => $context["document"]) {
+            // line 257
+            echo "\t\t\t\t<tr>
+\t\t\t\t\t<td>
+\t\t\t\t\t\t<a href=\"";
+            // line 259
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_show", ["id" => twig_get_attribute($this->env, $this->source, $context["document"], "id", [], "any", false, false, false, 259)]), "html", null, true);
+            echo "\" class=\"fw-medium\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["document"], "reference", [], "any", false, false, false, 259), "html", null, true);
+            echo "</a>
+\t\t\t\t\t</td>
+\t\t\t\t\t<td>";
+            // line 261
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["document"], "type", [], "any", false, false, false, 261), "html", null, true);
+            echo "</td>
+\t\t\t\t\t<td>";
+            // line 262
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["document"], "doc_date", [], "any", false, false, false, 262), "d/m/Y"), "html", null, true);
+            echo "</td>
+\t\t\t\t\t<td>";
+            // line 263
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["document"], "montant_ht", [], "any", false, false, false, 263), 2, ",", " "), "html", null, true);
+            echo "
+\t\t\t\t\t\t€</td>
+\t\t\t\t\t<td>
+\t\t\t\t\t\t";
+            // line 266
+            if ((twig_get_attribute($this->env, $this->source, $context["document"], "statut", [], "any", false, false, false, 266) == "Confirmé")) {
+                // line 267
+                echo "\t\t\t\t\t\t\t<span class=\"badge bg-success\">";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["document"], "statut", [], "any", false, false, false, 267), "html", null, true);
+                echo "</span>
+\t\t\t\t\t\t";
+            } elseif ((twig_get_attribute($this->env, $this->source,             // line 268
+$context["document"], "statut", [], "any", false, false, false, 268) == "Ouvert")) {
+                // line 269
+                echo "\t\t\t\t\t\t\t<span class=\"badge bg-warning\">";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["document"], "statut", [], "any", false, false, false, 269), "html", null, true);
+                echo "</span>
+\t\t\t\t\t\t";
+            } else {
+                // line 271
+                echo "\t\t\t\t\t\t\t<span class=\"badge bg-secondary\">";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["document"], "statut", [], "any", false, false, false, 271), "html", null, true);
+                echo "</span>
+\t\t\t\t\t\t";
+            }
+            // line 273
+            echo "\t\t\t\t\t</td>
+\t\t\t\t</tr>
+\t\t\t";
+            $context['_iterated'] = true;
+        }
+        if (!$context['_iterated']) {
+            // line 276
+            echo "\t\t\t\t<tr>
+\t\t\t\t\t<td colspan=\"5\" class=\"text-center\">Aucun document récent</td>
+\t\t\t\t</tr>
+\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['document'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 280
+        echo "\t\t</tbody>
+\t</table>
+</div></div></div></div></div><divclass=\"row\"><!-- Top articles --><div class=\"col-xl-6\"><div class=\"card\"><div class=\"card-header align-items-center d-flex\">
+<h4 class=\"card-title mb-0 flex-grow-1\">Articles les Plus Vendus</h4></div><div class=\"card-body\">
+<div id=\"top-articles-chart\" data-colors='[\"--vz-primary\", \"--vz-success\", \"--vz-warning\", \"--vz-info\", \"--vz-danger\"]' class=\"apex-charts\" dir=\"ltr\"></div></div></div></div><!-- Activité récente --><div class=\"col-xl-6\"><div class=\"card\"><div class=\"card-header align-items-center d-flex\">
+<h4 class=\"card-title mb-0 flex-grow-1\">Activité Récente</h4></div><div class=\"card-body\">
+<div class=\"simplebar-wrapper\" style=\"max-height: 365px;\">
+\t<div data-simplebar style=\"height: 365px;\">
+\t\t";
+        // line 288
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["activites_recentes"]) || array_key_exists("activites_recentes", $context) ? $context["activites_recentes"] : (function () { throw new RuntimeError('Variable "activites_recentes" does not exist.', 288, $this->source); })()));
+        $context['_iterated'] = false;
+        foreach ($context['_seq'] as $context["_key"] => $context["activite"]) {
+            // line 289
+            echo "\t\t\t<div class=\"d-flex align-items-center mb-4\">
+\t\t\t\t<div class=\"flex-shrink-0\">
+\t\t\t\t\t<div class=\"stat-icon\">
+\t\t\t\t\t\t<i data-feather=\"";
+            // line 292
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["activite"], "icon", [], "any", false, false, false, 292), "html", null, true);
+            echo "\"></i>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t\t<div class=\"flex-grow-1 ms-3\">
+\t\t\t\t\t<h6 class=\"mb-1\">";
+            // line 296
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["activite"], "titre", [], "any", false, false, false, 296), "html", null, true);
+            echo "</h6>
+\t\t\t\t\t<p class=\"text-muted mb-0\">";
+            // line 297
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["activite"], "description", [], "any", false, false, false, 297), "html", null, true);
+            echo "</p>
+\t\t\t\t\t<ul class=\"list-inline mb-0\">
+\t\t\t\t\t\t<li class=\"list-inline-item\">";
+            // line 299
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["activite"], "date", [], "any", false, false, false, 299), "d/m/Y H:i"), "html", null, true);
+            echo "</li>
+\t\t\t\t\t</ul>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t";
+            $context['_iterated'] = true;
+        }
+        if (!$context['_iterated']) {
+            // line 304
+            echo "\t\t\t<p class=\"text-muted text-center\">Aucune activité récente</p>
+\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['activite'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 306
+        echo "\t</div>
+</div></div></div></div></div></div></div>";
+        // line 307
+        echo twig_include($this->env, $context, "partials/footer.html.twig");
+        echo "</div></div>";
+        echo twig_include($this->env, $context, "partials/customizer.html.twig");
+        echo twig_include($this->env, $context, "partials/vendor-scripts.html.twig");
+        echo "<script src=\"../../assets/libs/apexcharts/apexcharts.min.js\"></script><script src=\"../../assets/libs/jsvectormap/jsvectormap.min.js\"></script><script src=\"../../assets/js/pages/dashboard-analytics.init.js\"></script><script src=\"../../assets/js/app.js\"></script><script>document.addEventListener(\"DOMContentLoaded\", function () { // Chart CA vs Dépenses
+var options = {
+series: [
+{
+name: 'Chiffre d\\'Affaires',
+data: ";
+        // line 312
+        echo (isset($context["ca_data"]) || array_key_exists("ca_data", $context) ? $context["ca_data"] : (function () { throw new RuntimeError('Variable "ca_data" does not exist.', 312, $this->source); })());
+        echo "
+}, {
+name: 'Dépenses',
+data: ";
+        // line 315
+        echo (isset($context["depenses_data"]) || array_key_exists("depenses_data", $context) ? $context["depenses_data"] : (function () { throw new RuntimeError('Variable "depenses_data" does not exist.', 315, $this->source); })());
+        echo "
+}
+],
+chart: {
+height: 350,
+type: 'area',
+toolbar: {
+show: false
+}
+},
+colors: [
+'#0ab39c', '#f7b84b'
+],
+dataLabels: {
+enabled: false
+},
+stroke: {
+curve: 'smooth',
+width: 2
+},
+fill: {
+type: 'gradient',
+gradient: {
+shadeIntensity: 1,
+inverseColors: false,
+opacityFrom: 0.45,
+opacityTo: 0.05,
+stops: [20, 100, 100, 100]
+}
+},
+xaxis: {
+categories: ";
+        // line 346
+        echo (isset($context["mois_labels"]) || array_key_exists("mois_labels", $context) ? $context["mois_labels"] : (function () { throw new RuntimeError('Variable "mois_labels" does not exist.', 346, $this->source); })());
+        echo "
+},
+tooltip: {
+y: {
+formatter: function (val) {
+return val + \" €\";
+}
+}
+}
+};
+
+var chart = new ApexCharts(document.querySelector(\"#ca-chart\"), options);
+chart.render();
+
+// Chart répartition documents
+var documentChart = {
+series: ";
+        // line 362
+        echo (isset($context["documents_series"]) || array_key_exists("documents_series", $context) ? $context["documents_series"] : (function () { throw new RuntimeError('Variable "documents_series" does not exist.', 362, $this->source); })());
+        echo ",
+chart: {
+type: 'donut',
+height: 320
+},
+labels: ";
+        // line 367
+        echo (isset($context["documents_labels"]) || array_key_exists("documents_labels", $context) ? $context["documents_labels"] : (function () { throw new RuntimeError('Variable "documents_labels" does not exist.', 367, $this->source); })());
+        echo ",
+colors: [
+'#405189',
+'#0ab39c',
+'#f7b84b',
+'#f06548',
+'#3577f1'
+],
+legend: {
+position: 'bottom'
+},
+plotOptions: {
+pie: {
+donut: {
+size: '65%'
+}
+}
+}
+};
+
+var chart2 = new ApexCharts(document.querySelector(\"#documents-chart\"), documentChart);
+chart2.render();
+
+// Chart top articles
+var topArticlesChart = {
+series: [
+{
+data: ";
+        // line 394
+        echo (isset($context["top_articles_values"]) || array_key_exists("top_articles_values", $context) ? $context["top_articles_values"] : (function () { throw new RuntimeError('Variable "top_articles_values" does not exist.', 394, $this->source); })());
+        echo "
+}
+],
+chart: {
+type: 'bar',
+height: 320
+},
+plotOptions: {
+bar: {
+borderRadius: 4,
+horizontal: true
+}
+},
+dataLabels: {
+enabled: false
+},
+xaxis: {
+categories: ";
+        // line 411
+        echo (isset($context["top_articles_labels"]) || array_key_exists("top_articles_labels", $context) ? $context["top_articles_labels"] : (function () { throw new RuntimeError('Variable "top_articles_labels" does not exist.', 411, $this->source); })());
+        echo "
+},
+colors: ['#0ab39c']
+};
+
+var chart3 = new ApexCharts(document.querySelector(\"#top-articles-chart\"), topArticlesChart);
+chart3.render();
+});</script></body> </html>
+";
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
 
@@ -1784,7 +666,7 @@ class __TwigTemplate_dd5c3a416f5ebc32682107bedbe710c8 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  1747 => 1696,  58 => 10,  50 => 5,  43 => 1,);
+        return array (  630 => 411,  610 => 394,  580 => 367,  572 => 362,  553 => 346,  519 => 315,  513 => 312,  502 => 307,  499 => 306,  492 => 304,  482 => 299,  477 => 297,  473 => 296,  466 => 292,  461 => 289,  456 => 288,  446 => 280,  437 => 276,  430 => 273,  424 => 271,  418 => 269,  416 => 268,  411 => 267,  409 => 266,  403 => 263,  399 => 262,  395 => 261,  388 => 259,  384 => 257,  379 => 256,  362 => 242,  355 => 237,  346 => 233,  337 => 229,  331 => 226,  326 => 224,  321 => 222,  315 => 219,  306 => 212,  301 => 211,  284 => 197,  275 => 191,  261 => 180,  247 => 169,  233 => 158,  197 => 125,  178 => 109,  157 => 91,  149 => 86,  127 => 67,  120 => 63,  106 => 52,  96 => 45,  57 => 9,  49 => 4,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -1792,1707 +674,421 @@ class __TwigTemplate_dd5c3a416f5ebc32682107bedbe710c8 extends Template
         return new Source("{{ include('partials/main.html.twig') }}
 
 <head>
+\t{{ include('partials/title-meta.html.twig', {title: 'Tableau de Bord ERP'}) }}
 
-    {{ include('partials/title-meta.html.twig', {title: 'Landing'}) }}
+\t<!-- plugin css -->
+\t<link href=\"../../assets/libs/jsvectormap/jsvectormap.min.css\" rel=\"stylesheet\" type=\"text/css\"/>
 
-    <!--Swiper slider css-->
-    <link href=\"../../assets/libs/swiper/swiper-bundle.min.css\" rel=\"stylesheet\" type=\"text/css\" />
+\t{{ include('partials/head-css.html.twig') }}
 
-    {{ include('partials/head-css.html.twig') }}
-
+\t<style>
+\t\t.card-stat {
+\t\t\tborder-left: 4px solid #0ab39c;
+\t\t}
+\t\t.card-stat-warning {
+\t\t\tborder-left: 4px solid #f7b84b;
+\t\t}
+\t\t.card-stat-danger {
+\t\t\tborder-left: 4px solid #f06548;
+\t\t}
+\t\t.stat-icon {
+\t\t\tfont-size: 22px;
+\t\t\tbackground-color: rgba(10, 179, 156, 0.1);
+\t\t\theight: 50px;
+\t\t\twidth: 50px;
+\t\t\tline-height: 50px;
+\t\t\ttext-align: center;
+\t\t\tborder-radius: 50%;
+\t\t\tcolor: #0ab39c;
+\t\t}
+\t\t.stat-icon-warning {
+\t\t\tbackground-color: rgba(247, 184, 75, 0.1);
+\t\t\tcolor: #f7b84b;
+\t\t}
+\t\t.stat-icon-danger {
+\t\t\tbackground-color: rgba(240, 101, 72, 0.1);
+\t\t\tcolor: #f06548;
+\t\t}
+\t</style>
 </head>
 
-<body data-bs-spy=\"scroll\" data-bs-target=\"#navbar-example\">
-
-    <!-- Begin page -->
-    <div class=\"layout-wrapper landing\">
-        <nav class=\"navbar navbar-expand-lg navbar-landing fixed-top\" id=\"navbar\">
-            <div class=\"container\">
-                <a class=\"navbar-brand\" href=\"/\">
-                    <img src=\"../../assets/images/logo-dark.png\" class=\"card-logo card-logo-dark\" alt=\"logo dark\" height=\"17\">
-                    <img src=\"../../assets/images/logo-light.png\" class=\"card-logo card-logo-light\" alt=\"logo light\" height=\"17\">
-                </a>
-                <button class=\"navbar-toggler py-0 fs-20 text-body\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-                    <i class=\"mdi mdi-menu\"></i>
-                </button>
-
-                <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
-                    <ul class=\"navbar-nav mx-auto mt-2 mt-lg-0\" id=\"navbar-example\">
-                        <li class=\"nav-item\">
-                            <a class=\"nav-link active\" href=\"#hero\">Home</a>
-                        </li>
-                        <li class=\"nav-item\">
-                            <a class=\"nav-link\" href=\"#services\">Services</a>
-                        </li>
-                        <li class=\"nav-item\">
-                            <a class=\"nav-link\" href=\"#features\">Features</a>
-                        </li>
-                        <li class=\"nav-item\">
-                            <a class=\"nav-link\" href=\"#plans\">Plans</a>
-                        </li>
-                        <li class=\"nav-item\">
-                            <a class=\"nav-link\" href=\"#reviews\">Reviews</a>
-                        </li>
-                        <li class=\"nav-item\">
-                            <a class=\"nav-link\" href=\"#team\">Team</a>
-                        </li>
-                        <li class=\"nav-item\">
-                            <a class=\"nav-link\" href=\"#contact\">Contact</a>
-                        </li>
-                    </ul>
-
-                    <div class=\"\">
-                        <a href=\"auth-signin-basic\" class=\"btn btn-link fw-medium text-decoration-none text-dark\">Sign in</a>
-                        <a href=\"auth-signup-basic\" class=\"btn btn-primary\">Sign Up</a>
-                    </div>
-                </div>
-
-            </div>
-        </nav>
-        <!-- end navbar -->
-        <div class=\"vertical-overlay\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent.show\"></div>
-
-        <!-- start hero section -->
-        <section class=\"section pb-0 hero-section\" id=\"hero\">
-            <div class=\"bg-overlay bg-overlay-pattern\"></div>
-            <div class=\"container\">
-                <div class=\"row justify-content-center\">
-                    <div class=\"col-lg-8 col-sm-10\">
-                        <div class=\"text-center mt-lg-5 pt-5\">
-                            <h1 class=\"display-6 fw-semibold mb-3 lh-base\">The better way to manage your website with <span class=\"text-success\">Velzon </span></h1>
-                            <p class=\"lead text-muted lh-base\">Velzon is a fully responsive, multipurpose and premium Bootstrap 5 Admin & Dashboard Template built in multiple frameworks.</p>
-
-                            <div class=\"d-flex gap-2 justify-content-center mt-4\">
-                                <a href=\"auth-signup-basic\" class=\"btn btn-primary\">Get Started <i class=\"ri-arrow-right-line align-middle ms-1\"></i></a>
-                                <a href=\"pages-pricing\" class=\"btn btn-danger\">View Plans <i class=\"ri-eye-line align-middle ms-1\"></i></a>
-                            </div>
-                        </div>
-
-                        <div class=\"mt-4 mt-sm-5 pt-sm-5 mb-sm-n5 demo-carousel\">
-                            <div class=\"demo-img-patten-top d-none d-sm-block\">
-                                <img src=\"../../assets/images/landing/img-pattern.png\" class=\"d-block img-fluid\" alt=\"...\">
-                            </div>
-                            <div class=\"demo-img-patten-bottom d-none d-sm-block\">
-                                <img src=\"../../assets/images/landing/img-pattern.png\" class=\"d-block img-fluid\" alt=\"...\">
-                            </div>
-                            <div class=\"carousel slide carousel-fade\" data-bs-ride=\"carousel\">
-                                <div class=\"carousel-inner shadow-lg p-2 bg-white rounded\">
-                                    <div class=\"carousel-item active\" data-bs-interval=\"2000\">
-                                        <img src=\"../../assets/images/demos/default.png\" class=\"d-block w-100\" alt=\"...\">
-                                    </div>
-                                    <div class=\"carousel-item\" data-bs-interval=\"2000\">
-                                        <img src=\"../../assets/images/demos/saas.png\" class=\"d-block w-100\" alt=\"...\">
-                                    </div>
-                                    <div class=\"carousel-item\" data-bs-interval=\"2000\">
-                                        <img src=\"../../assets/images/demos/material.png\" class=\"d-block w-100\" alt=\"...\">
-                                    </div>
-                                    <div class=\"carousel-item\" data-bs-interval=\"2000\">
-                                        <img src=\"../../assets/images/demos/minimal.png\" class=\"d-block w-100\" alt=\"...\">
-                                    </div>
-                                    <div class=\"carousel-item\" data-bs-interval=\"2000\">
-                                        <img src=\"../../assets/images/demos/creative.png\" class=\"d-block w-100\" alt=\"...\">
-                                    </div>
-                                    <div class=\"carousel-item\" data-bs-interval=\"2000\">
-                                        <img src=\"../../assets/images/demos/modern.png\" class=\"d-block w-100\" alt=\"...\">
-                                    </div>
-                                    <div class=\"carousel-item\" data-bs-interval=\"2000\">
-                                        <img src=\"../../assets/images/demos/interactive.png\" class=\"d-block w-100\" alt=\"...\">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-            <div class=\"position-absolute start-0 end-0 bottom-0 hero-shape-svg\">
-                <svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 1440 120\">
-                    <g mask=\"url(&quot;#SvgjsMask1003&quot;)\" fill=\"none\">
-                        <path d=\"M 0,118 C 288,98.6 1152,40.4 1440,21L1440 140L0 140z\">
-                        </path>
-                    </g>
-                </svg>
-            </div>
-            <!-- end shape -->
-        </section>
-        <!-- end hero section -->
-
-        <!-- start client section -->
-        <div class=\"pt-5 mt-5\">
-            <div class=\"container\">
-                <div class=\"row\">
-                    <div class=\"col-lg-12\">
-
-                        <div class=\"text-center mt-5\">
-                            <h5 class=\"fs-20\">Trusted <span class=\"text-primary text-decoration-underline\">by</span> the world's best</h5>
-
-                            <!-- Swiper -->
-                            <div class=\"swiper trusted-client-slider mt-sm-5 mt-4 mb-sm-5 mb-4\" dir=\"ltr\">
-                                <div class=\"swiper-wrapper\">
-                                    <div class=\"swiper-slide\">
-                                        <div class=\"client-images\">
-                                            <img src=\"../../assets/images/clients/amazon.svg\" alt=\"client-img\" class=\"mx-auto img-fluid d-block\">
-                                        </div>
-                                    </div>
-                                    <div class=\"swiper-slide\">
-                                        <div class=\"client-images\">
-                                            <img src=\"../../assets/images/clients/walmart.svg\" alt=\"client-img\" class=\"mx-auto img-fluid d-block\">
-                                        </div>
-                                    </div>
-                                    <div class=\"swiper-slide\">
-                                        <div class=\"client-images\">
-                                            <img src=\"../../assets/images/clients/lenovo.svg\" alt=\"client-img\" class=\"mx-auto img-fluid d-block\">
-                                        </div>
-                                    </div>
-                                    <div class=\"swiper-slide\">
-                                        <div class=\"client-images\">
-                                            <img src=\"../../assets/images/clients/paypal.svg\" alt=\"client-img\" class=\"mx-auto img-fluid d-block\">
-                                        </div>
-                                    </div>
-                                    <div class=\"swiper-slide\">
-                                        <div class=\"client-images\">
-                                            <img src=\"../../assets/images/clients/shopify.svg\" alt=\"client-img\" class=\"mx-auto img-fluid d-block\">
-                                        </div>
-                                    </div>
-                                    <div class=\"swiper-slide\">
-                                        <div class=\"client-images\">
-                                            <img src=\"../../assets/images/clients/verizon.svg\" alt=\"client-img\" class=\"mx-auto img-fluid d-block\">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-        </div>
-        <!-- end client section -->
-
-        <!-- start services -->
-        <section class=\"section\" id=\"services\">
-            <div class=\"container\">
-                <div class=\"row justify-content-center\">
-                    <div class=\"col-lg-8\">
-                        <div class=\"text-center mb-5\">
-                            <h1 class=\"mb-3 ff-secondary fw-semibold lh-base\">A Digital web design studio creating modern & engaging online</h1>
-                            <p class=\"text-muted\">To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce the grammar</p>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
-
-                <div class=\"row g-3\">
-                    <div class=\"col-lg-4\">
-                        <div class=\"d-flex p-3\">
-                            <div class=\"flex-shrink-0 me-3\">
-                                <div class=\"avatar-sm icon-effect\">
-                                    <div class=\"avatar-title bg-transparent text-success rounded-circle\">
-                                        <i class=\"ri-pencil-ruler-2-line fs-36\"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"flex-grow-1\">
-                                <h5 class=\"fs-18\">Creative Design</h5>
-                                <p class=\"text-muted my-3 ff-secondary\">The creative design includes designs that are unique, effective and memorable.</p>
-                                <div>
-                                    <a href=\"#\" class=\"fs-13 fw-medium\">Learn More <i class=\"ri-arrow-right-s-line align-bottom\"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-4\">
-                        <div class=\"d-flex p-3\">
-                            <div class=\"flex-shrink-0 me-3\">
-                                <div class=\"avatar-sm icon-effect\">
-                                    <div class=\"avatar-title bg-transparent text-success rounded-circle\">
-                                        <i class=\"ri-palette-line fs-36\"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"flex-grow-1\">
-                                <h5 class=\"fs-18\">Unlimited Colors</h5>
-                                <p class=\"text-muted my-3 ff-secondary\">The collection of rules and guidelines which designers use to communicate with users through appealing.</p>
-                                <div>
-                                    <a href=\"#\" class=\"fs-13 fw-medium\">Learn More <i class=\"ri-arrow-right-s-line align-bottom\"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-4\">
-                        <div class=\"d-flex p-3\">
-                            <div class=\"flex-shrink-0 me-3\">
-                                <div class=\"avatar-sm icon-effect\">
-                                    <div class=\"avatar-title bg-transparent text-success rounded-circle\">
-                                        <i class=\"ri-lightbulb-flash-line fs-36\"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"flex-grow-1\">
-                                <h5 class=\"fs-18\">Strategy Solutions</h5>
-                                <p class=\"text-muted my-3 ff-secondary\">Business development firm that provides strategic planning, market research services and project.</p>
-                                <div>
-                                    <a href=\"#\" class=\"fs-13 fw-medium\">Learn More <i class=\"ri-arrow-right-s-line align-bottom\"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-4\">
-                        <div class=\"d-flex p-3\">
-                            <div class=\"flex-shrink-0 me-3\">
-                                <div class=\"avatar-sm icon-effect\">
-                                    <div class=\"avatar-title bg-transparent text-success rounded-circle\">
-                                        <i class=\"ri-customer-service-line fs-36\"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"flex-grow-1\">
-                                <h5 class=\"fs-18\">Awesome Support</h5>
-                                <p class=\"text-muted my-3 ff-secondary\">Awesome Support is the most versatile and feature-rich support plugin for all version.</p>
-                                <div>
-                                    <a href=\"#\" class=\"fs-13 fw-medium\">Learn More <i class=\"ri-arrow-right-s-line align-bottom\"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-4\">
-                        <div class=\"d-flex p-3\">
-                            <div class=\"flex-shrink-0 me-3\">
-                                <div class=\"avatar-sm icon-effect\">
-                                    <div class=\"avatar-title bg-transparent text-success rounded-circle\">
-                                        <i class=\"ri-stack-line fs-36\"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"flex-grow-1\">
-                                <h5 class=\"fs-18\">Truly Multipurpose</h5>
-                                <p class=\"text-muted my-3 ff-secondary\">You usually get a broad range of options to play with. This enables you to use a single theme across multiple.</p>
-                                <div>
-                                    <a href=\"#\" class=\"fs-13 fw-medium\">Learn More <i class=\"ri-arrow-right-s-line align-bottom\"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-4\">
-                        <div class=\"d-flex p-3\">
-                            <div class=\"flex-shrink-0 me-3\">
-                                <div class=\"avatar-sm icon-effect\">
-                                    <div class=\"avatar-title bg-transparent text-success rounded-circle\">
-                                        <i class=\"ri-settings-2-line fs-36\"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"flex-grow-1\">
-                                <h5 class=\"fs-18\">Easy to customize</h5>
-                                <p class=\"text-muted my-3 ff-secondary\">Personalise your own website, no matter what theme and what customization options.</p>
-                                <div>
-                                    <a href=\"#\" class=\"fs-13 fw-medium\">Learn More <i class=\"ri-arrow-right-s-line align-bottom\"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-
-                    <div class=\"col-lg-4\">
-                        <div class=\"d-flex p-3\">
-                            <div class=\"flex-shrink-0 me-3\">
-                                <div class=\"avatar-sm icon-effect\">
-                                    <div class=\"avatar-title bg-transparent text-success rounded-circle\">
-                                        <i class=\"ri-slideshow-line fs-36\"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"flex-grow-1\">
-                                <h5 class=\"fs-18\">Responsive & Clean Design</h5>
-                                <p class=\"text-muted my-3 ff-secondary\">Responsive design is a graphic user interface (GUI) design approach used to create content.</p>
-                                <div>
-                                    <a href=\"#\" class=\"fs-13 fw-medium\">Learn More <i class=\"ri-arrow-right-s-line align-bottom\"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-4\">
-                        <div class=\"d-flex p-3\">
-                            <div class=\"flex-shrink-0 me-3\">
-                                <div class=\"avatar-sm icon-effect\">
-                                    <div class=\"avatar-title bg-transparent text-success rounded-circle\">
-                                        <i class=\"ri-google-fill fs-36\"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"flex-grow-1\">
-                                <h5 class=\"fs-18\">Google Font Collection</h5>
-                                <p class=\"text-muted my-3 ff-secondary\">Google Fonts is a collection of 915 fonts, all available to use for free on your website.</p>
-                                <div>
-                                    <a href=\"#\" class=\"fs-13 fw-medium\">Learn More <i class=\"ri-arrow-right-s-line align-bottom\"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-4\">
-                        <div class=\"d-flex p-3\">
-                            <div class=\"flex-shrink-0 me-3\">
-                                <div class=\"avatar-sm icon-effect\">
-                                    <div class=\"avatar-title bg-transparent text-success rounded-circle\">
-                                        <i class=\"ri-briefcase-5-line fs-36\"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"flex-grow-1\">
-                                <h5 class=\"fs-18\">Top Industry Specialists</h5>
-                                <p class=\"text-muted my-3 ff-secondary\">An industrial specialist works with industrial operations to ensure that manufacturing facilities work.</p>
-                                <div>
-                                    <a href=\"#\" class=\"fs-13 fw-medium\">Learn More <i class=\"ri-arrow-right-s-line align-bottom\"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-        </section>
-        <!-- end services -->
-
-        <!-- start features -->
-        <section class=\"section bg-light py-5\" id=\"features\">
-            <div class=\"container\">
-                <div class=\"row align-items-center gy-4\">
-                    <div class=\"col-lg-6 col-sm-7 mx-auto\">
-                        <div>
-                            <img src=\"../../assets/images/landing/features/img-1.png\" alt=\"\" class=\"img-fluid mx-auto\">
-                        </div>
-                    </div>
-                    <div class=\"col-lg-6\">
-                        <div class=\"text-muted\">
-                            <div class=\"avatar-sm icon-effect mb-4\">
-                                <div class=\"avatar-title bg-transparent rounded-circle text-success h1\">
-                                    <i class=\"ri-collage-line fs-36\"></i>
-                                </div>
-                            </div>
-                            <h3 class=\"mb-3 fs-20\">Huge collection of widgets</h3>
-                            <p class=\"mb-4 ff-secondary fs-16\">Collection widgets specialize in displaying many elements of the same type, such as a collection of pictures from a collection of articles from a news app or a collection of messages from a communication app.</p>
-
-                            <div class=\"row pt-3\">
-                                <div class=\"col-3\">
-                                    <div class=\"text-center\">
-                                        <h4>5</h4>
-                                        <p>Dashboards</p>
-                                    </div>
-                                </div>
-                                <div class=\"col-3\">
-                                    <div class=\"text-center\">
-                                        <h4>150+</h4>
-                                        <p>Pages</p>
-                                    </div>
-                                </div>
-                                <div class=\"col-4\">
-                                    <div class=\"text-center\">
-                                        <h4>7+</h4>
-                                        <p>Functional Apps</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-        </section>
-        <!-- end features -->
-
-        <!-- start cta -->
-        <section class=\"py-5 bg-primary position-relative\">
-            <div class=\"bg-overlay bg-overlay-pattern opacity-50\"></div>
-            <div class=\"container\">
-                <div class=\"row align-items-center gy-4\">
-                    <div class=\"col-sm\">
-                        <div>
-                            <h4 class=\"text-white mb-0 fw-semibold\">Build your web App/SaaS with Velzon dashboard</h4>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-sm-auto\">
-                        <div>
-                            <a href=\"https://1.envato.market/velzon-admin\" target=\"_blank\" class=\"btn bg-gradient btn-danger\"><i class=\"ri-shopping-cart-2-line align-middle me-1\"></i> Buy Now</a>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-        </section>
-        <!-- end cta -->
-
-        <!-- start features -->
-        <section class=\"section\">
-            <div class=\"container\">
-                <div class=\"row align-items-center gy-4\">
-                    <div class=\"col-lg-6 order-2 order-lg-1\">
-                        <div class=\"text-muted\">
-                            <h5 class=\"fs-12 text-uppercase text-success\">Design</h5>
-                            <h4 class=\"mb-3\">Well Designed Dashboards</h4>
-                            <p class=\"mb-4 ff-secondary\">Quality Dashboards (QD) is a condition-specific, actionable web-based application for quality reporting and population management that is integrated into the Electronic Health Record (EHR).</p>
-
-                            <div class=\"row\">
-                                <div class=\"col-sm-5\">
-                                    <div class=\"vstack gap-2\">
-                                        <div class=\"d-flex align-items-center\">
-                                            <div class=\"flex-shrink-0 me-2\">
-                                                <div class=\"avatar-xs icon-effect\">
-                                                    <div class=\"avatar-title bg-transparent text-success rounded-circle h2\">
-                                                        <i class=\"ri-check-fill\"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class=\"flex-grow-1\">
-                                                <h5 class=\"fs-14 mb-0\">Ecommerce</h5>
-                                            </div>
-                                        </div>
-                                        <div class=\"d-flex align-items-center\">
-                                            <div class=\"flex-shrink-0 me-2\">
-                                                <div class=\"avatar-xs icon-effect\">
-                                                    <div class=\"avatar-title bg-transparent text-success rounded-circle h2\">
-                                                        <i class=\"ri-check-fill\"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class=\"flex-grow-1\">
-                                                <h5 class=\"fs-14 mb-0\">Analytics</h5>
-                                            </div>
-                                        </div>
-                                        <div class=\"d-flex align-items-center\">
-                                            <div class=\"flex-shrink-0 me-2\">
-                                                <div class=\"avatar-xs icon-effect\">
-                                                    <div class=\"avatar-title bg-transparent text-success rounded-circle h2\">
-                                                        <i class=\"ri-check-fill\"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class=\"flex-grow-1\">
-                                                <h5 class=\"fs-14 mb-0\">CRM</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class=\"col-sm-5\">
-                                    <div class=\"vstack gap-2\">
-                                        <div class=\"d-flex align-items-center\">
-                                            <div class=\"flex-shrink-0 me-2\">
-                                                <div class=\"avatar-xs icon-effect\">
-                                                    <div class=\"avatar-title bg-transparent text-success rounded-circle h2\">
-                                                        <i class=\"ri-check-fill\"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class=\"flex-grow-1\">
-                                                <h5 class=\"fs-14 mb-0\">Crypto</h5>
-                                            </div>
-                                        </div>
-                                        <div class=\"d-flex align-items-center\">
-                                            <div class=\"flex-shrink-0 me-2\">
-                                                <div class=\"avatar-xs icon-effect\">
-                                                    <div class=\"avatar-title bg-transparent text-success rounded-circle h2\">
-                                                        <i class=\"ri-check-fill\"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class=\"flex-grow-1\">
-                                                <h5 class=\"fs-14 mb-0\">Projects</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class=\"mt-4\">
-                                <a href=\"/\" class=\"btn btn-primary\">Learn More <i class=\"ri-arrow-right-line align-middle ms-1\"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-6 col-sm-7 col-10 ms-auto order-1 order-lg-2\">
-                        <div>
-                            <img src=\"../../assets/images/landing/features/img-2.png\" alt=\"\" class=\"img-fluid\">
-                        </div>
-                    </div>
-                </div>
-                <!-- end row -->
-
-                <div class=\"row align-items-center mt-5 pt-lg-5 gy-4\">
-                    <div class=\"col-lg-6 col-sm-7 col-10 mx-auto\">
-                        <div>
-                            <img src=\"../../assets/images/landing/features/img-3.png\" alt=\"\" class=\"img-fluid\">
-                        </div>
-                    </div>
-                    <div class=\"col-lg-6\">
-                        <div class=\"text-muted ps-lg-5\">
-                            <h5 class=\"fs-12 text-uppercase text-success\">structure</h5>
-                            <h4 class=\"mb-3\">Well Documented</h4>
-                            <p class=\"mb-4\">used to describe something that is known about or known to be true because there are many documents that describe it, prove it, etc.</p>
-
-                            <div class=\"vstack gap-2\">
-                                <div class=\"d-flex align-items-center\">
-                                    <div class=\"flex-shrink-0 me-2\">
-                                        <div class=\"avatar-xs icon-effect\">
-                                            <div class=\"avatar-title bg-transparent text-success rounded-circle h2\">
-                                                <i class=\"ri-check-fill\"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class=\"flex-grow-1\">
-                                        <p class=\"mb-0\">Dynamic Conetnt</p>
-                                    </div>
-                                </div>
-                                <div class=\"d-flex align-items-center\">
-                                    <div class=\"flex-shrink-0 me-2\">
-                                        <div class=\"avatar-xs icon-effect\">
-                                            <div class=\"avatar-title bg-transparent text-success rounded-circle h2\">
-                                                <i class=\"ri-check-fill\"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class=\"flex-grow-1\">
-                                        <p class=\"mb-0\">Setup plugin's information.</p>
-                                    </div>
-                                </div>
-                                <div class=\"d-flex align-items-center\">
-                                    <div class=\"flex-shrink-0 me-2\">
-                                        <div class=\"avatar-xs icon-effect\">
-                                            <div class=\"avatar-title bg-transparent text-success rounded-circle h2\">
-                                                <i class=\"ri-check-fill\"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class=\"flex-grow-1\">
-                                        <p class=\"mb-0\">Themes customization information</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-        </section>
-        <!-- end features -->
-
-        <!-- start plan -->
-        <section class=\"section bg-light\" id=\"plans\">
-            <div class=\"bg-overlay bg-overlay-pattern\"></div>
-            <div class=\"container\">
-                <div class=\"row justify-content-center\">
-                    <div class=\"col-lg-8\">
-                        <div class=\"text-center mb-5\">
-                            <h3 class=\"mb-3 fw-semibold\">Choose the plan that's right for you</h3>
-                            <p class=\"text-muted mb-4\">Simple pricing. No hidden fees. Advanced features for you business.</p>
-
-                            <div class=\"d-flex justify-content-center align-items-center\">
-                                <div>
-                                    <h5 class=\"fs-14 mb-0\">Month</h5>
-                                </div>
-                                <div class=\"form-check form-switch fs-20 ms-3 \" onclick=\"check()\">
-                                    <input class=\"form-check-input\" type=\"checkbox\" id=\"plan-switch\">
-                                    <label class=\"form-check-label\" for=\"plan-switch\"></label>
-                                </div>
-                                <div>
-                                    <h5 class=\"fs-14 mb-0\">Annual <span class=\"badge bg-success-subtle text-success\">Save 20%</span></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
-
-                <div class=\"row gy-4\">
-                    <div class=\"col-lg-4\">
-                        <div class=\"card plan-box mb-0\">
-                            <div class=\"card-body p-4 m-2\">
-                                <div class=\"d-flex align-items-center\">
-                                    <div class=\"flex-grow-1\">
-                                        <h5 class=\"mb-1 fw-semibold\">Basic Plan</h5>
-                                        <p class=\"text-muted mb-0\">For Startup</p>
-                                    </div>
-                                    <div class=\"avatar-sm\">
-                                        <div class=\"avatar-title bg-light rounded-circle text-primary\">
-                                            <i class=\"ri-book-mark-line fs-20\"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class=\"py-4 text-center\">
-                                    <h1 class=\"month\"><sup><small>\$</small></sup><span class=\"ff-secondary fw-bold\">19</span> <span class=\"fs-13 text-muted\">/Month</span></h1>
-                                    <h1 class=\"annual\"><sup><small>\$</small></sup><span class=\"ff-secondary fw-bold\">171</span> <span class=\"fs-13 text-muted\">/Year</span></h1>
-                                </div>
-
-                                <div>
-                                    <ul class=\"list-unstyled text-muted vstack gap-3 ff-secondary\">
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-success me-1\">
-                                                    <i class=\"ri-checkbox-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    Upto <b>3</b> Projects
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-success me-1\">
-                                                    <i class=\"ri-checkbox-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    Upto <b>299</b> Customers
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-success me-1\">
-                                                    <i class=\"ri-checkbox-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    Scalable Bandwidth
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-success me-1\">
-                                                    <i class=\"ri-checkbox-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    <b>5</b> FTP Login
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-danger me-1\">
-                                                    <i class=\"ri-close-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    <b>24/7</b> Support
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-danger me-1\">
-                                                    <i class=\"ri-close-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    <b>Unlimited</b> Storage
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-danger me-1\">
-                                                    <i class=\"ri-close-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    Domain
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class=\"mt-4\">
-                                        <a href=\"javascript:void(0);\" class=\"btn btn-soft-success w-100\">Get Started</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end col-->
-                    <div class=\"col-lg-4\">
-                        <div class=\"card plan-box mb-0 ribbon-box right\">
-                            <div class=\"card-body p-4 m-2\">
-                                <div class=\"ribbon-two ribbon-two-danger\"><span>Popular</span></div>
-                                <div class=\"d-flex align-items-center\">
-                                    <div class=\"flex-grow-1\">
-                                        <h5 class=\"mb-1 fw-semibold\">Pro Business</h5>
-                                        <p class=\"text-muted mb-0\">Professional plans</p>
-                                    </div>
-                                    <div class=\"avatar-sm\">
-                                        <div class=\"avatar-title bg-light rounded-circle text-primary\">
-                                            <i class=\"ri-medal-fill fs-20\"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class=\"py-4 text-center\">
-                                    <h1 class=\"month\"><sup><small>\$</small></sup><span class=\"ff-secondary fw-bold\">29</span> <span class=\"fs-13 text-muted\">/Month</span></h1>
-                                    <h1 class=\"annual\"><sup><small>\$</small></sup><span class=\"ff-secondary fw-bold\">261</span> <span class=\"fs-13 text-muted\">/Year</span></h1>
-                                </div>
-
-                                <div>
-                                    <ul class=\"list-unstyled text-muted vstack gap-3 ff-secondary\">
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-success me-1\">
-                                                    <i class=\"ri-checkbox-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    Upto <b>15</b> Projects
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-success me-1\">
-                                                    <i class=\"ri-checkbox-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    <b>Unlimited</b> Customers
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-success me-1\">
-                                                    <i class=\"ri-checkbox-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    Scalable Bandwidth
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-success me-1\">
-                                                    <i class=\"ri-checkbox-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    <b>12</b> FTP Login
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-success me-1\">
-                                                    <i class=\"ri-checkbox-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    <b>24/7</b> Support
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-danger me-1\">
-                                                    <i class=\"ri-close-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    <b>Unlimited</b> Storage
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-danger me-1\">
-                                                    <i class=\"ri-close-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    Domain
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class=\"mt-4\">
-                                        <a href=\"javascript:void(0);\" class=\"btn btn-soft-success w-100\">Get Started</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end col-->
-                    <div class=\"col-lg-4\">
-                        <div class=\"card plan-box mb-0\">
-                            <div class=\"card-body p-4 m-2\">
-                                <div class=\"d-flex align-items-center\">
-                                    <div class=\"flex-grow-1\">
-                                        <h5 class=\"mb-1 fw-semibold\">Platinum Plan</h5>
-                                        <p class=\"text-muted mb-0\">Enterprise Businesses</p>
-                                    </div>
-                                    <div class=\"avatar-sm\">
-                                        <div class=\"avatar-title bg-light rounded-circle text-primary\">
-                                            <i class=\"ri-stack-fill fs-20\"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class=\"py-4 text-center\">
-                                    <h1 class=\"month\"><sup><small>\$</small></sup><span class=\"ff-secondary fw-bold\">39</span> <span class=\"fs-13 text-muted\">/Month</span></h1>
-                                    <h1 class=\"annual\"><sup><small>\$</small></sup><span class=\"ff-secondary fw-bold\">351</span> <span class=\"fs-13 text-muted\">/Year</span></h1>
-                                </div>
-
-                                <div>
-                                    <ul class=\"list-unstyled text-muted vstack gap-3 ff-secondary\">
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-success me-1\">
-                                                    <i class=\"ri-checkbox-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    <b>Unlimited</b> Projects
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-success me-1\">
-                                                    <i class=\"ri-checkbox-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    <b>Unlimited</b> Customers
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-success me-1\">
-                                                    <i class=\"ri-checkbox-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    Scalable Bandwidth
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-success me-1\">
-                                                    <i class=\"ri-checkbox-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    <b>Unlimited</b> FTP Login
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-success me-1\">
-                                                    <i class=\"ri-checkbox-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    <b>24/7</b> Support
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-success me-1\">
-                                                    <i class=\"ri-checkbox-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    <b>Unlimited</b> Storage
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class=\"d-flex\">
-                                                <div class=\"flex-shrink-0 text-success me-1\">
-                                                    <i class=\"ri-checkbox-circle-fill fs-15 align-middle\"></i>
-                                                </div>
-                                                <div class=\"flex-grow-1\">
-                                                    Domain
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class=\"mt-4\">
-                                        <a href=\"javascript:void(0);\" class=\"btn btn-soft-success w-100\">Get Started</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end col-->
-                </div>
-                <!--end row-->
-            </div>
-            <!-- end container -->
-        </section>
-        <!-- end plan -->
-
-        <!-- start faqs -->
-        <section class=\"section\">
-            <div class=\"container\">
-                <div class=\"row justify-content-center\">
-                    <div class=\"col-lg-8\">
-                        <div class=\"text-center mb-5\">
-                            <h3 class=\"mb-3 fw-semibold\">Frequently Asked Questions</h3>
-                            <p class=\"text-muted mb-4 ff-secondary\">If you can not find answer to your question in our FAQ, you can always contact us or email us. We will answer you shortly!</p>
-
-                            <div class=\"hstack gap-2 justify-content-center\">
-                                <button type=\"button\" class=\"btn btn-primary btn-label rounded-pill\"><i class=\"ri-mail-line label-icon align-middle rounded-pill fs-16 me-2\"></i> Email Us</button>
-                                <button type=\"button\" class=\"btn btn-info btn-label rounded-pill\"><i class=\"ri-twitter-line label-icon align-middle rounded-pill fs-16 me-2\"></i> Send Us Tweet</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end row -->
-
-                <div class=\"row g-lg-5 g-4\">
-                    <div class=\"col-lg-6\">
-                        <div class=\"d-flex align-items-center mb-2\">
-                            <div class=\"flex-shrink-0 me-1\">
-                                <i class=\"ri-question-line fs-24 align-middle text-success me-1\"></i>
-                            </div>
-                            <div class=\"flex-grow-1\">
-                                <h5 class=\"mb-0 fw-semibold\">General Questions</h5>
-                            </div>
-                        </div>
-                        <div class=\"accordion custom-accordionwithicon custom-accordion-border accordion-border-box\" id=\"genques-accordion\">
-                            <div class=\"accordion-item\">
-                                <h2 class=\"accordion-header\" id=\"genques-headingOne\">
-                                    <button class=\"accordion-button\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#genques-collapseOne\" aria-expanded=\"true\" aria-controls=\"genques-collapseOne\">
-                                        What is the purpose of using themes ?
-                                    </button>
-                                </h2>
-                                <div id=\"genques-collapseOne\" class=\"accordion-collapse collapse show\" aria-labelledby=\"genques-headingOne\" data-bs-parent=\"#genques-accordion\">
-                                    <div class=\"accordion-body ff-secondary\">
-                                        A theme is a set of colors, fonts, effects, and more that can be applied to your entire presentation to give it a
-                                        consistent, professional look. You've already been using a theme, even if you didn't know it: the default Office theme, which consists.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"accordion-item\">
-                                <h2 class=\"accordion-header\" id=\"genques-headingTwo\">
-                                    <button class=\"accordion-button collapsed\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#genques-collapseTwo\" aria-expanded=\"false\" aria-controls=\"genques-collapseTwo\">
-                                        Can a theme have more than one theme?
-                                    </button>
-                                </h2>
-                                <div id=\"genques-collapseTwo\" class=\"accordion-collapse collapse\" aria-labelledby=\"genques-headingTwo\" data-bs-parent=\"#genques-accordion\">
-                                    <div class=\"accordion-body ff-secondary\">
-                                        A story can have as many themes as the reader can identify based on recurring patterns and parallels within the story
-                                        itself. In looking at ways to separate themes into a hierarchy, we might find it useful to follow the example of a single book.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"accordion-item\">
-                                <h2 class=\"accordion-header\" id=\"genques-headingThree\">
-                                    <button class=\"accordion-button collapsed\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#genques-collapseThree\" aria-expanded=\"false\" aria-controls=\"genques-collapseThree\">
-                                        What are theme features?
-                                    </button>
-                                </h2>
-                                <div id=\"genques-collapseThree\" class=\"accordion-collapse collapse\" aria-labelledby=\"genques-headingThree\" data-bs-parent=\"#genques-accordion\">
-                                    <div class=\"accordion-body ff-secondary\">
-                                        Theme features is a set of specific functionality that may be enabled by theme authors. Themes must register each
-                                        individual Theme Feature that the author wishes to support. Theme support functions should be called in the theme's functions.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"accordion-item\">
-                                <h2 class=\"accordion-header\" id=\"genques-headingFour\">
-                                    <button class=\"accordion-button collapsed\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#genques-collapseFour\" aria-expanded=\"false\" aria-controls=\"genques-collapseFour\">
-                                        What is simple theme?
-                                    </button>
-                                </h2>
-                                <div id=\"genques-collapseFour\" class=\"accordion-collapse collapse\" aria-labelledby=\"genques-headingFour\" data-bs-parent=\"#genques-accordion\">
-                                    <div class=\"accordion-body ff-secondary\">
-                                        Simple is a free WordPress theme, by Themify, built exactly what it is named for: simplicity. Immediately upgrade the
-                                        quality of your WordPress site with the simple theme To use the built-in Chrome theme editor.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--end accordion-->
-
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-6\">
-                        <div class=\"d-flex align-items-center mb-2\">
-                            <div class=\"flex-shrink-0 me-1\">
-                                <i class=\"ri-shield-keyhole-line fs-24 align-middle text-success me-1\"></i>
-                            </div>
-                            <div class=\"flex-grow-1\">
-                                <h5 class=\"mb-0 fw-semibold\">Privacy &amp; Security</h5>
-                            </div>
-                        </div>
-
-                        <div class=\"accordion custom-accordionwithicon custom-accordion-border accordion-border-box\" id=\"privacy-accordion\">
-                            <div class=\"accordion-item\">
-                                <h2 class=\"accordion-header\" id=\"privacy-headingOne\">
-                                    <button class=\"accordion-button collapsed\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#privacy-collapseOne\" aria-expanded=\"false\" aria-controls=\"privacy-collapseOne\">
-                                        Does Word have night mode?
-                                    </button>
-                                </h2>
-                                <div id=\"privacy-collapseOne\" class=\"accordion-collapse collapse\" aria-labelledby=\"privacy-headingOne\" data-bs-parent=\"#privacy-accordion\">
-                                    <div class=\"accordion-body ff-secondary\">
-                                        You can run Microsoft Word in dark mode, which uses a dark color palette to help reduce eye strain in low light
-                                        settings. You can choose to make the document white or black using the Switch Modes button in the ribbon's View tab.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"accordion-item\">
-                                <h2 class=\"accordion-header\" id=\"privacy-headingTwo\">
-                                    <button class=\"accordion-button\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#privacy-collapseTwo\" aria-expanded=\"true\" aria-controls=\"privacy-collapseTwo\">
-                                        Is theme an opinion?
-                                    </button>
-                                </h2>
-                                <div id=\"privacy-collapseTwo\" class=\"accordion-collapse collapse show\" aria-labelledby=\"privacy-headingTwo\" data-bs-parent=\"#privacy-accordion\">
-                                    <div class=\"accordion-body ff-secondary\">
-                                        A theme is an opinion the author expresses on the subject, for instance, the author's dissatisfaction with the narrow
-                                        confines of French bourgeois marriage during that period theme is an idea that a writer repeats.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"accordion-item\">
-                                <h2 class=\"accordion-header\" id=\"privacy-headingThree\">
-                                    <button class=\"accordion-button collapsed\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#privacy-collapseThree\" aria-expanded=\"false\" aria-controls=\"privacy-collapseThree\">
-                                        How do you develop a theme?
-                                    </button>
-                                </h2>
-                                <div id=\"privacy-collapseThree\" class=\"accordion-collapse collapse\" aria-labelledby=\"privacy-headingThree\" data-bs-parent=\"#privacy-accordion\">
-                                    <div class=\"accordion-body ff-secondary\">
-                                        A short story, novella, or novel presents a narrative to its reader. Perhaps that narrative involves mystery, terror,
-                                        romance, comedy, or all of the above. These works of fiction may also contain memorable characters, vivid
-                                        world-building, literary devices.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"accordion-item\">
-                                <h2 class=\"accordion-header\" id=\"privacy-headingFour\">
-                                    <button class=\"accordion-button collapsed\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#privacy-collapseFour\" aria-expanded=\"false\" aria-controls=\"privacy-collapseFour\">
-                                        Do stories need themes?
-                                    </button>
-                                </h2>
-                                <div id=\"privacy-collapseFour\" class=\"accordion-collapse collapse\" aria-labelledby=\"privacy-headingFour\" data-bs-parent=\"#privacy-accordion\">
-                                    <div class=\"accordion-body ff-secondary\">
-                                        A story can have as many themes as the reader can identify based on recurring patterns and parallels within the story
-                                        itself. In looking at ways to separate themes into a hierarchy, we might find it useful to follow the example of a
-                                        single book.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--end accordion-->
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-        </section>
-        <!-- end faqs -->
-
-        <!-- start review -->
-        <section class=\"section bg-primary\" id=\"reviews\">
-            <div class=\"bg-overlay bg-overlay-pattern\"></div>
-            <div class=\"container\">
-                <div class=\"row justify-content-center\">
-                    <div class=\"col-lg-10\">
-                        <div class=\"text-center\">
-                            <div>
-                                <i class=\"ri-double-quotes-l text-success display-3\"></i>
-                            </div>
-                            <h4 class=\"text-white mb-5\"><span class=\"text-success\">19k</span>+ Satisfied clients</h4>
-
-                            <!-- Swiper -->
-                            <div class=\"swiper client-review-swiper rounded\" dir=\"ltr\">
-                                <div class=\"swiper-wrapper\">
-                                    <div class=\"swiper-slide\">
-                                        <div class=\"row justify-content-center\">
-                                            <div class=\"col-10\">
-                                                <div class=\"text-white-50\">
-                                                    <p class=\"fs-20 ff-secondary mb-4\">\" I am givng 5 stars. Theme is great and everyone one stuff everything in theme. Future request should not affect current state of theme. \"</p>
-
-                                                    <div>
-                                                        <h5 class=\"text-white\">gregoriusus</h5>
-                                                        <p>- Skote User</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end slide -->
-                                    <div class=\"swiper-slide\">
-                                        <div class=\"row justify-content-center\">
-                                            <div class=\"col-10\">
-                                                <div class=\"text-white-50\">
-                                                    <p class=\"fs-20 ff-secondary mb-4\">\" Awesome support. Had few issues while setting up because of my device, the support team helped me fix them up in a day. Everything looks clean and good. Highly recommended! \"</p>
-
-                                                    <div>
-                                                        <h5 class=\"text-white\">GeekyGreenOwl</h5>
-                                                        <p>- Skote User</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end slide -->
-                                    <div class=\"swiper-slide\">
-                                        <div class=\"row justify-content-center\">
-                                            <div class=\"col-10\">
-                                                <div class=\"text-white-50\">
-                                                    <p class=\"fs-20 ff-secondary mb-4\">\" Amazing template, Redux store and components is nicely designed. It's a great start point for an admin based project. Clean Code and good documentation. Template is completely in React and absolutely no usage of jQuery \"</p>
-
-                                                    <div>
-                                                        <h5 class=\"text-white\">sreeks456</h5>
-                                                        <p>- Veltrix User</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end slide -->
-                                </div>
-                                <div class=\"swiper-button-next bg-white rounded-circle\"></div>
-                                <div class=\"swiper-button-prev bg-white rounded-circle\"></div>
-                                <div class=\"swiper-pagination position-relative mt-2\"></div>
-                            </div>
-                            <!-- end slider -->
-                        </div>
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-        </section>
-        <!-- end review -->
-
-        <!-- start counter -->
-        <section class=\"py-5 position-relative bg-light\">
-            <div class=\"container\">
-                <div class=\"row text-center gy-4\">
-                    <div class=\"col-lg-3 col-6\">
-                        <div>
-                            <h2 class=\"mb-2\"><span class=\"counter-value\" data-target=\"100\">0</span>+</h2>
-                            <div class=\"text-muted\">Projects Completed</div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-
-                    <div class=\"col-lg-3 col-6\">
-                        <div>
-                            <h2 class=\"mb-2\"><span class=\"counter-value\" data-target=\"24\">0</span></h2>
-                            <div class=\"text-muted\">Win Awards</div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-
-                    <div class=\"col-lg-3 col-6\">
-                        <div>
-                            <h2 class=\"mb-2\"><span class=\"counter-value\" data-target=\"20.3\">0</span>k</h2>
-                            <div class=\"text-muted\">Satisfied Clients</div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-3 col-6\">
-                        <div>
-                            <h2 class=\"mb-2\"><span class=\"counter-value\" data-target=\"50\">0</span></h2>
-                            <div class=\"text-muted\">Employees</div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-        </section>
-        <!-- end counter -->
-
-        <!-- start Work Process -->
-        <section class=\"section\">
-            <div class=\"container\">
-                <div class=\"row justify-content-center\">
-                    <div class=\"col-lg-8\">
-                        <div class=\"text-center mb-5\">
-                            <h3 class=\"mb-3 fw-semibold\">Our Work Process</h3>
-                            <p class=\"text-muted mb-4 ff-secondary\">In an ideal world this website wouldn’t exist, a client would acknowledge the importance of having web copy before the Proin vitae ipsum vel ex finibus semper design starts.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- end row -->
-
-                <div class=\"row text-center\">
-                    <div class=\"col-lg-4\">
-                        <div class=\"process-card mt-4\">
-                            <div class=\"process-arrow-img d-none d-lg-block\">
-                                <img src=\"../../assets/images/landing/process-arrow-img.png\" alt=\"\" class=\"img-fluid\">
-                            </div>
-                            <div class=\"avatar-sm icon-effect mx-auto mb-4\">
-                                <div class=\"avatar-title bg-transparent text-success rounded-circle h1\">
-                                    <i class=\"ri-quill-pen-line\"></i>
-                                </div>
-                            </div>
-
-                            <h5>Tell us what you need</h5>
-                            <p class=\"text-muted ff-secondary\">The profession and the employer and your desire to make your mark.</p>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-4\">
-                        <div class=\"process-card mt-4\">
-                            <div class=\"process-arrow-img d-none d-lg-block\">
-                                <img src=\"../../assets/images/landing/process-arrow-img.png\" alt=\"\" class=\"img-fluid\">
-                            </div>
-                            <div class=\"avatar-sm icon-effect mx-auto mb-4\">
-                                <div class=\"avatar-title bg-transparent text-success rounded-circle h1\">
-                                    <i class=\"ri-user-follow-line\"></i>
-                                </div>
-                            </div>
-
-                            <h5>Get free quotes</h5>
-                            <p class=\"text-muted ff-secondary\">The most important aspect of beauty was, therefore, an inherent part.</p>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-4\">
-                        <div class=\"process-card mt-4\">
-                            <div class=\"avatar-sm icon-effect mx-auto mb-4\">
-                                <div class=\"avatar-title bg-transparent text-success rounded-circle h1\">
-                                    <i class=\"ri-book-mark-line\"></i>
-                                </div>
-                            </div>
-
-                            <h5>Deliver high quality product</h5>
-                            <p class=\"text-muted ff-secondary\">We quickly learn to fear and thus automatically avoid potentially.</p>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-        </section>
-        <!-- end Work Process -->
-
-        <!-- start team -->
-        <section class=\"section bg-light\" id=\"team\">
-            <div class=\"container\">
-                <div class=\"row justify-content-center\">
-                    <div class=\"col-lg-8\">
-                        <div class=\"text-center mb-5\">
-                            <h3 class=\"mb-3 fw-semibold\">Our <span class=\"text-danger\">Team</span></h3>
-                            <p class=\"text-muted mb-4 ff-secondary\">To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce the grammar.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- end row -->
-                <div class=\"row\">
-                    <div class=\"col-lg-3 col-sm-6\">
-                        <div class=\"card\">
-                            <div class=\"card-body text-center p-4\">
-                                <div class=\"avatar-xl mx-auto mb-4 position-relative\">
-                                    <img src=\"../../assets/images/users/avatar-2.jpg\" alt=\"\" class=\"img-fluid rounded-circle\">
-                                    <a href=\"apps-mailbox\" class=\"btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs\">
-                                        <div class=\"avatar-title bg-transparent\">
-                                            <i class=\"ri-mail-fill align-bottom\"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- end card body -->
-                                <h5 class=\"mb-1\"><a href=\"pages-profile\" class=\"text-body\">Nancy Martino</a></h5>
-                                <p class=\"text-muted mb-0 ff-secondary\">Team Leader</p>
-                            </div>
-                        </div>
-                        <!-- end card -->
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-3 col-sm-6\">
-                        <div class=\"card\">
-                            <div class=\"card-body text-center p-4\">
-                                <div class=\"avatar-xl mx-auto mb-4 position-relative\">
-                                    <img src=\"../../assets/images/users/avatar-10.jpg\" alt=\"\" class=\"img-fluid rounded-circle\">
-                                    <a href=\"apps-mailbox\" class=\"btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs\">
-                                        <div class=\"avatar-title bg-transparent\">
-                                            <i class=\"ri-mail-fill align-bottom\"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- end card body -->
-                                <h5 class=\"mb-1\"><a href=\"pages-profile\" class=\"text-body\">Henry Baird</a></h5>
-                                <p class=\"text-muted mb-0 ff-secondary\">Full Stack Developer</p>
-                            </div>
-                        </div>
-                        <!-- end card -->
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-3 col-sm-6\">
-                        <div class=\"card\">
-                            <div class=\"card-body text-center p-4\">
-                                <div class=\"avatar-xl mx-auto mb-4 position-relative\">
-                                    <img src=\"../../assets/images/users/avatar-3.jpg\" alt=\"\" class=\"img-fluid rounded-circle\">
-                                    <a href=\"apps-mailbox\" class=\"btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs\">
-                                        <div class=\"avatar-title bg-transparent\">
-                                            <i class=\"ri-mail-fill align-bottom\"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- end card body -->
-                                <h5 class=\"mb-1\"><a href=\"pages-profile\" class=\"text-body\">Frank Hook</a></h5>
-                                <p class=\"text-muted mb-0 ff-secondary\">Project Manager</p>
-                            </div>
-                        </div>
-                        <!-- end card -->
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-3 col-sm-6\">
-                        <div class=\"card\">
-                            <div class=\"card-body text-center p-4\">
-                                <div class=\"avatar-xl mx-auto mb-4 position-relative\">
-                                    <img src=\"../../assets/images/users/avatar-8.jpg\" alt=\"\" class=\"img-fluid rounded-circle\">
-                                    <a href=\"apps-mailbox\" class=\"btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs\">
-                                        <div class=\"avatar-title bg-transparent\">
-                                            <i class=\"ri-mail-fill align-bottom\"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- end card body -->
-                                <h5 class=\"mb-1\"><a href=\"pages-profile\" class=\"text-body\">Donald Palmer</a></h5>
-                                <p class=\"text-muted mb-0 ff-secondary\">UI/UX Designer</p>
-                            </div>
-                        </div>
-                        <!-- end card -->
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
-                <div class=\"row\">
-                    <div class=\"col-lg-3 col-sm-6\">
-                        <div class=\"card\">
-                            <div class=\"card-body text-center p-4\">
-                                <div class=\"avatar-xl mx-auto mb-4 position-relative\">
-                                    <img src=\"../../assets/images/users/avatar-5.jpg\" alt=\"\" class=\"img-fluid rounded-circle\">
-                                    <a href=\"apps-mailbox\" class=\"btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs\">
-                                        <div class=\"avatar-title bg-transparent\">
-                                            <i class=\"ri-mail-fill align-bottom\"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- end card body -->
-                                <h5 class=\"mb-1\"><a href=\"pages-profile\" class=\"text-body\">Erica Kernan</a></h5>
-                                <p class=\"text-muted mb-0 ff-secondary\">Web Designer</p>
-                            </div>
-                        </div>
-                        <!-- end card -->
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-3 col-sm-6\">
-                        <div class=\"card\">
-                            <div class=\"card-body text-center p-4\">
-                                <div class=\"avatar-xl mx-auto mb-4 position-relative\">
-                                    <img src=\"../../assets/images/users/avatar-4.jpg\" alt=\"\" class=\"img-fluid rounded-circle\">
-                                    <a href=\"apps-mailbox\" class=\"btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs\">
-                                        <div class=\"avatar-title bg-transparent\">
-                                            <i class=\"ri-mail-fill align-bottom\"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- end card body -->
-                                <h5 class=\"mb-1\"><a href=\"pages-profile\" class=\"text-body\">Alexis Clarke</a></h5>
-                                <p class=\"text-muted mb-0 ff-secondary\">Backend Developer</p>
-                            </div>
-                        </div>
-                        <!-- end card -->
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-3 col-sm-6\">
-                        <div class=\"card\">
-                            <div class=\"card-body text-center p-4\">
-                                <div class=\"avatar-xl mx-auto mb-4 position-relative\">
-                                    <img src=\"../../assets/images/users/avatar-6.jpg\" alt=\"\" class=\"img-fluid rounded-circle\">
-                                    <a href=\"apps-mailbox\" class=\"btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs\">
-                                        <div class=\"avatar-title bg-transparent\">
-                                            <i class=\"ri-mail-fill align-bottom\"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- end card body -->
-                                <h5 class=\"mb-1\"><a href=\"pages-profile\" class=\"text-body\">Marie Ward</a></h5>
-                                <p class=\"text-muted mb-0 ff-secondary\">Full Stack Developer</p>
-                            </div>
-                        </div>
-                        <!-- end card -->
-                    </div>
-                    <!-- end col -->
-
-                    <div class=\"col-lg-3 col-sm-6\">
-                        <div class=\"card\">
-                            <div class=\"card-body text-center p-4\">
-                                <div class=\"avatar-xl mx-auto mb-4 position-relative\">
-                                    <img src=\"../../assets/images/users/avatar-7.jpg\" alt=\"\" class=\"img-fluid rounded-circle\">
-                                    <a href=\"apps-mailbox\" class=\"btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs\">
-                                        <div class=\"avatar-title bg-transparent\">
-                                            <i class=\"ri-mail-fill align-bottom\"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- end card body -->
-                                <h5 class=\"mb-1\"><a href=\"pages-profile\" class=\"text-body\">Jack Gough</a></h5>
-                                <p class=\"text-muted mb-0 ff-secondary\">React Js Developer</p>
-                            </div>
-                        </div>
-                        <!-- end card -->
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
-                <div class=\"row\">
-                    <div class=\"col-lg-12\">
-                        <div class=\"text-center mt-2\">
-                            <a href=\"pages-team\" class=\"btn btn-primary\">View All Members <i class=\"ri-arrow-right-line ms-1 align-bottom\"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-        </section>
-        <!-- end team -->
-
-        <!-- start contact -->
-        <section class=\"section\" id=\"contact\">
-            <div class=\"container\">
-                <div class=\"row justify-content-center\">
-                    <div class=\"col-lg-8\">
-                        <div class=\"text-center mb-5\">
-                            <h3 class=\"mb-3 fw-semibold\">Get In Touch</h3>
-                            <p class=\"text-muted mb-4 ff-secondary\">We thrive when coming up with innovative ideas but also understand that a smart concept should be supported with faucibus sapien odio measurable results.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- end row -->
-
-                <div class=\"row gy-4\">
-                    <div class=\"col-lg-4\">
-                        <div>
-                            <div class=\"mt-4\">
-                                <h5 class=\"fs-13 text-muted text-uppercase\">Office Address 1:</h5>
-                                <div class=\"ff-secondary fw-semibold\">4461 Cedar Street Moro, <br />AR 72368</div>
-                            </div>
-                            <div class=\"mt-4\">
-                                <h5 class=\"fs-13 text-muted text-uppercase\">Office Address 2:</h5>
-                                <div class=\"ff-secondary fw-semibold\">2467 Swick Hill Street <br />New Orleans, LA</div>
-                            </div>
-                            <div class=\"mt-4\">
-                                <h5 class=\"fs-13 text-muted text-uppercase\">Working Hours:</h5>
-                                <div class=\"ff-secondary fw-semibold\">9:00am to 6:00pm</div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-lg-8\">
-                        <div>
-                            <form>
-                                <div class=\"row\">
-                                    <div class=\"col-lg-6\">
-                                        <div class=\"mb-4\">
-                                            <label for=\"name\" class=\"form-label fs-13\">Name</label>
-                                            <input name=\"name\" id=\"name\" type=\"text\" class=\"form-control bg-light border-light\" placeholder=\"Your name*\">
-                                        </div>
-                                    </div>
-                                    <div class=\"col-lg-6\">
-                                        <div class=\"mb-4\">
-                                            <label for=\"email\" class=\"form-label fs-13\">Email</label>
-                                            <input name=\"email\" id=\"email\" type=\"email\" class=\"form-control bg-light border-light\" placeholder=\"Your email*\">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class=\"row\">
-                                    <div class=\"col-lg-12\">
-                                        <div class=\"mb-4\">
-                                            <label for=\"subject\" class=\"form-label fs-13\">Subject</label>
-                                            <input type=\"text\" class=\"form-control bg-light border-light\" id=\"subject\" name=\"subject\" placeholder=\"Your Subject..\" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class=\"row\">
-                                    <div class=\"col-lg-12\">
-                                        <div class=\"mb-3\">
-                                            <label for=\"comments\" class=\"form-label fs-13\">Message</label>
-                                            <textarea name=\"comments\" id=\"comments\" rows=\"3\" class=\"form-control bg-light border-light\" placeholder=\"Your message...\"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class=\"row\">
-                                    <div class=\"col-lg-12 text-end\">
-                                        <input type=\"submit\" id=\"submit\" name=\"send\" class=\"submitBnt btn btn-primary\" value=\"Send Message\">
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-        </section>
-        <!-- end contact -->
-
-        <!-- start cta -->
-        <section class=\"py-5 bg-primary position-relative\">
-            <div class=\"bg-overlay bg-overlay-pattern opacity-50\"></div>
-            <div class=\"container\">
-                <div class=\"row align-items-center gy-4\">
-                    <div class=\"col-sm\">
-                        <div>
-                            <h4 class=\"text-white mb-0 fw-semibold\">Build your web App/SaaS with Velzon dashboard</h4>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class=\"col-sm-auto\">
-                        <div>
-                            <a href=\"https://1.envato.market/velzon-admin\" target=\"_blank\" class=\"btn bg-gradient btn-danger\"><i class=\"ri-shopping-cart-2-line align-middle me-1\"></i> Buy Now</a>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-        </section>
-        <!-- end cta -->
-
-        <!-- Start footer -->
-        <footer class=\"custom-footer bg-dark py-5 position-relative\">
-            <div class=\"container\">
-                <div class=\"row\">
-                    <div class=\"col-lg-4 mt-4\">
-                        <div>
-                            <div>
-                                <img src=\"../../assets/images/logo-light.png\" alt=\"logo light\" height=\"17\">
-                            </div>
-                            <div class=\"mt-4 fs-13\">
-                                <p>Premium Multipurpose Admin & Dashboard Template</p>
-                                <p class=\"ff-secondary\">You can build any type of web application like eCommerce, CRM, CMS, Project management apps, Admin Panels, etc using Velzon.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class=\"col-lg-7 ms-lg-auto\">
-                        <div class=\"row\">
-                            <div class=\"col-sm-4 mt-4\">
-                                <h5 class=\"text-white mb-0\">Company</h5>
-                                <div class=\"text-muted mt-3\">
-                                    <ul class=\"list-unstyled ff-secondary footer-list\">
-                                        <li><a href=\"pages-profile\">About Us</a></li>
-                                        <li><a href=\"pages-gallery\">Gallery</a></li>
-                                        <li><a href=\"apps-projects-overview\">Projects</a></li>
-                                        <li><a href=\"pages-timeline\">Timeline</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class=\"col-sm-4 mt-4\">
-                                <h5 class=\"text-white mb-0\">Apps Pages</h5>
-                                <div class=\"text-muted mt-3\">
-                                    <ul class=\"list-unstyled ff-secondary footer-list\">
-                                        <li><a href=\"pages-pricing\">Calendar</a></li>
-                                        <li><a href=\"apps-mailbox\">Mailbox</a></li>
-                                        <li><a href=\"apps-chat\">Chat</a></li>
-                                        <li><a href=\"apps-crm-deals\">Deals</a></li>
-                                        <li><a href=\"apps-tasks-kanban\">Kanban Board</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class=\"col-sm-4 mt-4\">
-                                <h5 class=\"text-white mb-0\">Support</h5>
-                                <div class=\"text-muted mt-3\">
-                                    <ul class=\"list-unstyled ff-secondary footer-list\">
-                                        <li><a href=\"pages-faqs\">FAQ</a></li>
-                                        <li><a href=\"pages-faqs\">Contact</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class=\"row text-center text-sm-start align-items-center mt-5\">
-                    <div class=\"col-sm-6\">
-
-                        <div>
-                            <p class=\"copy-rights mb-0\">
-                                <script> document.write(new Date().getFullYear()) </script> © Velzon - Themesbrand
-                            </p>
-                        </div>
-                    </div>
-                    <div class=\"col-sm-6\">
-                        <div class=\"text-sm-end mt-3 mt-sm-0\">
-                            <ul class=\"list-inline mb-0 footer-social-link\">
-                                <li class=\"list-inline-item\">
-                                    <a href=\"javascript: void(0);\" class=\"avatar-xs d-block\">
-                                        <div class=\"avatar-title rounded-circle\">
-                                            <i class=\"ri-facebook-fill\"></i>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class=\"list-inline-item\">
-                                    <a href=\"javascript: void(0);\" class=\"avatar-xs d-block\">
-                                        <div class=\"avatar-title rounded-circle\">
-                                            <i class=\"ri-github-fill\"></i>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class=\"list-inline-item\">
-                                    <a href=\"javascript: void(0);\" class=\"avatar-xs d-block\">
-                                        <div class=\"avatar-title rounded-circle\">
-                                            <i class=\"ri-linkedin-fill\"></i>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class=\"list-inline-item\">
-                                    <a href=\"javascript: void(0);\" class=\"avatar-xs d-block\">
-                                        <div class=\"avatar-title rounded-circle\">
-                                            <i class=\"ri-google-fill\"></i>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class=\"list-inline-item\">
-                                    <a href=\"javascript: void(0);\" class=\"avatar-xs d-block\">
-                                        <div class=\"avatar-title rounded-circle\">
-                                            <i class=\"ri-dribbble-line\"></i>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- end footer -->
-
-
-        <!--start back-to-top-->
-        <button onclick=\"topFunction()\" class=\"btn btn-danger btn-icon landing-back-top\" id=\"back-to-top\">
-            <i class=\"ri-arrow-up-line\"></i>
-        </button>
-        <!--end back-to-top-->
-
-    </div>
-    <!-- end layout wrapper -->
-
-
-    {{ include('partials/vendor-scripts.html.twig') }}
-
-    <!--Swiper slider js-->
-    <script src=\"../../assets/libs/swiper/swiper-bundle.min.js\"></script>
-
-    <!-- landing init -->
-    <script src=\"../../assets/js/pages/landing.init.js\"></script>
-</body>
-
-</html>", "pages/landing.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\pages\\landing.html.twig");
+<body>
+\t<!-- Begin page -->
+\t<div id=\"layout-wrapper\">
+\t\t{{ include('partials/menu.html.twig') }}
+
+\t\t<!-- ============================================================== -->
+\t\t<!-- Start right Content here -->
+\t\t<!-- ============================================================== -->
+\t\t\t<div class=\"main-content\"> <div class=\"page-content\">
+\t\t\t\t<div class=\"container-fluid\">
+\t\t\t\t\t{{ include('partials/page-title.html.twig', {pagetitle: 'Tableau de Bord', title: 'Vue d\\'ensemble'}) }}
+
+                    <div class=\"row\">
+                        <!-- Statistiques principales -->
+                        <div class=\"col-xl-3 col-md-6\">
+                            <div class=\"card card-animate card-stat\">
+                                <div class=\"card-body\">
+                                    <div class=\"d-flex justify-content-between\">
+                                        <div>
+                                            <p class=\"fw-medium text-muted mb-0\">Chiffre d'Affaires</p>
+                                            <h2 class=\"mt-4 ff-secondary fw-semibold\">
+                                                <span class=\"counter-value\" data-target=\"{{ ca_mois|number_format(2, ',', ' ') }}\">0</span> €
+                                            </h2>
+                                            <p class=\"mb-0 text-muted\">
+                                                <span class=\"badge bg-light text-success mb-0\">
+                                                    <i class=\"ri-arrow-up-line align-middle\"></i> {{ evolution_ca }}
+\t\t\t\t\t%
+\t\t\t\t</span>
+\t\t\t\tvs. mois dernier
+\t\t\t</p>
+\t\t</div>
+\t\t<div>
+\t\t\t<div class=\"avatar-sm flex-shrink-0\">
+\t\t\t\t<span class=\"avatar-title bg-info-subtle rounded-circle fs-2\">
+\t\t\t\t\t<i data-feather=\"dollar-sign\" class=\"text-info\"></i>
+\t\t\t\t</span>
+\t\t\t</div>
+\t\t</div>
+\t</div>
+</body></div></div></div><div class=\"col-xl-3 col-md-6\"><div class=\"card card-animate card-stat\"><div class=\"card-body\">
+<div class=\"d-flex justify-content-between\">
+\t<div>
+\t\t<p class=\"fw-medium text-muted mb-0\">Commandes en cours</p>
+\t\t<h2 class=\"mt-4 ff-secondary fw-semibold\">
+\t\t\t<span class=\"counter-value\" data-target=\"{{ commandes_encours }}\">0</span>
+\t\t</h2>
+\t\t<p class=\"mb-0 text-muted\">
+\t\t\t<span class=\"badge bg-light text-success mb-0\">
+\t\t\t\t<i class=\"ri-arrow-up-line align-middle\"></i>
+\t\t\t\t{{ evolution_commandes }}
+\t\t\t\t%
+\t\t\t</span>
+\t\t\tvs. mois dernier
+\t\t</p>
+\t</div>
+\t<div>
+\t\t<div class=\"avatar-sm flex-shrink-0\">
+\t\t\t<span class=\"avatar-title bg-info-subtle rounded-circle fs-2\">
+\t\t\t\t<i data-feather=\"shopping-cart\" class=\"text-info\"></i>
+\t\t\t</span>
+\t\t</div>
+\t</div>
+</div></div></div></div><div class=\"col-xl-3 col-md-6\"><div class=\"card card-animate card-stat-warning\"><div class=\"card-body\">
+<div class=\"d-flex justify-content-between\">
+\t<div>
+\t\t<p class=\"fw-medium text-muted mb-0\">Stocks Faibles</p>
+\t\t<h2 class=\"mt-4 ff-secondary fw-semibold\">
+\t\t\t<span class=\"counter-value\" data-target=\"{{ stocks_faibles }}\">0</span>
+\t\t</h2>
+\t\t<p class=\"mb-0 text-muted\">Articles à réapprovisionner</p>
+\t</div>
+\t<div>
+\t\t<div class=\"avatar-sm flex-shrink-0\">
+\t\t\t<span class=\"avatar-title bg-warning-subtle rounded-circle fs-2\">
+\t\t\t\t<i data-feather=\"alert-triangle\" class=\"text-warning\"></i>
+\t\t\t</span>
+\t\t</div>
+\t</div>
+</div></div></div></div><div class=\"col-xl-3 col-md-6\"><div class=\"card card-animate card-stat-danger\"><div class=\"card-body\">
+<div class=\"d-flex justify-content-between\">
+\t<div>
+\t\t<p class=\"fw-medium text-muted mb-0\">Documents en attente</p>
+\t\t<h2 class=\"mt-4 ff-secondary fw-semibold\">
+\t\t\t<span class=\"counter-value\" data-target=\"{{ documents_attente }}\">0</span>
+\t\t</h2>
+\t\t<p class=\"mb-0 text-muted\">En attente de validation</p>
+\t</div>
+\t<div>
+\t\t<div class=\"avatar-sm flex-shrink-0\">
+\t\t\t<span class=\"avatar-title bg-danger-subtle rounded-circle fs-2\">
+\t\t\t\t<i data-feather=\"clock\" class=\"text-danger\"></i>
+\t\t\t</span>
+\t\t</div>
+\t</div>
+</div></div></div></div></div><divclass=\"row\"><!-- Graphique CA vs Dépenses --><div class=\"col-xl-8\"><div class=\"card\"><div class=\"card-header align-items-center d-flex\">
+<h4 class=\"card-title mb-0 flex-grow-1\">Évolution du Chiffre d'Affaires</h4>
+<div class=\"flex-shrink-0\">
+\t<div class=\"dropdown\">
+\t\t<a class=\"text-reset dropdown-btn\" href=\"#\" data-bs-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+\t\t\t<span class=\"fw-semibold text-uppercase fs-12\">Mensuel</span>
+\t\t</a>
+\t</div>
+</div></div><div class=\"card-body\">
+<div id=\"ca-chart\" data-colors='[\"--vz-success\", \"--vz-primary\"]' class=\"apex-charts\" dir=\"ltr\"></div></div></div></div><!-- Statistiques documents --><div class=\"col-xl-4\"><div class=\"card\"><div class=\"card-header align-items-center d-flex\">
+<h4 class=\"card-title mb-0 flex-grow-1\">Répartition des Documents</h4></div><div class=\"card-body\">
+<div id=\"documents-chart\" data-colors='[\"--vz-primary\", \"--vz-success\", \"--vz-warning\", \"--vz-danger\", \"--vz-info\"]' class=\"apex-charts\" dir=\"ltr\"></div>
+
+<div class=\"mt-3\">
+\t<div class=\"d-flex align-items-center mb-2\">
+\t\t<div class=\"flex-grow-1\">
+\t\t\t<p class=\"text-truncate text-muted fs-14 mb-0\">
+\t\t\t\t<i class=\"mdi mdi-circle align-middle text-primary me-2\"></i>
+\t\t\t\tFactures Vente
+\t\t\t</p>
+\t\t</div>
+\t\t<div class=\"flex-shrink-0\">
+\t\t\t<p class=\"mb-0\">{{ stats_documents['Facture vente'] ?? 0 }}</p>
+\t\t</div>
+\t</div>
+\t<div class=\"d-flex align-items-center mb-2\">
+\t\t<div class=\"flex-grow-1\">
+\t\t\t<p class=\"text-truncate text-muted fs-14 mb-0\">
+\t\t\t\t<i class=\"mdi mdi-circle align-middle text-success me-2\"></i>
+\t\t\t\tCommandes Achat
+\t\t\t</p>
+\t\t</div>
+\t\t<div class=\"flex-shrink-0\">
+\t\t\t<p class=\"mb-0\">{{ stats_documents['Commande achat'] ?? 0 }}</p>
+\t\t</div>
+\t</div>
+\t<div class=\"d-flex align-items-center mb-2\">
+\t\t<div class=\"flex-grow-1\">
+\t\t\t<p class=\"text-truncate text-muted fs-14 mb-0\">
+\t\t\t\t<i class=\"mdi mdi-circle align-middle text-warning me-2\"></i>
+\t\t\t\tDevis
+\t\t\t</p>
+\t\t</div>
+\t\t<div class=\"flex-shrink-0\">
+\t\t\t<p class=\"mb-0\">{{ (stats_documents['Devis achat'] ?? 0) + (stats_documents['Devis vente'] ?? 0) }}</p>
+\t\t</div>
+\t</div>
+\t<div class=\"d-flex align-items-center mb-2\">
+\t\t<div class=\"flex-grow-1\">
+\t\t\t<p class=\"text-truncate text-muted fs-14 mb-0\">
+\t\t\t\t<i class=\"mdi mdi-circle align-middle text-danger me-2\"></i>
+\t\t\t\tBons d'Entrée/Sortie
+\t\t\t</p>
+\t\t</div>
+\t\t<div class=\"flex-shrink-0\">
+\t\t\t<p class=\"mb-0\">{{ (stats_documents['Bon entré'] ?? 0) + (stats_documents['Bon de sortie'] ?? 0) }}</p>
+\t\t</div>
+\t</div>
+</div></div></div></div></div><divclass=\"row\"><!-- Stocks faibles --><div class=\"col-xl-6\"><div class=\"card\"><div class=\"card-header align-items-center d-flex\">
+<h4 class=\"card-title mb-0 flex-grow-1\">Stocks Faibles</h4>
+<div class=\"flex-shrink-0\">
+\t<a href=\"{{ path('app_stock_index') }}\" class=\"btn btn-soft-primary btn-sm\">Voir tous les stocks</a>
+</div></div><div class=\"card-body\">
+<div class=\"table-responsive\">
+\t<table class=\"table table-borderless table-centered align-middle table-nowrap mb-0\">
+\t\t<thead class=\"text-muted border-dashed border border-start-0 border-end-0 bg-light-subtle\">
+\t\t\t<tr>
+\t\t\t\t<th>Article</th>
+\t\t\t\t<th>Référence</th>
+\t\t\t\t<th>Dépôt</th>
+\t\t\t\t<th>Stock Actuel</th>
+\t\t\t\t<th>Action</th>
+\t\t\t</tr>
+\t\t</thead>
+\t\t<tbody>
+\t\t\t{% for stock in alertes_stocks %}
+\t\t\t\t<tr>
+\t\t\t\t\t<td>
+\t\t\t\t\t\t<div class=\"d-flex align-items-center\">
+\t\t\t\t\t\t\t<div class=\"flex-shrink-0 me-2\">
+\t\t\t\t\t\t\t\t<i data-feather=\"package\" class=\"text-warning\"></i>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<div class=\"flex-grow-1\">Article
+\t\t\t\t\t\t\t\t{{ stock.article_id }}</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</td>
+\t\t\t\t\t<td>{{ stock.reference }}</td>
+\t\t\t\t\t<td>Dépôt
+\t\t\t\t\t\t{{ stock.depot_id }}</td>
+\t\t\t\t\t<td>
+\t\t\t\t\t\t<span class=\"text-danger fw-semibold\">{{ stock.qte_stock_dispo }}</span>
+\t\t\t\t\t</td>
+\t\t\t\t\t<td>
+\t\t\t\t\t\t<a href=\"{{ path('app_commande_achat_new') }}\" class=\"btn btn-sm btn-soft-warning\">Commander</a>
+\t\t\t\t\t</td>
+\t\t\t\t</tr>
+\t\t\t{% else %}
+\t\t\t\t<tr>
+\t\t\t\t\t<td colspan=\"5\" class=\"text-center\">Aucun stock faible</td>
+\t\t\t\t</tr>
+\t\t\t{% endfor %}
+\t\t</tbody>
+\t</table>
+</div></div></div></div><!-- Documents récents --><div class=\"col-xl-6\"><div class=\"card\"><div class=\"card-header align-items-center d-flex\">
+<h4 class=\"card-title mb-0 flex-grow-1\">Documents Récents</h4>
+<div class=\"flex-shrink-0\">
+\t<a href=\"{{ path('app_documents_index') }}\" class=\"btn btn-soft-primary btn-sm\">Voir tous</a>
+</div></div><div class=\"card-body\">
+<div class=\"table-responsive\">
+\t<table class=\"table table-borderless table-centered align-middle table-nowrap mb-0\">
+\t\t<thead class=\"text-muted border-dashed border border-start-0 border-end-0 bg-light-subtle\">
+\t\t\t<tr>
+\t\t\t\t<th>Référence</th>
+\t\t\t\t<th>Type</th>
+\t\t\t\t<th>Date</th>
+\t\t\t\t<th>Montant</th>
+\t\t\t\t<th>Statut</th>
+\t\t\t</tr>
+\t\t</thead>
+\t\t<tbody>
+\t\t\t{% for document in documents_recents %}
+\t\t\t\t<tr>
+\t\t\t\t\t<td>
+\t\t\t\t\t\t<a href=\"{{ path('app_documents_show', {'id': document.id}) }}\" class=\"fw-medium\">{{ document.reference }}</a>
+\t\t\t\t\t</td>
+\t\t\t\t\t<td>{{ document.type }}</td>
+\t\t\t\t\t<td>{{ document.doc_date|date('d/m/Y') }}</td>
+\t\t\t\t\t<td>{{ document.montant_ht|number_format(2, ',', ' ') }}
+\t\t\t\t\t\t€</td>
+\t\t\t\t\t<td>
+\t\t\t\t\t\t{% if document.statut == 'Confirmé' %}
+\t\t\t\t\t\t\t<span class=\"badge bg-success\">{{ document.statut }}</span>
+\t\t\t\t\t\t{% elseif document.statut == 'Ouvert' %}
+\t\t\t\t\t\t\t<span class=\"badge bg-warning\">{{ document.statut }}</span>
+\t\t\t\t\t\t{% else %}
+\t\t\t\t\t\t\t<span class=\"badge bg-secondary\">{{ document.statut }}</span>
+\t\t\t\t\t\t{% endif %}
+\t\t\t\t\t</td>
+\t\t\t\t</tr>
+\t\t\t{% else %}
+\t\t\t\t<tr>
+\t\t\t\t\t<td colspan=\"5\" class=\"text-center\">Aucun document récent</td>
+\t\t\t\t</tr>
+\t\t\t{% endfor %}
+\t\t</tbody>
+\t</table>
+</div></div></div></div></div><divclass=\"row\"><!-- Top articles --><div class=\"col-xl-6\"><div class=\"card\"><div class=\"card-header align-items-center d-flex\">
+<h4 class=\"card-title mb-0 flex-grow-1\">Articles les Plus Vendus</h4></div><div class=\"card-body\">
+<div id=\"top-articles-chart\" data-colors='[\"--vz-primary\", \"--vz-success\", \"--vz-warning\", \"--vz-info\", \"--vz-danger\"]' class=\"apex-charts\" dir=\"ltr\"></div></div></div></div><!-- Activité récente --><div class=\"col-xl-6\"><div class=\"card\"><div class=\"card-header align-items-center d-flex\">
+<h4 class=\"card-title mb-0 flex-grow-1\">Activité Récente</h4></div><div class=\"card-body\">
+<div class=\"simplebar-wrapper\" style=\"max-height: 365px;\">
+\t<div data-simplebar style=\"height: 365px;\">
+\t\t{% for activite in activites_recentes %}
+\t\t\t<div class=\"d-flex align-items-center mb-4\">
+\t\t\t\t<div class=\"flex-shrink-0\">
+\t\t\t\t\t<div class=\"stat-icon\">
+\t\t\t\t\t\t<i data-feather=\"{{ activite.icon }}\"></i>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t\t<div class=\"flex-grow-1 ms-3\">
+\t\t\t\t\t<h6 class=\"mb-1\">{{ activite.titre }}</h6>
+\t\t\t\t\t<p class=\"text-muted mb-0\">{{ activite.description }}</p>
+\t\t\t\t\t<ul class=\"list-inline mb-0\">
+\t\t\t\t\t\t<li class=\"list-inline-item\">{{ activite.date|date('d/m/Y H:i') }}</li>
+\t\t\t\t\t</ul>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t{% else %}
+\t\t\t<p class=\"text-muted text-center\">Aucune activité récente</p>
+\t\t{% endfor %}
+\t</div>
+</div></div></div></div></div></div></div>{{ include('partials/footer.html.twig') }}</div></div>{{ include('partials/customizer.html.twig') }}{{ include('partials/vendor-scripts.html.twig') }}<script src=\"../../assets/libs/apexcharts/apexcharts.min.js\"></script><script src=\"../../assets/libs/jsvectormap/jsvectormap.min.js\"></script><script src=\"../../assets/js/pages/dashboard-analytics.init.js\"></script><script src=\"../../assets/js/app.js\"></script><script>document.addEventListener(\"DOMContentLoaded\", function () { // Chart CA vs Dépenses
+var options = {
+series: [
+{
+name: 'Chiffre d\\'Affaires',
+data: {{ ca_data|raw }}
+}, {
+name: 'Dépenses',
+data: {{ depenses_data|raw }}
+}
+],
+chart: {
+height: 350,
+type: 'area',
+toolbar: {
+show: false
+}
+},
+colors: [
+'#0ab39c', '#f7b84b'
+],
+dataLabels: {
+enabled: false
+},
+stroke: {
+curve: 'smooth',
+width: 2
+},
+fill: {
+type: 'gradient',
+gradient: {
+shadeIntensity: 1,
+inverseColors: false,
+opacityFrom: 0.45,
+opacityTo: 0.05,
+stops: [20, 100, 100, 100]
+}
+},
+xaxis: {
+categories: {{ mois_labels|raw }}
+},
+tooltip: {
+y: {
+formatter: function (val) {
+return val + \" €\";
+}
+}
+}
+};
+
+var chart = new ApexCharts(document.querySelector(\"#ca-chart\"), options);
+chart.render();
+
+// Chart répartition documents
+var documentChart = {
+series: {{ documents_series|raw }},
+chart: {
+type: 'donut',
+height: 320
+},
+labels: {{ documents_labels|raw }},
+colors: [
+'#405189',
+'#0ab39c',
+'#f7b84b',
+'#f06548',
+'#3577f1'
+],
+legend: {
+position: 'bottom'
+},
+plotOptions: {
+pie: {
+donut: {
+size: '65%'
+}
+}
+}
+};
+
+var chart2 = new ApexCharts(document.querySelector(\"#documents-chart\"), documentChart);
+chart2.render();
+
+// Chart top articles
+var topArticlesChart = {
+series: [
+{
+data: {{ top_articles_values|raw }}
+}
+],
+chart: {
+type: 'bar',
+height: 320
+},
+plotOptions: {
+bar: {
+borderRadius: 4,
+horizontal: true
+}
+},
+dataLabels: {
+enabled: false
+},
+xaxis: {
+categories: {{ top_articles_labels|raw }}
+},
+colors: ['#0ab39c']
+};
+
+var chart3 = new ApexCharts(document.querySelector(\"#top-articles-chart\"), topArticlesChart);
+chart3.render();
+});</script></body> </html>
+", "pages/landing.html.twig", "C:\\Users\\Lenovo\\Desktop\\ERP_axia\\ERP_axia\\saas\\templates\\pages\\landing.html.twig");
     }
 }

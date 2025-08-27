@@ -88,7 +88,6 @@ class __TwigTemplate_1c16752e591ef860816e6e2fef2b6667 extends Template
         
                                         <div class=\"col-sm-8\">
                                             <div class=\"text-sm-end\">
-                                                <!-- You can add search or other filters here if needed -->
                                             </div>
                                         </div>
                                     </div>
@@ -108,36 +107,36 @@ class __TwigTemplate_1c16752e591ef860816e6e2fef2b6667 extends Template
                                             </thead>
                                             <tbody>
                                                 ";
-        // line 46
+        // line 45
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["stocks"]) || array_key_exists("stocks", $context) ? $context["stocks"] : (function () { throw new RuntimeError('Variable "stocks" does not exist.', 46, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["stocks"]) || array_key_exists("stocks", $context) ? $context["stocks"] : (function () { throw new RuntimeError('Variable "stocks" does not exist.', 45, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["stock"]) {
-            // line 47
+            // line 46
             echo "                                                <tr>
                                                     <td>";
+            // line 47
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["stock"], "id", [], "any", false, false, false, 47), "html", null, true);
+            echo "</td>
+                                                    <td>";
             // line 48
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["stock"], "id", [], "any", false, false, false, 48), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["stock"], "article", [], "any", false, false, false, 48), "reference", [], "any", false, false, false, 48), "html", null, true);
             echo "</td>
                                                     <td>";
             // line 49
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["stock"], "article", [], "any", false, false, false, 49), "reference", [], "any", false, false, false, 49), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["stock"], "depot", [], "any", false, false, false, 49), "intitule", [], "any", false, false, false, 49), "html", null, true);
             echo "</td>
                                                     <td>";
             // line 50
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["stock"], "depot", [], "any", false, false, false, 50), "intitule", [], "any", false, false, false, 50), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["stock"], "dateEntree", [], "any", false, false, false, 50), "d/m/Y"), "html", null, true);
             echo "</td>
                                                     <td>";
             // line 51
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["stock"], "dateEntree", [], "any", false, false, false, 51), "d/m/Y"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["stock"], "qteStockPrincipal", [], "any", false, false, false, 51), "html", null, true);
             echo "</td>
                                                     <td>";
             // line 52
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["stock"], "qteStockPrincipal", [], "any", false, false, false, 52), "html", null, true);
-            echo "</td>
-                                                    <td>";
-            // line 53
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["stock"], "qteStockDispo", [], "any", false, false, false, 53), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["stock"], "qteStockDispo", [], "any", false, false, false, 52), "html", null, true);
             echo "</td>
                                                     <td>
                                                         <div class=\"d-flex gap-3\">
@@ -149,7 +148,7 @@ class __TwigTemplate_1c16752e591ef860816e6e2fef2b6667 extends Template
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 61
+            // line 60
             echo "                                                <tr>
                                                     <td colspan=\"7\" class=\"text-center\">No stock entries found</td>
                                                 </tr>
@@ -158,7 +157,7 @@ class __TwigTemplate_1c16752e591ef860816e6e2fef2b6667 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['stock'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 65
+        // line 64
         echo "                                            </tbody>
                                         </table>
                                     </div>
@@ -169,18 +168,18 @@ class __TwigTemplate_1c16752e591ef860816e6e2fef2b6667 extends Template
                 </div>
             </div>
             ";
-        // line 74
+        // line 73
         echo twig_include($this->env, $context, "partials/footer.html.twig");
         echo "
         </div>
     </div>
 
     ";
-        // line 78
+        // line 77
         echo twig_include($this->env, $context, "partials/vendor-scripts.html.twig");
         echo "
     <script src=\"";
-        // line 79
+        // line 78
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/libs/sweetalert2/sweetalert2.min.js"), "html", null, true);
         echo "\"></script>
     <script>
@@ -238,7 +237,7 @@ class __TwigTemplate_1c16752e591ef860816e6e2fef2b6667 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  184 => 79,  180 => 78,  173 => 74,  162 => 65,  153 => 61,  140 => 53,  136 => 52,  132 => 51,  128 => 50,  124 => 49,  120 => 48,  117 => 47,  112 => 46,  80 => 17,  73 => 13,  65 => 8,  61 => 7,  57 => 6,  53 => 5,  49 => 4,  43 => 1,);
+        return array (  183 => 78,  179 => 77,  172 => 73,  161 => 64,  152 => 60,  139 => 52,  135 => 51,  131 => 50,  127 => 49,  123 => 48,  119 => 47,  116 => 46,  111 => 45,  80 => 17,  73 => 13,  65 => 8,  61 => 7,  57 => 6,  53 => 5,  49 => 4,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -269,7 +268,6 @@ class __TwigTemplate_1c16752e591ef860816e6e2fef2b6667 extends Template
         
                                         <div class=\"col-sm-8\">
                                             <div class=\"text-sm-end\">
-                                                <!-- You can add search or other filters here if needed -->
                                             </div>
                                         </div>
                                     </div>

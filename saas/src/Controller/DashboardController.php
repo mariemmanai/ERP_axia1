@@ -20,15 +20,13 @@ class DashboardController extends AbstractController
         StockRepository $stockRepository,
         DocumentsLigneRepository $documentsLignesRepository
     ): Response {
-        // Récupérer les données pour les statistiques
         $caMois = $documentsRepository->getChiffreAffairesMois();
         $evolutionCA = $documentsRepository->getEvolutionCA();
         $commandesEncours = $documentsRepository->countDocumentsByStatus('Ouvert');
         $evolutionCommandes = $documentsRepository->getEvolutionCommandes();
-        $stocksFaibles = $stockRepository->findLowStock(10); // Seuil à 10 unités
+        $stocksFaibles = $stockRepository->findLowStock(10);
         $documentsAttente = $documentsRepository->countDocumentsByStatus('Sous traitement');
 
-        // Données pour les graphiques
         $caData = $documentsRepository->getCADataLast6Months();
         $depensesData = $documentsRepository->getDepensesDataLast6Months();
         $moisLabels = $documentsRepository->getLast6MonthsLabels();
@@ -44,7 +42,6 @@ class DashboardController extends AbstractController
         $alertesStocks = $stockRepository->findLowStockWithDetails(5);
         $documentsRecents = $documentsRepository->findRecentDocuments(5);
 
-        // Activités récentes (à adapter selon vos besoins)
         $activitesRecentes = [
             [
                 'icon' => 'file-text',

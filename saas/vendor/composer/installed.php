@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'symfony/skeleton',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => '1.x-dev',
+        'version' => '1.9999999.9999999.9999999-dev',
+        'reference' => 'f0a336bc0ead5200024ad7fdfc8a1624455ba685',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -307,8 +307,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '3.0.0',
-                1 => '1.0|2.0|3.0',
+                0 => '1.0|2.0|3.0',
+                1 => '3.0.0',
             ),
         ),
         'psr/simple-cache-implementation' => array(
@@ -954,9 +954,9 @@
             ),
         ),
         'symfony/skeleton' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => '1.x-dev',
+            'version' => '1.9999999.9999999.9999999-dev',
+            'reference' => 'f0a336bc0ead5200024ad7fdfc8a1624455ba685',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

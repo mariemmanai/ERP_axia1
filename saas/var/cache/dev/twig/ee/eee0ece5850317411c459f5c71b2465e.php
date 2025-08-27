@@ -162,25 +162,22 @@ class __TwigTemplate_9bae7caa8423931be97a6a2b7cdcc4c4 extends Template
                         </div>
                     </div>
 
-                </div> <!-- container-fluid -->
+                </div> 
             </div>
-            <!-- End Page-content -->
 
             ";
-        // line 74
+        // line 73
         echo twig_include($this->env, $context, "partials/footer.html.twig");
         echo "
         </div>
-        <!-- end main content-->
     </div>
-    <!-- END layout-wrapper -->
 
     ";
-        // line 80
+        // line 77
         echo twig_include($this->env, $context, "partials/customizer.html.twig");
         echo "
     ";
-        // line 81
+        // line 78
         echo twig_include($this->env, $context, "partials/vendor-scripts.html.twig");
         echo "
 
@@ -221,7 +218,7 @@ class __TwigTemplate_9bae7caa8423931be97a6a2b7cdcc4c4 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  184 => 81,  180 => 80,  171 => 74,  159 => 64,  150 => 60,  136 => 51,  132 => 50,  126 => 47,  120 => 44,  116 => 43,  113 => 42,  108 => 41,  87 => 23,  81 => 19,  79 => 16,  71 => 11,  64 => 7,  60 => 6,  56 => 5,  52 => 4,  48 => 3,  43 => 1,);
+        return array (  181 => 78,  177 => 77,  170 => 73,  159 => 64,  150 => 60,  136 => 51,  132 => 50,  126 => 47,  120 => 44,  116 => 43,  113 => 42,  108 => 41,  87 => 23,  81 => 19,  79 => 16,  71 => 11,  64 => 7,  60 => 6,  56 => 5,  52 => 4,  48 => 3,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -295,15 +292,12 @@ class __TwigTemplate_9bae7caa8423931be97a6a2b7cdcc4c4 extends Template
                         </div>
                     </div>
 
-                </div> <!-- container-fluid -->
+                </div> 
             </div>
-            <!-- End Page-content -->
 
             {{ include('partials/footer.html.twig') }}
         </div>
-        <!-- end main content-->
     </div>
-    <!-- END layout-wrapper -->
 
     {{ include('partials/customizer.html.twig') }}
     {{ include('partials/vendor-scripts.html.twig') }}

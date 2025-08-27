@@ -138,7 +138,7 @@ class __TwigTemplate_f8a53434d903257853532fb0b1f69bc0 extends Template
                             </div>
                         </div>
                     </div>
-                </div> <!-- container-fluid -->
+                </div>
             </div>
             ";
         // line 59
@@ -265,7 +265,7 @@ class __TwigTemplate_f8a53434d903257853532fb0b1f69bc0 extends Template
                             </div>
                         </div>
                     </div>
-                </div> <!-- container-fluid -->
+                </div>
             </div>
             {{ include('partials/footer.html.twig') }}
         </div>
