@@ -47,23 +47,7 @@ class __TwigTemplate_6a1a37ca11cf8266845f44c29da419e2 extends Template
 \t<div
 \t\tclass=\"navbar-brand-box\">
 \t\t<!-- Dark Logo-->
-\t\t<a href=\"/\" class=\"logo logo-dark\">
-\t\t\t<span class=\"logo-sm\">
-\t\t\t\t<img src=\"../../assets/images/logo-sm.png\" alt=\"\" height=\"22\">
-\t\t\t</span>
-\t\t\t<span class=\"logo-lg\">
-\t\t\t\t<img src=\"../../assets/images/logo-dark.png\" alt=\"\" height=\"17\">
-\t\t\t</span>
-\t\t</a>
-\t\t<!-- Light Logo-->
-\t\t<a href=\"/\" class=\"logo logo-light\">
-\t\t\t<span class=\"logo-sm\">
-\t\t\t\t<img src=\"../../assets/images/logo-sm.png\" alt=\"\" height=\"22\">
-\t\t\t</span>
-\t\t\t<span class=\"logo-lg\">
-\t\t\t\t<img src=\"../../assets/images/logo-light.png\" alt=\"\" height=\"17\">
-\t\t\t</span>
-\t\t</a>
+
 \t\t<button type=\"button\" class=\"btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover\" id=\"vertical-hover\">
 \t\t\t<i class=\"ri-record-circle-line\"></i>
 \t\t</button>
@@ -93,32 +77,11 @@ class __TwigTemplate_6a1a37ca11cf8266845f44c29da419e2 extends Template
 \t\t\t\t</li>
 
 \t\t\t\t<!-- Messages -->
-\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t<a class=\"nav-link menu-link\" href=\"#sidebarMessages\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarMessages\">
-\t\t\t\t\t\t<i class=\"ri-mail-line\"></i>
-\t\t\t\t\t\t<span data-key=\"t-messages\">Messages</span>
-\t\t\t\t\t</a>
-\t\t\t\t\t<div class=\"collapse menu-dropdown\" id=\"sidebarMessages\">
-\t\t\t\t\t\t<ul class=\"nav nav-sm flex-column\">
-\t\t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Boite Réception</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Nouveaux Messages</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Messages Envoyés</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Corbeilles</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t</ul>
-\t\t\t\t\t</div>
-\t\t\t\t</li>
-
+\t\t\t\t";
+        // line 60
+        echo "
 \t\t\t\t<!-- Gestion Des Achats -->
-\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t<a class=\"nav-link menu-link\" href=\"#sidebarPurchases\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarPurchases\">
+\t\t\t\t\t<li class=\"nav-item\"> <a class=\"nav-link menu-link\" href=\"#sidebarPurchases\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarPurchases\">
 \t\t\t\t\t\t<i class=\"ri-shopping-cart-line\"></i>
 \t\t\t\t\t\t<span>Gestion Des Achats</span>
 \t\t\t\t\t</a>
@@ -126,49 +89,49 @@ class __TwigTemplate_6a1a37ca11cf8266845f44c29da419e2 extends Template
 \t\t\t\t\t\t<ul class=\"nav nav-sm flex-column\">
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 86
+        // line 69
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "DA"]);
         echo "\" class=\"nav-link\">Devis achat</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 89
+        // line 72
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "CA"]);
         echo "\" class=\"nav-link\">Commandes achat</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 92
+        // line 75
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "FA"]);
         echo "\" class=\"nav-link\">Factures achat</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 95
+        // line 78
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "FAA"]);
         echo "\" class=\"nav-link\">Factures achat Avoire</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 98
+        // line 81
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "BE"]);
         echo "\" class=\"nav-link\">Bon d'entrée</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 101
+        // line 84
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "BT"]);
         echo "\" class=\"nav-link\">Bon de transfert</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 104
+        // line 87
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "BR"]);
         echo "\" class=\"nav-link\">Bon de retour</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 107
+        // line 90
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "Inv"]);
         echo "\" class=\"nav-link\">Inventaire</a>
 \t\t\t\t\t\t\t</li>
@@ -192,31 +155,31 @@ class __TwigTemplate_6a1a37ca11cf8266845f44c29da419e2 extends Template
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 128
+        // line 111
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "BE"]);
         echo "\" class=\"nav-link\">Bon d'entrée</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 131
+        // line 114
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "BS"]);
         echo "\" class=\"nav-link\">Bon de sortie</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 134
+        // line 117
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "BT"]);
         echo "\" class=\"nav-link\">Bon de transfert</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 137
+        // line 120
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "BR"]);
         echo "\" class=\"nav-link\">Bon de retour</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 140
+        // line 123
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "Inv"]);
         echo "\" class=\"nav-link\">Inventaire</a>
 \t\t\t\t\t\t\t</li>
@@ -235,43 +198,43 @@ class __TwigTemplate_6a1a37ca11cf8266845f44c29da419e2 extends Template
 \t\t\t\t\t\t<ul class=\"nav nav-sm flex-column\">
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 156
+        // line 139
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "DV"]);
         echo "\" class=\"nav-link\">Devis vente</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 159
+        // line 142
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "CV"]);
         echo "\" class=\"nav-link\">Commandes vente</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 162
+        // line 145
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "FV"]);
         echo "\" class=\"nav-link\">Factures vente</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 165
+        // line 148
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "FVA"]);
         echo "\" class=\"nav-link\">Factures vente avoire</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 168
+        // line 151
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "BS"]);
         echo "\" class=\"nav-link\">Bon de sortie</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 171
+        // line 154
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "BL"]);
         echo "\" class=\"nav-link\">Bon de livraison</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 174
+        // line 157
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "Inv"]);
         echo "\" class=\"nav-link\">Inventaire</a>
 \t\t\t\t\t\t\t</li>
@@ -339,32 +302,11 @@ class __TwigTemplate_6a1a37ca11cf8266845f44c29da419e2 extends Template
 \t\t\t\t</li>
 
 \t\t\t\t<!-- Statistiques -->
-\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t<a class=\"nav-link menu-link\" href=\"#sidebarStats\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarStats\">
-\t\t\t\t\t\t<i class=\"ri-bar-chart-line\"></i>
-\t\t\t\t\t\t<span data-key=\"t-statistics\">Statistiques</span>
-\t\t\t\t\t</a>
-\t\t\t\t\t<div class=\"collapse menu-dropdown\" id=\"sidebarStats\">
-\t\t\t\t\t\t<ul class=\"nav nav-sm flex-column\">
-\t\t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Générale</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Achats</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Productions</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Ventes</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t</ul>
-\t\t\t\t\t</div>
-\t\t\t\t</li>
-
+\t\t\t\t";
+        // line 245
+        echo "
 \t\t\t\t<!-- Logs -->
-\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t<a class=\"nav-link menu-link\" href=\"#sidebarLogs\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarLogs\">
+\t\t\t\t\t<li class=\"nav-item\"> <a class=\"nav-link menu-link\" href=\"#sidebarLogs\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarLogs\">
 \t\t\t\t\t\t<i class=\"ri-file-list-2-line\"></i>
 \t\t\t\t\t\t<span data-key=\"t-logs\">Logs</span>
 \t\t\t\t\t</a>
@@ -416,7 +358,7 @@ class __TwigTemplate_6a1a37ca11cf8266845f44c29da419e2 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  275 => 174,  269 => 171,  263 => 168,  257 => 165,  251 => 162,  245 => 159,  239 => 156,  220 => 140,  214 => 137,  208 => 134,  202 => 131,  196 => 128,  172 => 107,  166 => 104,  160 => 101,  154 => 98,  148 => 95,  142 => 92,  136 => 89,  130 => 86,  43 => 1,);
+        return array (  307 => 245,  238 => 157,  232 => 154,  226 => 151,  220 => 148,  214 => 145,  208 => 142,  202 => 139,  183 => 123,  177 => 120,  171 => 117,  165 => 114,  159 => 111,  135 => 90,  129 => 87,  123 => 84,  117 => 81,  111 => 78,  105 => 75,  99 => 72,  93 => 69,  82 => 60,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -428,23 +370,7 @@ class __TwigTemplate_6a1a37ca11cf8266845f44c29da419e2 extends Template
 \t<div
 \t\tclass=\"navbar-brand-box\">
 \t\t<!-- Dark Logo-->
-\t\t<a href=\"/\" class=\"logo logo-dark\">
-\t\t\t<span class=\"logo-sm\">
-\t\t\t\t<img src=\"../../assets/images/logo-sm.png\" alt=\"\" height=\"22\">
-\t\t\t</span>
-\t\t\t<span class=\"logo-lg\">
-\t\t\t\t<img src=\"../../assets/images/logo-dark.png\" alt=\"\" height=\"17\">
-\t\t\t</span>
-\t\t</a>
-\t\t<!-- Light Logo-->
-\t\t<a href=\"/\" class=\"logo logo-light\">
-\t\t\t<span class=\"logo-sm\">
-\t\t\t\t<img src=\"../../assets/images/logo-sm.png\" alt=\"\" height=\"22\">
-\t\t\t</span>
-\t\t\t<span class=\"logo-lg\">
-\t\t\t\t<img src=\"../../assets/images/logo-light.png\" alt=\"\" height=\"17\">
-\t\t\t</span>
-\t\t</a>
+
 \t\t<button type=\"button\" class=\"btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover\" id=\"vertical-hover\">
 \t\t\t<i class=\"ri-record-circle-line\"></i>
 \t\t</button>
@@ -474,32 +400,31 @@ class __TwigTemplate_6a1a37ca11cf8266845f44c29da419e2 extends Template
 \t\t\t\t</li>
 
 \t\t\t\t<!-- Messages -->
-\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t<a class=\"nav-link menu-link\" href=\"#sidebarMessages\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarMessages\">
-\t\t\t\t\t\t<i class=\"ri-mail-line\"></i>
-\t\t\t\t\t\t<span data-key=\"t-messages\">Messages</span>
-\t\t\t\t\t</a>
-\t\t\t\t\t<div class=\"collapse menu-dropdown\" id=\"sidebarMessages\">
-\t\t\t\t\t\t<ul class=\"nav nav-sm flex-column\">
-\t\t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Boite Réception</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Nouveaux Messages</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Messages Envoyés</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Corbeilles</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t</ul>
-\t\t\t\t\t</div>
-\t\t\t\t</li>
+\t\t\t\t{# <li class=\"nav-item\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<a class=\"nav-link menu-link\" href=\"#sidebarMessages\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarMessages\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"ri-mail-line\"></i>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span data-key=\"t-messages\">Messages</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"collapse menu-dropdown\" id=\"sidebarMessages\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ul class=\"nav nav-sm flex-column\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Boite Réception</a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Nouveaux Messages</a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Messages Envoyés</a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Corbeilles</a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t\t</li> #}
 
 \t\t\t\t<!-- Gestion Des Achats -->
-\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t<a class=\"nav-link menu-link\" href=\"#sidebarPurchases\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarPurchases\">
+\t\t\t\t\t<li class=\"nav-item\"> <a class=\"nav-link menu-link\" href=\"#sidebarPurchases\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarPurchases\">
 \t\t\t\t\t\t<i class=\"ri-shopping-cart-line\"></i>
 \t\t\t\t\t\t<span>Gestion Des Achats</span>
 \t\t\t\t\t</a>
@@ -660,32 +585,31 @@ class __TwigTemplate_6a1a37ca11cf8266845f44c29da419e2 extends Template
 \t\t\t\t</li>
 
 \t\t\t\t<!-- Statistiques -->
-\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t<a class=\"nav-link menu-link\" href=\"#sidebarStats\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarStats\">
-\t\t\t\t\t\t<i class=\"ri-bar-chart-line\"></i>
-\t\t\t\t\t\t<span data-key=\"t-statistics\">Statistiques</span>
-\t\t\t\t\t</a>
-\t\t\t\t\t<div class=\"collapse menu-dropdown\" id=\"sidebarStats\">
-\t\t\t\t\t\t<ul class=\"nav nav-sm flex-column\">
-\t\t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Générale</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Achats</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Productions</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Ventes</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t</ul>
-\t\t\t\t\t</div>
-\t\t\t\t</li>
+\t\t\t\t{# <li class=\"nav-item\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<a class=\"nav-link menu-link\" href=\"#sidebarStats\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarStats\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"ri-bar-chart-line\"></i>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span data-key=\"t-statistics\">Statistiques</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"collapse menu-dropdown\" id=\"sidebarStats\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ul class=\"nav nav-sm flex-column\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Générale</a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Achats</a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Productions</a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"apps-chat\" class=\"nav-link\">Ventes</a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t\t</li> #}
 
 \t\t\t\t<!-- Logs -->
-\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t<a class=\"nav-link menu-link\" href=\"#sidebarLogs\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarLogs\">
+\t\t\t\t\t<li class=\"nav-item\"> <a class=\"nav-link menu-link\" href=\"#sidebarLogs\" data-bs-toggle=\"collapse\" role=\"button\" aria-expanded=\"false\" aria-controls=\"sidebarLogs\">
 \t\t\t\t\t\t<i class=\"ri-file-list-2-line\"></i>
 \t\t\t\t\t\t<span data-key=\"t-logs\">Logs</span>
 \t\t\t\t\t</a>

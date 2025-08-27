@@ -234,3 +234,12 @@ d09fb2,127.0.0.1,GET,http://127.0.0.1:8000/stats/api/kpi/dep-mois?month=2025-08,
 f28c5a,127.0.0.1,GET,http://127.0.0.1:8000/stats/api/kpi/ruptures-count?month=2025-08,1756290248,,200,request
 fc4488,127.0.0.1,GET,http://127.0.0.1:8000/stats/api/kpi/ca-mois?month=2025-08,1756290249,,200,request
 ce87fb,127.0.0.1,GET,http://127.0.0.1:8000/api/stats/ca-12-mois,1756290250,,200,request
+22fffd,127.0.0.1,GET,http://127.0.0.1:8000/.well-known/appspecific/com.chrome.devtools.json,1756290869,87eee0,404,request
+87eee0,127.0.0.1,GET,http://127.0.0.1:8000/.well-known/appspecific/com.chrome.devtools.json,1756290870,,404,request
+02471a,127.0.0.1,GET,http://127.0.0.1:8000/,1756290969,,200,request
+2101c3,127.0.0.1,GET,http://127.0.0.1:8000/stats/api/kpi/ca-mois,1756290970,,200,request
+8e918e,127.0.0.1,GET,http://127.0.0.1:8000/stats/api/kpi/dep-mois,1756290971,,200,request
+56954e,127.0.0.1,GET,http://127.0.0.1:8000/stats/api/kpi/ruptures-count,1756290971,,200,request
+a25bab,127.0.0.1,GET,http://127.0.0.1:8000/api/stats/ca-12-mois,1756290971,,200,request
+e75a19,127.0.0.1,GET,http://127.0.0.1:8000/.well-known/appspecific/com.chrome.devtools.json,1756290972,9997d7,404,request
+9997d7,127.0.0.1,GET,http://127.0.0.1:8000/.well-known/appspecific/com.chrome.devtools.json,1756290972,,404,request
