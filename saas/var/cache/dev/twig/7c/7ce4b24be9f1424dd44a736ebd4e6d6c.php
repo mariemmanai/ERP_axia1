@@ -90,8 +90,6 @@ class __TwigTemplate_6a1a37ca11cf8266845f44c29da419e2 extends Template
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t</div>
-
-
 \t\t\t\t</li>
 
 \t\t\t\t<!-- Messages -->
@@ -128,49 +126,49 @@ class __TwigTemplate_6a1a37ca11cf8266845f44c29da419e2 extends Template
 \t\t\t\t\t\t<ul class=\"nav nav-sm flex-column\">
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 88
+        // line 86
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "DA"]);
         echo "\" class=\"nav-link\">Devis achat</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 91
+        // line 89
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "CA"]);
         echo "\" class=\"nav-link\">Commandes achat</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 94
+        // line 92
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "FA"]);
         echo "\" class=\"nav-link\">Factures achat</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 97
+        // line 95
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "FAA"]);
         echo "\" class=\"nav-link\">Factures achat Avoire</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 100
+        // line 98
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "BE"]);
         echo "\" class=\"nav-link\">Bon d'entrée</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 103
+        // line 101
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "BT"]);
         echo "\" class=\"nav-link\">Bon de transfert</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 106
+        // line 104
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "BR"]);
         echo "\" class=\"nav-link\">Bon de retour</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 109
+        // line 107
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "Inv"]);
         echo "\" class=\"nav-link\">Inventaire</a>
 \t\t\t\t\t\t\t</li>
@@ -194,31 +192,31 @@ class __TwigTemplate_6a1a37ca11cf8266845f44c29da419e2 extends Template
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 130
+        // line 128
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "BE"]);
         echo "\" class=\"nav-link\">Bon d'entrée</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 133
+        // line 131
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "BS"]);
         echo "\" class=\"nav-link\">Bon de sortie</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 136
+        // line 134
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "BT"]);
         echo "\" class=\"nav-link\">Bon de transfert</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 139
+        // line 137
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "BR"]);
         echo "\" class=\"nav-link\">Bon de retour</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 142
+        // line 140
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "Inv"]);
         echo "\" class=\"nav-link\">Inventaire</a>
 \t\t\t\t\t\t\t</li>
@@ -237,43 +235,43 @@ class __TwigTemplate_6a1a37ca11cf8266845f44c29da419e2 extends Template
 \t\t\t\t\t\t<ul class=\"nav nav-sm flex-column\">
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 158
+        // line 156
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "DV"]);
         echo "\" class=\"nav-link\">Devis vente</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 161
+        // line 159
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "CV"]);
         echo "\" class=\"nav-link\">Commandes vente</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 164
+        // line 162
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "FV"]);
         echo "\" class=\"nav-link\">Factures vente</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 167
+        // line 165
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "FVA"]);
         echo "\" class=\"nav-link\">Factures vente avoire</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 170
+        // line 168
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "BS"]);
         echo "\" class=\"nav-link\">Bon de sortie</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 173
+        // line 171
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "BL"]);
         echo "\" class=\"nav-link\">Bon de livraison</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 176
+        // line 174
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_documents_index", ["Doc" => "Inv"]);
         echo "\" class=\"nav-link\">Inventaire</a>
 \t\t\t\t\t\t\t</li>
@@ -418,7 +416,7 @@ class __TwigTemplate_6a1a37ca11cf8266845f44c29da419e2 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  277 => 176,  271 => 173,  265 => 170,  259 => 167,  253 => 164,  247 => 161,  241 => 158,  222 => 142,  216 => 139,  210 => 136,  204 => 133,  198 => 130,  174 => 109,  168 => 106,  162 => 103,  156 => 100,  150 => 97,  144 => 94,  138 => 91,  132 => 88,  43 => 1,);
+        return array (  275 => 174,  269 => 171,  263 => 168,  257 => 165,  251 => 162,  245 => 159,  239 => 156,  220 => 140,  214 => 137,  208 => 134,  202 => 131,  196 => 128,  172 => 107,  166 => 104,  160 => 101,  154 => 98,  148 => 95,  142 => 92,  136 => 89,  130 => 86,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -473,8 +471,6 @@ class __TwigTemplate_6a1a37ca11cf8266845f44c29da419e2 extends Template
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t</div>
-
-
 \t\t\t\t</li>
 
 \t\t\t\t<!-- Messages -->
